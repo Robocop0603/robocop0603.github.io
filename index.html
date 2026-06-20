@@ -127,9 +127,10 @@
         margin: 4px 0;
     }
 
-    .highlight-match {
-        background: linear-gradient(135deg, rgba(0,95,60,0.60), rgba(20,20,20,0.58));
-        border: 1px solid rgba(90,255,180,0.25);
+    .empty-appointments {
+        font-size: 16px;
+        color: #cccccc;
+        padding: 12px;
     }
 
     .search-area {
@@ -274,31 +275,7 @@
 
     <div class="appointments">
         <div class="appointments-title">📅 Upcoming Appointments</div>
-
-        <div class="match-list">
-
-            <div class="match-card">
-                <div class="match-competition">Besta deild karla</div>
-                <div class="match-teams">ÍBV vs Stjarnan</div>
-                <div class="match-detail">📆 Sun 21 júní • 18:00</div>
-                <div class="match-detail">👨‍⚖️ Fjórði dómari</div>
-            </div>
-
-            <div class="match-card">
-                <div class="match-competition">Lengjudeild karla</div>
-                <div class="match-teams">Þróttur vs Grindavík</div>
-                <div class="match-detail">📆 Lau 27 júní • 14:00</div>
-                <div class="match-detail">👨‍⚖️ Dómari</div>
-            </div>
-
-            <div class="match-card highlight-match">
-                <div class="match-competition">Mjólkurbikar karla • Undanúrslit</div>
-                <div class="match-teams">Breiðablik vs Víkingur</div>
-                <div class="match-detail">📆 Sun 28 júní • 14:00</div>
-                <div class="match-detail">👨‍⚖️ Fjórði dómari</div>
-            </div>
-
-        </div>
+        <div id="upcoming-list" class="match-list"></div>
     </div>
 </div>
 
@@ -428,21 +405,34 @@
 </div>
 
 <script>
+    /*
+        Every Wednesday when you get new appointments,
+        only update this matches list.
+
+        The dashboard will automatically:
+        1. Put the first future match in the countdown card.
+        2. Show the later future matches under Upcoming Appointments.
+        3. Remove completed matches automatically.
+    */
+
     const matches = [
         {
             date: "2026-06-21T18:00:00",
+            displayDate: "Sun 21 júní • 18:00",
             teams: "ÍBV vs Stjarnan",
             role: "Fjórði dómari",
             competition: "Besta deild karla"
         },
         {
             date: "2026-06-27T14:00:00",
+            displayDate: "Lau 27 júní • 14:00",
             teams: "Þróttur vs Grindavík",
             role: "Dómari",
             competition: "Lengjudeild karla"
         },
         {
             date: "2026-06-28T14:00:00",
+            displayDate: "Sun 28 júní • 14:00",
             teams: "Breiðablik vs Víkingur",
             role: "Fjórði dómari",
             competition: "Mjólkurbikar karla • Undanúrslit"
@@ -463,7 +453,7 @@
                 day: "numeric"
             });
 
-        const upcomingMatches = matches
+        const futureMatches = matches
             .map(match => ({
                 ...match,
                 matchDate: new Date(match.date)
@@ -471,20 +461,28 @@
             .filter(match => match.matchDate > now)
             .sort((a, b) => a.matchDate - b.matchDate);
 
-        if (upcomingMatches.length === 0) {
+        const upcomingList = document.getElementById("upcoming-list");
+        upcomingList.innerHTML = "";
+
+        if (futureMatches.length === 0) {
             document.getElementById("countdown-teams").innerHTML =
                 "No upcoming matches";
 
             document.getElementById("countdown-role").innerHTML =
-                "Time to update your appointments";
+                "Time to update your KSÍ appointments";
 
             document.getElementById("countdown-time").innerHTML =
                 "✅ All listed matches completed";
 
+            upcomingList.innerHTML =
+                '<div class="empty-appointments">No later appointments listed</div>';
+
             return;
         }
 
-        const nextMatch = upcomingMatches[0];
+        const nextMatch = futureMatches[0];
+        const laterMatches = futureMatches.slice(1);
+
         const diff = nextMatch.matchDate - now;
 
         const days = Math.floor(diff / (1000 * 60 * 60 * 24));
@@ -505,6 +503,25 @@
 
         document.getElementById("countdown-time").innerHTML =
             days + "d " + hours + "h " + minutes + "m";
+
+        if (laterMatches.length === 0) {
+            upcomingList.innerHTML =
+                '<div class="empty-appointments">No later appointments listed</div>';
+        } else {
+            laterMatches.forEach(match => {
+                const matchCard = document.createElement("div");
+                matchCard.className = "match-card";
+
+                matchCard.innerHTML = `
+                    <div class="match-competition">${match.competition}</div>
+                    <div class="match-teams">${match.teams}</div>
+                    <div class="match-detail">📆 ${match.displayDate}</div>
+                    <div class="match-detail">👨‍⚖️ ${match.role}</div>
+                `;
+
+                upcomingList.appendChild(matchCard);
+            });
+        }
     }
 
     updateDashboard();
