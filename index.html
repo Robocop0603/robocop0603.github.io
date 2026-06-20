@@ -98,13 +98,28 @@
         font-size: 16px;
         color: #bfffd8;
         font-weight: bold;
-        margin-bottom: 8px;
+        margin-bottom: 12px;
+    }
+
+    .countdown-teams-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 22px;
+        margin-bottom: 10px;
+    }
+
+    .countdown-logo {
+        width: 72px;
+        height: 72px;
+        object-fit: contain;
+        filter: drop-shadow(0 4px 10px rgba(0,0,0,0.55));
     }
 
     #countdown-teams {
-        font-size: 30px;
+        font-size: 32px;
         font-weight: bold;
-        margin-bottom: 8px;
+        white-space: nowrap;
     }
 
     #countdown-competition {
@@ -271,6 +286,30 @@
     .card span {
         font-size: 18px;
     }
+
+    @media (max-width: 700px) {
+        h1 {
+            font-size: 34px;
+        }
+
+        #clock {
+            font-size: 36px;
+        }
+
+        .countdown-teams-row {
+            gap: 12px;
+        }
+
+        .countdown-logo {
+            width: 54px;
+            height: 54px;
+        }
+
+        #countdown-teams {
+            font-size: 24px;
+            white-space: normal;
+        }
+    }
 </style>
 <h1>⚽ ROBOCOP Dashboard</h1>
 
@@ -294,7 +333,13 @@
 
     <div class="countdown-card">
         <div class="countdown-label">⏳ NEXT MATCH</div>
-        <div id="countdown-teams"></div>
+
+        <div class="countdown-teams-row">
+            <img id="home-logo" class="countdown-logo" src="" alt="">
+            <div id="countdown-teams"></div>
+            <img id="away-logo" class="countdown-logo" src="" alt="">
+        </div>
+
         <div id="countdown-competition"></div>
         <div id="countdown-role"></div>
         <div id="countdown-time"></div>
@@ -449,7 +494,9 @@
             displayDate: "Sun 21 júní • 18:00",
             teams: "ÍBV vs Stjarnan",
             role: "Fjórði dómari",
-            competition: "Besta deild karla"
+            competition: "Besta deild karla",
+            homeLogo: "images/ibv-logo.png",
+            awayLogo: "images/stjarnan-logo.png"
         },
         {
             date: "2026-06-27T14:00:00",
@@ -492,7 +539,13 @@
         const upcomingList = document.getElementById("upcoming-list");
         upcomingList.innerHTML = "";
 
+        const homeLogo = document.getElementById("home-logo");
+        const awayLogo = document.getElementById("away-logo");
+
         if (futureMatches.length === 0) {
+            homeLogo.style.display = "none";
+            awayLogo.style.display = "none";
+
             document.getElementById("countdown-teams").innerHTML =
                 "No upcoming matches";
 
@@ -514,6 +567,20 @@
         const nextMatch = futureMatches[0];
         const laterMatches = futureMatches.slice(1);
 
+        if (nextMatch.homeLogo) {
+            homeLogo.src = nextMatch.homeLogo;
+            homeLogo.style.display = "block";
+        } else {
+            homeLogo.style.display = "none";
+        }
+
+        if (nextMatch.awayLogo) {
+            awayLogo.src = nextMatch.awayLogo;
+            awayLogo.style.display = "block";
+        } else {
+            awayLogo.style.display = "none";
+        }
+
         const diff = nextMatch.matchDate - now;
 
         const days = Math.floor(diff / (1000 * 60 * 60 * 24));
@@ -527,7 +594,7 @@
         );
 
         document.getElementById("countdown-teams").innerHTML =
-            "⚽ " + nextMatch.teams;
+            nextMatch.teams;
 
         document.getElementById("countdown-competition").innerHTML =
             "🏆 " + nextMatch.competition;
