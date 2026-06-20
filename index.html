@@ -83,15 +83,13 @@
         white-space: nowrap;
     }
 
-    #countdown-competition {
-        font-size: 12px;
-        color: #dddddd;
-        margin-bottom: 2px;
-    }
-
+    #countdown-competition,
     #countdown-role {
         font-size: 12px;
         color: #dddddd;
+    }
+
+    #countdown-role {
         margin-bottom: 6px;
     }
 
@@ -160,7 +158,7 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 16px;
-        margin: 0 auto 28px auto;
+        margin: 0 auto 22px auto;
         max-width: 1150px;
     }
 
@@ -196,41 +194,61 @@
         box-shadow: 0 0 0 2px #10a37f, 0 10px 30px rgba(16,163,127,0.35);
     }
 
-    .featured-youtube {
+    .featured-row {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 18px;
+        margin: 0 auto 40px auto;
+    }
+
+    .featured-card {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 18px;
-        width: 420px;
+        gap: 15px;
+        width: 260px;
         max-width: 90%;
-        margin: 0 auto 40px auto;
-        padding: 18px 25px;
-        background: linear-gradient(135deg, #ff0000, #b80000);
+        padding: 16px 22px;
         border-radius: 22px;
         text-decoration: none;
         color: white;
-        box-shadow: 0 12px 35px rgba(255,0,0,0.4);
         transition: all 0.25s ease;
     }
 
-    .featured-youtube:hover {
+    .featured-card:hover {
         transform: translateY(-5px) scale(1.02);
-        box-shadow: 0 18px 45px rgba(255,0,0,0.6);
     }
 
-    .featured-youtube img {
-        width: 64px;
-        height: 64px;
+    .featured-card img {
+        width: 54px;
+        height: 54px;
+        object-fit: contain;
     }
 
-    .youtube-title {
-        font-size: 30px;
+    .featured-title {
+        font-size: 24px;
         font-weight: bold;
     }
 
-    .youtube-subtitle {
-        font-size: 14px;
+    .featured-subtitle {
+        font-size: 13px;
         opacity: 0.9;
+    }
+
+    .youtube-card {
+        background: linear-gradient(135deg, #ff0000, #b80000);
+        box-shadow: 0 12px 35px rgba(255,0,0,0.4);
+    }
+
+    .facebook-card {
+        background: linear-gradient(135deg, #1877f2, #0b4fb3);
+        box-shadow: 0 12px 35px rgba(24,119,242,0.35);
+    }
+
+    .messenger-card {
+        background: linear-gradient(135deg, #00b2ff, #006aff);
+        box-shadow: 0 12px 35px rgba(0,178,255,0.35);
     }
 
     .container {
@@ -348,13 +366,33 @@
     </form>
 </div>
 
-<a class="featured-youtube" href="https://youtube.com" target="_blank" rel="noopener noreferrer">
-    <img src="https://www.google.com/s2/favicons?domain=youtube.com&sz=128">
-    <div>
-        <div class="youtube-title">YouTube</div>
-        <div class="youtube-subtitle">Open YouTube</div>
-    </div>
-</a>
+<div class="featured-row">
+
+    <a class="featured-card youtube-card" href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+        <img src="https://www.google.com/s2/favicons?domain=youtube.com&sz=128">
+        <div>
+            <div class="featured-title">YouTube</div>
+            <div class="featured-subtitle">Open YouTube</div>
+        </div>
+    </a>
+
+    <a class="featured-card facebook-card" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+        <img src="https://www.google.com/s2/favicons?domain=facebook.com&sz=128">
+        <div>
+            <div class="featured-title">Facebook</div>
+            <div class="featured-subtitle">Open Facebook</div>
+        </div>
+    </a>
+
+    <a class="featured-card messenger-card" href="https://www.messenger.com" target="_blank" rel="noopener noreferrer">
+        <img src="https://www.google.com/s2/favicons?domain=messenger.com&sz=128">
+        <div>
+            <div class="featured-title">Messenger</div>
+            <div class="featured-subtitle">Open Messenger</div>
+        </div>
+    </a>
+
+</div>
 
 <div class="container">
 
@@ -370,7 +408,7 @@
         <span>mbl</span>
     </a>
 
-        <a class="card" href="https://www.framundanibeinni.is/" target="_blank" rel="noopener noreferrer">
+    <a class="card" href="https://www.framundanibeinni.is/" target="_blank" rel="noopener noreferrer">
         <img src="https://www.google.com/s2/favicons?domain=framundanibeinni.is&sz=64">
         <span>Framundan</span>
     </a>
@@ -412,7 +450,7 @@
         <span>KSÍ Comet</span>
     </a>
 
-     <a class="card" href="https://www.theifab.com/laws/latest/" target="_blank" rel="noopener noreferrer">
+    <a class="card" href="https://www.theifab.com/laws/latest/" target="_blank" rel="noopener noreferrer">
         <img src="images/ifab-logo.png">
         <span>Laws of the Game</span>
     </a>
@@ -448,7 +486,7 @@
         <img src="images/livey-logo.jpg">
         <span>Livey</span>
     </a>
-    
+
     <div class="section-title">🏃 Referee Fitness</div>
 
     <a class="card" href="https://connect.garmin.com/app/home" target="_blank" rel="noopener noreferrer">
@@ -478,7 +516,7 @@
         <span>Golf.is</span>
     </a>
 
-<a class="card" href="https://www.golfbox.dk/site/my_golfbox/ressources/booking/grid.asp?Ressource_GUID={E4FACDD4-A584-44D7-B155-8670F6EA9068}&Club_GUID={A112EA7C-4DCC-4083-887F-3DAED23C1BEB}" target="_blank" rel="noopener noreferrer">
+    <a class="card" href="https://www.golfbox.dk/site/my_golfbox/ressources/booking/grid.asp?Ressource_GUID=%7BE4FACDD4-A584-44D7-B155-8670F6EA9068%7D&Club_GUID=%7BA112EA7C-4DCC-4083-887F-3DAED23C1BEB%7D" target="_blank" rel="noopener noreferrer">
         <img src="images/golfbox-logo.png">
         <span>Golfbox</span>
     </a>
