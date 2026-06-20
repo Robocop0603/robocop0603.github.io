@@ -1,21 +1,14 @@
-<!DOCTYPE html>
-
-<html>
-<head>
-    <title>ROBOCOP</title>
-
-```
 <style>
     body {
         color: white;
         font-family: Arial, sans-serif;
         text-align: center;
         margin: 0;
-        padding: 40px 20px;
+        padding: 35px 20px;
         min-height: 100vh;
 
         background:
-            linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.82)),
+            linear-gradient(rgba(0,0,0,0.70), rgba(0,0,0,0.86)),
             url("use-golf-backround.jpg");
 
         background-size: cover;
@@ -24,17 +17,59 @@
     }
 
     h1 {
-        font-size: 44px;
-        margin-bottom: 10px;
+        font-size: 46px;
+        margin-bottom: 8px;
         letter-spacing: 2px;
-        text-shadow: 0 4px 15px rgba(0,0,0,0.8);
+        text-shadow: 0 4px 15px rgba(0,0,0,0.9);
+    }
+
+    .top-panel {
+        max-width: 850px;
+        margin: 0 auto 30px auto;
+        padding: 22px;
+        border-radius: 24px;
+        background: rgba(25,25,25,0.65);
+        border: 1px solid rgba(255,255,255,0.14);
+        backdrop-filter: blur(12px);
+        box-shadow: 0 12px 35px rgba(0,0,0,0.45);
     }
 
     #clock {
-        font-size: 28px;
-        margin-bottom: 30px;
+        font-size: 42px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    #date {
+        font-size: 19px;
         color: #dddddd;
-        text-shadow: 0 3px 10px rgba(0,0,0,0.8);
+        margin-bottom: 18px;
+    }
+
+    .next-match {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 16px 20px;
+        border-radius: 18px;
+        background: rgba(255,255,255,0.08);
+        border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .next-match-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 6px;
+    }
+
+    .next-match-main {
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .next-match-info {
+        font-size: 15px;
+        color: #cccccc;
+        margin-top: 5px;
     }
 
     .search-area {
@@ -61,7 +96,7 @@
     }
 
     .search-box:focus {
-        background: rgba(45,45,45,0.92);
+        background: rgba(45,45,45,0.95);
         transform: scale(1.02);
     }
 
@@ -151,7 +186,7 @@
     }
 
     .card:hover {
-        background: rgba(65,65,65,0.9);
+        background: rgba(65,65,65,0.92);
         transform: translateY(-6px);
         box-shadow: 0 15px 35px rgba(0,0,0,0.55);
     }
@@ -166,16 +201,18 @@
         font-size: 18px;
     }
 </style>
-```
+<h1>⚽ ROBOCOP Dashboard</h1>
 
-</head>
+<div class="top-panel">
+    <div id="clock"></div>
+    <div id="date"></div>
 
-<body>
-
-```
-<h1>⚽ ROBOCOP </h1>
-
-<div id="clock"></div>
+    <div class="next-match">
+        <div class="next-match-title">📅 Next Match</div>
+        <div class="next-match-main">No match added yet</div>
+        <div class="next-match-info">Edit this box when your next appointment comes in</div>
+    </div>
+</div>
 
 <div class="search-area">
 
@@ -245,6 +282,13 @@
         <span>KSI ABLER</span>
     </a>
 
+    <div class="section-title">📚 Referee Resources</div>
+
+    <a class="card" href="https://www.theifab.com/laws/latest/" target="_blank" rel="noopener noreferrer">
+        <img src="https://www.google.com/s2/favicons?domain=theifab.com&sz=64">
+        <span>Laws of the Game</span>
+    </a>
+
     <div class="section-title">🏃 Referee Fitness</div>
 
     <a class="card" href="https://connect.garmin.com/app/home" target="_blank" rel="noopener noreferrer">
@@ -293,13 +337,19 @@
 <script>
     function updateClock() {
         const now = new Date();
-        document.getElementById("clock").innerHTML = now.toLocaleTimeString();
+
+        document.getElementById("clock").innerHTML =
+            now.toLocaleTimeString("en-GB");
+
+        document.getElementById("date").innerHTML =
+            now.toLocaleDateString("en-GB", {
+                weekday: "long",
+                year: "numeric",
+                month: "long",
+                day: "numeric"
+            });
     }
 
     updateClock();
     setInterval(updateClock, 1000);
 </script>
-```
-
-</body>
-</html>
