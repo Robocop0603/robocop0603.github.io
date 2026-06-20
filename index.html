@@ -44,6 +44,14 @@
         margin-bottom: 22px;
     }
 
+    #countdown {
+    font-size: 22px;
+    font-weight: bold;
+    color: #8cffb7;
+    margin-bottom: 22px;
+    text-shadow: 0 0 12px rgba(140,255,183,0.4);
+}
+
     .appointments {
         max-width: 850px;
         margin: 0 auto;
@@ -228,6 +236,7 @@
 <div class="top-panel">
     <div id="clock"></div>
     <div id="date"></div>
+    <div id="countdown"></div>
 
     <div class="appointments">
         <div class="appointments-title">📅 Næstu leikir </div>
@@ -307,10 +316,10 @@
         <span>UEFA Nextaur</span>
     </a>
 
-    <a class="card" href="https://comet.ksi.is/resources/jsf/common/home.xhtml" target="_blank" rel="noopener noreferrer">
-        <img src="https://www.google.com/s2/favicons?domain=ksi.is&sz=64">
-        <span>KSÍ Comet</span>
-    </a>
+  <a class="card" href="https://comet.ksi.is/resources/jsf/common/home.xhtml" target="_blank" rel="noopener noreferrer">
+    <img src="images/comet-logo.png">
+    <span>KSÍ Comet</span>
+</a>
 
     <a class="card" href="https://www.framundanibeinni.is/" target="_blank" rel="noopener noreferrer">
         <img src="https://www.google.com/s2/favicons?domain=framundanibeinni.is&sz=64">
@@ -330,9 +339,9 @@
     <div class="section-title">📚 Referee Resources</div>
 
     <a class="card" href="https://www.theifab.com/laws/latest/" target="_blank" rel="noopener noreferrer">
-        <img src="https://www.google.com/s2/favicons?domain=theifab.com&sz=64">
-        <span>Laws of the Game</span>
-    </a>
+    <img src="images/ifab-logo.png">
+    <span>Laws of the Game</span>
+</a>
 
     <div class="section-title">🏃 Referee Fitness</div>
 
@@ -386,20 +395,51 @@
 
 <script>
     function updateClock() {
-        const now = new Date();
 
-        document.getElementById("clock").innerHTML =
-            now.toLocaleTimeString("en-GB");
+    const now = new Date();
 
-        document.getElementById("date").innerHTML =
-            now.toLocaleDateString("en-GB", {
-                weekday: "long",
-                year: "numeric",
-                month: "long",
-                day: "numeric"
-            });
+    document.getElementById("clock").innerHTML =
+        now.toLocaleTimeString("en-GB");
+
+    document.getElementById("date").innerHTML =
+        now.toLocaleDateString("en-GB", {
+            weekday: "long",
+            year: "numeric",
+            month: "long",
+            day: "numeric"
+        });
+
+    const nextMatch = new Date("2026-06-21T18:00:00");
+
+    const diff = nextMatch - now;
+
+    if (diff > 0) {
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+            (diff % (1000 * 60 * 60 * 24))
+            / (1000 * 60 * 60)
+        );
+
+        const minutes = Math.floor(
+            (diff % (1000 * 60 * 60))
+            / (1000 * 60)
+        );
+
+        document.getElementById("countdown").innerHTML =
+            "⏳ Next Match in " +
+            days + "d " +
+            hours + "h " +
+            minutes + "m";
+
+    } else {
+
+        document.getElementById("countdown").innerHTML =
+            "⚽ Match Day";
+
     }
+}
 
-    updateClock();
-    setInterval(updateClock, 1000);
+updateClock();
+setInterval(updateClock, 1000);
 </script>
