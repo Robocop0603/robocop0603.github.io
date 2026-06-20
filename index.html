@@ -256,6 +256,12 @@
         object-fit: contain;
     }
 
+    .tv-card img {
+        width: 85px;
+        height: 52px;
+        object-fit: contain;
+    }
+
     .card span {
         font-size: 18px;
     }
@@ -313,14 +319,14 @@
     </a>
 
     <a class="card" href="https://app.refpal.org/games/" target="_blank" rel="noopener noreferrer">
-    <img src="images/refpal-logo.jpg">
-    <span>RefPal</span>
-</a>
+        <img src="images/refpal-logo.jpg">
+        <span>RefPal</span>
+    </a>
 
-   <a class="card" href="https://app.spiideo.net/accounts/3609bb32-fd3a-4faf-aa42-bd286380f88d/recordings?game-query=&rrscroll=disabled" target="_blank" rel="noopener noreferrer">
-    <img src="images/spiideo-logo.png">
-    <span>Spiideo</span>
-</a>
+    <a class="card" href="https://app.spiideo.net/accounts/3609bb32-fd3a-4faf-aa42-bd286380f88d/recordings?game-query=&rrscroll=disabled" target="_blank" rel="noopener noreferrer">
+        <img src="images/spiideo-logo.png">
+        <span>Spiideo</span>
+    </a>
 
     <a class="card" href="https://nextaur.com/uefa/login" target="_blank" rel="noopener noreferrer">
         <img src="https://www.google.com/s2/favicons?domain=nextaur.com&sz=64">
@@ -345,6 +351,33 @@
     <a class="card" href="https://abler.io/ksi" target="_blank" rel="noopener noreferrer">
         <img src="https://www.google.com/s2/favicons?domain=abler.io&sz=64">
         <span>KSI ABLER</span>
+    </a>
+
+    <div class="section-title">📺 TV</div>
+
+    <a class="card tv-card" href="https://sjonvarp.syn.is/profiles" target="_blank" rel="noopener noreferrer">
+        <img src="images/syn-logo.png">
+        <span>SÝN</span>
+    </a>
+
+    <a class="card tv-card" href="https://sjonvarp.siminn.is/auth/login" target="_blank" rel="noopener noreferrer">
+        <img src="images/siminn-logo.png">
+        <span>Síminn TV</span>
+    </a>
+
+    <a class="card tv-card" href="https://www.netflix.com/is/" target="_blank" rel="noopener noreferrer">
+        <img src="images/netflix-logo.jpg">
+        <span>Netflix</span>
+    </a>
+
+    <a class="card tv-card" href="https://viaplay.is/is-is/" target="_blank" rel="noopener noreferrer">
+        <img src="images/viaplay-logo.jpg">
+        <span>Viaplay</span>
+    </a>
+
+    <a class="card tv-card" href="https://watch.livey.events/" target="_blank" rel="noopener noreferrer">
+        <img src="images/livey-logo.jpg">
+        <span>Livey</span>
     </a>
 
     <div class="section-title">📚 Referee Resources</div>
@@ -405,16 +438,6 @@
 </div>
 
 <script>
-    /*
-        Every Wednesday when you get new appointments,
-        only update this matches list.
-
-        The dashboard will automatically:
-        1. Put the first future match in the countdown card.
-        2. Show the later future matches under Upcoming Appointments.
-        3. Remove completed matches automatically.
-    */
-
     const matches = [
         {
             date: "2026-06-21T18:00:00",
