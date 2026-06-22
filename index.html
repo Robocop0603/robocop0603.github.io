@@ -89,15 +89,11 @@
         color: #dddddd;
     }
 
-    #countdown-role {
-        margin-bottom: 6px;
-    }
-
     #countdown-matchdate {
-    font-size: 13px;
-    color: #cfcfcf;
-    margin-bottom: 8px;
-}
+        font-size: 13px;
+        color: #cfcfcf;
+        margin-bottom: 8px;
+    }
 
     #countdown-time {
         font-size: 18px;
@@ -392,8 +388,9 @@
 
         <div id="countdown-competition"></div>
         <div id="countdown-role"></div>
-<div id="countdown-matchdate"></div>
-<div id="countdown-time"></div>
+        <div id="countdown-matchdate"></div>
+        <div id="countdown-time"></div>
+    </div>
 
     <div class="appointments">
         <div class="appointments-title">📅 Upcoming Appointments</div>
@@ -644,8 +641,8 @@
             document.getElementById("countdown-competition").innerHTML =
                 "Time to update your KSÍ appointments";
 
-            document.getElementById("countdown-role").innerHTML =
-                "";
+            document.getElementById("countdown-role").innerHTML = "";
+            document.getElementById("countdown-matchdate").innerHTML = "";
 
             document.getElementById("countdown-time").innerHTML =
                 "✅ All listed matches completed";
@@ -692,12 +689,13 @@
             "🏆 " + nextMatch.competition;
 
         document.getElementById("countdown-role").innerHTML =
-    "👨‍⚖️ " + nextMatch.role;
+            "👨‍⚖️ " + nextMatch.role;
 
-document.getElementById("countdown-matchdate").innerHTML =
-    "📅 " + nextMatch.displayDate;
+        document.getElementById("countdown-matchdate").innerHTML =
+            "📅 " + nextMatch.displayDate;
 
-document.getElementById("countdown-time").innerHTML =
+        document.getElementById("countdown-time").innerHTML =
+            "⏳ " + days + "d " + hours + "h " + minutes + "m";
 
         if (laterMatches.length === 0) {
             upcomingList.innerHTML =
