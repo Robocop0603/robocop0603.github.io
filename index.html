@@ -27,6 +27,24 @@
         background-attachment: fixed;
     }
 
+    body {
+    position: relative;
+    background: #000;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.88)),
+        url("images/robocop-referee.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
     h1 {
         font-size: 46px;
         margin-bottom: 8px;
@@ -368,10 +386,8 @@
     @media (max-width: 700px) {
 
     body {
-        padding: 22px 12px;
-        background-attachment: scroll;
-        background-position: center top;
-    }
+    padding: 22px 12px;
+}
 
     h1 {
         font-size: 34px;
