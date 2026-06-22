@@ -255,7 +255,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 16px;
+        gap: 14px;
         max-width: 1150px;
         margin: auto;
     }
@@ -264,60 +264,62 @@
         width: 100%;
         font-size: 25px;
         font-weight: bold;
-        margin: 36px 0 8px 0;
+        margin: 34px 0 8px 0;
         text-shadow: 0 4px 15px rgba(0,0,0,0.9);
     }
 
     .card {
-        width: 155px;
-        padding: 16px;
-        background: rgba(38,38,38,0.78);
-        border: 1px solid rgba(255,255,255,0.12);
-        border-radius: 17px;
+        width: 140px;
+        padding: 14px;
+        border: 1px solid rgba(255,255,255,0.16);
+        border-radius: 16px;
         text-decoration: none;
         color: white;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 9px;
+        gap: 8px;
         backdrop-filter: blur(10px);
         transition: all 0.22s ease;
-        box-shadow: 0 8px 22px rgba(0,0,0,0.35);
+        background: linear-gradient(135deg, var(--c1), var(--c2));
+        box-shadow: 0 8px 22px var(--glow);
     }
 
     .card:hover {
-        background: rgba(65,65,65,0.92);
-        transform: translateY(-5px);
-        box-shadow: 0 15px 35px rgba(0,0,0,0.55);
+        background: linear-gradient(135deg, var(--c1), var(--c2));
+        transform: translateY(-5px) scale(1.03);
+        box-shadow: 0 14px 34px var(--glow);
     }
 
     .card img {
-        width: 42px;
+        width: 38px;
+        height: 38px;
+        object-fit: contain;
+        filter: drop-shadow(0 3px 8px rgba(0,0,0,0.45));
+    }
+
+    .tv-card img {
+        width: 70px;
         height: 42px;
         object-fit: contain;
     }
 
-    .tv-card img {
-        width: 75px;
-        height: 46px;
-        object-fit: contain;
-    }
-
     .card span {
-        font-size: 16px;
+        font-size: 15px;
+        font-weight: bold;
     }
 
     .media-card {
-        width: 230px;
-        min-height: 82px;
+        width: 215px;
+        min-height: 74px;
         flex-direction: row;
         justify-content: center;
-        gap: 14px;
+        gap: 12px;
     }
 
     .media-card img {
-        width: 48px;
-        height: 48px;
+        width: 44px;
+        height: 44px;
     }
 
     .media-text {
@@ -325,39 +327,104 @@
     }
 
     .media-title {
-        font-size: 21px;
+        font-size: 20px;
         font-weight: bold;
         line-height: 1.1;
     }
 
     .media-subtitle {
-        font-size: 13px;
+        font-size: 12px;
         opacity: 0.9;
     }
 
     .visir-card {
-        background: linear-gradient(135deg,#1f5fbf,#3d7fff);
-        box-shadow: 0 0 25px rgba(61,127,255,.4);
+        --c1: #1f5fbf;
+        --c2: #3d7fff;
+        --glow: rgba(61,127,255,.4);
     }
 
     .mbl-card {
-        background: linear-gradient(135deg,#001e7a,#0044cc);
-        box-shadow: 0 0 25px rgba(0,68,204,.4);
+        --c1: #001e7a;
+        --c2: #0044cc;
+        --glow: rgba(0,68,204,.4);
     }
 
     .framundan-card {
-        background: linear-gradient(135deg,#c89a00,#ffcf33);
-        box-shadow: 0 0 25px rgba(255,207,51,.35);
+        --c1: #c89a00;
+        --c2: #ffcf33;
+        --glow: rgba(255,207,51,.35);
     }
 
     .fotbolti-card {
-        background: linear-gradient(135deg,#2b2b2b,#4d4d4d);
-        box-shadow: 0 0 25px rgba(255,255,255,.15);
+        --c1: #2b2b2b;
+        --c2: #4d4d4d;
+        --glow: rgba(255,255,255,.15);
     }
 
     .abler-card {
-        background: linear-gradient(135deg,#202020,#444444);
-        box-shadow: 0 0 25px rgba(255,255,255,.15);
+        --c1: #202020;
+        --c2: #444444;
+        --glow: rgba(255,255,255,.15);
+    }
+
+    .dark-card {
+        --c1: rgba(45,45,45,0.95);
+        --c2: rgba(20,20,20,0.90);
+        --glow: rgba(255,255,255,.12);
+    }
+
+    .green-card {
+        --c1: #006b3f;
+        --c2: #003d25;
+        --glow: rgba(0,190,110,.30);
+    }
+
+    .blue-card {
+        --c1: #0057b8;
+        --c2: #00356f;
+        --glow: rgba(0,95,200,.32);
+    }
+
+    .lightblue-card {
+        --c1: #00a4ff;
+        --c2: #0059b8;
+        --glow: rgba(0,164,255,.35);
+    }
+
+    .red-card {
+        --c1: #e10000;
+        --c2: #8c0000;
+        --glow: rgba(225,0,0,.34);
+    }
+
+    .orange-card {
+        --c1: #d98200;
+        --c2: #8a4f00;
+        --glow: rgba(255,165,0,.28);
+    }
+
+    .purple-card {
+        --c1: #6b3df5;
+        --c2: #32166f;
+        --glow: rgba(120,80,255,.30);
+    }
+
+    .teal-card {
+        --c1: #00a389;
+        --c2: #006052;
+        --glow: rgba(0,180,150,.30);
+    }
+
+    .golf-card {
+        --c1: #2f7d32;
+        --c2: #17451b;
+        --glow: rgba(80,190,90,.30);
+    }
+
+    .chatgpt-card {
+        --c1: #10a37f;
+        --c2: #08614d;
+        --glow: rgba(16,163,127,.35);
     }
 
     @media (max-width: 700px) {
@@ -499,37 +566,37 @@
     <!-- ===== DÓMGÆSLA ===== -->
     <div class="section-title">⚽ Dómgæsla</div>
 
-    <a class="card" href="https://toppfotbolti.momentslab.com/auth/signin" target="_blank" rel="noopener noreferrer">
+    <a class="card dark-card" href="https://toppfotbolti.momentslab.com/auth/signin" target="_blank" rel="noopener noreferrer">
         <img src="https://www.google.com/s2/favicons?domain=momentslab.com&sz=64">
         <span>Toppfótbolti</span>
     </a>
 
-    <a class="card" href="https://app.refpal.org/games/" target="_blank" rel="noopener noreferrer">
+    <a class="card blue-card" href="https://app.refpal.org/games/" target="_blank" rel="noopener noreferrer">
         <img src="images/refpal-logo.jpg">
         <span>RefPal</span>
     </a>
 
-    <a class="card" href="https://app.spiideo.net/accounts/3609bb32-fd3a-4faf-aa42-bd286380f88d/recordings?game-query=&rrscroll=disabled" target="_blank" rel="noopener noreferrer">
+    <a class="card orange-card" href="https://app.spiideo.net/accounts/3609bb32-fd3a-4faf-aa42-bd286380f88d/recordings?game-query=&rrscroll=disabled" target="_blank" rel="noopener noreferrer">
         <img src="images/spiideo-logo.png">
         <span>Spiideo</span>
     </a>
 
-    <a class="card" href="https://nextaur.com/uefa/login" target="_blank" rel="noopener noreferrer">
+    <a class="card purple-card" href="https://nextaur.com/uefa/login" target="_blank" rel="noopener noreferrer">
         <img src="https://www.google.com/s2/favicons?domain=nextaur.com&sz=64">
         <span>UEFA Nextaur</span>
     </a>
 
-    <a class="card" href="https://comet.ksi.is/resources/jsf/common/home.xhtml" target="_blank" rel="noopener noreferrer">
+    <a class="card green-card" href="https://comet.ksi.is/resources/jsf/common/home.xhtml" target="_blank" rel="noopener noreferrer">
         <img src="images/comet-logo.png">
         <span>KSÍ Comet</span>
     </a>
 
-    <a class="card" href="https://www.theifab.com/laws/latest/" target="_blank" rel="noopener noreferrer">
+    <a class="card teal-card" href="https://www.theifab.com/laws/latest/" target="_blank" rel="noopener noreferrer">
         <img src="images/ifab-logo.png">
         <span>Laws of the Game</span>
     </a>
 
-    <a class="card" href="https://www.ksi.is/felagslid/domaramal/?id=6987982&banner-tab=matches-and-results" target="_blank" rel="noopener noreferrer">
+    <a class="card blue-card" href="https://www.ksi.is/felagslid/domaramal/?id=6987982&banner-tab=matches-and-results" target="_blank" rel="noopener noreferrer">
         <img src="images/ksi-logo.png">
         <span>Dómaramál-KSÍ</span>
     </a>
@@ -537,27 +604,27 @@
     <!-- ===== TV ===== -->
     <div class="section-title">📺 TV</div>
 
-    <a class="card tv-card" href="https://sjonvarp.syn.is/profiles" target="_blank" rel="noopener noreferrer">
+    <a class="card tv-card blue-card" href="https://sjonvarp.syn.is/profiles" target="_blank" rel="noopener noreferrer">
         <img src="images/syn-logo.png">
         <span>SÝN</span>
     </a>
 
-    <a class="card tv-card" href="https://sjonvarp.siminn.is/auth/login" target="_blank" rel="noopener noreferrer">
+    <a class="card tv-card red-card" href="https://sjonvarp.siminn.is/auth/login" target="_blank" rel="noopener noreferrer">
         <img src="images/siminn-logo.png">
         <span>Síminn TV</span>
     </a>
 
-    <a class="card tv-card" href="https://www.netflix.com/is/" target="_blank" rel="noopener noreferrer">
+    <a class="card tv-card red-card" href="https://www.netflix.com/is/" target="_blank" rel="noopener noreferrer">
         <img src="images/netflix-logo.jpg">
         <span>Netflix</span>
     </a>
 
-    <a class="card tv-card" href="https://viaplay.is/is-is/" target="_blank" rel="noopener noreferrer">
+    <a class="card tv-card purple-card" href="https://viaplay.is/is-is/" target="_blank" rel="noopener noreferrer">
         <img src="images/viaplay-logo.jpg">
         <span>Viaplay</span>
     </a>
 
-    <a class="card tv-card" href="https://watch.livey.events/" target="_blank" rel="noopener noreferrer">
+    <a class="card tv-card lightblue-card" href="https://watch.livey.events/" target="_blank" rel="noopener noreferrer">
         <img src="images/livey-logo.jpg">
         <span>Livey</span>
     </a>
@@ -565,12 +632,12 @@
     <!-- ===== REFEREE FITNESS ===== -->
     <div class="section-title">🏃 Referee Fitness</div>
 
-    <a class="card" href="https://connect.garmin.com/app/home" target="_blank" rel="noopener noreferrer">
+    <a class="card blue-card" href="https://connect.garmin.com/app/home" target="_blank" rel="noopener noreferrer">
         <img src="https://www.google.com/s2/favicons?domain=garmin.com&sz=64">
         <span>Garmin Connect</span>
     </a>
 
-    <a class="card" href="https://flow.polar.com/diary" target="_blank" rel="noopener noreferrer">
+    <a class="card red-card" href="https://flow.polar.com/diary" target="_blank" rel="noopener noreferrer">
         <img src="https://www.google.com/s2/favicons?domain=polar.com&sz=64">
         <span>Polar Flow</span>
     </a>
@@ -578,22 +645,22 @@
     <!-- ===== GOLF ===== -->
     <div class="section-title">⛳ Golf</div>
 
-    <a class="card" href="https://orninngolf.is" target="_blank" rel="noopener noreferrer">
+    <a class="card golf-card" href="https://orninngolf.is" target="_blank" rel="noopener noreferrer">
         <img src="https://www.google.com/s2/favicons?domain=orninngolf.is&sz=64">
         <span>ÖrninnGolf</span>
     </a>
 
-    <a class="card" href="https://golfskalinn.is" target="_blank" rel="noopener noreferrer">
+    <a class="card golf-card" href="https://golfskalinn.is" target="_blank" rel="noopener noreferrer">
         <img src="https://www.google.com/s2/favicons?domain=golfskalinn.is&sz=64">
         <span>Golfskálinn</span>
     </a>
 
-    <a class="card" href="https://golf.is" target="_blank" rel="noopener noreferrer">
+    <a class="card golf-card" href="https://golf.is" target="_blank" rel="noopener noreferrer">
         <img src="images/gsi-logo.png">
         <span>Golf.is</span>
     </a>
 
-    <a class="card" href="https://www.golfbox.dk/site/my_golfbox/ressources/booking/grid.asp?Ressource_GUID=%7BE4FACDD4-A584-44D7-B155-8670F6EA9068%7D&Club_GUID=%7BA112EA7C-4DCC-4083-887F-3DAED23C1BEB%7D" target="_blank" rel="noopener noreferrer">
+    <a class="card golf-card" href="https://www.golfbox.dk/site/my_golfbox/ressources/booking/grid.asp?Ressource_GUID=%7BE4FACDD4-A584-44D7-B155-8670F6EA9068%7D&Club_GUID=%7BA112EA7C-4DCC-4083-887F-3DAED23C1BEB%7D" target="_blank" rel="noopener noreferrer">
         <img src="images/golfbox-logo.png">
         <span>Golfbox</span>
     </a>
@@ -601,7 +668,7 @@
     <!-- ===== TOOLS ===== -->
     <div class="section-title">💻 Tools</div>
 
-    <a class="card" href="https://chatgpt.com" target="_blank" rel="noopener noreferrer">
+    <a class="card chatgpt-card" href="https://chatgpt.com" target="_blank" rel="noopener noreferrer">
         <img src="https://www.google.com/s2/favicons?domain=chatgpt.com&sz=64">
         <span>ChatGPT</span>
     </a>
