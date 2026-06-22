@@ -251,6 +251,11 @@
         box-shadow: 0 12px 35px rgba(0,178,255,0.35);
     }
 
+    .news-card {
+    background: linear-gradient(135deg, rgba(45,45,45,0.95), rgba(20,20,20,0.90));
+    border: 1px solid rgba(255,255,255,0.14);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+}
     .container {
         display: flex;
         flex-wrap: wrap;
@@ -396,16 +401,24 @@
 
 <div class="container">
 
-    <div class="section-title">📰 Netmiðlar</div>
+<div class="section-title">📰 Netmiðlar</div>
 
-    <a class="card" href="https://visir.is" target="_blank" rel="noopener noreferrer">
-        <img src="https://www.google.com/s2/favicons?domain=visir.is&sz=64">
-        <span>Vísir</span>
+<div class="featured-row">
+
+    <a class="featured-card news-card" href="https://visir.is" target="_blank" rel="noopener noreferrer">
+        <img src="https://www.google.com/s2/favicons?domain=visir.is&sz=128">
+        <div>
+            <div class="featured-title">Vísir</div>
+            <div class="featured-subtitle">News</div>
+        </div>
     </a>
 
-    <a class="card" href="https://mbl.is" target="_blank" rel="noopener noreferrer">
-        <img src="https://www.google.com/s2/favicons?domain=mbl.is&sz=64">
-        <span>mbl</span>
+    <a class="featured-card news-card" href="https://mbl.is" target="_blank" rel="noopener noreferrer">
+        <img src="https://www.google.com/s2/favicons?domain=mbl.is&sz=128">
+        <div>
+            <div class="featured-title">mbl</div>
+            <div class="featured-subtitle">News</div>
+        </div>
     </a>
 
     <a class="card" href="https://www.framundanibeinni.is/" target="_blank" rel="noopener noreferrer">
