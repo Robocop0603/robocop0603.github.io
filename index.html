@@ -93,6 +93,12 @@
         margin-bottom: 6px;
     }
 
+    #countdown-matchdate {
+    font-size: 13px;
+    color: #cfcfcf;
+    margin-bottom: 8px;
+}
+
     #countdown-time {
         font-size: 18px;
         font-weight: bold;
@@ -386,8 +392,8 @@
 
         <div id="countdown-competition"></div>
         <div id="countdown-role"></div>
-        <div id="countdown-time"></div>
-    </div>
+<div id="countdown-matchdate"></div>
+<div id="countdown-time"></div>
 
     <div class="appointments">
         <div class="appointments-title">📅 Upcoming Appointments</div>
@@ -686,10 +692,12 @@
             "🏆 " + nextMatch.competition;
 
         document.getElementById("countdown-role").innerHTML =
-            "👨‍⚖️ " + nextMatch.role;
+    "👨‍⚖️ " + nextMatch.role;
 
-        document.getElementById("countdown-time").innerHTML =
-            "⏳ " + days + "d " + hours + "h " + minutes + "m";
+document.getElementById("countdown-matchdate").innerHTML =
+    "📅 " + nextMatch.displayDate;
+
+document.getElementById("countdown-time").innerHTML =
 
         if (laterMatches.length === 0) {
             upcomingList.innerHTML =
