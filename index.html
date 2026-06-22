@@ -199,17 +199,17 @@
         justify-content: center;
         flex-wrap: wrap;
         gap: 18px;
-        margin: 0 auto 40px auto;
+        margin: 0 auto 38px auto;
     }
 
     .featured-card {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 15px;
-        width: 260px;
+        gap: 14px;
+        width: 250px;
         max-width: 90%;
-        padding: 16px 22px;
+        padding: 15px 20px;
         border-radius: 22px;
         text-decoration: none;
         color: white;
@@ -221,13 +221,13 @@
     }
 
     .featured-card img {
-        width: 54px;
-        height: 54px;
+        width: 52px;
+        height: 52px;
         object-fit: contain;
     }
 
     .featured-title {
-        font-size: 24px;
+        font-size: 23px;
         font-weight: bold;
     }
 
@@ -251,16 +251,11 @@
         box-shadow: 0 12px 35px rgba(0,178,255,0.35);
     }
 
-    .news-card {
-    background: linear-gradient(135deg, rgba(45,45,45,0.95), rgba(20,20,20,0.90));
-    border: 1px solid rgba(255,255,255,0.14);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.35);
-}
     .container {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 20px;
+        gap: 16px;
         max-width: 1150px;
         margin: auto;
     }
@@ -269,22 +264,22 @@
         width: 100%;
         font-size: 25px;
         font-weight: bold;
-        margin: 38px 0 10px 0;
+        margin: 36px 0 8px 0;
         text-shadow: 0 4px 15px rgba(0,0,0,0.9);
     }
 
     .card {
-        width: 180px;
-        padding: 20px;
+        width: 155px;
+        padding: 16px;
         background: rgba(38,38,38,0.78);
         border: 1px solid rgba(255,255,255,0.12);
-        border-radius: 18px;
+        border-radius: 17px;
         text-decoration: none;
         color: white;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+        gap: 9px;
         backdrop-filter: blur(10px);
         transition: all 0.22s ease;
         box-shadow: 0 8px 22px rgba(0,0,0,0.35);
@@ -292,24 +287,77 @@
 
     .card:hover {
         background: rgba(65,65,65,0.92);
-        transform: translateY(-6px);
+        transform: translateY(-5px);
         box-shadow: 0 15px 35px rgba(0,0,0,0.55);
     }
 
     .card img {
-        width: 48px;
-        height: 48px;
+        width: 42px;
+        height: 42px;
         object-fit: contain;
     }
 
     .tv-card img {
-        width: 85px;
-        height: 52px;
+        width: 75px;
+        height: 46px;
         object-fit: contain;
     }
 
     .card span {
-        font-size: 18px;
+        font-size: 16px;
+    }
+
+    .media-card {
+        width: 230px;
+        min-height: 82px;
+        flex-direction: row;
+        justify-content: center;
+        gap: 14px;
+    }
+
+    .media-card img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .media-text {
+        text-align: left;
+    }
+
+    .media-title {
+        font-size: 21px;
+        font-weight: bold;
+        line-height: 1.1;
+    }
+
+    .media-subtitle {
+        font-size: 13px;
+        opacity: 0.9;
+    }
+
+    .visir-card {
+        background: linear-gradient(135deg,#1f5fbf,#3d7fff);
+        box-shadow: 0 0 25px rgba(61,127,255,.4);
+    }
+
+    .mbl-card {
+        background: linear-gradient(135deg,#001e7a,#0044cc);
+        box-shadow: 0 0 25px rgba(0,68,204,.4);
+    }
+
+    .framundan-card {
+        background: linear-gradient(135deg,#c89a00,#ffcf33);
+        box-shadow: 0 0 25px rgba(255,207,51,.35);
+    }
+
+    .fotbolti-card {
+        background: linear-gradient(135deg,#2b2b2b,#4d4d4d);
+        box-shadow: 0 0 25px rgba(255,255,255,.15);
+    }
+
+    .abler-card {
+        background: linear-gradient(135deg,#202020,#444444);
+        box-shadow: 0 0 25px rgba(255,255,255,.15);
     }
 
     @media (max-width: 700px) {
@@ -328,6 +376,10 @@
         #countdown-teams {
             font-size: 16px;
             white-space: normal;
+        }
+
+        .media-card {
+            width: 85%;
         }
     }
 </style>
@@ -401,41 +453,50 @@
 
 <div class="container">
 
-<div class="section-title">📰 Netmiðlar</div>
+    <!-- ===== NETMIÐLAR ===== -->
+    <div class="section-title">📰 Netmiðlar</div>
 
-<div class="featured-row">
-
-    <a class="featured-card news-card" href="https://visir.is" target="_blank" rel="noopener noreferrer">
+    <a class="card media-card visir-card" href="https://visir.is" target="_blank" rel="noopener noreferrer">
         <img src="https://www.google.com/s2/favicons?domain=visir.is&sz=128">
-        <div>
-            <div class="featured-title">Vísir</div>
-            <div class="featured-subtitle">News</div>
+        <div class="media-text">
+            <div class="media-title">Vísir</div>
+            <div class="media-subtitle">News</div>
         </div>
     </a>
 
-    <a class="featured-card news-card" href="https://mbl.is" target="_blank" rel="noopener noreferrer">
+    <a class="card media-card mbl-card" href="https://mbl.is" target="_blank" rel="noopener noreferrer">
         <img src="https://www.google.com/s2/favicons?domain=mbl.is&sz=128">
-        <div>
-            <div class="featured-title">mbl</div>
-            <div class="featured-subtitle">News</div>
+        <div class="media-text">
+            <div class="media-title">mbl</div>
+            <div class="media-subtitle">News</div>
         </div>
     </a>
 
-    <a class="card" href="https://www.framundanibeinni.is/" target="_blank" rel="noopener noreferrer">
-        <img src="https://www.google.com/s2/favicons?domain=framundanibeinni.is&sz=64">
-        <span>Framundan</span>
+    <a class="card media-card framundan-card" href="https://www.framundanibeinni.is/" target="_blank" rel="noopener noreferrer">
+        <img src="https://www.google.com/s2/favicons?domain=framundanibeinni.is&sz=128">
+        <div class="media-text">
+            <div class="media-title">Framundan</div>
+            <div class="media-subtitle">Live scores</div>
+        </div>
     </a>
 
-    <a class="card" href="https://fotbolti.net" target="_blank" rel="noopener noreferrer">
-        <img src="https://www.google.com/s2/favicons?domain=fotbolti.net&sz=64">
-        <span>Fotbolti.net</span>
+    <a class="card media-card fotbolti-card" href="https://fotbolti.net" target="_blank" rel="noopener noreferrer">
+        <img src="https://www.google.com/s2/favicons?domain=fotbolti.net&sz=128">
+        <div class="media-text">
+            <div class="media-title">Fotbolti.net</div>
+            <div class="media-subtitle">Football news</div>
+        </div>
     </a>
 
-    <a class="card" href="https://www.abler.io/ksi/?category=Adults" target="_blank" rel="noopener noreferrer">
-        <img src="https://www.google.com/s2/favicons?domain=abler.io&sz=64">
-        <span>KSI ABLER</span>
+    <a class="card media-card abler-card" href="https://abler.io/ksi" target="_blank" rel="noopener noreferrer">
+        <img src="https://www.google.com/s2/favicons?domain=abler.io&sz=128">
+        <div class="media-text">
+            <div class="media-title">KSI ABLER</div>
+            <div class="media-subtitle">Appointments</div>
+        </div>
     </a>
 
+    <!-- ===== DÓMGÆSLA ===== -->
     <div class="section-title">⚽ Dómgæsla</div>
 
     <a class="card" href="https://toppfotbolti.momentslab.com/auth/signin" target="_blank" rel="noopener noreferrer">
@@ -473,6 +534,7 @@
         <span>Dómaramál-KSÍ</span>
     </a>
 
+    <!-- ===== TV ===== -->
     <div class="section-title">📺 TV</div>
 
     <a class="card tv-card" href="https://sjonvarp.syn.is/profiles" target="_blank" rel="noopener noreferrer">
@@ -500,6 +562,7 @@
         <span>Livey</span>
     </a>
 
+    <!-- ===== REFEREE FITNESS ===== -->
     <div class="section-title">🏃 Referee Fitness</div>
 
     <a class="card" href="https://connect.garmin.com/app/home" target="_blank" rel="noopener noreferrer">
@@ -512,6 +575,7 @@
         <span>Polar Flow</span>
     </a>
 
+    <!-- ===== GOLF ===== -->
     <div class="section-title">⛳ Golf</div>
 
     <a class="card" href="https://orninngolf.is" target="_blank" rel="noopener noreferrer">
@@ -529,11 +593,12 @@
         <span>Golf.is</span>
     </a>
 
-    <a class="card" href="https://golfbox.golf/#/" target="_blank" rel="noopener noreferrer">
+    <a class="card" href="https://www.golfbox.dk/site/my_golfbox/ressources/booking/grid.asp?Ressource_GUID=%7BE4FACDD4-A584-44D7-B155-8670F6EA9068%7D&Club_GUID=%7BA112EA7C-4DCC-4083-887F-3DAED23C1BEB%7D" target="_blank" rel="noopener noreferrer">
         <img src="images/golfbox-logo.png">
         <span>Golfbox</span>
     </a>
 
+    <!-- ===== TOOLS ===== -->
     <div class="section-title">💻 Tools</div>
 
     <a class="card" href="https://chatgpt.com" target="_blank" rel="noopener noreferrer">
@@ -544,6 +609,7 @@
 </div>
 
 <script>
+    // ===== UPDATE MATCHES HERE =====
     const matches = [
         {
             date: "2026-06-21T18:00:00",
