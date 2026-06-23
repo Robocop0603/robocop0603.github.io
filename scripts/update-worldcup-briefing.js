@@ -3,8 +3,8 @@ const fs = require("fs");
 const API_KEY = process.env.API_FOOTBALL_KEY;
 const API_BASE = "https://v3.football.api-sports.io";
 const TIME_ZONE = "Atlantic/Reykjavik";
-const LEAGUE_ID = 1;
-const SEASON = 2026;
+const LEAGUE_ID = 39;
+const SEASON = 2023;
 
 if (!API_KEY) {
   console.error("Missing API_FOOTBALL_KEY secret.");
@@ -173,7 +173,7 @@ async function main() {
 
   const briefing = {
     updated,
-    title: "World Cup Briefing",
+    title: "Premier League Test",
     apiFixtureCount: allFixtures.length,
     yesterday: yesterday.length ? yesterday : [
       {
