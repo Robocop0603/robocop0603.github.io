@@ -3,46 +3,6 @@ const fs = require("fs");
 const TIME_ZONE = "Atlantic/Reykjavik";
 const API_URL = "https://worldcup26.ir/get/games";
 
-function getReykjavikDate(offsetDays = 0) {
-  const now = new Date();
-
-  const parts = new Intl.DateTimeFormat("en-CA", {
-    timeZone: TIME_ZONE,
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit"
-  }).formatToParts(now);
-
-  const year = parts.find(p => p.type === "year").value;
-  const month = parts.find(p => p.type === "month").value;
-  const day = parts.find(p => p.type === "day").value;
-
-  const base = new Date(`${year}-${month}-${day}T12:00:00Z`);
-  base.setUTCDate(base.getUTCDate() + offsetDays);
-
-  return base.toISOString().slice(0, 10);
-}
-
-function getFixtureDateInReykjavik(dateString) {
-  if (!dateString) return "";
-
-  const d = new Date(dateString);
-  if (isNaN(d)) return "";
-
-  const parts = new Intl.DateTimeFormat("en-CA", {
-    timeZone: TIME_ZONE,
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit"
-  }).formatToParts(d);
-
-  const year = parts.find(p => p.type === "year").value;
-  const month = parts.find(p => p.type === "month").value;
-  const day = parts.find(p => p.type === "day").value;
-
-  return `${year}-${month}-${day}`;
-}
-
 function formatTimeInReykjavik(dateString) {
   if (!dateString) return "";
 
@@ -69,12 +29,14 @@ function getValue(obj, possibleKeys) {
 function getTeamName(value) {
   if (!value) return "";
   if (typeof value === "string") return value;
+
   return (
     value.name ||
     value.en ||
     value.title ||
     value.country ||
     value.team_name ||
+    value.short_name ||
     ""
   );
 }
@@ -82,11 +44,11 @@ function getTeamName(value) {
 function normalizeGame(raw) {
   const homeRaw =
     getValue(raw, ["home_team", "homeTeam", "home", "team1", "team_a", "teamA"]) ||
-    getValue(raw, ["home_team_en", "home_name"]);
+    getValue(raw, ["home_team_en", "home_name", "homeTeamName"]);
 
   const awayRaw =
     getValue(raw, ["away_team", "awayTeam", "away", "team2", "team_b", "teamB"]) ||
-    getValue(raw, ["away_team_en", "away_name"]);
+    getValue(raw, ["away_team_en", "away_name", "awayTeamName"]);
 
   const home = getTeamName(homeRaw) || "Home";
   const away = getTeamName(awayRaw) || "Away";
@@ -122,6 +84,8 @@ function normalizeGame(raw) {
     getValue(raw.officials || {}, ["referee"]) ||
     "Not published yet";
 
+  const dateObject = new Date(date);
+
   return {
     home,
     away,
@@ -130,7 +94,7 @@ function normalizeGame(raw) {
     date,
     status,
     referee,
-    dateObject: new Date(date)
+    dateObject
   };
 }
 
@@ -166,7 +130,8 @@ function makeGameItem(game, includeTime = false) {
   };
 
   if (includeTime) {
-    item.time = formatTimeInReykjavik(game.date);
+    const time = formatTimeInReykjavik(game.date);
+    item.time = time || "Time not published";
   }
 
   return item;
@@ -198,65 +163,45 @@ async function getAllWorldCupFixtures() {
     games = data.response;
   }
 
-  console.log("Games returned:", games.length);
+  console.log("Raw games returned:", games.length);
 
   if (games.length > 0) {
     console.log("First raw game sample:");
     console.log(JSON.stringify(games[0], null, 2));
   }
 
-  return games
-    .map(normalizeGame)
-    .filter(game => game.date && !isNaN(game.dateObject));
+  return games.map(normalizeGame);
 }
 
 async function main() {
-  const yesterdayDate = getReykjavikDate(-1);
-  const todayDate = getReykjavikDate(0);
-  const now = new Date();
-
   const allFixtures = await getAllWorldCupFixtures();
 
-  console.log(`Yesterday in Reykjavik: ${yesterdayDate}`);
-  console.log(`Today in Reykjavik: ${todayDate}`);
-  console.log(`World Cup fixtures found: ${allFixtures.length}`);
+  const validDateFixtures = allFixtures
+    .filter(game => game.date && !isNaN(game.dateObject))
+    .sort((a, b) => a.dateObject - b.dateObject);
 
-  const yesterdayFixtures = allFixtures.filter(game => {
-    return getFixtureDateInReykjavik(game.date) === yesterdayDate;
-  });
+  const noDateFixtures = allFixtures
+    .filter(game => !game.date || isNaN(game.dateObject));
 
-  const todayFixtures = allFixtures.filter(game => {
-    return getFixtureDateInReykjavik(game.date) === todayDate;
-  });
+  const now = new Date();
 
-  const nextFixtures = allFixtures
+  const upcoming = validDateFixtures
     .filter(game => game.dateObject >= now && !isFinished(game))
-    .sort((a, b) => a.dateObject - b.dateObject)
     .slice(0, 4);
 
-  const recentFinished = allFixtures
+  const fallbackUpcoming = validDateFixtures.slice(0, 4);
+
+  const displayToday =
+    upcoming.length > 0
+      ? upcoming
+      : fallbackUpcoming.length > 0
+        ? fallbackUpcoming
+        : noDateFixtures.slice(0, 4);
+
+  const recentFinished = validDateFixtures
     .filter(game => game.dateObject < now && isFinished(game))
     .sort((a, b) => b.dateObject - a.dateObject)
     .slice(0, 4);
-
-  const yesterday = yesterdayFixtures
-    .filter(game => isFinished(game))
-    .map(game => makeGameItem(game, false));
-
-  let today = todayFixtures.map(game => makeGameItem(game, true));
-
-  let todayLabel = "Today";
-
-  if (today.length === 0 && nextFixtures.length > 0) {
-    today = nextFixtures.map(game => makeGameItem(game, true));
-    todayLabel = "Next matches";
-  }
-
-  let yesterdayFinal = yesterday;
-
-  if (yesterdayFinal.length === 0 && recentFinished.length > 0) {
-    yesterdayFinal = recentFinished.map(game => makeGameItem(game, false));
-  }
 
   const updated = new Intl.DateTimeFormat("en-CA", {
     timeZone: TIME_ZONE,
@@ -268,39 +213,26 @@ async function main() {
     hour12: false
   }).format(new Date()).replace(",", "");
 
-  const refereeNames = [...yesterdayFinal, ...today]
-    .filter(game => game.referee && game.referee !== "Not published yet")
-    .map(game => `${game.match}: ${game.referee}`);
-
-  let note = "";
-
-  if (allFixtures.length === 0) {
-    note = "World Cup API returned 0 fixtures. The dashboard system works, but this source may not be available right now.";
-  } else if (refereeNames.length > 0) {
-    note = `Referee appointments found: ${refereeNames.join(" · ")}`;
-  } else {
-    note = `World Cup API returned ${allFixtures.length} fixtures. Showing ${todayLabel.toLowerCase()}. Referee names will show here if this source publishes them.`;
-  }
-
   const briefing = {
     updated,
     title: "World Cup Briefing",
     apiFixtureCount: allFixtures.length,
-    todayLabel,
-    yesterday: yesterdayFinal.length ? yesterdayFinal : [
+    validDateCount: validDateFixtures.length,
+    todayLabel: "Next matches",
+    yesterday: recentFinished.length ? recentFinished.map(game => makeGameItem(game, false)) : [
       {
         match: "No completed World Cup matches found yet",
         referee: "Not published yet"
       }
     ],
-    today: today.length ? today : [
+    today: displayToday.length ? displayToday.map(game => makeGameItem(game, true)) : [
       {
         match: "No upcoming World Cup matches found",
         time: "",
         referee: "Not published yet"
       }
     ],
-    note
+    note: `World Cup API returned ${allFixtures.length} fixtures. ${validDateFixtures.length} had readable dates. Showing next available matches. Referee names will show here if this source publishes them.`
   };
 
   fs.mkdirSync("data", { recursive: true });
@@ -311,6 +243,8 @@ async function main() {
   );
 
   console.log("World Cup briefing updated.");
+  console.log(`Raw fixtures: ${allFixtures.length}`);
+  console.log(`Readable date fixtures: ${validDateFixtures.length}`);
 }
 
 main().catch(error => {
