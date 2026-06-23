@@ -1,1 +1,36 @@
-
+{
+  "updated": "2026-06-23 04:30",
+  "title": "World Cup Briefing",
+  "yesterday": [
+    {
+      "match": "Argentina 2–0 Austria",
+      "referee": "Not published yet"
+    },
+    {
+      "match": "France 3–0 Iraq",
+      "referee": "Not published yet"
+    },
+    {
+      "match": "Norway 3–2 Senegal",
+      "referee": "Not published yet"
+    }
+  ],
+  "today": [
+    {
+      "match": "Portugal vs Uzbekistan",
+      "time": "17:00",
+      "referee": "Not published yet"
+    },
+    {
+      "match": "England vs Ghana",
+      "time": "20:00",
+      "referee": "Not published yet"
+    },
+    {
+      "match": "Panama vs Croatia",
+      "time": "23:00",
+      "referee": "Not published yet"
+    }
+  ],
+  "note": "Automatic version coming soon. Referee names will show here when available from the data source."
+}
