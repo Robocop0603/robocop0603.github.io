@@ -1,15 +1,7 @@
 const fs = require("fs");
 
-const API_KEY = process.env.API_FOOTBALL_KEY;
-const API_BASE = "https://v3.football.api-sports.io";
 const TIME_ZONE = "Atlantic/Reykjavik";
-const LEAGUE_ID = 1;
-const SEASON = 2026;
-
-if (!API_KEY) {
-  console.error("Missing API_FOOTBALL_KEY secret.");
-  process.exit(1);
-}
+const API_URL = "https://worldcup26.ir/get/games";
 
 function getReykjavikDate(offsetDays = 0) {
   const now = new Date();
@@ -59,61 +51,129 @@ function formatTimeInReykjavik(dateString) {
   }).format(new Date(dateString));
 }
 
-function isFinished(statusShort) {
-  return ["FT", "AET", "PEN"].includes(statusShort);
+function getValue(obj, possibleKeys) {
+  for (const key of possibleKeys) {
+    if (obj && obj[key] !== undefined && obj[key] !== null && obj[key] !== "") {
+      return obj[key];
+    }
+  }
+  return "";
 }
 
-function formatMatch(fixture) {
-  const home = fixture.teams?.home?.name || "Home";
-  const away = fixture.teams?.away?.name || "Away";
-  const homeGoals = fixture.goals?.home;
-  const awayGoals = fixture.goals?.away;
+function normalizeGame(raw) {
+  const home =
+    getValue(raw, ["home_team", "homeTeam", "home", "team1", "team_a", "teamA"]) ||
+    getValue(raw.home || {}, ["name", "en", "title"]) ||
+    getValue(raw.home_team || {}, ["name", "en", "title"]) ||
+    "Home";
 
-  if (typeof homeGoals === "number" && typeof awayGoals === "number") {
-    return `${home} ${homeGoals}–${awayGoals} ${away}`;
+  const away =
+    getValue(raw, ["away_team", "awayTeam", "away", "team2", "team_b", "teamB"]) ||
+    getValue(raw.away || {}, ["name", "en", "title"]) ||
+    getValue(raw.away_team || {}, ["name", "en", "title"]) ||
+    "Away";
+
+  const homeScore = getValue(raw, ["home_score", "homeScore", "score1", "home_goals", "goals_home"]);
+  const awayScore = getValue(raw, ["away_score", "awayScore", "score2", "away_goals", "goals_away"]);
+
+  const date =
+    getValue(raw, ["date", "match_date", "datetime", "kickoff", "time", "start_time"]) ||
+    getValue(raw.fixture || {}, ["date"]);
+
+  const status = String(
+    getValue(raw, ["status", "match_status", "state"]) ||
+    getValue(raw.fixture || {}, ["status"]) ||
+    ""
+  ).toLowerCase();
+
+  const referee =
+    getValue(raw, ["referee", "main_referee", "official"]) ||
+    getValue(raw.officials || {}, ["referee"]) ||
+    "Not published yet";
+
+  return {
+    home,
+    away,
+    homeScore,
+    awayScore,
+    date,
+    status,
+    referee
+  };
+}
+
+function isFinished(game) {
+  return (
+    game.status.includes("finished") ||
+    game.status.includes("complete") ||
+    game.status.includes("full") ||
+    game.status === "ft" ||
+    game.status === "aet" ||
+    game.status === "pen"
+  );
+}
+
+function formatMatch(game) {
+  const hasScore =
+    game.homeScore !== "" &&
+    game.awayScore !== "" &&
+    game.homeScore !== null &&
+    game.awayScore !== null;
+
+  if (hasScore) {
+    return `${game.home} ${game.homeScore}–${game.awayScore} ${game.away}`;
   }
 
-  return `${home} vs ${away}`;
+  return `${game.home} vs ${game.away}`;
+}
+
+function makeGameItem(game, includeTime = false) {
+  const item = {
+    match: formatMatch(game),
+    referee: game.referee || "Not published yet"
+  };
+
+  if (includeTime) {
+    item.time = formatTimeInReykjavik(game.date);
+  }
+
+  return item;
 }
 
 async function getAllWorldCupFixtures() {
-  const url = `${API_BASE}/fixtures?league=${LEAGUE_ID}&season=${SEASON}`;
+  console.log("Requesting World Cup games:");
+  console.log(API_URL);
 
-  console.log("Requesting all World Cup fixtures:");
-  console.log(url);
-
-  const response = await fetch(url, {
-    headers: {
-      "x-apisports-key": API_KEY
-    }
-  });
+  const response = await fetch(API_URL);
 
   if (!response.ok) {
-    throw new Error(`API request failed: ${response.status} ${response.statusText}`);
+    throw new Error(`World Cup API request failed: ${response.status} ${response.statusText}`);
   }
 
   const data = await response.json();
 
-  console.log("API results:");
-  console.log("Errors:", JSON.stringify(data.errors || {}));
-  console.log("Fixtures returned:", data.results);
+  let games = [];
 
-  return data.response || [];
-}
-
-function makeGameItem(fixture, includeTime = false) {
-  const referee = fixture.fixture?.referee || "Not published yet";
-
-  const item = {
-    match: formatMatch(fixture),
-    referee
-  };
-
-  if (includeTime) {
-    item.time = formatTimeInReykjavik(fixture.fixture?.date);
+  if (Array.isArray(data)) {
+    games = data;
+  } else if (Array.isArray(data.data)) {
+    games = data.data;
+  } else if (Array.isArray(data.games)) {
+    games = data.games;
+  } else if (Array.isArray(data.matches)) {
+    games = data.matches;
+  } else if (Array.isArray(data.response)) {
+    games = data.response;
   }
 
-  return item;
+  console.log("Games returned:", games.length);
+
+  if (games.length > 0) {
+    console.log("First raw game sample:");
+    console.log(JSON.stringify(games[0], null, 2));
+  }
+
+  return games.map(normalizeGame);
 }
 
 async function main() {
@@ -124,24 +184,20 @@ async function main() {
 
   console.log(`Yesterday in Reykjavik: ${yesterdayDate}`);
   console.log(`Today in Reykjavik: ${todayDate}`);
-
-  if (allFixtures.length > 0) {
-    console.log("First fixture sample:");
-    console.log(JSON.stringify(allFixtures[0], null, 2));
-  }
+  console.log(`World Cup fixtures found: ${allFixtures.length}`);
 
   const yesterdayFixtures = allFixtures.filter(game => {
-    const fixtureDate = getFixtureDateInReykjavik(game.fixture?.date);
+    const fixtureDate = getFixtureDateInReykjavik(game.date);
     return fixtureDate === yesterdayDate;
   });
 
   const todayFixtures = allFixtures.filter(game => {
-    const fixtureDate = getFixtureDateInReykjavik(game.fixture?.date);
+    const fixtureDate = getFixtureDateInReykjavik(game.date);
     return fixtureDate === todayDate;
   });
 
   const yesterday = yesterdayFixtures
-    .filter(game => isFinished(game.fixture?.status?.short))
+    .filter(game => isFinished(game))
     .map(game => makeGameItem(game, false));
 
   const today = todayFixtures
@@ -164,11 +220,11 @@ async function main() {
   let note = "";
 
   if (allFixtures.length === 0) {
-    note = "API-Football returned 0 World Cup 2026 fixtures for this account. The dashboard system works, but this API account may not include the data yet.";
+    note = "World Cup API returned 0 fixtures. The dashboard system works, but this source may not be available right now.";
   } else if (refereeNames.length > 0) {
     note = `Referee appointments found: ${refereeNames.join(" · ")}`;
   } else {
-    note = `API-Football returned ${allFixtures.length} World Cup 2026 fixtures. Referee names will show here when available.`;
+    note = `World Cup API returned ${allFixtures.length} fixtures. Referee names will show here if this source publishes them.`;
   }
 
   const briefing = {
@@ -178,7 +234,7 @@ async function main() {
     yesterday: yesterday.length ? yesterday : [
       {
         match: allFixtures.length === 0
-          ? "World Cup 2026 data not available from API-Football yet"
+          ? "World Cup data source not available right now"
           : "No completed World Cup matches found yesterday",
         referee: "Not published yet"
       }
@@ -186,7 +242,7 @@ async function main() {
     today: today.length ? today : [
       {
         match: allFixtures.length === 0
-          ? "World Cup 2026 data not available from API-Football yet"
+          ? "World Cup data source not available right now"
           : "No World Cup matches found today",
         time: "",
         referee: "Not published yet"
@@ -203,7 +259,6 @@ async function main() {
   );
 
   console.log("World Cup briefing updated.");
-  console.log(`World Cup fixtures found: ${allFixtures.length}`);
 }
 
 main().catch(error => {
