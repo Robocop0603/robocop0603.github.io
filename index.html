@@ -186,6 +186,33 @@ body::before {
         padding: 12px;
     }
 
+    <section class="worldcup-card">
+  <div class="worldcup-header">
+    <div>
+      <h2>World Cup Briefing</h2>
+      <p id="wc-updated">Loading briefing...</p>
+    </div>
+    <div class="worldcup-badge">WC 2026</div>
+  </div>
+
+  <div class="worldcup-grid">
+    <div class="worldcup-box">
+      <h3>Yesterday</h3>
+      <div id="wc-yesterday"></div>
+    </div>
+
+    <div class="worldcup-box">
+      <h3>Today</h3>
+      <div id="wc-today"></div>
+    </div>
+  </div>
+
+  <div class="worldcup-referee">
+    <h3>Referee Watch</h3>
+    <p id="wc-note">Loading referee details...</p>
+  </div>
+</section>
+
     .search-area {
         display: flex;
         flex-wrap: wrap;
@@ -429,6 +456,109 @@ body::before {
         width: 210px;
         padding: 12px 16px;
     }
+}
+
+    .worldcup-card {
+  width: min(960px, 94%);
+  margin: 18px auto;
+  padding: 18px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(30, 41, 59, 0.96));
+  color: white;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.worldcup-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.worldcup-header h2 {
+  margin: 0;
+  font-size: 1.35rem;
+  letter-spacing: 0.5px;
+}
+
+.worldcup-header p {
+  margin: 4px 0 0;
+  color: #cbd5e1;
+  font-size: 0.85rem;
+}
+
+.worldcup-badge {
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(59, 130, 246, 0.25);
+  color: #dbeafe;
+  font-size: 0.78rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.worldcup-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.worldcup-box,
+.worldcup-referee {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 14px;
+}
+
+.worldcup-box h3,
+.worldcup-referee h3 {
+  margin: 0 0 10px;
+  font-size: 0.95rem;
+  color: #bfdbfe;
+}
+
+.wc-match {
+  padding: 9px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.wc-match:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.wc-main {
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+.wc-sub {
+  margin-top: 3px;
+  color: #cbd5e1;
+  font-size: 0.82rem;
+}
+
+.worldcup-referee {
+  margin-top: 12px;
+}
+
+.worldcup-referee p {
+  margin: 0;
+  color: #e2e8f0;
+  line-height: 1.4;
+}
+
+@media (max-width: 720px) {
+  .worldcup-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .worldcup-card {
+    padding: 15px;
+    border-radius: 18px;
+  }
 }
 </style>
 <h1>⚽ ROBOCOP Dashboard</h1>
@@ -779,6 +909,51 @@ body::before {
 
     updateDashboard();
     setInterval(updateDashboard, 1000);
+</script>
+
+    <script>
+async function loadWorldCupBriefing() {
+  try {
+    const response = await fetch("data/worldcup-briefing.json?cache=" + Date.now());
+    const data = await response.json();
+
+    document.getElementById("wc-updated").textContent = "Updated: " + data.updated;
+
+    const yesterdayBox = document.getElementById("wc-yesterday");
+    const todayBox = document.getElementById("wc-today");
+
+    yesterdayBox.innerHTML = "";
+    todayBox.innerHTML = "";
+
+    data.yesterday.forEach(game => {
+      const item = document.createElement("div");
+      item.className = "wc-match";
+      item.innerHTML = `
+        <div class="wc-main">${game.match}</div>
+        <div class="wc-sub">Referee: ${game.referee || "Not published yet"}</div>
+      `;
+      yesterdayBox.appendChild(item);
+    });
+
+    data.today.forEach(game => {
+      const item = document.createElement("div");
+      item.className = "wc-match";
+      item.innerHTML = `
+        <div class="wc-main">${game.match}</div>
+        <div class="wc-sub">${game.time || ""} · Referee: ${game.referee || "Not published yet"}</div>
+      `;
+      todayBox.appendChild(item);
+    });
+
+    document.getElementById("wc-note").textContent = data.note || "Referee details will appear here when available.";
+  } catch (error) {
+    document.getElementById("wc-updated").textContent = "World Cup Briefing unavailable";
+    document.getElementById("wc-note").textContent = "Could not load briefing data.";
+    console.error(error);
+  }
+}
+
+loadWorldCupBriefing();
 </script>
 
     </body>
