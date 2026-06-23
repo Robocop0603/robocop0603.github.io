@@ -987,13 +987,14 @@ async function loadWorldCupBriefing() {
     });
 
     data.today.forEach(game => {
-      const item = document.createElement("div");
-      item.className = "wc-match";
-      item.innerHTML = `
-  <div class="wc-main">${game.match}</div>
-`;
-      todayBox.appendChild(item);
-    });
+  const item = document.createElement("div");
+  item.className = "wc-match";
+  item.innerHTML = `
+    <div class="wc-main">${game.match}</div>
+    <div class="wc-sub">${game.time || "Time not published"}</div>
+  `;
+  todayBox.appendChild(item);
+});
 
     document.getElementById("wc-note").textContent = data.note || "Referee details will appear here when available.";
   } catch (error) {
