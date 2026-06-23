@@ -271,9 +271,13 @@ function formatMatch(game) {
 }
 
 function makeGameItem(game) {
+  const reykjavikTime = formatReykjavikTime(game.dateObject);
+
   return {
     match: formatMatch(game),
-    time: formatReykjavikTime(game.dateObject),
+    time: reykjavikTime && reykjavikTime !== "Time not published"
+      ? reykjavikTime
+      : "Time not published",
     referee: game.referee || "Not published yet"
   };
 }
