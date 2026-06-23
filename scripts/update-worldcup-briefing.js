@@ -31,8 +31,26 @@ function getReykjavikDate(offsetDays = 0) {
   return base.toISOString().slice(0, 10);
 }
 
+function getFixtureDateInReykjavik(dateString) {
+  if (!dateString) return "";
+
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: TIME_ZONE,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit"
+  }).formatToParts(new Date(dateString));
+
+  const year = parts.find(p => p.type === "year").value;
+  const month = parts.find(p => p.type === "month").value;
+  const day = parts.find(p => p.type === "day").value;
+
+  return `${year}-${month}-${day}`;
+}
+
 function formatTimeInReykjavik(dateString) {
   if (!dateString) return "";
+
   return new Intl.DateTimeFormat("en-GB", {
     timeZone: TIME_ZONE,
     hour: "2-digit",
@@ -58,8 +76,11 @@ function formatMatch(fixture) {
   return `${home} vs ${away}`;
 }
 
-async function getFixturesByDate(date) {
-  const url = `${API_BASE}/fixtures?league=${LEAGUE_ID}&season=${SEASON}&date=${date}`;
+async function getAllWorldCupFixtures() {
+  const url = `${API_BASE}/fixtures?league=${LEAGUE_ID}&season=${SEASON}`;
+
+  console.log("Requesting all World Cup fixtures:");
+  console.log(url);
 
   const response = await fetch(url, {
     headers: {
@@ -73,9 +94,9 @@ async function getFixturesByDate(date) {
 
   const data = await response.json();
 
-  if (data.errors && Object.keys(data.errors).length > 0) {
-    console.log("API errors:", data.errors);
-  }
+  console.log("API results:");
+  console.log("Errors:", JSON.stringify(data.errors || {}));
+  console.log("Fixtures returned:", data.results);
 
   return data.response || [];
 }
@@ -99,8 +120,25 @@ async function main() {
   const yesterdayDate = getReykjavikDate(-1);
   const todayDate = getReykjavikDate(0);
 
-  const yesterdayFixtures = await getFixturesByDate(yesterdayDate);
-  const todayFixtures = await getFixturesByDate(todayDate);
+  const allFixtures = await getAllWorldCupFixtures();
+
+  console.log(`Yesterday in Reykjavik: ${yesterdayDate}`);
+  console.log(`Today in Reykjavik: ${todayDate}`);
+
+  if (allFixtures.length > 0) {
+    console.log("First fixture sample:");
+    console.log(JSON.stringify(allFixtures[0], null, 2));
+  }
+
+  const yesterdayFixtures = allFixtures.filter(game => {
+    const fixtureDate = getFixtureDateInReykjavik(game.fixture?.date);
+    return fixtureDate === yesterdayDate;
+  });
+
+  const todayFixtures = allFixtures.filter(game => {
+    const fixtureDate = getFixtureDateInReykjavik(game.fixture?.date);
+    return fixtureDate === todayDate;
+  });
 
   const yesterday = yesterdayFixtures
     .filter(game => isFinished(game.fixture?.status?.short))
@@ -123,25 +161,38 @@ async function main() {
     .filter(game => game.referee && game.referee !== "Not published yet")
     .map(game => `${game.match}: ${game.referee}`);
 
+  let note = "";
+
+  if (allFixtures.length === 0) {
+    note = "API-Football returned 0 World Cup 2026 fixtures for this account. The dashboard system works, but this API account may not include the data yet.";
+  } else if (refereeNames.length > 0) {
+    note = `Referee appointments found: ${refereeNames.join(" · ")}`;
+  } else {
+    note = `API-Football returned ${allFixtures.length} World Cup 2026 fixtures. Referee names will show here when available.`;
+  }
+
   const briefing = {
     updated,
     title: "World Cup Briefing",
+    apiFixtureCount: allFixtures.length,
     yesterday: yesterday.length ? yesterday : [
       {
-        match: "No completed World Cup matches found yesterday",
+        match: allFixtures.length === 0
+          ? "World Cup 2026 data not available from API-Football yet"
+          : "No completed World Cup matches found yesterday",
         referee: "Not published yet"
       }
     ],
     today: today.length ? today : [
       {
-        match: "No World Cup matches found today",
+        match: allFixtures.length === 0
+          ? "World Cup 2026 data not available from API-Football yet"
+          : "No World Cup matches found today",
         time: "",
         referee: "Not published yet"
       }
     ],
-    note: refereeNames.length
-      ? `Referee appointments found: ${refereeNames.join(" · ")}`
-      : "Referee names will show here when available from the data source."
+    note
   };
 
   fs.mkdirSync("data", { recursive: true });
@@ -152,8 +203,7 @@ async function main() {
   );
 
   console.log("World Cup briefing updated.");
-  console.log(`Yesterday: ${yesterdayDate}`);
-  console.log(`Today: ${todayDate}`);
+  console.log(`World Cup fixtures found: ${allFixtures.length}`);
 }
 
 main().catch(error => {
