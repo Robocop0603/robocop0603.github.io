@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-23 12:08",
+  "updated": "2026-06-23 12:26",
   "title": "World Cup Briefing",
   "apiFixtureCount": 104,
   "todayLabel": "Today",
@@ -44,5 +44,5 @@
       "time": "23:00 Reykjavík"
     }
   ],
-  "note": "World Cup API returned 104 fixtures. Kickoff times are shown in Reykjavík time. Referee names are not included in this source yet."
+  "note": "Referee appointments are not included in this fixture source yet. Kickoff times are shown in Reykjavík time."
 }
