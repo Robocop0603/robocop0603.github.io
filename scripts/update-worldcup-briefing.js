@@ -1,9 +1,140 @@
 const fs = require("fs");
 
 const TIME_ZONE = "Atlantic/Reykjavik";
-const API_URL = "https://worldcup26.ir/get/games";
+const API_GAMES_URL = "https://worldcup26.ir/get/games";
+const API_STADIUMS_URL = "https://worldcup26.ir/get/stadiums";
 
-function parseWorldCupDate(localDate) {
+// June/July 2026 offsets from UTC.
+// Iceland/Reykjavík is UTC, so converting to UTC also gives Reykjavík time.
+const TIMEZONE_OFFSETS = {
+  "America/Mexico_City": -6,
+  "America/Vancouver": -7,
+  "America/Los_Angeles": -7,
+  "America/Chicago": -5,
+  "America/New_York": -4,
+  "America/Toronto": -4
+};
+
+function getValue(obj, possibleKeys) {
+  for (const key of possibleKeys) {
+    if (obj && obj[key] !== undefined && obj[key] !== null && obj[key] !== "") {
+      return obj[key];
+    }
+  }
+  return "";
+}
+
+function detectVenueTimezone(stadium) {
+  const text = JSON.stringify(stadium || {}).toLowerCase();
+
+  if (
+    text.includes("mexico city") ||
+    text.includes("ciudad de méxico") ||
+    text.includes("azteca") ||
+    text.includes("banorte") ||
+    text.includes("guadalajara") ||
+    text.includes("monterrey")
+  ) {
+    return "America/Mexico_City";
+  }
+
+  if (text.includes("vancouver")) {
+    return "America/Vancouver";
+  }
+
+  if (text.includes("toronto")) {
+    return "America/Toronto";
+  }
+
+  if (
+    text.includes("los angeles") ||
+    text.includes("seattle") ||
+    text.includes("san francisco") ||
+    text.includes("bay area")
+  ) {
+    return "America/Los_Angeles";
+  }
+
+  if (
+    text.includes("dallas") ||
+    text.includes("houston") ||
+    text.includes("kansas city")
+  ) {
+    return "America/Chicago";
+  }
+
+  if (
+    text.includes("new york") ||
+    text.includes("new jersey") ||
+    text.includes("boston") ||
+    text.includes("philadelphia") ||
+    text.includes("miami") ||
+    text.includes("atlanta")
+  ) {
+    return "America/New_York";
+  }
+
+  return "";
+}
+
+async function getStadiumTimezoneMap() {
+  try {
+    console.log("Requesting World Cup stadiums:");
+    console.log(API_STADIUMS_URL);
+
+    const response = await fetch(API_STADIUMS_URL);
+
+    if (!response.ok) {
+      console.log("Could not fetch stadiums. Status:", response.status);
+      return {};
+    }
+
+    const data = await response.json();
+
+    let stadiums = [];
+
+    if (Array.isArray(data)) {
+      stadiums = data;
+    } else if (Array.isArray(data.data)) {
+      stadiums = data.data;
+    } else if (Array.isArray(data.stadiums)) {
+      stadiums = data.stadiums;
+    } else if (Array.isArray(data.response)) {
+      stadiums = data.response;
+    }
+
+    console.log("Stadiums returned:", stadiums.length);
+
+    if (stadiums.length > 0) {
+      console.log("First raw stadium sample:");
+      console.log(JSON.stringify(stadiums[0], null, 2));
+    }
+
+    const map = {};
+
+    stadiums.forEach(stadium => {
+      const id =
+        getValue(stadium, ["id", "_id", "stadium_id", "stadiumId"]) ||
+        getValue(stadium.stadium || {}, ["id", "stadium_id"]);
+
+      const timezone = detectVenueTimezone(stadium);
+
+      if (id && timezone) {
+        map[String(id)] = timezone;
+      }
+    });
+
+    console.log("Stadium timezone map:");
+    console.log(JSON.stringify(map, null, 2));
+
+    return map;
+  } catch (error) {
+    console.log("Stadium fetch failed:", error.message);
+    return {};
+  }
+}
+
+function parseWorldCupDateToUTC(localDate, stadiumId, stadiumTimezoneMap) {
   // API format example: "06/11/2026 13:00"
   if (!localDate) return null;
 
@@ -15,9 +146,57 @@ function parseWorldCupDate(localDate) {
 
   const [, month, day, year, hour, minute] = match;
 
-  // Treat source time as local tournament time enough for ordering/display.
-  // We display the raw local time as given by the API.
-  return new Date(`${year}-${month}-${day}T${hour}:${minute}:00Z`);
+  const timezone =
+    stadiumTimezoneMap[String(stadiumId)] ||
+    fallbackTimezoneFromStadiumId(stadiumId);
+
+  const offset = TIMEZONE_OFFSETS[timezone];
+
+  if (offset === undefined) {
+    // If we cannot identify the venue timezone, keep the raw time as UTC fallback.
+    return new Date(
+      Date.UTC(
+        Number(year),
+        Number(month) - 1,
+        Number(day),
+        Number(hour),
+        Number(minute)
+      )
+    );
+  }
+
+  // Local venue time to UTC:
+  // Example Mexico City UTC-6, 13:00 local -> 19:00 UTC/Reykjavík.
+  return new Date(
+    Date.UTC(
+      Number(year),
+      Number(month) - 1,
+      Number(day),
+      Number(hour) - offset,
+      Number(minute)
+    )
+  );
+}
+
+function fallbackTimezoneFromStadiumId(stadiumId) {
+  // Fallback if stadium endpoint is unavailable.
+  // We know from the game sample that stadium_id 1 is Mexico City.
+  const fallback = {
+    "1": "America/Mexico_City"
+  };
+
+  return fallback[String(stadiumId)] || "";
+}
+
+function formatReykjavikTime(dateObj) {
+  if (!dateObj || isNaN(dateObj)) return "Time not published";
+
+  return new Intl.DateTimeFormat("en-GB", {
+    timeZone: TIME_ZONE,
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false
+  }).format(dateObj) + " Reykjavík";
 }
 
 function formatDateKey(dateObj) {
@@ -57,23 +236,16 @@ function getReykjavikDate(offsetDays = 0) {
   return base.toISOString().slice(0, 10);
 }
 
-function formatTimeFromLocalDate(localDate) {
-  // From "06/11/2026 13:00" return "13:00"
-  if (!localDate) return "Time not published";
-
-  const match = String(localDate).match(/\s(\d{2}:\d{2})/);
-  return match ? match[1] : "Time not published";
-}
-
-function normalizeGame(raw) {
+function normalizeGame(raw, stadiumTimezoneMap) {
   const home = raw.home_team_name_en || "Home";
   const away = raw.away_team_name_en || "Away";
 
   const homeScore = raw.home_score;
   const awayScore = raw.away_score;
 
+  const stadiumId = raw.stadium_id;
   const dateText = raw.local_date || "";
-  const dateObject = parseWorldCupDate(dateText);
+  const dateObject = parseWorldCupDateToUTC(dateText, stadiumId, stadiumTimezoneMap);
 
   const finished = String(raw.finished).toLowerCase() === "true";
   const status = raw.time_elapsed || "";
@@ -83,6 +255,7 @@ function normalizeGame(raw) {
     away,
     homeScore,
     awayScore,
+    stadiumId,
     dateText,
     dateObject,
     finished,
@@ -91,16 +264,17 @@ function normalizeGame(raw) {
   };
 }
 
+function hasRealScore(value) {
+  return (
+    value !== undefined &&
+    value !== null &&
+    String(value).toLowerCase() !== "null" &&
+    String(value) !== ""
+  );
+}
+
 function formatMatch(game) {
-  const hasScore =
-    game.homeScore !== undefined &&
-    game.awayScore !== undefined &&
-    game.homeScore !== null &&
-    game.awayScore !== null &&
-    String(game.homeScore).toLowerCase() !== "null" &&
-    String(game.awayScore).toLowerCase() !== "null" &&
-    String(game.homeScore) !== "" &&
-    String(game.awayScore) !== "";
+  const hasScore = hasRealScore(game.homeScore) && hasRealScore(game.awayScore);
 
   if (hasScore) {
     return `${game.home} ${game.homeScore}–${game.awayScore} ${game.away}`;
@@ -116,17 +290,17 @@ function makeGameItem(game, includeTime = false) {
   };
 
   if (includeTime) {
-    item.time = formatTimeFromLocalDate(game.dateText);
+    item.time = formatReykjavikTime(game.dateObject);
   }
 
   return item;
 }
 
-async function getAllWorldCupFixtures() {
+async function getAllWorldCupFixtures(stadiumTimezoneMap) {
   console.log("Requesting World Cup games:");
-  console.log(API_URL);
+  console.log(API_GAMES_URL);
 
-  const response = await fetch(API_URL);
+  const response = await fetch(API_GAMES_URL);
 
   if (!response.ok) {
     throw new Error(`World Cup API request failed: ${response.status} ${response.statusText}`);
@@ -156,12 +330,13 @@ async function getAllWorldCupFixtures() {
   }
 
   return games
-    .map(normalizeGame)
+    .map(game => normalizeGame(game, stadiumTimezoneMap))
     .filter(game => game.dateObject && !isNaN(game.dateObject));
 }
 
 async function main() {
-  const allFixtures = await getAllWorldCupFixtures();
+  const stadiumTimezoneMap = await getStadiumTimezoneMap();
+  const allFixtures = await getAllWorldCupFixtures(stadiumTimezoneMap);
 
   const yesterdayDate = getReykjavikDate(-1);
   const todayDate = getReykjavikDate(0);
@@ -226,7 +401,7 @@ async function main() {
         referee: "Not published yet"
       }
     ],
-    note: `World Cup API returned ${allFixtures.length} fixtures. Showing ${todayLabel.toLowerCase()}. Referee names are not included in this source yet.`
+    note: `World Cup API returned ${allFixtures.length} fixtures. Kickoff times are shown in Reykjavík time. Referee names are not included in this source yet.`
   };
 
   fs.mkdirSync("data", { recursive: true });
