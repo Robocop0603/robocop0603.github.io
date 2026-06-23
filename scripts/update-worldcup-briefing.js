@@ -4,8 +4,8 @@ const TIME_ZONE = "Atlantic/Reykjavik";
 const API_GAMES_URL = "https://worldcup26.ir/get/games";
 const API_STADIUMS_URL = "https://worldcup26.ir/get/stadiums";
 
-// June/July 2026 offsets from UTC.
-// Iceland/Reykjavík is UTC, so converting to UTC also gives Reykjavík time.
+// June/July 2026 timezone offsets from UTC.
+// Reykjavík is UTC, so UTC time = Reykjavík time.
 const TIMEZONE_OFFSETS = {
   "America/Mexico_City": -6,
   "America/Vancouver": -7,
@@ -105,11 +105,6 @@ async function getStadiumTimezoneMap() {
 
     console.log("Stadiums returned:", stadiums.length);
 
-    if (stadiums.length > 0) {
-      console.log("First raw stadium sample:");
-      console.log(JSON.stringify(stadiums[0], null, 2));
-    }
-
     const map = {};
 
     stadiums.forEach(stadium => {
@@ -134,6 +129,16 @@ async function getStadiumTimezoneMap() {
   }
 }
 
+function fallbackTimezoneFromStadiumId(stadiumId) {
+  // Known from our raw sample:
+  // stadium_id 1 = Mexico City opening match.
+  const fallback = {
+    "1": "America/Mexico_City"
+  };
+
+  return fallback[String(stadiumId)] || "America/New_York";
+}
+
 function parseWorldCupDateToUTC(localDate, stadiumId, stadiumTimezoneMap) {
   // API format example: "06/11/2026 13:00"
   if (!localDate) return null;
@@ -152,21 +157,9 @@ function parseWorldCupDateToUTC(localDate, stadiumId, stadiumTimezoneMap) {
 
   const offset = TIMEZONE_OFFSETS[timezone];
 
-  if (offset === undefined) {
-    // If we cannot identify the venue timezone, keep the raw time as UTC fallback.
-    return new Date(
-      Date.UTC(
-        Number(year),
-        Number(month) - 1,
-        Number(day),
-        Number(hour),
-        Number(minute)
-      )
-    );
-  }
+  if (offset === undefined) return null;
 
-  // Local venue time to UTC:
-  // Example Mexico City UTC-6, 13:00 local -> 19:00 UTC/Reykjavík.
+  // Convert venue local time to UTC/Reykjavík time.
   return new Date(
     Date.UTC(
       Number(year),
@@ -178,29 +171,23 @@ function parseWorldCupDateToUTC(localDate, stadiumId, stadiumTimezoneMap) {
   );
 }
 
-function fallbackTimezoneFromStadiumId(stadiumId) {
-  // Fallback if stadium endpoint is unavailable.
-  // We know from the game sample that stadium_id 1 is Mexico City.
-  const fallback = {
-    "1": "America/Mexico_City"
-  };
-
-  return fallback[String(stadiumId)] || "";
-}
-
 function formatReykjavikTime(dateObj) {
-  if (!dateObj || isNaN(dateObj)) return "Time not published";
+  if (!dateObj || Number.isNaN(dateObj.getTime())) {
+    return "Time not published";
+  }
 
-  return new Intl.DateTimeFormat("en-GB", {
-    timeZone: TIME_ZONE,
-    hour: "2-digit",
-    minute: "2-digit",
-    hour12: false
-  }).format(dateObj) + " Reykjavík";
+  return (
+    new Intl.DateTimeFormat("en-GB", {
+      timeZone: TIME_ZONE,
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: false
+    }).format(dateObj) + " Reykjavík"
+  );
 }
 
 function formatDateKey(dateObj) {
-  if (!dateObj || isNaN(dateObj)) return "";
+  if (!dateObj || Number.isNaN(dateObj.getTime())) return "";
 
   const parts = new Intl.DateTimeFormat("en-CA", {
     timeZone: TIME_ZONE,
@@ -283,17 +270,12 @@ function formatMatch(game) {
   return `${game.home} vs ${game.away}`;
 }
 
-function makeGameItem(game, includeTime = false) {
-  const item = {
+function makeGameItem(game) {
+  return {
     match: formatMatch(game),
+    time: formatReykjavikTime(game.dateObject),
     referee: game.referee || "Not published yet"
   };
-
-  if (includeTime) {
-    item.time = formatReykjavikTime(game.dateObject);
-  }
-
-  return item;
 }
 
 async function getAllWorldCupFixtures(stadiumTimezoneMap) {
@@ -331,7 +313,7 @@ async function getAllWorldCupFixtures(stadiumTimezoneMap) {
 
   return games
     .map(game => normalizeGame(game, stadiumTimezoneMap))
-    .filter(game => game.dateObject && !isNaN(game.dateObject));
+    .filter(game => game.dateObject && !Number.isNaN(game.dateObject.getTime()));
 }
 
 async function main() {
@@ -354,24 +336,24 @@ async function main() {
 
   const finishedYesterday = yesterdayFixtures
     .filter(game => game.finished)
-    .map(game => makeGameItem(game, false));
+    .map(game => makeGameItem(game));
 
   const recentFinished = sortedFixtures
     .filter(game => game.dateObject < now && game.finished)
     .sort((a, b) => b.dateObject - a.dateObject)
     .slice(0, 4)
-    .map(game => makeGameItem(game, false));
+    .map(game => makeGameItem(game));
 
-  const todayGames = todayFixtures.map(game => makeGameItem(game, true));
+  const todayGames = todayFixtures.map(game => makeGameItem(game));
 
   const upcomingGames = sortedFixtures
     .filter(game => game.dateObject >= now && !game.finished)
     .slice(0, 4)
-    .map(game => makeGameItem(game, true));
+    .map(game => makeGameItem(game));
 
-  let yesterday = finishedYesterday.length ? finishedYesterday : recentFinished;
-  let today = todayGames.length ? todayGames : upcomingGames;
-  let todayLabel = todayGames.length ? "Today" : "Next matches";
+  const yesterday = finishedYesterday.length ? finishedYesterday : recentFinished;
+  const today = todayGames.length ? todayGames : upcomingGames;
+  const todayLabel = todayGames.length ? "Today" : "Next matches";
 
   const updated = new Intl.DateTimeFormat("en-CA", {
     timeZone: TIME_ZONE,
@@ -383,7 +365,7 @@ async function main() {
     hour12: false
   }).format(new Date()).replace(",", "");
 
-    const briefing = {
+  const briefing = {
     updated,
     title: "World Cup Briefing",
     apiFixtureCount: allFixtures.length,
@@ -391,6 +373,7 @@ async function main() {
     yesterday: yesterday.length ? yesterday : [
       {
         match: "No completed World Cup matches found yet",
+        time: "",
         referee: "Not published yet"
       }
     ],
