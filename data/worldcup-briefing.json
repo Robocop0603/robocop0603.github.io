@@ -1,8 +1,9 @@
 {
-  "updated": "2026-06-23 11:51",
+  "updated": "2026-06-23 11:54",
   "title": "World Cup Briefing",
-  "apiFixtureCount": 0,
-  "todayLabel": "Today",
+  "apiFixtureCount": 104,
+  "validDateCount": 0,
+  "todayLabel": "Next matches",
   "yesterday": [
     {
       "match": "No completed World Cup matches found yet",
@@ -11,10 +12,25 @@
   ],
   "today": [
     {
-      "match": "No upcoming World Cup matches found",
-      "time": "",
-      "referee": "Not published yet"
+      "match": "Home 2–0 Away",
+      "referee": "Not published yet",
+      "time": "Time not published"
+    },
+    {
+      "match": "Home 2–1 Away",
+      "referee": "Not published yet",
+      "time": "Time not published"
+    },
+    {
+      "match": "Home 1–1 Away",
+      "referee": "Not published yet",
+      "time": "Time not published"
+    },
+    {
+      "match": "Home 4–1 Away",
+      "referee": "Not published yet",
+      "time": "Time not published"
     }
   ],
-  "note": "World Cup API returned 0 fixtures. The dashboard system works, but this source may not be available right now."
+  "note": "World Cup API returned 104 fixtures. 0 had readable dates. Showing next available matches. Referee names will show here if this source publishes them."
 }
