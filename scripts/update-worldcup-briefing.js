@@ -383,7 +383,7 @@ async function main() {
     hour12: false
   }).format(new Date()).replace(",", "");
 
-  const briefing = {
+    const briefing = {
     updated,
     title: "World Cup Briefing",
     apiFixtureCount: allFixtures.length,
@@ -401,7 +401,8 @@ async function main() {
         referee: "Not published yet"
       }
     ],
-    note: `Referee appointments are not included in this fixture source yet. Kickoff times are shown in Reykjavík time.`
+    note: "Referee appointments are not included in this fixture source yet. Kickoff times are shown in Reykjavík time."
+  };
 
   fs.mkdirSync("data", { recursive: true });
 
