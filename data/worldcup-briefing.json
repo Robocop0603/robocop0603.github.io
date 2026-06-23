@@ -1,18 +1,19 @@
 {
-  "updated": "2026-06-23 11:18",
+  "updated": "2026-06-23 11:29",
   "title": "World Cup Briefing",
+  "apiFixtureCount": 0,
   "yesterday": [
     {
-      "match": "No completed World Cup matches found yesterday",
+      "match": "World Cup 2026 data not available from API-Football yet",
       "referee": "Not published yet"
     }
   ],
   "today": [
     {
-      "match": "No World Cup matches found today",
+      "match": "World Cup 2026 data not available from API-Football yet",
       "time": "",
       "referee": "Not published yet"
     }
   ],
-  "note": "Referee names will show here when available from the data source."
+  "note": "API-Football returned 0 World Cup 2026 fixtures for this account. The dashboard system works, but this API account may not include the data yet."
 }
