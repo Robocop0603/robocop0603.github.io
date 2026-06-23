@@ -1,7 +1,7 @@
 {
-  "updated": "2026-06-23 11:37",
-  "title": "Premier League Test",
-  "apiFixtureCount": 380,
+  "updated": "2026-06-23 11:47",
+  "title": "World Cup Briefing",
+  "apiFixtureCount": 104,
   "yesterday": [
     {
       "match": "No completed World Cup matches found yesterday",
@@ -15,5 +15,5 @@
       "referee": "Not published yet"
     }
   ],
-  "note": "API-Football returned 380 World Cup 2026 fixtures. Referee names will show here when available."
+  "note": "World Cup API returned 104 fixtures. Referee names will show here if this source publishes them."
 }
