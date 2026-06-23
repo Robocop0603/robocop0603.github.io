@@ -401,8 +401,7 @@ async function main() {
         referee: "Not published yet"
       }
     ],
-    note: `World Cup API returned ${allFixtures.length} fixtures. Kickoff times are shown in Reykjavík time. Referee names are not included in this source yet.`
-  };
+    note: `Referee appointments are not included in this fixture source yet. Kickoff times are shown in Reykjavík time.`
 
   fs.mkdirSync("data", { recursive: true });
 
