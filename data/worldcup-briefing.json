@@ -1,47 +1,50 @@
 {
-  "updated": "2026-06-23 12:26",
+  "updated": "2026-06-23 12:33",
   "title": "World Cup Briefing",
   "apiFixtureCount": 104,
   "todayLabel": "Today",
   "yesterday": [
     {
       "match": "New Zealand 1–3 Egypt",
+      "time": "01:00 Reykjavík",
       "referee": "Not published yet"
     },
     {
       "match": "Argentina 2–0 Austria",
+      "time": "17:00 Reykjavík",
       "referee": "Not published yet"
     },
     {
       "match": "France 3–0 Iraq",
+      "time": "21:00 Reykjavík",
       "referee": "Not published yet"
     }
   ],
   "today": [
     {
       "match": "Norway 3–2 Senegal",
-      "referee": "Not published yet",
-      "time": "00:00 Reykjavík"
+      "time": "00:00 Reykjavík",
+      "referee": "Not published yet"
     },
     {
       "match": "Jordan 1–2 Algeria",
-      "referee": "Not published yet",
-      "time": "03:00 Reykjavík"
+      "time": "03:00 Reykjavík",
+      "referee": "Not published yet"
     },
     {
       "match": "Portugal 0–0 Uzbekistan",
-      "referee": "Not published yet",
-      "time": "17:00 Reykjavík"
+      "time": "17:00 Reykjavík",
+      "referee": "Not published yet"
     },
     {
       "match": "England 0–0 Ghana",
-      "referee": "Not published yet",
-      "time": "20:00 Reykjavík"
+      "time": "20:00 Reykjavík",
+      "referee": "Not published yet"
     },
     {
       "match": "Panama 0–0 Croatia",
-      "referee": "Not published yet",
-      "time": "23:00 Reykjavík"
+      "time": "23:00 Reykjavík",
+      "referee": "Not published yet"
     }
   ],
   "note": "Referee appointments are not included in this fixture source yet. Kickoff times are shown in Reykjavík time."
