@@ -26,12 +26,15 @@ function getReykjavikDate(offsetDays = 0) {
 function getFixtureDateInReykjavik(dateString) {
   if (!dateString) return "";
 
+  const d = new Date(dateString);
+  if (isNaN(d)) return "";
+
   const parts = new Intl.DateTimeFormat("en-CA", {
     timeZone: TIME_ZONE,
     year: "numeric",
     month: "2-digit",
     day: "2-digit"
-  }).formatToParts(new Date(dateString));
+  }).formatToParts(d);
 
   const year = parts.find(p => p.type === "year").value;
   const month = parts.find(p => p.type === "month").value;
@@ -43,12 +46,15 @@ function getFixtureDateInReykjavik(dateString) {
 function formatTimeInReykjavik(dateString) {
   if (!dateString) return "";
 
+  const d = new Date(dateString);
+  if (isNaN(d)) return "";
+
   return new Intl.DateTimeFormat("en-GB", {
     timeZone: TIME_ZONE,
     hour: "2-digit",
     minute: "2-digit",
     hour12: false
-  }).format(new Date(dateString));
+  }).format(d);
 }
 
 function getValue(obj, possibleKeys) {
@@ -60,21 +66,46 @@ function getValue(obj, possibleKeys) {
   return "";
 }
 
+function getTeamName(value) {
+  if (!value) return "";
+  if (typeof value === "string") return value;
+  return (
+    value.name ||
+    value.en ||
+    value.title ||
+    value.country ||
+    value.team_name ||
+    ""
+  );
+}
+
 function normalizeGame(raw) {
-  const home =
+  const homeRaw =
     getValue(raw, ["home_team", "homeTeam", "home", "team1", "team_a", "teamA"]) ||
-    getValue(raw.home || {}, ["name", "en", "title"]) ||
-    getValue(raw.home_team || {}, ["name", "en", "title"]) ||
-    "Home";
+    getValue(raw, ["home_team_en", "home_name"]);
 
-  const away =
+  const awayRaw =
     getValue(raw, ["away_team", "awayTeam", "away", "team2", "team_b", "teamB"]) ||
-    getValue(raw.away || {}, ["name", "en", "title"]) ||
-    getValue(raw.away_team || {}, ["name", "en", "title"]) ||
-    "Away";
+    getValue(raw, ["away_team_en", "away_name"]);
 
-  const homeScore = getValue(raw, ["home_score", "homeScore", "score1", "home_goals", "goals_home"]);
-  const awayScore = getValue(raw, ["away_score", "awayScore", "score2", "away_goals", "goals_away"]);
+  const home = getTeamName(homeRaw) || "Home";
+  const away = getTeamName(awayRaw) || "Away";
+
+  const homeScore = getValue(raw, [
+    "home_score",
+    "homeScore",
+    "score1",
+    "home_goals",
+    "goals_home"
+  ]);
+
+  const awayScore = getValue(raw, [
+    "away_score",
+    "awayScore",
+    "score2",
+    "away_goals",
+    "goals_away"
+  ]);
 
   const date =
     getValue(raw, ["date", "match_date", "datetime", "kickoff", "time", "start_time"]) ||
@@ -98,7 +129,8 @@ function normalizeGame(raw) {
     awayScore,
     date,
     status,
-    referee
+    referee,
+    dateObject: new Date(date)
   };
 }
 
@@ -173,12 +205,15 @@ async function getAllWorldCupFixtures() {
     console.log(JSON.stringify(games[0], null, 2));
   }
 
-  return games.map(normalizeGame);
+  return games
+    .map(normalizeGame)
+    .filter(game => game.date && !isNaN(game.dateObject));
 }
 
 async function main() {
   const yesterdayDate = getReykjavikDate(-1);
   const todayDate = getReykjavikDate(0);
+  const now = new Date();
 
   const allFixtures = await getAllWorldCupFixtures();
 
@@ -187,21 +222,41 @@ async function main() {
   console.log(`World Cup fixtures found: ${allFixtures.length}`);
 
   const yesterdayFixtures = allFixtures.filter(game => {
-    const fixtureDate = getFixtureDateInReykjavik(game.date);
-    return fixtureDate === yesterdayDate;
+    return getFixtureDateInReykjavik(game.date) === yesterdayDate;
   });
 
   const todayFixtures = allFixtures.filter(game => {
-    const fixtureDate = getFixtureDateInReykjavik(game.date);
-    return fixtureDate === todayDate;
+    return getFixtureDateInReykjavik(game.date) === todayDate;
   });
+
+  const nextFixtures = allFixtures
+    .filter(game => game.dateObject >= now && !isFinished(game))
+    .sort((a, b) => a.dateObject - b.dateObject)
+    .slice(0, 4);
+
+  const recentFinished = allFixtures
+    .filter(game => game.dateObject < now && isFinished(game))
+    .sort((a, b) => b.dateObject - a.dateObject)
+    .slice(0, 4);
 
   const yesterday = yesterdayFixtures
     .filter(game => isFinished(game))
     .map(game => makeGameItem(game, false));
 
-  const today = todayFixtures
-    .map(game => makeGameItem(game, true));
+  let today = todayFixtures.map(game => makeGameItem(game, true));
+
+  let todayLabel = "Today";
+
+  if (today.length === 0 && nextFixtures.length > 0) {
+    today = nextFixtures.map(game => makeGameItem(game, true));
+    todayLabel = "Next matches";
+  }
+
+  let yesterdayFinal = yesterday;
+
+  if (yesterdayFinal.length === 0 && recentFinished.length > 0) {
+    yesterdayFinal = recentFinished.map(game => makeGameItem(game, false));
+  }
 
   const updated = new Intl.DateTimeFormat("en-CA", {
     timeZone: TIME_ZONE,
@@ -213,7 +268,7 @@ async function main() {
     hour12: false
   }).format(new Date()).replace(",", "");
 
-  const refereeNames = [...yesterday, ...today]
+  const refereeNames = [...yesterdayFinal, ...today]
     .filter(game => game.referee && game.referee !== "Not published yet")
     .map(game => `${game.match}: ${game.referee}`);
 
@@ -224,26 +279,23 @@ async function main() {
   } else if (refereeNames.length > 0) {
     note = `Referee appointments found: ${refereeNames.join(" · ")}`;
   } else {
-    note = `World Cup API returned ${allFixtures.length} fixtures. Referee names will show here if this source publishes them.`;
+    note = `World Cup API returned ${allFixtures.length} fixtures. Showing ${todayLabel.toLowerCase()}. Referee names will show here if this source publishes them.`;
   }
 
   const briefing = {
     updated,
     title: "World Cup Briefing",
     apiFixtureCount: allFixtures.length,
-    yesterday: yesterday.length ? yesterday : [
+    todayLabel,
+    yesterday: yesterdayFinal.length ? yesterdayFinal : [
       {
-        match: allFixtures.length === 0
-          ? "World Cup data source not available right now"
-          : "No completed World Cup matches found yesterday",
+        match: "No completed World Cup matches found yet",
         referee: "Not published yet"
       }
     ],
     today: today.length ? today : [
       {
-        match: allFixtures.length === 0
-          ? "World Cup data source not available right now"
-          : "No World Cup matches found today",
+        match: "No upcoming World Cup matches found",
         time: "",
         referee: "Not published yet"
       }
