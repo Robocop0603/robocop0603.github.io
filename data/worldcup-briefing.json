@@ -1,26 +1,9 @@
 {
-  "updated": "2026-06-23 12:39",
+  "updated": "2026-06-24 12:34",
   "title": "World Cup Briefing",
   "apiFixtureCount": 104,
   "todayLabel": "Today",
   "yesterday": [
-    {
-      "match": "New Zealand 1–3 Egypt",
-      "time": "01:00 Reykjavík",
-      "referee": "Not published yet"
-    },
-    {
-      "match": "Argentina 2–0 Austria",
-      "time": "17:00 Reykjavík",
-      "referee": "Not published yet"
-    },
-    {
-      "match": "France 3–0 Iraq",
-      "time": "21:00 Reykjavík",
-      "referee": "Not published yet"
-    }
-  ],
-  "today": [
     {
       "match": "Norway 3–2 Senegal",
       "time": "00:00 Reykjavík",
@@ -32,7 +15,7 @@
       "referee": "Not published yet"
     },
     {
-      "match": "Portugal 0–0 Uzbekistan",
+      "match": "Portugal 5–0 Uzbekistan",
       "time": "17:00 Reykjavík",
       "referee": "Not published yet"
     },
@@ -42,8 +25,35 @@
       "referee": "Not published yet"
     },
     {
-      "match": "Panama 0–0 Croatia",
+      "match": "Panama 0–1 Croatia",
       "time": "23:00 Reykjavík",
+      "referee": "Not published yet"
+    }
+  ],
+  "today": [
+    {
+      "match": "Colombia 1–0 Democratic Republic of the Congo",
+      "time": "02:00 Reykjavík",
+      "referee": "Not published yet"
+    },
+    {
+      "match": "Bosnia and Herzegovina vs Qatar",
+      "time": "19:00 Reykjavík",
+      "referee": "Not published yet"
+    },
+    {
+      "match": "Switzerland vs Canada",
+      "time": "19:00 Reykjavík",
+      "referee": "Not published yet"
+    },
+    {
+      "match": "Scotland vs Brazil",
+      "time": "22:00 Reykjavík",
+      "referee": "Not published yet"
+    },
+    {
+      "match": "Morocco vs Haiti",
+      "time": "22:00 Reykjavík",
       "referee": "Not published yet"
     }
   ],
