@@ -1,59 +1,64 @@
 {
-  "updated": "2026-06-24 12:34",
+  "updated": "2026-06-25 12:38",
   "title": "World Cup Briefing",
   "apiFixtureCount": 104,
   "todayLabel": "Today",
   "yesterday": [
-    {
-      "match": "Norway 3–2 Senegal",
-      "time": "00:00 Reykjavík",
-      "referee": "Not published yet"
-    },
-    {
-      "match": "Jordan 1–2 Algeria",
-      "time": "03:00 Reykjavík",
-      "referee": "Not published yet"
-    },
-    {
-      "match": "Portugal 5–0 Uzbekistan",
-      "time": "17:00 Reykjavík",
-      "referee": "Not published yet"
-    },
-    {
-      "match": "England 0–0 Ghana",
-      "time": "20:00 Reykjavík",
-      "referee": "Not published yet"
-    },
-    {
-      "match": "Panama 0–1 Croatia",
-      "time": "23:00 Reykjavík",
-      "referee": "Not published yet"
-    }
-  ],
-  "today": [
     {
       "match": "Colombia 1–0 Democratic Republic of the Congo",
       "time": "02:00 Reykjavík",
       "referee": "Not published yet"
     },
     {
-      "match": "Bosnia and Herzegovina vs Qatar",
+      "match": "Bosnia and Herzegovina 3–1 Qatar",
       "time": "19:00 Reykjavík",
       "referee": "Not published yet"
     },
     {
-      "match": "Switzerland vs Canada",
+      "match": "Switzerland 2–1 Canada",
       "time": "19:00 Reykjavík",
       "referee": "Not published yet"
     },
     {
-      "match": "Scotland vs Brazil",
+      "match": "Morocco 4–2 Haiti",
       "time": "22:00 Reykjavík",
       "referee": "Not published yet"
     },
     {
-      "match": "Morocco vs Haiti",
+      "match": "Scotland 0–3 Brazil",
       "time": "22:00 Reykjavík",
+      "referee": "Not published yet"
+    }
+  ],
+  "today": [
+    {
+      "match": "Czech Republic 0–3 Mexico",
+      "time": "01:00 Reykjavík",
+      "referee": "Not published yet"
+    },
+    {
+      "match": "South Africa 1–0 South Korea",
+      "time": "01:00 Reykjavík",
+      "referee": "Not published yet"
+    },
+    {
+      "match": "Curaçao 0–0 Ivory Coast",
+      "time": "20:00 Reykjavík",
+      "referee": "Not published yet"
+    },
+    {
+      "match": "Ecuador 0–0 Germany",
+      "time": "20:00 Reykjavík",
+      "referee": "Not published yet"
+    },
+    {
+      "match": "Japan 0–0 Sweden",
+      "time": "23:00 Reykjavík",
+      "referee": "Not published yet"
+    },
+    {
+      "match": "Tunisia 0–0 Netherlands",
+      "time": "23:00 Reykjavík",
       "referee": "Not published yet"
     }
   ],
