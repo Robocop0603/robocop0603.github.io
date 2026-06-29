@@ -1,51 +1,9 @@
 {
-  "updated": "2026-06-28 11:23",
+  "updated": "2026-06-29 16:46",
   "title": "World Cup Briefing",
   "apiFixtureCount": 104,
   "todayLabel": "Today",
   "yesterday": [
-    {
-      "match": "Cape Verde 0–0 Saudi Arabia",
-      "time": "00:00 Reykjavík",
-      "referee": "Not published yet"
-    },
-    {
-      "match": "Uruguay 0–1 Spain",
-      "time": "00:00 Reykjavík",
-      "referee": "Not published yet"
-    },
-    {
-      "match": "Egypt 1–1 Iran",
-      "time": "03:00 Reykjavík",
-      "referee": "Not published yet"
-    },
-    {
-      "match": "New Zealand 1–5 Belgium",
-      "time": "03:00 Reykjavík",
-      "referee": "Not published yet"
-    },
-    {
-      "match": "Panama 0–2 England",
-      "time": "21:00 Reykjavík",
-      "referee": "Not published yet"
-    },
-    {
-      "match": "Croatia 2–1 Ghana",
-      "time": "21:00 Reykjavík",
-      "referee": "Not published yet"
-    },
-    {
-      "match": "Democratic Republic of the Congo 3–1 Uzbekistan",
-      "time": "23:30 Reykjavík",
-      "referee": "Not published yet"
-    },
-    {
-      "match": "Colombia 0–0 Portugal",
-      "time": "23:30 Reykjavík",
-      "referee": "Not published yet"
-    }
-  ],
-  "today": [
     {
       "match": "Jordan 1–3 Argentina",
       "time": "02:00 Reykjavík",
@@ -57,8 +15,20 @@
       "referee": "Not published yet"
     },
     {
-      "match": "South Africa 0–0 Canada",
+      "match": "South Africa 0–1 Canada",
       "time": "19:00 Reykjavík",
+      "referee": "Not published yet"
+    }
+  ],
+  "today": [
+    {
+      "match": "Brazil vs Japan",
+      "time": "17:00 Reykjavík",
+      "referee": "Not published yet"
+    },
+    {
+      "match": "Germany vs Paraguay",
+      "time": "20:30 Reykjavík",
       "referee": "Not published yet"
     }
   ],
