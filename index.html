@@ -3,151 +3,294 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Robocop Dashboard</title>
+  <title>Robocop Referee Dashboard</title>
 
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(135deg, #020617, #0f172a);
+      background:
+        radial-gradient(circle at top left, rgba(56,189,248,0.20), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(250,204,21,0.12), transparent 35%),
+        #020617;
       color: #e5e7eb;
     }
 
     .page {
-      max-width: 1100px;
+      max-width: 1250px;
       margin: 0 auto;
       padding: 24px;
     }
 
     .hero {
-      text-align: center;
-      padding: 28px 16px;
-      border-radius: 24px;
-      background: rgba(15, 23, 42, 0.9);
+      padding: 34px 24px;
+      border-radius: 28px;
+      background: rgba(15, 23, 42, 0.88);
       border: 1px solid rgba(148, 163, 184, 0.25);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.35);
       margin-bottom: 24px;
+    }
+
+    .hero-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(56, 189, 248, 0.14);
+      color: #7dd3fc;
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 12px;
     }
 
     h1 {
       margin: 0;
-      font-size: 36px;
-      color: #38bdf8;
+      font-size: 42px;
+      letter-spacing: -1px;
+      color: #f8fafc;
     }
 
     .subtitle {
-      margin-top: 8px;
+      margin-top: 10px;
       color: #94a3b8;
-      font-size: 16px;
+      font-size: 17px;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: 1.4fr 0.8fr;
-      gap: 20px;
-    }
-
-    .card {
-      background: rgba(30, 41, 59, 0.95);
-      border: 1px solid rgba(148, 163, 184, 0.2);
+    .hero-card {
+      min-width: 230px;
+      padding: 18px;
       border-radius: 20px;
-      padding: 20px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
-      margin-bottom: 20px;
+      background: rgba(2, 6, 23, 0.65);
+      border: 1px solid rgba(148, 163, 184, 0.20);
+      text-align: right;
     }
 
-    h2 {
-      margin-top: 0;
-      color: #f8fafc;
-      font-size: 22px;
-      border-bottom: 1px solid rgba(148, 163, 184, 0.25);
-      padding-bottom: 10px;
-    }
-
-    .match {
-      padding: 16px;
-      border-radius: 16px;
-      background: #0f172a;
-      margin-bottom: 12px;
-      border-left: 5px solid #38bdf8;
-    }
-
-    .match-date {
-      color: #38bdf8;
-      font-weight: bold;
-      margin-bottom: 6px;
-    }
-
-    .teams {
-      font-size: 22px;
-      font-weight: bold;
-      margin-bottom: 6px;
-    }
-
-    .role {
-      color: #facc15;
-      font-weight: bold;
-    }
-
-    .competition {
-      color: #cbd5e1;
-      font-size: 14px;
-      margin-top: 4px;
-    }
-
-    .status {
-      display: inline-block;
-      margin-top: 8px;
-      padding: 5px 10px;
-      border-radius: 999px;
-      background: rgba(34, 197, 94, 0.15);
-      color: #4ade80;
-      font-size: 13px;
-      font-weight: bold;
-    }
-
-    .note {
-      line-height: 1.6;
-      color: #cbd5e1;
-    }
-
-    .big-number {
-      font-size: 42px;
+    .clock {
+      font-size: 26px;
       font-weight: bold;
       color: #38bdf8;
     }
 
     .small {
       color: #94a3b8;
-      font-size: 14px;
+      font-size: 13px;
     }
 
-    .focus-list {
-      padding-left: 18px;
+    .layout {
+      display: grid;
+      grid-template-columns: 1.45fr 0.9fr;
+      gap: 22px;
+    }
+
+    .card {
+      background: rgba(15, 23, 42, 0.88);
+      border: 1px solid rgba(148, 163, 184, 0.22);
+      border-radius: 24px;
+      padding: 22px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.28);
+      margin-bottom: 22px;
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: 22px;
+      color: #f8fafc;
+    }
+
+    .next-match {
+      border-left: 6px solid #facc15;
+      background: linear-gradient(135deg, rgba(250,204,21,0.12), rgba(15,23,42,0.95));
+    }
+
+    .next-label {
+      color: #facc15;
+      font-size: 13px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .next-teams {
+      font-size: 30px;
+      font-weight: bold;
+      margin: 10px 0 8px;
+      color: #ffffff;
+    }
+
+    .next-meta {
+      color: #cbd5e1;
+      line-height: 1.7;
+    }
+
+    .countdown-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .count-box {
+      background: rgba(2, 6, 23, 0.7);
+      border-radius: 16px;
+      padding: 14px;
+      text-align: center;
+      border: 1px solid rgba(148, 163, 184, 0.18);
+    }
+
+    .count-number {
+      font-size: 28px;
+      font-weight: bold;
+      color: #38bdf8;
+    }
+
+    .count-label {
+      font-size: 12px;
+      color: #94a3b8;
+    }
+
+    .match {
+      display: grid;
+      grid-template-columns: 95px 1fr auto;
+      gap: 16px;
+      align-items: center;
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(2, 6, 23, 0.62);
+      border: 1px solid rgba(148, 163, 184, 0.16);
+      margin-bottom: 12px;
+    }
+
+    .date-pill {
+      text-align: center;
+      border-radius: 14px;
+      padding: 10px;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+    }
+
+    .date-day {
+      font-size: 22px;
+      font-weight: bold;
+      color: #38bdf8;
+    }
+
+    .date-month {
+      font-size: 12px;
+      color: #bae6fd;
+    }
+
+    .teams {
+      font-size: 20px;
+      font-weight: bold;
+      color: #f8fafc;
+    }
+
+    .competition {
+      color: #94a3b8;
+      font-size: 14px;
+      margin-top: 4px;
+    }
+
+    .role {
+      color: #facc15;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: bold;
+      margin-top: 8px;
+      background: rgba(34,197,94,0.13);
+      color: #4ade80;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .stat {
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(2, 6, 23, 0.62);
+      border: 1px solid rgba(148, 163, 184, 0.16);
+    }
+
+    .stat-number {
+      font-size: 34px;
+      font-weight: bold;
+      color: #38bdf8;
+    }
+
+    .stat-label {
+      color: #94a3b8;
+      font-size: 13px;
+    }
+
+    .note {
       line-height: 1.7;
       color: #cbd5e1;
     }
 
-    .footer {
-      text-align: center;
-      color: #64748b;
-      font-size: 13px;
-      margin-top: 28px;
-      padding-bottom: 20px;
+    .focus-list {
+      padding-left: 20px;
+      color: #cbd5e1;
+      line-height: 1.8;
     }
 
-    @media (max-width: 800px) {
-      .grid {
+    .status-good {
+      color: #4ade80;
+      font-weight: bold;
+    }
+
+    .footer {
+      color: #64748b;
+      text-align: center;
+      padding: 20px 0 8px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 900px) {
+      .layout {
         grid-template-columns: 1fr;
       }
 
-      h1 {
-        font-size: 30px;
+      .match {
+        grid-template-columns: 1fr;
       }
 
-      .teams {
-        font-size: 19px;
+      .role {
+        white-space: normal;
+      }
+
+      .countdown-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      .hero-card {
+        text-align: left;
+        width: 100%;
       }
     }
   </style>
@@ -157,49 +300,103 @@
   <div class="page">
 
     <header class="hero">
-      <h1>Robocop Referee Dashboard</h1>
-      <div class="subtitle">Appointments • Match focus • World Cup briefing</div>
+      <div class="hero-top">
+        <div>
+          <div class="badge">ROBOCOP COMMAND CENTER</div>
+          <h1>Referee Dashboard</h1>
+          <div class="subtitle">Appointments • Match focus • Control • Preparation</div>
+        </div>
+
+        <div class="hero-card">
+          <div class="clock" id="clock">--:--</div>
+          <div class="small">Reykjavík time</div>
+          <div class="small" id="todayDate"></div>
+        </div>
+      </div>
     </header>
 
-    <div class="grid">
+    <div class="layout">
 
       <main>
+        <section class="card next-match">
+          <div class="next-label">Next appointment</div>
+          <div class="next-teams" id="nextTeams">Loading...</div>
+          <div class="next-meta" id="nextMeta"></div>
+
+          <div class="countdown-row">
+            <div class="count-box">
+              <div class="count-number" id="days">0</div>
+              <div class="count-label">Days</div>
+            </div>
+            <div class="count-box">
+              <div class="count-number" id="hours">0</div>
+              <div class="count-label">Hours</div>
+            </div>
+            <div class="count-box">
+              <div class="count-number" id="minutes">0</div>
+              <div class="count-label">Minutes</div>
+            </div>
+            <div class="count-box">
+              <div class="count-number" id="seconds">0</div>
+              <div class="count-label">Seconds</div>
+            </div>
+          </div>
+        </section>
+
         <section class="card">
-          <h2>Upcoming Referee Appointments</h2>
+          <h2>Upcoming Appointments</h2>
           <div id="matches"></div>
         </section>
 
         <section class="card">
           <h2>World Cup Briefing</h2>
           <p class="note">
-            No live automatic World Cup data is connected in this clean version.
-            This section is ready for your GitHub workflow update later.
+            Clean version ready. Later we connect this section again to your automatic GitHub workflow.
           </p>
-          <div class="status">Dashboard online</div>
+          <span class="tag">Ready for automation</span>
         </section>
       </main>
 
       <aside>
         <section class="card">
-          <h2>Next Match Focus</h2>
-          <div class="big-number" id="daysToNext">–</div>
-          <div class="small">days until next appointment</div>
+          <h2>Season Snapshot</h2>
+          <div class="stats-grid">
+            <div class="stat">
+              <div class="stat-number" id="totalGames">0</div>
+              <div class="stat-label">Appointments loaded</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number" id="middleGames">0</div>
+              <div class="stat-label">Referee / Dómari</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number" id="fourthGames">0</div>
+              <div class="stat-label">Fourth official</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number" id="nextNumber">0</div>
+              <div class="stat-label">Upcoming left</div>
+            </div>
+          </div>
         </section>
 
         <section class="card">
-          <h2>Referee Notes</h2>
+          <h2>Referee Focus</h2>
           <ul class="focus-list">
-            <li>Strong presence from first whistle.</li>
-            <li>Clear body language.</li>
-            <li>Respect the game, but stay calm.</li>
-            <li>Next match matters most.</li>
+            <li>Strong presence from the first whistle.</li>
+            <li>Clear signals and calm body language.</li>
+            <li>Sell the big decisions with confidence.</li>
+            <li>Stay close to play, but keep the wide angle.</li>
+            <li>The last match is gone. The next match matters.</li>
           </ul>
         </section>
 
         <section class="card">
-          <h2>Status</h2>
+          <h2>Dashboard Status</h2>
           <p class="note">
-            Site active. Appointments loaded from local HTML.
+            Schedule source: <span class="status-good">inside index.html</span><br />
+            JSON system: <span class="status-good">coming next</span><br />
+            Site mode: <span class="status-good">live ready</span>
           </p>
           <p class="small" id="updated"></p>
         </section>
@@ -208,7 +405,7 @@
     </div>
 
     <footer class="footer">
-      Robocop Dashboard • Built for match control ⚽
+      Robocop Referee Dashboard • Built for match control ⚽
     </footer>
 
   </div>
@@ -218,6 +415,8 @@
       {
         date: "2026-07-02T19:15:00",
         displayDate: "Fim 2 júlí • 19:15",
+        day: "2",
+        month: "JÚL",
         teams: "Víkingur vs KA",
         role: "Fjórði dómari",
         competition: "Besta deild karla"
@@ -225,6 +424,8 @@
       {
         date: "2026-07-06T19:15:00",
         displayDate: "Mán 6 júlí • 19:15",
+        day: "6",
+        month: "JÚL",
         teams: "Keflavík vs Fram",
         role: "Fjórði dómari",
         competition: "Besta deild karla"
@@ -232,6 +433,8 @@
       {
         date: "2026-07-08T19:00:00",
         displayDate: "Mið 8 júlí • 19:00",
+        day: "8",
+        month: "JÚL",
         teams: "Kormákur/Hvöt vs Kári",
         role: "Dómari",
         competition: "Gatorade bikarinn"
@@ -239,6 +442,8 @@
       {
         date: "2026-07-10T19:15:00",
         displayDate: "Fös 10 júlí • 19:15",
+        day: "10",
+        month: "JÚL",
         teams: "Njarðvík vs Grindavík",
         role: "Dómari",
         competition: "Lengjudeild karla"
@@ -246,55 +451,135 @@
       {
         date: "2026-07-14T19:15:00",
         displayDate: "Þri 14 júlí • 19:15",
+        day: "14",
+        month: "JÚL",
         teams: "HK vs ÍR",
         role: "Dómari",
         competition: "Lengjudeild karla"
       }
     ];
 
-    const matchContainer = document.getElementById("matches");
+    function renderMatches() {
+      const container = document.getElementById("matches");
+      container.innerHTML = "";
 
-    matches.forEach(match => {
-      const matchCard = document.createElement("div");
-      matchCard.className = "match";
+      matches.forEach(match => {
+        const card = document.createElement("div");
+        card.className = "match";
 
-      matchCard.innerHTML = `
-        <div class="match-date">${match.displayDate}</div>
-        <div class="teams">${match.teams}</div>
-        <div class="role">${match.role}</div>
-        <div class="competition">${match.competition}</div>
-      `;
+        card.innerHTML = `
+          <div class="date-pill">
+            <div class="date-day">${match.day}</div>
+            <div class="date-month">${match.month}</div>
+          </div>
 
-      matchContainer.appendChild(matchCard);
-    });
+          <div>
+            <div class="teams">${match.teams}</div>
+            <div class="competition">${match.displayDate} • ${match.competition}</div>
+          </div>
 
-    function updateDaysToNextMatch() {
+          <div class="role">${match.role}</div>
+        `;
+
+        container.appendChild(card);
+      });
+    }
+
+    function getFutureMatches() {
       const now = new Date();
 
-      const futureMatches = matches
-        .map(match => ({ ...match, realDate: new Date(match.date) }))
+      return matches
+        .map(match => ({
+          ...match,
+          realDate: new Date(match.date)
+        }))
         .filter(match => match.realDate >= now)
         .sort((a, b) => a.realDate - b.realDate);
+    }
 
-      const daysBox = document.getElementById("daysToNext");
+    function updateNextMatch() {
+      const futureMatches = getFutureMatches();
+
+      const nextTeams = document.getElementById("nextTeams");
+      const nextMeta = document.getElementById("nextMeta");
 
       if (futureMatches.length === 0) {
-        daysBox.textContent = "0";
+        nextTeams.textContent = "No upcoming appointments";
+        nextMeta.textContent = "Add new games to the schedule.";
+        document.getElementById("days").textContent = "0";
+        document.getElementById("hours").textContent = "0";
+        document.getElementById("minutes").textContent = "0";
+        document.getElementById("seconds").textContent = "0";
         return;
       }
 
-      const difference = futureMatches[0].realDate - now;
-      const days = Math.ceil(difference / (1000 * 60 * 60 * 24));
+      const next = futureMatches[0];
+      const now = new Date();
+      const diff = next.realDate - now;
 
-      daysBox.textContent = days;
+      const totalSeconds = Math.max(0, Math.floor(diff / 1000));
+      const days = Math.floor(totalSeconds / 86400);
+      const hours = Math.floor((totalSeconds % 86400) / 3600);
+      const minutes = Math.floor((totalSeconds % 3600) / 60);
+      const seconds = totalSeconds % 60;
+
+      nextTeams.textContent = next.teams;
+      nextMeta.innerHTML = `
+        ${next.displayDate}<br>
+        ${next.role} • ${next.competition}
+      `;
+
+      document.getElementById("days").textContent = days;
+      document.getElementById("hours").textContent = hours;
+      document.getElementById("minutes").textContent = minutes;
+      document.getElementById("seconds").textContent = seconds;
     }
 
-    updateDaysToNextMatch();
+    function updateStats() {
+      const futureMatches = getFutureMatches();
 
-    document.getElementById("updated").textContent =
-      "Last updated: " + new Date().toLocaleString("is-IS", {
-        timeZone: "Atlantic/Reykjavik"
-      });
+      document.getElementById("totalGames").textContent = matches.length;
+      document.getElementById("middleGames").textContent =
+        matches.filter(match => match.role.toLowerCase().includes("dómari") && !match.role.toLowerCase().includes("fjórði")).length;
+
+      document.getElementById("fourthGames").textContent =
+        matches.filter(match => match.role.toLowerCase().includes("fjórði")).length;
+
+      document.getElementById("nextNumber").textContent = futureMatches.length;
+    }
+
+    function updateClock() {
+      const now = new Date();
+
+      document.getElementById("clock").textContent =
+        now.toLocaleTimeString("is-IS", {
+          timeZone: "Atlantic/Reykjavik",
+          hour: "2-digit",
+          minute: "2-digit"
+        });
+
+      document.getElementById("todayDate").textContent =
+        now.toLocaleDateString("is-IS", {
+          timeZone: "Atlantic/Reykjavik",
+          weekday: "long",
+          day: "numeric",
+          month: "long",
+          year: "numeric"
+        });
+
+      document.getElementById("updated").textContent =
+        "Last updated: " + now.toLocaleString("is-IS", {
+          timeZone: "Atlantic/Reykjavik"
+        });
+    }
+
+    renderMatches();
+    updateStats();
+    updateClock();
+    updateNextMatch();
+
+    setInterval(updateClock, 1000);
+    setInterval(updateNextMatch, 1000);
   </script>
 </body>
 </html>
