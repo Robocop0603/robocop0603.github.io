@@ -1,39 +1,39 @@
 {
-  "updated": "2026-07-01 13:43",
+  "updated": "2026-07-02 12:24",
   "title": "World Cup Briefing",
   "apiFixtureCount": 104,
   "todayLabel": "Today",
   "yesterday": [
-    {
-      "match": "Netherlands 1–1 Morocco",
-      "time": "01:00 Reykjavík",
-      "referee": "Not published yet"
-    },
-    {
-      "match": "Ivory Coast 1–2 Norway",
-      "time": "17:00 Reykjavík",
-      "referee": "Not published yet"
-    },
-    {
-      "match": "France 3–0 Sweden",
-      "time": "21:00 Reykjavík",
-      "referee": "Not published yet"
-    }
-  ],
-  "today": [
     {
       "match": "Mexico 2–0 Ecuador",
       "time": "01:00 Reykjavík",
       "referee": "Not published yet"
     },
     {
-      "match": "England vs Democratic Republic of the Congo",
+      "match": "England 2–1 Democratic Republic of the Congo",
       "time": "16:00 Reykjavík",
       "referee": "Not published yet"
     },
     {
-      "match": "Belgium vs Senegal",
+      "match": "Belgium 3–2 Senegal",
       "time": "20:00 Reykjavík",
+      "referee": "Not published yet"
+    }
+  ],
+  "today": [
+    {
+      "match": "United States 2–0 Bosnia and Herzegovina",
+      "time": "00:00 Reykjavík",
+      "referee": "Not published yet"
+    },
+    {
+      "match": "Spain 0–0 Austria",
+      "time": "19:00 Reykjavík",
+      "referee": "Not published yet"
+    },
+    {
+      "match": "Portugal 0–0 Croatia",
+      "time": "23:00 Reykjavík",
       "referee": "Not published yet"
     }
   ],
