@@ -1,1023 +1,300 @@
 <!DOCTYPE html>
-<html>
+<html lang="is">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ROBOCOP Dashboard</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Robocop Dashboard</title>
 
-<link rel="apple-touch-icon" sizes="180x180" href="/icon.jpg">
-<link rel="icon" type="image/jpeg" href="/icon.jpg">
+  <style>
+    * { box-sizing: border-box; }
 
-</head>
-<body>
-
-<style>
     body {
-        color: white;
-        font-family: Arial, sans-serif;
-        text-align: center;
-        margin: 0;
-        padding: 35px 20px;
-        min-height: 100vh;
-        background:
-            linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.88)),
-            url("images/robocop-referee.jpg");
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #020617, #0f172a);
+      color: #e5e7eb;
     }
 
-    body {
-    position: relative;
-    background: #000;
-}
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px;
+    }
 
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    background:
-        linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.88)),
-        url("images/robocop-referee.jpg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
+    .hero {
+      text-align: center;
+      padding: 28px 16px;
+      border-radius: 24px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      margin-bottom: 24px;
+    }
 
     h1 {
-        font-size: 46px;
-        margin-bottom: 8px;
-        letter-spacing: 2px;
-        text-shadow: 0 4px 15px rgba(0,0,0,0.9);
+      margin: 0;
+      font-size: 36px;
+      color: #38bdf8;
     }
 
-    .top-panel {
-        max-width: 1050px;
-        margin: 0 auto 28px auto;
-        padding: 24px;
-        border-radius: 26px;
-        background: rgba(25,25,25,0.68);
-        border: 1px solid rgba(255,255,255,0.14);
-        backdrop-filter: blur(12px);
-        box-shadow: 0 12px 35px rgba(0,0,0,0.45);
+    .subtitle {
+      margin-top: 8px;
+      color: #94a3b8;
+      font-size: 16px;
     }
 
-    #clock {
-        font-size: 44px;
-        font-weight: bold;
-        margin-bottom: 5px;
+    .grid {
+      display: grid;
+      grid-template-columns: 1.4fr 0.8fr;
+      gap: 20px;
     }
 
-    #date {
+    .card {
+      background: rgba(30, 41, 59, 0.95);
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #f8fafc;
+      font-size: 22px;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+      padding-bottom: 10px;
+    }
+
+    .match {
+      padding: 16px;
+      border-radius: 16px;
+      background: #0f172a;
+      margin-bottom: 12px;
+      border-left: 5px solid #38bdf8;
+    }
+
+    .match-date {
+      color: #38bdf8;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    .teams {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    .role {
+      color: #facc15;
+      font-weight: bold;
+    }
+
+    .competition {
+      color: #cbd5e1;
+      font-size: 14px;
+      margin-top: 4px;
+    }
+
+    .status {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: rgba(34, 197, 94, 0.15);
+      color: #4ade80;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .note {
+      line-height: 1.6;
+      color: #cbd5e1;
+    }
+
+    .big-number {
+      font-size: 42px;
+      font-weight: bold;
+      color: #38bdf8;
+    }
+
+    .small {
+      color: #94a3b8;
+      font-size: 14px;
+    }
+
+    .focus-list {
+      padding-left: 18px;
+      line-height: 1.7;
+      color: #cbd5e1;
+    }
+
+    .footer {
+      text-align: center;
+      color: #64748b;
+      font-size: 13px;
+      margin-top: 28px;
+      padding-bottom: 20px;
+    }
+
+    @media (max-width: 800px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      .teams {
         font-size: 19px;
-        color: #dddddd;
-        margin-bottom: 22px;
+      }
     }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <header class="hero">
+      <h1>Robocop Referee Dashboard</h1>
+      <div class="subtitle">Appointments • Match focus • World Cup briefing</div>
+    </header>
+
+    <div class="grid">
+
+      <main>
+        <section class="card">
+          <h2>Upcoming Referee Appointments</h2>
+          <div id="matches"></div>
+        </section>
+
+        <section class="card">
+          <h2>World Cup Briefing</h2>
+          <p class="note">
+            No live automatic World Cup data is connected in this clean version.
+            This section is ready for your GitHub workflow update later.
+          </p>
+          <div class="status">Dashboard online</div>
+        </section>
+      </main>
+
+      <aside>
+        <section class="card">
+          <h2>Next Match Focus</h2>
+          <div class="big-number" id="daysToNext">–</div>
+          <div class="small">days until next appointment</div>
+        </section>
+
+        <section class="card">
+          <h2>Referee Notes</h2>
+          <ul class="focus-list">
+            <li>Strong presence from first whistle.</li>
+            <li>Clear body language.</li>
+            <li>Respect the game, but stay calm.</li>
+            <li>Next match matters most.</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>Status</h2>
+          <p class="note">
+            Site active. Appointments loaded from local HTML.
+          </p>
+          <p class="small" id="updated"></p>
+        </section>
+      </aside>
 
-    .countdown-card {
-        max-width: 420px;
-        margin: 0 auto 20px auto;
-        padding: 12px;
-        border-radius: 18px;
-        background: linear-gradient(135deg, rgba(0,95,60,0.68), rgba(20,20,20,0.74));
-        border: 1px solid rgba(120,255,190,0.32);
-        box-shadow: 0 0 22px rgba(90,255,180,0.16);
-    }
-
-    .countdown-label {
-        font-size: 11px;
-        color: #bfffd8;
-        font-weight: bold;
-        margin-bottom: 7px;
-        letter-spacing: 1px;
-    }
-
-    .countdown-teams-row {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 12px;
-        margin-bottom: 6px;
-    }
-
-    .countdown-logo {
-        width: 32px;
-        height: 32px;
-        object-fit: contain;
-        filter: drop-shadow(0 3px 8px rgba(0,0,0,0.55));
-    }
-
-    #countdown-teams {
-        font-size: 18px;
-        font-weight: bold;
-        white-space: nowrap;
-    }
-
-    #countdown-competition,
-    #countdown-role {
-        font-size: 12px;
-        color: #dddddd;
-    }
-
-    #countdown-matchdate {
-        font-size: 13px;
-        color: #cfcfcf;
-        margin-bottom: 8px;
-    }
-
-    #countdown-time {
-        font-size: 18px;
-        font-weight: bold;
-        color: #8cffb7;
-        text-shadow: 0 0 10px rgba(140,255,183,0.4);
-    }
-
-    .appointments {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 18px;
-        border-radius: 22px;
-        background: rgba(255,255,255,0.08);
-        border: 1px solid rgba(255,255,255,0.12);
-    }
-
-    .appointments-title {
-        font-size: 22px;
-        font-weight: bold;
-        margin-bottom: 16px;
-    }
-
-    .match-list {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap: 14px;
-    }
-
-    .match-card {
-        padding: 16px;
-        border-radius: 18px;
-        background: rgba(20,20,20,0.55);
-        border: 1px solid rgba(255,255,255,0.12);
-        box-shadow: 0 8px 22px rgba(0,0,0,0.28);
-    }
-
-    .match-competition {
-        font-size: 14px;
-        color: #cccccc;
-        margin-bottom: 8px;
-    }
-
-    .match-teams {
-        font-size: 21px;
-        font-weight: bold;
-        margin-bottom: 8px;
-    }
-
-    .match-detail {
-        font-size: 15px;
-        color: #dddddd;
-        margin: 4px 0;
-    }
-
-    .empty-appointments {
-        font-size: 16px;
-        color: #cccccc;
-        padding: 12px;
-    }
-
-    .search-area {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 16px;
-        margin: 0 auto 22px auto;
-        max-width: 1150px;
-    }
-
-    .search-box {
-        width: 340px;
-        max-width: 90vw;
-        padding: 17px 24px;
-        border: 1px solid rgba(255,255,255,0.15);
-        border-radius: 50px;
-        background: rgba(30,30,30,0.82);
-        color: white;
-        font-size: 17px;
-        outline: none;
-        backdrop-filter: blur(10px);
-        box-shadow: 0 8px 25px rgba(0,0,0,0.45);
-        transition: all 0.25s ease;
-    }
-
-    .search-box:focus {
-        background: rgba(45,45,45,0.95);
-        transform: scale(1.02);
-    }
-
-    .google:focus {
-        box-shadow: 0 0 0 2px #4285f4, 0 10px 30px rgba(66,133,244,0.35);
-    }
-
-    .youtube:focus {
-        box-shadow: 0 0 0 2px #ff0000, 0 10px 30px rgba(255,0,0,0.35);
-    }
-
-    .chatgpt:focus {
-        box-shadow: 0 0 0 2px #10a37f, 0 10px 30px rgba(16,163,127,0.35);
-    }
-
-    .featured-row {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 18px;
-        margin: 0 auto 38px auto;
-    }
-
-    .featured-card {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 14px;
-        width: 250px;
-        max-width: 90%;
-        padding: 15px 20px;
-        border-radius: 22px;
-        text-decoration: none;
-        color: white;
-        transition: all 0.25s ease;
-    }
-
-    .featured-card:hover {
-        transform: translateY(-5px) scale(1.02);
-    }
-
-    .featured-card img {
-        width: 52px;
-        height: 52px;
-        object-fit: contain;
-    }
-
-    .featured-title {
-        font-size: 23px;
-        font-weight: bold;
-    }
-
-    .featured-subtitle {
-        font-size: 13px;
-        opacity: 0.9;
-    }
-
-    .youtube-card {
-        background: linear-gradient(135deg, #ff0000, #b80000);
-        box-shadow: 0 12px 35px rgba(255,0,0,0.4);
-    }
-
-    .facebook-card {
-        background: linear-gradient(135deg, #1877f2, #0b4fb3);
-        box-shadow: 0 12px 35px rgba(24,119,242,0.35);
-    }
-
-    .messenger-card {
-        background: linear-gradient(135deg, #00b2ff, #006aff);
-        box-shadow: 0 12px 35px rgba(0,178,255,0.35);
-    }
-
-    .container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 14px;
-        max-width: 1150px;
-        margin: auto;
-    }
-
-    .section-title {
-        width: 100%;
-        font-size: 25px;
-        font-weight: bold;
-        margin: 34px 0 8px 0;
-        text-shadow: 0 4px 15px rgba(0,0,0,0.9);
-    }
-
-    .card {
-        width: 140px;
-        padding: 14px;
-        background: rgba(38,38,38,0.78);
-        border: 1px solid rgba(255,255,255,0.12);
-        border-radius: 16px;
-        text-decoration: none;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-        backdrop-filter: blur(10px);
-        transition: all 0.22s ease;
-        box-shadow: 0 8px 22px rgba(0,0,0,0.35);
-    }
-
-    .card:hover {
-        background: rgba(38,38,38,0.88);
-        transform: translateY(-5px) scale(1.03);
-        box-shadow: 0 14px 34px rgba(0,0,0,0.55);
-    }
-
-    .card img {
-        width: 38px;
-        height: 38px;
-        object-fit: contain;
-        filter: drop-shadow(0 3px 8px rgba(0,0,0,0.45));
-    }
-
-    .card span {
-        font-size: 15px;
-        font-weight: bold;
-    }
-
-    .tv-card {
-        background: linear-gradient(135deg, var(--c1), var(--c2));
-        box-shadow: 0 8px 22px var(--glow);
-        border: 1px solid rgba(255,255,255,0.16);
-    }
-
-    .tv-card:hover {
-        background: linear-gradient(135deg, var(--c1), var(--c2));
-        box-shadow: 0 14px 34px var(--glow);
-    }
-
-    .tv-card img {
-        width: 70px;
-        height: 42px;
-        object-fit: contain;
-    }
-
-    .syn-tv {
-        --c1: #e10000;
-        --c2: #8c0000;
-        --glow: rgba(225,0,0,.34);
-    }
-
-    .siminn-tv {
-        --c1: #0057b8;
-        --c2: #00356f;
-        --glow: rgba(0,95,200,.32);
-    }
-
-    .netflix-tv {
-        --c1: #e10000;
-        --c2: #8c0000;
-        --glow: rgba(225,0,0,.34);
-    }
-
-    .viaplay-tv {
-        --c1: #6b3df5;
-        --c2: #32166f;
-        --glow: rgba(120,80,255,.30);
-    }
-
-    .livey-tv {
-        --c1: #00a4ff;
-        --c2: #0059b8;
-        --glow: rgba(0,164,255,.35);
-    }
-
-    @media (max-width: 700px) {
-
-    body {
-    padding: 22px 12px;
-}
-
-    h1 {
-        font-size: 34px;
-    }
-
-    #clock {
-        font-size: 36px;
-    }
-
-    .countdown-card {
-        max-width: 95%;
-    }
-
-    #countdown-teams {
-        font-size: 16px;
-        white-space: normal;
-    }
-
-    .card {
-        width: 115px;
-        padding: 11px;
-    }
-
-    .card img {
-        width: 32px;
-        height: 32px;
-    }
-
-    .card span {
-        font-size: 13px;
-    }
-
-    .section-title {
-        font-size: 21px;
-        margin: 24px 0 6px 0;
-    }
-
-    .featured-card {
-        width: 210px;
-        padding: 12px 16px;
-    }
-}
-
-    .worldcup-card {
-  width: min(960px, 94%);
-  margin: 18px auto;
-  padding: 18px;
-  border-radius: 22px;
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(30, 41, 59, 0.96));
-  color: white;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-.worldcup-header {
-  display: flex;
-  justify-content: space-between;
-  gap: 14px;
-  align-items: center;
-  margin-bottom: 14px;
-}
-
-.worldcup-header h2 {
-  margin: 0;
-  font-size: 1.35rem;
-  letter-spacing: 0.5px;
-}
-
-.worldcup-header p {
-  margin: 4px 0 0;
-  color: #cbd5e1;
-  font-size: 0.85rem;
-}
-
-.worldcup-badge {
-  padding: 7px 10px;
-  border-radius: 999px;
-  background: rgba(59, 130, 246, 0.25);
-  color: #dbeafe;
-  font-size: 0.78rem;
-  font-weight: 700;
-  white-space: nowrap;
-}
-
-.worldcup-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-
-.worldcup-box,
-.worldcup-referee {
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
-  padding: 14px;
-}
-
-.worldcup-box h3,
-.worldcup-referee h3 {
-  margin: 0 0 10px;
-  font-size: 0.95rem;
-  color: #bfdbfe;
-}
-
-.wc-match {
-  padding: 9px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.09);
-}
-
-.wc-match:first-child {
-  border-top: 0;
-  padding-top: 0;
-}
-
-.wc-main {
-  font-weight: 800;
-  font-size: 0.95rem;
-}
-
-.wc-sub {
-  margin-top: 3px;
-  color: #cbd5e1;
-  font-size: 0.82rem;
-}
-
-.worldcup-referee {
-  margin-top: 12px;
-}
-
-.worldcup-referee p {
-  margin: 0;
-  color: #e2e8f0;
-  line-height: 1.4;
-}
-
-@media (max-width: 720px) {
-  .worldcup-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .worldcup-card {
-    padding: 15px;
-    border-radius: 18px;
-  }
-}
-
-    /* Smaller World Cup Briefing card */
-.worldcup-card {
-  max-width: 960px;
-  padding: 18px 20px;
-  margin: 26px auto 20px;
-}
-
-.worldcup-header {
-  margin-bottom: 12px;
-}
-
-.worldcup-header h2 {
-  font-size: 24px;
-}
-
-.worldcup-grid {
-  gap: 12px;
-}
-
-.worldcup-box {
-  padding: 14px 16px;
-  min-height: 210px;
-}
-
-.worldcup-box h3,
-.worldcup-referee h3 {
-  margin-bottom: 8px;
-}
-
-.wc-match {
-  padding: 8px 0;
-}
-
-.wc-main {
-  font-size: 17px;
-}
-
-.wc-sub {
-  font-size: 14px;
-  margin-top: 2px;
-}
-
-.worldcup-referee {
-  margin-top: 12px;
-  padding: 12px 16px;
-}
-
-#wc-note {
-  font-size: 15px;
-}
-</style>
-<h1>⚽ ROBOCOP Dashboard</h1>
-
-<div class="top-panel">
-    <div id="clock"></div>
-    <div id="date"></div>
-
-    <div class="countdown-card">
-        <div class="countdown-label">⏳ NEXT MATCH</div>
-
-        <div class="countdown-teams-row">
-            <img id="home-logo" class="countdown-logo" src="" alt="">
-            <div id="countdown-teams"></div>
-            <img id="away-logo" class="countdown-logo" src="" alt="">
-        </div>
-
-        <div id="countdown-competition"></div>
-        <div id="countdown-role"></div>
-        <div id="countdown-matchdate"></div>
-        <div id="countdown-time"></div>
     </div>
 
-    <div class="appointments">
-        <div class="appointments-title">📅 Upcoming Appointments</div>
-        <div id="upcoming-list" class="match-list"></div>
-    </div>
-</div>
+    <footer class="footer">
+      Robocop Dashboard • Built for match control ⚽
+    </footer>
 
-    <section class="worldcup-card">
-  <div class="worldcup-header">
-    <div>
-      <h2>World Cup Briefing</h2>
-      <p id="wc-updated">Loading briefing...</p>
-    </div>
-    <div class="worldcup-badge">WC 2026</div>
   </div>
 
-  <div class="worldcup-grid">
-    <div class="worldcup-box">
-      <h3>Yesterday</h3>
-      <div id="wc-yesterday"></div>
-    </div>
-
-    <div class="worldcup-box">
-      <h3>Today</h3>
-      <div id="wc-today"></div>
-    </div>
-  </div>
-
-  <div class="worldcup-referee">
-    <h3>Referee Watch</h3>
-    <p id="wc-note">Loading referee details...</p>
-  </div>
-</section>
-
-<div class="search-area">
-    <form action="https://www.google.com/search" method="GET" target="_blank">
-        <input class="search-box google" type="text" name="q" placeholder="🔍 Search Google...">
-    </form>
-
-    <form action="https://www.youtube.com/results" method="GET" target="_blank">
-        <input class="search-box youtube" type="text" name="search_query" placeholder="▶ Search YouTube...">
-    </form>
-
-    <form action="https://chatgpt.com/" method="GET" target="_blank">
-        <input class="search-box chatgpt" type="text" name="q" placeholder="🤖 Ask ChatGPT...">
-    </form>
-</div>
-
-<div class="featured-row">
-
-    <a class="featured-card youtube-card" href="https://youtube.com" target="_blank" rel="noopener noreferrer">
-        <img src="https://www.google.com/s2/favicons?domain=youtube.com&sz=128">
-        <div>
-            <div class="featured-title">YouTube</div>
-            <div class="featured-subtitle">Open YouTube</div>
-        </div>
-    </a>
-
-    <a class="featured-card facebook-card" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-        <img src="https://www.google.com/s2/favicons?domain=facebook.com&sz=128">
-        <div>
-            <div class="featured-title">Facebook</div>
-            <div class="featured-subtitle">Open Facebook</div>
-        </div>
-    </a>
-
-    <a class="featured-card messenger-card" href="https://www.messenger.com" target="_blank" rel="noopener noreferrer">
-        <img src="https://www.google.com/s2/favicons?domain=messenger.com&sz=128">
-        <div>
-            <div class="featured-title">Messenger</div>
-            <div class="featured-subtitle">Open Messenger</div>
-        </div>
-    </a>
-
-</div>
-
-<div class="container">
-
-    <div class="section-title">📰 Netmiðlar</div>
-
-    <a class="card" href="https://visir.is" target="_blank" rel="noopener noreferrer">
-        <img src="https://www.google.com/s2/favicons?domain=visir.is&sz=64">
-        <span>Vísir</span>
-    </a>
-
-    <a class="card" href="https://mbl.is" target="_blank" rel="noopener noreferrer">
-        <img src="https://www.google.com/s2/favicons?domain=mbl.is&sz=64">
-        <span>mbl</span>
-    </a>
-
-    <a class="card" href="https://www.framundanibeinni.is/" target="_blank" rel="noopener noreferrer">
-        <img src="https://www.google.com/s2/favicons?domain=framundanibeinni.is&sz=64">
-        <span>Framundan</span>
-    </a>
-
-    <a class="card" href="https://fotbolti.net" target="_blank" rel="noopener noreferrer">
-        <img src="https://www.google.com/s2/favicons?domain=fotbolti.net&sz=64">
-        <span>Fotbolti.net</span>
-    </a>
-
-    <a class="card" href="https://abler.io/ksi" target="_blank" rel="noopener noreferrer">
-        <img src="https://www.google.com/s2/favicons?domain=abler.io&sz=64">
-        <span>KSI ABLER</span>
-    </a>
-
-    <div class="section-title">⚽ Dómgæsla</div>
-
-    <a class="card" href="https://toppfotbolti.momentslab.com/auth/signin" target="_blank" rel="noopener noreferrer">
-        <img src="https://www.google.com/s2/favicons?domain=momentslab.com&sz=64">
-        <span>Toppfótbolti</span>
-    </a>
-
-    <a class="card" href="https://app.refpal.org/games/" target="_blank" rel="noopener noreferrer">
-        <img src="images/refpal-logo.jpg">
-        <span>RefPal</span>
-    </a>
-
-    <a class="card" href="https://app.spiideo.net/accounts/3609bb32-fd3a-4faf-aa42-bd286380f88d/recordings?game-query=&rrscroll=disabled" target="_blank" rel="noopener noreferrer">
-        <img src="images/spiideo-logo.png">
-        <span>Spiideo</span>
-    </a>
-
-    <a class="card" href="https://nextaur.com/uefa/login" target="_blank" rel="noopener noreferrer">
-        <img src="https://www.google.com/s2/favicons?domain=nextaur.com&sz=64">
-        <span>UEFA Nextaur</span>
-    </a>
-
-    <a class="card" href="https://comet.ksi.is/resources/jsf/common/home.xhtml" target="_blank" rel="noopener noreferrer">
-        <img src="images/comet-logo.png">
-        <span>KSÍ Comet</span>
-    </a>
-
-    <a class="card" href="https://www.theifab.com/laws/latest/" target="_blank" rel="noopener noreferrer">
-        <img src="images/ifab-logo.png">
-        <span>Laws of the Game</span>
-    </a>
-
-    <a class="card" href="https://www.ksi.is/felagslid/domaramal/?id=6987982&banner-tab=matches-and-results" target="_blank" rel="noopener noreferrer">
-        <img src="images/ksi-logo.png">
-        <span>Dómaramál-KSÍ</span>
-    </a>
-
-    <div class="section-title">📺 TV</div>
-
-    <a class="card tv-card syn-tv" href="https://sjonvarp.syn.is/profiles" target="_blank" rel="noopener noreferrer">
-        <img src="images/syn-logo.png">
-        <span>SÝN</span>
-    </a>
-
-    <a class="card tv-card siminn-tv" href="https://sjonvarp.siminn.is/auth/login" target="_blank" rel="noopener noreferrer">
-        <img src="images/siminn-logo.png">
-        <span>Síminn TV</span>
-    </a>
-
-    <a class="card tv-card netflix-tv" href="https://www.netflix.com/is/" target="_blank" rel="noopener noreferrer">
-        <img src="images/netflix-logo.jpg">
-        <span>Netflix</span>
-    </a>
-
-    <a class="card tv-card viaplay-tv" href="https://viaplay.is/is-is/" target="_blank" rel="noopener noreferrer">
-        <img src="images/viaplay-logo.jpg">
-        <span>Viaplay</span>
-    </a>
-
-    <a class="card tv-card livey-tv" href="https://watch.livey.events/" target="_blank" rel="noopener noreferrer">
-        <img src="images/livey-logo.jpg">
-        <span>Livey</span>
-    </a>
-
-    <div class="section-title">🏃 Referee Fitness</div>
-
-    <a class="card" href="https://connect.garmin.com/app/home" target="_blank" rel="noopener noreferrer">
-        <img src="https://www.google.com/s2/favicons?domain=garmin.com&sz=64">
-        <span>Garmin Connect</span>
-    </a>
-
-    <a class="card" href="https://flow.polar.com/diary" target="_blank" rel="noopener noreferrer">
-        <img src="https://www.google.com/s2/favicons?domain=polar.com&sz=64">
-        <span>Polar Flow</span>
-    </a>
-
-    <div class="section-title">⛳ Golf</div>
-
-    <a class="card" href="https://orninngolf.is" target="_blank" rel="noopener noreferrer">
-        <img src="https://www.google.com/s2/favicons?domain=orninngolf.is&sz=64">
-        <span>ÖrninnGolf</span>
-    </a>
-
-    <a class="card" href="https://golfskalinn.is" target="_blank" rel="noopener noreferrer">
-        <img src="https://www.google.com/s2/favicons?domain=golfskalinn.is&sz=64">
-        <span>Golfskálinn</span>
-    </a>
-
-    <a class="card" href="https://golf.is" target="_blank" rel="noopener noreferrer">
-        <img src="images/gsi-logo.png">
-        <span>Golf.is</span>
-    </a>
-
-    <a class="card" href="https://www.golfbox.dk/site/my_golfbox/ressources/booking/grid.asp?Ressource_GUID=%7BE4FACDD4-A584-44D7-B155-8670F6EA9068%7D&Club_GUID=%7BA112EA7C-4DCC-4083-887F-3DAED23C1BEB%7D" target="_blank" rel="noopener noreferrer">
-        <img src="images/golfbox-logo.png">
-        <span>Golfbox</span>
-    </a>
-
-    <div class="section-title">💻 Tools</div>
-
-    <a class="card" href="https://chatgpt.com" target="_blank" rel="noopener noreferrer">
-        <img src="https://www.google.com/s2/favicons?domain=chatgpt.com&sz=64">
-        <span>ChatGPT</span>
-    </a>
-
-</div>
-
-<script>
+  <script>
     const matches = [
-    {
+      {
         date: "2026-07-02T19:15:00",
         displayDate: "Fim 2 júlí • 19:15",
         teams: "Víkingur vs KA",
         role: "Fjórði dómari",
         competition: "Besta deild karla"
-    },
-    {
+      },
+      {
         date: "2026-07-06T19:15:00",
         displayDate: "Mán 6 júlí • 19:15",
         teams: "Keflavík vs Fram",
         role: "Fjórði dómari",
         competition: "Besta deild karla"
-    },
-    {
+      },
+      {
         date: "2026-07-08T19:00:00",
         displayDate: "Mið 8 júlí • 19:00",
         teams: "Kormákur/Hvöt vs Kári",
         role: "Dómari",
         competition: "Gatorade bikarinn"
-    },
-    {
+      },
+      {
         date: "2026-07-10T19:15:00",
         displayDate: "Fös 10 júlí • 19:15",
         teams: "Njarðvík vs Grindavík",
         role: "Dómari",
         competition: "Lengjudeild karla"
-    },
-    {
-        date: "2026-07-14T17:00:00",
-        displayDate: "Þri 14 júlí • 17:00",
+      },
+      {
+        date: "2026-07-14T19:15:00",
+        displayDate: "Þri 14 júlí • 19:15",
         teams: "HK vs ÍR",
         role: "Dómari",
         competition: "Lengjudeild karla"
-    }
-];
+      }
+    ];
 
-    function updateDashboard() {
-        const now = new Date();
+    const matchContainer = document.getElementById("matches");
 
-        document.getElementById("clock").innerHTML =
-            now.toLocaleTimeString("en-GB");
+    matches.forEach(match => {
+      const matchCard = document.createElement("div");
+      matchCard.className = "match";
 
-        document.getElementById("date").innerHTML =
-            now.toLocaleDateString("en-GB", {
-                weekday: "long",
-                year: "numeric",
-                month: "long",
-                day: "numeric"
-            });
+      matchCard.innerHTML = `
+        <div class="match-date">${match.displayDate}</div>
+        <div class="teams">${match.teams}</div>
+        <div class="role">${match.role}</div>
+        <div class="competition">${match.competition}</div>
+      `;
 
-        const futureMatches = matches
-            .map(match => ({
-                ...match,
-                matchDate: new Date(match.date)
-            }))
-            .filter(match => match.matchDate > now)
-            .sort((a, b) => a.matchDate - b.matchDate);
-
-        const upcomingList = document.getElementById("upcoming-list");
-        upcomingList.innerHTML = "";
-
-        const homeLogo = document.getElementById("home-logo");
-        const awayLogo = document.getElementById("away-logo");
-
-        if (futureMatches.length === 0) {
-            homeLogo.style.display = "none";
-            awayLogo.style.display = "none";
-
-            document.getElementById("countdown-teams").innerHTML =
-                "No upcoming matches";
-
-            document.getElementById("countdown-competition").innerHTML =
-                "Time to update your KSÍ appointments";
-
-            document.getElementById("countdown-role").innerHTML = "";
-            document.getElementById("countdown-matchdate").innerHTML = "";
-
-            document.getElementById("countdown-time").innerHTML =
-                "✅ All listed matches completed";
-
-            upcomingList.innerHTML =
-                '<div class="empty-appointments">No later appointments listed</div>';
-
-            return;
-        }
-
-        const nextMatch = futureMatches[0];
-        const laterMatches = futureMatches.slice(1);
-
-        if (nextMatch.homeLogo) {
-            homeLogo.src = nextMatch.homeLogo;
-            homeLogo.style.display = "block";
-        } else {
-            homeLogo.style.display = "none";
-        }
-
-        if (nextMatch.awayLogo) {
-            awayLogo.src = nextMatch.awayLogo;
-            awayLogo.style.display = "block";
-        } else {
-            awayLogo.style.display = "none";
-        }
-
-        const diff = nextMatch.matchDate - now;
-
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor(
-            (diff % (1000 * 60 * 60 * 24)) /
-            (1000 * 60 * 60)
-        );
-        const minutes = Math.floor(
-            (diff % (1000 * 60 * 60)) /
-            (1000 * 60)
-        );
-
-        document.getElementById("countdown-teams").innerHTML =
-            nextMatch.teams;
-
-        document.getElementById("countdown-competition").innerHTML =
-            "🏆 " + nextMatch.competition;
-
-        document.getElementById("countdown-role").innerHTML =
-            "👨‍⚖️ " + nextMatch.role;
-
-        document.getElementById("countdown-matchdate").innerHTML =
-            "📅 " + nextMatch.displayDate;
-
-        document.getElementById("countdown-time").innerHTML =
-            "⏳ " + days + "d " + hours + "h " + minutes + "m";
-
-        if (laterMatches.length === 0) {
-            upcomingList.innerHTML =
-                '<div class="empty-appointments">No later appointments listed</div>';
-        } else {
-            laterMatches.forEach(match => {
-                const matchCard = document.createElement("div");
-                matchCard.className = "match-card";
-
-                matchCard.innerHTML = `
-                    <div class="match-competition">${match.competition}</div>
-                    <div class="match-teams">${match.teams}</div>
-                    <div class="match-detail">📆 ${match.displayDate}</div>
-                    <div class="match-detail">👨‍⚖️ ${match.role}</div>
-                `;
-
-                upcomingList.appendChild(matchCard);
-            });
-        }
-    }
-
-    updateDashboard();
-    setInterval(updateDashboard, 1000);
-</script>
-
-    <script>
-async function loadWorldCupBriefing() {
-  try {
-    const response = await fetch("data/worldcup-briefing.json?cache=" + Date.now());
-    const data = await response.json();
-
-    document.getElementById("wc-updated").textContent = "Updated: " + data.updated;
-
-    const yesterdayBox = document.getElementById("wc-yesterday");
-    const todayBox = document.getElementById("wc-today");
-
-    yesterdayBox.innerHTML = "";
-    todayBox.innerHTML = "";
-
-    data.yesterday.forEach(game => {
-      const item = document.createElement("div");
-      item.className = "wc-match";
-      item.innerHTML = `
-  <div class="wc-main">${game.match}</div>
-  <div class="wc-sub">${game.time || ""}</div>
-`;
-      yesterdayBox.appendChild(item);
+      matchContainer.appendChild(matchCard);
     });
 
-    data.today.forEach(game => {
-  const item = document.createElement("div");
-  item.className = "wc-match";
-  item.innerHTML = `
-    <div class="wc-main">${game.match}</div>
-    <div class="wc-sub">${game.time || "Time not published"}</div>
-  `;
-  todayBox.appendChild(item);
-});
+    function updateDaysToNextMatch() {
+      const now = new Date();
 
-    document.getElementById("wc-note").textContent = data.note || "Referee details will appear here when available.";
-  } catch (error) {
-    document.getElementById("wc-updated").textContent = "World Cup Briefing unavailable";
-    document.getElementById("wc-note").textContent = "Could not load briefing data.";
-    console.error(error);
-  }
-}
+      const futureMatches = matches
+        .map(match => ({ ...match, realDate: new Date(match.date) }))
+        .filter(match => match.realDate >= now)
+        .sort((a, b) => a.realDate - b.realDate);
 
-loadWorldCupBriefing();
-</script>
+      const daysBox = document.getElementById("daysToNext");
 
-    </body>
+      if (futureMatches.length === 0) {
+        daysBox.textContent = "0";
+        return;
+      }
+
+      const difference = futureMatches[0].realDate - now;
+      const days = Math.ceil(difference / (1000 * 60 * 60 * 24));
+
+      daysBox.textContent = days;
+    }
+
+    updateDaysToNextMatch();
+
+    document.getElementById("updated").textContent =
+      "Last updated: " + new Date().toLocaleString("is-IS", {
+        timeZone: "Atlantic/Reykjavik"
+      });
+  </script>
+</body>
 </html>
