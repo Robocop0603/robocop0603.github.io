@@ -1,3 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ROBOCOP Dashboard</title>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/icon.jpg">
+<link rel="icon" type="image/jpeg" href="/icon.jpg">
+
+</head>
+<body>
+
 <style>
     body {
         color: white;
@@ -13,6 +26,24 @@
         background-position: center;
         background-attachment: fixed;
     }
+
+    body {
+    position: relative;
+    background: #000;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.88)),
+        url("images/robocop-referee.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
 
     h1 {
         font-size: 46px;
@@ -83,16 +114,16 @@
         white-space: nowrap;
     }
 
-    #countdown-competition {
-        font-size: 12px;
-        color: #dddddd;
-        margin-bottom: 2px;
-    }
-
+    #countdown-competition,
     #countdown-role {
         font-size: 12px;
         color: #dddddd;
-        margin-bottom: 6px;
+    }
+
+    #countdown-matchdate {
+        font-size: 13px;
+        color: #cfcfcf;
+        margin-bottom: 8px;
     }
 
     #countdown-time {
@@ -160,7 +191,7 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 16px;
-        margin: 0 auto 28px auto;
+        margin: 0 auto 22px auto;
         max-width: 1150px;
     }
 
@@ -196,48 +227,68 @@
         box-shadow: 0 0 0 2px #10a37f, 0 10px 30px rgba(16,163,127,0.35);
     }
 
-    .featured-youtube {
+    .featured-row {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 18px;
+        margin: 0 auto 38px auto;
+    }
+
+    .featured-card {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 18px;
-        width: 420px;
+        gap: 14px;
+        width: 250px;
         max-width: 90%;
-        margin: 0 auto 40px auto;
-        padding: 18px 25px;
-        background: linear-gradient(135deg, #ff0000, #b80000);
+        padding: 15px 20px;
         border-radius: 22px;
         text-decoration: none;
         color: white;
-        box-shadow: 0 12px 35px rgba(255,0,0,0.4);
         transition: all 0.25s ease;
     }
 
-    .featured-youtube:hover {
+    .featured-card:hover {
         transform: translateY(-5px) scale(1.02);
-        box-shadow: 0 18px 45px rgba(255,0,0,0.6);
     }
 
-    .featured-youtube img {
-        width: 64px;
-        height: 64px;
+    .featured-card img {
+        width: 52px;
+        height: 52px;
+        object-fit: contain;
     }
 
-    .youtube-title {
-        font-size: 30px;
+    .featured-title {
+        font-size: 23px;
         font-weight: bold;
     }
 
-    .youtube-subtitle {
-        font-size: 14px;
+    .featured-subtitle {
+        font-size: 13px;
         opacity: 0.9;
+    }
+
+    .youtube-card {
+        background: linear-gradient(135deg, #ff0000, #b80000);
+        box-shadow: 0 12px 35px rgba(255,0,0,0.4);
+    }
+
+    .facebook-card {
+        background: linear-gradient(135deg, #1877f2, #0b4fb3);
+        box-shadow: 0 12px 35px rgba(24,119,242,0.35);
+    }
+
+    .messenger-card {
+        background: linear-gradient(135deg, #00b2ff, #006aff);
+        box-shadow: 0 12px 35px rgba(0,178,255,0.35);
     }
 
     .container {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 20px;
+        gap: 14px;
         max-width: 1150px;
         margin: auto;
     }
@@ -246,67 +297,139 @@
         width: 100%;
         font-size: 25px;
         font-weight: bold;
-        margin: 38px 0 10px 0;
+        margin: 34px 0 8px 0;
         text-shadow: 0 4px 15px rgba(0,0,0,0.9);
     }
 
     .card {
-        width: 180px;
-        padding: 20px;
+        width: 140px;
+        padding: 14px;
         background: rgba(38,38,38,0.78);
         border: 1px solid rgba(255,255,255,0.12);
-        border-radius: 18px;
+        border-radius: 16px;
         text-decoration: none;
         color: white;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+        gap: 8px;
         backdrop-filter: blur(10px);
         transition: all 0.22s ease;
         box-shadow: 0 8px 22px rgba(0,0,0,0.35);
     }
 
     .card:hover {
-        background: rgba(65,65,65,0.92);
-        transform: translateY(-6px);
-        box-shadow: 0 15px 35px rgba(0,0,0,0.55);
+        background: rgba(38,38,38,0.88);
+        transform: translateY(-5px) scale(1.03);
+        box-shadow: 0 14px 34px rgba(0,0,0,0.55);
     }
 
     .card img {
-        width: 48px;
-        height: 48px;
+        width: 38px;
+        height: 38px;
         object-fit: contain;
-    }
-
-    .tv-card img {
-        width: 85px;
-        height: 52px;
-        object-fit: contain;
+        filter: drop-shadow(0 3px 8px rgba(0,0,0,0.45));
     }
 
     .card span {
-        font-size: 18px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .tv-card {
+        background: linear-gradient(135deg, var(--c1), var(--c2));
+        box-shadow: 0 8px 22px var(--glow);
+        border: 1px solid rgba(255,255,255,0.16);
+    }
+
+    .tv-card:hover {
+        background: linear-gradient(135deg, var(--c1), var(--c2));
+        box-shadow: 0 14px 34px var(--glow);
+    }
+
+    .tv-card img {
+        width: 70px;
+        height: 42px;
+        object-fit: contain;
+    }
+
+    .syn-tv {
+        --c1: #e10000;
+        --c2: #8c0000;
+        --glow: rgba(225,0,0,.34);
+    }
+
+    .siminn-tv {
+        --c1: #0057b8;
+        --c2: #00356f;
+        --glow: rgba(0,95,200,.32);
+    }
+
+    .netflix-tv {
+        --c1: #e10000;
+        --c2: #8c0000;
+        --glow: rgba(225,0,0,.34);
+    }
+
+    .viaplay-tv {
+        --c1: #6b3df5;
+        --c2: #32166f;
+        --glow: rgba(120,80,255,.30);
+    }
+
+    .livey-tv {
+        --c1: #00a4ff;
+        --c2: #0059b8;
+        --glow: rgba(0,164,255,.35);
     }
 
     @media (max-width: 700px) {
-        h1 {
-            font-size: 34px;
-        }
 
-        #clock {
-            font-size: 36px;
-        }
+    body {
+    padding: 22px 12px;
+}
 
-        .countdown-card {
-            max-width: 95%;
-        }
-
-        #countdown-teams {
-            font-size: 16px;
-            white-space: normal;
-        }
+    h1 {
+        font-size: 34px;
     }
+
+    #clock {
+        font-size: 36px;
+    }
+
+    .countdown-card {
+        max-width: 95%;
+    }
+
+    #countdown-teams {
+        font-size: 16px;
+        white-space: normal;
+    }
+
+    .card {
+        width: 115px;
+        padding: 11px;
+    }
+
+    .card img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .card span {
+        font-size: 13px;
+    }
+
+    .section-title {
+        font-size: 21px;
+        margin: 24px 0 6px 0;
+    }
+
+    .featured-card {
+        width: 210px;
+        padding: 12px 16px;
+    }
+}
 </style>
 <h1>⚽ ROBOCOP Dashboard</h1>
 
@@ -325,6 +448,7 @@
 
         <div id="countdown-competition"></div>
         <div id="countdown-role"></div>
+        <div id="countdown-matchdate"></div>
         <div id="countdown-time"></div>
     </div>
 
@@ -348,13 +472,33 @@
     </form>
 </div>
 
-<a class="featured-youtube" href="https://youtube.com" target="_blank" rel="noopener noreferrer">
-    <img src="https://www.google.com/s2/favicons?domain=youtube.com&sz=128">
-    <div>
-        <div class="youtube-title">YouTube</div>
-        <div class="youtube-subtitle">Open YouTube</div>
-    </div>
-</a>
+<div class="featured-row">
+
+    <a class="featured-card youtube-card" href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+        <img src="https://www.google.com/s2/favicons?domain=youtube.com&sz=128">
+        <div>
+            <div class="featured-title">YouTube</div>
+            <div class="featured-subtitle">Open YouTube</div>
+        </div>
+    </a>
+
+    <a class="featured-card facebook-card" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+        <img src="https://www.google.com/s2/favicons?domain=facebook.com&sz=128">
+        <div>
+            <div class="featured-title">Facebook</div>
+            <div class="featured-subtitle">Open Facebook</div>
+        </div>
+    </a>
+
+    <a class="featured-card messenger-card" href="https://www.messenger.com" target="_blank" rel="noopener noreferrer">
+        <img src="https://www.google.com/s2/favicons?domain=messenger.com&sz=128">
+        <div>
+            <div class="featured-title">Messenger</div>
+            <div class="featured-subtitle">Open Messenger</div>
+        </div>
+    </a>
+
+</div>
 
 <div class="container">
 
@@ -370,7 +514,7 @@
         <span>mbl</span>
     </a>
 
-        <a class="card" href="https://www.framundanibeinni.is/" target="_blank" rel="noopener noreferrer">
+    <a class="card" href="https://www.framundanibeinni.is/" target="_blank" rel="noopener noreferrer">
         <img src="https://www.google.com/s2/favicons?domain=framundanibeinni.is&sz=64">
         <span>Framundan</span>
     </a>
@@ -412,7 +556,7 @@
         <span>KSÍ Comet</span>
     </a>
 
-     <a class="card" href="https://www.theifab.com/laws/latest/" target="_blank" rel="noopener noreferrer">
+    <a class="card" href="https://www.theifab.com/laws/latest/" target="_blank" rel="noopener noreferrer">
         <img src="images/ifab-logo.png">
         <span>Laws of the Game</span>
     </a>
@@ -424,31 +568,31 @@
 
     <div class="section-title">📺 TV</div>
 
-    <a class="card tv-card" href="https://sjonvarp.syn.is/profiles" target="_blank" rel="noopener noreferrer">
+    <a class="card tv-card syn-tv" href="https://sjonvarp.syn.is/profiles" target="_blank" rel="noopener noreferrer">
         <img src="images/syn-logo.png">
         <span>SÝN</span>
     </a>
 
-    <a class="card tv-card" href="https://sjonvarp.siminn.is/auth/login" target="_blank" rel="noopener noreferrer">
+    <a class="card tv-card siminn-tv" href="https://sjonvarp.siminn.is/auth/login" target="_blank" rel="noopener noreferrer">
         <img src="images/siminn-logo.png">
         <span>Síminn TV</span>
     </a>
 
-    <a class="card tv-card" href="https://www.netflix.com/is/" target="_blank" rel="noopener noreferrer">
+    <a class="card tv-card netflix-tv" href="https://www.netflix.com/is/" target="_blank" rel="noopener noreferrer">
         <img src="images/netflix-logo.jpg">
         <span>Netflix</span>
     </a>
 
-    <a class="card tv-card" href="https://viaplay.is/is-is/" target="_blank" rel="noopener noreferrer">
+    <a class="card tv-card viaplay-tv" href="https://viaplay.is/is-is/" target="_blank" rel="noopener noreferrer">
         <img src="images/viaplay-logo.jpg">
         <span>Viaplay</span>
     </a>
 
-    <a class="card tv-card" href="https://watch.livey.events/" target="_blank" rel="noopener noreferrer">
+    <a class="card tv-card livey-tv" href="https://watch.livey.events/" target="_blank" rel="noopener noreferrer">
         <img src="images/livey-logo.jpg">
         <span>Livey</span>
     </a>
-    
+
     <div class="section-title">🏃 Referee Fitness</div>
 
     <a class="card" href="https://connect.garmin.com/app/home" target="_blank" rel="noopener noreferrer">
@@ -478,7 +622,7 @@
         <span>Golf.is</span>
     </a>
 
-<a class="card" href="https://www.golfbox.dk/site/my_golfbox/ressources/booking/grid.asp?Ressource_GUID={E4FACDD4-A584-44D7-B155-8670F6EA9068}&Club_GUID={A112EA7C-4DCC-4083-887F-3DAED23C1BEB}" target="_blank" rel="noopener noreferrer">
+    <a class="card" href="https://www.golfbox.dk/site/my_golfbox/ressources/booking/grid.asp?Ressource_GUID=%7BE4FACDD4-A584-44D7-B155-8670F6EA9068%7D&Club_GUID=%7BA112EA7C-4DCC-4083-887F-3DAED23C1BEB%7D" target="_blank" rel="noopener noreferrer">
         <img src="images/golfbox-logo.png">
         <span>Golfbox</span>
     </a>
@@ -493,40 +637,68 @@
 </div>
 
 <script>
-    const matches = [
+    let matches = [];
+
+    const fallbackMatches = [
         {
-            date: "2026-06-21T18:00:00",
-            displayDate: "Sun 21 júní • 18:00",
-            teams: "ÍBV vs Stjarnan",
-            role: "Fjórði dómari",
-            competition: "Besta deild karla",
-            homeLogo: "images/ibv-logo.png",
-            awayLogo: "images/stjarnan-logo.png"
+                "date": "2026-07-02T19:15:00+00:00",
+                "displayDate": "Fim 2 júlí • 19:15",
+                "teams": "Víkingur vs KA",
+                "role": "Fjórði dómari",
+                "competition": "Besta deild karla",
+                "homeLogo": "images/vikingur-logo.png",
+                "awayLogo": "images/ka-logo.png"
         },
         {
-            date: "2026-06-27T14:00:00",
-            displayDate: "Lau 27 júní • 14:00",
-            teams: "Þróttur vs Grindavík",
-            role: "Dómari",
-            competition: "Lengjudeild karla"
+                "date": "2026-07-06T19:15:00+00:00",
+                "displayDate": "Mán 6 júlí • 19:15",
+                "teams": "Keflavík vs Fram",
+                "role": "Fjórði dómari",
+                "competition": "Besta deild karla",
+                "homeLogo": "images/keflavik-logo.png",
+                "awayLogo": "images/fram-logo.png"
         },
         {
-            date: "2026-06-28T14:00:00",
-            displayDate: "Sun 28 júní • 14:00",
-            teams: "Breiðablik vs Víkingur",
-            role: "Fjórði dómari",
-            competition: "Mjólkurbikar karla • Undanúrslit"
+                "date": "2026-07-08T19:00:00+00:00",
+                "displayDate": "Mið 8 júlí • 19:00",
+                "teams": "Kormákur/Hvöt vs TBD",
+                "role": "Dómari",
+                "competition": "2. deild karla",
+                "homeLogo": "images/kormakur-hvot-logo.png",
+                "awayLogo": ""
         }
-    ];
+];
+
+    async function loadMatches() {
+        try {
+            const response = await fetch("matches.json?version=" + Date.now());
+
+            if (!response.ok) {
+                throw new Error("Could not load matches.json");
+            }
+
+            matches = await response.json();
+        } catch (error) {
+            console.log("Using fallback matches from index.html", error);
+            matches = fallbackMatches;
+        }
+    }
+
 
     function updateDashboard() {
         const now = new Date();
 
         document.getElementById("clock").innerHTML =
-            now.toLocaleTimeString("en-GB");
+            now.toLocaleTimeString("en-GB", {
+                timeZone: "Atlantic/Reykjavik",
+                hour: "2-digit",
+                minute: "2-digit",
+                second: "2-digit"
+            });
 
         document.getElementById("date").innerHTML =
             now.toLocaleDateString("en-GB", {
+                timeZone: "Atlantic/Reykjavik",
                 weekday: "long",
                 year: "numeric",
                 month: "long",
@@ -557,8 +729,8 @@
             document.getElementById("countdown-competition").innerHTML =
                 "Time to update your KSÍ appointments";
 
-            document.getElementById("countdown-role").innerHTML =
-                "";
+            document.getElementById("countdown-role").innerHTML = "";
+            document.getElementById("countdown-matchdate").innerHTML = "";
 
             document.getElementById("countdown-time").innerHTML =
                 "✅ All listed matches completed";
@@ -607,6 +779,9 @@
         document.getElementById("countdown-role").innerHTML =
             "👨‍⚖️ " + nextMatch.role;
 
+        document.getElementById("countdown-matchdate").innerHTML =
+            "📅 " + nextMatch.displayDate;
+
         document.getElementById("countdown-time").innerHTML =
             "⏳ " + days + "d " + hours + "h " + minutes + "m";
 
@@ -630,6 +805,14 @@
         }
     }
 
-    updateDashboard();
-    setInterval(updateDashboard, 1000);
+    async function startDashboard() {
+        await loadMatches();
+        updateDashboard();
+        setInterval(updateDashboard, 1000);
+    }
+
+    startDashboard();
 </script>
+
+    </body>
+</html>
