@@ -1,47 +1,47 @@
 [
-    {
-        "date": "2026-07-02T19:15:00+00:00",
-        "displayDate": "Fim 2 júlí • 19:15",
-        "teams": "Víkingur vs KA",
-        "role": "Fjórði dómari",
-        "competition": "Besta deild karla",
-        "homeLogo": "images/vikingur-logo.png",
-        "awayLogo": "images/ka-logo.png"
-    },
-    {
-        "date": "2026-07-06T19:15:00+00:00",
-        "displayDate": "Mán 6 júlí • 19:15",
-        "teams": "Keflavík vs Fram",
-        "role": "Fjórði dómari",
-        "competition": "Besta deild karla",
-        "homeLogo": "images/keflavik-logo.png",
-        "awayLogo": "images/fram-logo.jpg"
-    },
-    {
-        "date": "2026-07-08T19:00:00+00:00",
-        "displayDate": "Mið 8 júlí • 19:00",
-        "teams": "Kormákur/Hvöt vs Kári",
-        "role": "Dómari",
-        "competition": "2. deild karla",
-        "homeLogo": "images/kormakur-hvot-logo.png",
-        "awayLogo": "images/kari-logo.png"
-    }
-    {
-        "date": "2026-07-10T19150:00+00:00",
-        "displayDate": "Fös 10 júlí • 19:15",
-        "teams": "Njarðvík vs Grindvík",
-        "role": "Dómari",
-        "competition": "2. deild karla",
-        "homeLogo": "images/njardvik-logo.png",
-        "awayLogo": "images/grindavik-logo.png"
-    }
-    {
-        "date": "2026-07-14T17:00:00+00:00",
-        "displayDate": "Þri 14 júlí • 17:00",
-        "teams": "HK vs ÍR",
-        "role": "Dómari",
-        "competition": "2. deild karla",
-        "homeLogo": "images/hk-logo.png",
-        "awayLogo": "images/ir-logo.png"
-    }
+  {
+    "date": "2026-07-02T19:15:00+00:00",
+    "displayDate": "Fim 2 júlí • 19:15",
+    "teams": "Víkingur vs KA",
+    "role": "Fjórði dómari",
+    "competition": "Besta deild karla",
+    "homeLogo": "images/vikingur-logo.png",
+    "awayLogo": "images/ka-logo.png"
+  },
+  {
+    "date": "2026-07-06T19:15:00+00:00",
+    "displayDate": "Mán 6 júlí • 19:15",
+    "teams": "Keflavík vs Fram",
+    "role": "Fjórði dómari",
+    "competition": "Besta deild karla",
+    "homeLogo": "images/keflavik-logo.png",
+    "awayLogo": "images/fram-logo.jpg"
+  },
+  {
+    "date": "2026-07-08T19:00:00+00:00",
+    "displayDate": "Mið 8 júlí • 19:00",
+    "teams": "Kormákur/Hvöt vs Kári",
+    "role": "Dómari",
+    "competition": "2. deild karla",
+    "homeLogo": "images/kormakur-hvot-logo.png",
+    "awayLogo": "images/kari-logo.png"
+  },
+  {
+    "date": "2026-07-10T19:15:00+00:00",
+    "displayDate": "Fös 10 júlí • 19:15",
+    "teams": "Njarðvík vs Grindvík",
+    "role": "Dómari",
+    "competition": "2. deild karla",
+    "homeLogo": "images/njardvik-logo.png",
+    "awayLogo": "images/grindavik-logo.png"
+  },
+  {
+    "date": "2026-07-14T17:00:00+00:00",
+    "displayDate": "Þri 14 júlí • 17:00",
+    "teams": "HK vs ÍR",
+    "role": "Dómari",
+    "competition": "2. deild karla",
+    "homeLogo": "images/hk-logo.png",
+    "awayLogo": "images/ir-logo.png"
+  }
 ]
