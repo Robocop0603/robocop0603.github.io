@@ -1,0 +1,29 @@
+[
+    {
+        "date": "2026-07-02T19:15:00+00:00",
+        "displayDate": "Fim 2 júlí • 19:15",
+        "teams": "Víkingur vs KA",
+        "role": "Fjórði dómari",
+        "competition": "Besta deild karla",
+        "homeLogo": "images/vikingur-logo.png",
+        "awayLogo": "images/ka-logo.png"
+    },
+    {
+        "date": "2026-07-06T19:15:00+00:00",
+        "displayDate": "Mán 6 júlí • 19:15",
+        "teams": "Keflavík vs Fram",
+        "role": "Fjórði dómari",
+        "competition": "Besta deild karla",
+        "homeLogo": "images/keflavik-logo.png",
+        "awayLogo": "images/fram-logo.png"
+    },
+    {
+        "date": "2026-07-08T19:00:00+00:00",
+        "displayDate": "Mið 8 júlí • 19:00",
+        "teams": "Kormákur/Hvöt vs TBD",
+        "role": "Dómari",
+        "competition": "2. deild karla",
+        "homeLogo": "images/kormakur-hvot-logo.png",
+        "awayLogo": ""
+    }
+]
