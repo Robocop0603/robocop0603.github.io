@@ -680,7 +680,7 @@ body::before {
             matches = await response.json();
         } catch (error) {
             console.log("Using fallback matches from index.html", error);
-            matches = fallbackMatches;
+            matches = [];
         }
     }
 
