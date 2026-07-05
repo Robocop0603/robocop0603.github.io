@@ -1,39 +1,29 @@
 {
-  "updated": "2026-07-04 11:02",
+  "updated": "2026-07-05 11:18",
   "title": "World Cup Briefing",
   "apiFixtureCount": 104,
   "todayLabel": "Today",
   "yesterday": [
-    {
-      "match": "Switzerland 2–0 Algeria",
-      "time": "03:00 Reykjavík",
-      "referee": "Not published yet"
-    },
-    {
-      "match": "Australia 1–1 Egypt",
-      "time": "18:00 Reykjavík",
-      "referee": "Not published yet"
-    },
-    {
-      "match": "Argentina 3–2 Cape Verde",
-      "time": "22:00 Reykjavík",
-      "referee": "Not published yet"
-    }
-  ],
-  "today": [
     {
       "match": "Colombia 1–0 Ghana",
       "time": "01:30 Reykjavík",
       "referee": "Not published yet"
     },
     {
-      "match": "Canada 0–0 Morocco",
+      "match": "Canada 0–3 Morocco",
       "time": "17:00 Reykjavík",
       "referee": "Not published yet"
     },
     {
-      "match": "Paraguay 0–0 France",
+      "match": "Paraguay 0–1 France",
       "time": "21:00 Reykjavík",
+      "referee": "Not published yet"
+    }
+  ],
+  "today": [
+    {
+      "match": "Brazil 0–0 Norway",
+      "time": "20:00 Reykjavík",
       "referee": "Not published yet"
     }
   ],
