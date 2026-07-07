@@ -1,24 +1,34 @@
 {
-  "updated": "2026-07-06 16:43",
+  "updated": "2026-07-07 13:25",
   "title": "World Cup Briefing",
   "apiFixtureCount": 104,
   "todayLabel": "Today",
   "yesterday": [
-    {
-      "match": "Brazil 1–2 Norway",
-      "time": "20:00 Reykjavík",
-      "referee": "Not published yet"
-    }
-  ],
-  "today": [
     {
       "match": "Mexico 2–3 England",
       "time": "00:00 Reykjavík",
       "referee": "Not published yet"
     },
     {
-      "match": "Portugal vs Spain",
+      "match": "Portugal 0–1 Spain",
       "time": "19:00 Reykjavík",
+      "referee": "Not published yet"
+    }
+  ],
+  "today": [
+    {
+      "match": "United States 1–4 Belgium",
+      "time": "00:00 Reykjavík",
+      "referee": "Not published yet"
+    },
+    {
+      "match": "Argentina vs Egypt",
+      "time": "16:00 Reykjavík",
+      "referee": "Not published yet"
+    },
+    {
+      "match": "Switzerland vs Colombia",
+      "time": "20:00 Reykjavík",
       "referee": "Not published yet"
     }
   ],
