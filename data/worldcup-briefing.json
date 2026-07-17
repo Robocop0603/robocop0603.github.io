@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-16 11:20",
+  "updated": "2026-07-17 10:59",
   "title": "World Cup Briefing",
   "apiFixtureCount": 104,
   "todayLabel": "Next matches",
@@ -7,6 +7,21 @@
     {
       "match": "England 1–2 Argentina",
       "time": "19:00 Reykjavík",
+      "referee": "Not published yet"
+    },
+    {
+      "match": "France 0–2 Spain",
+      "time": "19:00 Reykjavík",
+      "referee": "Not published yet"
+    },
+    {
+      "match": "Argentina 3–1 Switzerland",
+      "time": "01:00 Reykjavík",
+      "referee": "Not published yet"
+    },
+    {
+      "match": "Norway 1–2 England",
+      "time": "21:00 Reykjavík",
       "referee": "Not published yet"
     }
   ],
