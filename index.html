@@ -429,14 +429,14 @@ function updateGreeting() {
 
     let greeting;
 
-    if (hour >= 5 && hour < 12) {
-        greeting = "☀️ Good Morning, Robert";
-    } else if (hour >= 12 && hour < 18) {
-        greeting = "🌤️ Good Afternoon, Robert";
-    } else if (hour >= 18 && hour < 23) {
-        greeting = "🌙 Good Evening, Robert";
-    } else {
-        greeting = "🌙 Good Night, Robert";
+   if (hour >= 5 && hour < 12) {
+    greeting = "👮 Good Morning, Robert";
+} else if (hour >= 12 && hour < 18) {
+    greeting = "👮 Good Afternoon, Robert";
+} else if (hour >= 18 && hour < 23) {
+    greeting = "👮 Good Evening, Robert";
+} else {
+    greeting = "👮 Good Night, Robert";
     }
 
     document.getElementById("greeting").textContent = greeting;
