@@ -267,12 +267,32 @@ h1 {
     #clock { font-size: 36px; }
     .card { width: 115px; }
 }
+    /* ===== Welcome Header ===== */
+
+.welcome-header {
+    margin-bottom: 20px;
+}
+
+.welcome-header h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+#weather {
+    margin-top: 8px;
+    font-size: 16px;
+    color: #bdbdbd;
+}
 </style>
 </head>
 
 <body>
 
-<h1>⚽ ROBOCOP Dashboard</h1>
+<div class="welcome-header">
+    <h1 id="greeting">Good Morning, Robert</h1>
+    <div id="weather">Loading weather...</div>
+</div>
 
 <div class="top-panel">
     <div id="clock"></div>
@@ -392,6 +412,117 @@ h1 {
 <script>
 let matches = [];
 
+/* =========================================
+   GREETING
+========================================= */
+
+function updateGreeting() {
+    const now = new Date();
+
+    const hour = Number(
+        now.toLocaleTimeString("en-GB", {
+            timeZone: "Atlantic/Reykjavik",
+            hour: "2-digit",
+            hour12: false
+        })
+    );
+
+    let greeting;
+
+    if (hour >= 5 && hour < 12) {
+        greeting = "☀️ Good Morning, Robert";
+    } else if (hour >= 12 && hour < 18) {
+        greeting = "🌤️ Good Afternoon, Robert";
+    } else if (hour >= 18 && hour < 23) {
+        greeting = "🌙 Good Evening, Robert";
+    } else {
+        greeting = "🌙 Good Night, Robert";
+    }
+
+    document.getElementById("greeting").textContent = greeting;
+}
+
+
+/* =========================================
+   WEATHER
+========================================= */
+
+function getWeatherIcon(code, isDay) {
+    if (code === 0) return isDay ? "☀️" : "🌙";
+    if (code === 1 || code === 2) return isDay ? "🌤️" : "☁️";
+    if (code === 3) return "☁️";
+    if (code === 45 || code === 48) return "🌫️";
+    if (code >= 51 && code <= 57) return "🌦️";
+    if (code >= 61 && code <= 67) return "🌧️";
+    if (code >= 71 && code <= 77) return "🌨️";
+    if (code >= 80 && code <= 82) return "🌦️";
+    if (code >= 85 && code <= 86) return "🌨️";
+    if (code >= 95) return "⛈️";
+
+    return "🌤️";
+}
+
+function getWeatherDescription(code) {
+    if (code === 0) return "Clear";
+    if (code === 1) return "Mostly clear";
+    if (code === 2) return "Partly cloudy";
+    if (code === 3) return "Cloudy";
+    if (code === 45 || code === 48) return "Fog";
+    if (code >= 51 && code <= 57) return "Drizzle";
+    if (code >= 61 && code <= 67) return "Rain";
+    if (code >= 71 && code <= 77) return "Snow";
+    if (code >= 80 && code <= 82) return "Rain showers";
+    if (code >= 85 && code <= 86) return "Snow showers";
+    if (code >= 95) return "Thunderstorm";
+
+    return "Weather";
+}
+
+async function updateWeather() {
+    const weatherElement = document.getElementById("weather");
+
+    try {
+        const weatherUrl =
+            "https://api.open-meteo.com/v1/forecast" +
+            "?latitude=64.1123" +
+            "&longitude=-21.9129" +
+            "&current=temperature_2m,weather_code,wind_speed_10m,is_day" +
+            "&temperature_unit=celsius" +
+            "&wind_speed_unit=ms" +
+            "&timezone=Atlantic%2FReykjavik";
+
+        const response = await fetch(weatherUrl);
+
+        if (!response.ok) {
+            throw new Error("Could not load weather");
+        }
+
+        const data = await response.json();
+        const current = data.current;
+
+        const icon = getWeatherIcon(
+            current.weather_code,
+            current.is_day === 1
+        );
+
+        const description = getWeatherDescription(current.weather_code);
+        const temperature = Math.round(current.temperature_2m);
+        const windSpeed = Math.round(current.wind_speed_10m);
+
+        weatherElement.textContent =
+            `${icon} ${description} · ${temperature}°C · 💨 ${windSpeed} m/s · Kópavogur`;
+
+    } catch (error) {
+        console.log("Could not load weather", error);
+        weatherElement.textContent = "🌤️ Weather currently unavailable";
+    }
+}
+
+
+/* =========================================
+   MATCHES
+========================================= */
+
 async function loadMatches() {
     try {
         const response = await fetch("matches.json?version=" + Date.now());
@@ -401,14 +532,22 @@ async function loadMatches() {
         }
 
         matches = await response.json();
+
     } catch (error) {
         console.log("Could not load matches.json", error);
         matches = [];
     }
 }
 
+
+/* =========================================
+   CLOCK, DATE AND MATCH DASHBOARD
+========================================= */
+
 function updateDashboard() {
     const now = new Date();
+
+    updateGreeting();
 
     document.getElementById("clock").innerHTML =
         now.toLocaleTimeString("en-GB", {
@@ -445,13 +584,21 @@ function updateDashboard() {
         homeLogo.style.display = "none";
         awayLogo.style.display = "none";
 
-        document.getElementById("countdown-teams").innerHTML = "No upcoming matches";
-        document.getElementById("countdown-competition").innerHTML = "Update matches.json";
+        document.getElementById("countdown-teams").innerHTML =
+            "No upcoming matches";
+
+        document.getElementById("countdown-competition").innerHTML =
+            "Update matches.json";
+
         document.getElementById("countdown-role").innerHTML = "";
         document.getElementById("countdown-matchdate").innerHTML = "";
-        document.getElementById("countdown-time").innerHTML = "✅ All listed matches completed";
 
-        upcomingList.innerHTML = '<div class="empty-appointments">No later appointments listed</div>';
+        document.getElementById("countdown-time").innerHTML =
+            "✅ All listed matches completed";
+
+        upcomingList.innerHTML =
+            '<div class="empty-appointments">No later appointments listed</div>';
+
         return;
     }
 
@@ -477,14 +624,25 @@ function updateDashboard() {
     const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
     const minutes = Math.floor((diff / (1000 * 60)) % 60);
 
-    document.getElementById("countdown-teams").innerHTML = nextMatch.teams;
-    document.getElementById("countdown-competition").innerHTML = "🏆 " + nextMatch.competition;
-    document.getElementById("countdown-role").innerHTML = "👨‍⚖️ " + nextMatch.role;
-    document.getElementById("countdown-matchdate").innerHTML = "📅 " + nextMatch.displayDate;
-    document.getElementById("countdown-time").innerHTML = "⏳ " + days + "d " + hours + "h " + minutes + "m";
+    document.getElementById("countdown-teams").innerHTML =
+        nextMatch.teams;
+
+    document.getElementById("countdown-competition").innerHTML =
+        "🏆 " + nextMatch.competition;
+
+    document.getElementById("countdown-role").innerHTML =
+        "👨‍⚖️ " + nextMatch.role;
+
+    document.getElementById("countdown-matchdate").innerHTML =
+        "📅 " + nextMatch.displayDate;
+
+    document.getElementById("countdown-time").innerHTML =
+        "⏳ " + days + "d " + hours + "h " + minutes + "m";
 
     if (laterMatches.length === 0) {
-        upcomingList.innerHTML = '<div class="empty-appointments">No later appointments listed</div>';
+        upcomingList.innerHTML =
+            '<div class="empty-appointments">No later appointments listed</div>';
+
     } else {
         laterMatches.forEach(match => {
             const matchCard = document.createElement("div");
@@ -502,10 +660,21 @@ function updateDashboard() {
     }
 }
 
+
+/* =========================================
+   START PAGE
+========================================= */
+
 async function startDashboard() {
     await loadMatches();
+
     updateDashboard();
+    updateWeather();
+
     setInterval(updateDashboard, 1000);
+
+    // Refresh weather every 15 minutes
+    setInterval(updateWeather, 15 * 60 * 1000);
 }
 
 startDashboard();
