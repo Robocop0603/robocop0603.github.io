@@ -417,6 +417,101 @@ h1 {
     }
 
 }
+/* =========================================
+   SECTION DIVIDERS
+========================================= */
+
+.section-divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    width: 100%;
+    margin: 42px 0 24px;
+}
+
+.section-divider::before,
+.section-divider::after {
+    content: "";
+    flex: 1;
+    height: 4px;
+    border-radius: 999px;
+}
+
+.section-divider span {
+    color: white;
+    font-size: 28px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+/* Netsíður — blue/cyan */
+.section-divider.websites::before {
+    background: linear-gradient(
+        90deg,
+        rgba(38, 105, 170, 0.15),
+        #2d8cff
+    );
+}
+
+.section-divider.websites::after {
+    background: linear-gradient(
+        90deg,
+        #2d8cff,
+        rgba(38, 105, 170, 0.15)
+    );
+}
+
+/* Dómgæsla — green */
+.section-divider.referee::before {
+    background: linear-gradient(
+        90deg,
+        rgba(39, 199, 95, 0.15),
+        #27c75f
+    );
+}
+
+.section-divider.referee::after {
+    background: linear-gradient(
+        90deg,
+        #27c75f,
+        rgba(39, 199, 95, 0.15)
+    );
+}
+
+/* TV — red/orange */
+.section-divider.tv::before {
+    background: linear-gradient(
+        90deg,
+        rgba(255, 91, 33, 0.15),
+        #ff5b21
+    );
+}
+
+.section-divider.tv::after {
+    background: linear-gradient(
+        90deg,
+        #ff5b21,
+        rgba(255, 91, 33, 0.15)
+    );
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .section-divider {
+        gap: 10px;
+        margin: 34px 0 20px;
+    }
+
+    .section-divider::before,
+    .section-divider::after {
+        height: 3px;
+    }
+
+    .section-divider span {
+        font-size: 22px;
+    }
+}
 </style>
 </head>
 
@@ -508,7 +603,9 @@ h1 {
 
 <div class="container">
 
-    <div class="section-title">📰 Netsíður</div>
+    <div class="section-divider websites">
+    <span> Netsíður</span>
+</div>
 
    <a class="card" href="https://stund.orri.is/Vinnustund/index.jsp?login=true" target="_blank">
     <img src="images/vinnustund-logo.png" alt="Vinnustund">
