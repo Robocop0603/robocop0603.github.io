@@ -447,7 +447,7 @@ h1 {
             <div id="comeback-remaining" class="comeback-remaining"></div>
 
             <div id="police-marker" class="police-marker">
-                👮
+                👮‍♂️
             </div>
         </div>
 
@@ -460,7 +460,7 @@ h1 {
 </div>
     </div>
 
-    <div class="appointments">
+    <div class="appointments" style="display: none;">
         <div class="appointments-title">📅 Upcoming Appointments</div>
         <div id="upcoming-list" class="match-list"></div>
     </div>
@@ -577,13 +577,13 @@ function updateGreeting() {
     let greeting;
 
    if (hour >= 5 && hour < 12) {
-    greeting = "👮 Good Morning, Róbert";
+    greeting = "👮‍♂️ Good Morning, Róbert";
 } else if (hour >= 12 && hour < 18) {
-    greeting = "👮 Good Afternoon, Róbert";
+    greeting = " 👮‍♂️ Good Afternoon, Róbert";
 } else if (hour >= 18 && hour < 23) {
-    greeting = "👮 Good Evening, Róbert";
+    greeting = "👮‍♂️ Good Evening, Róbert";
 } else {
-    greeting = "👮 Good Night, Róbert";
+    greeting = "👮‍♂️ Good Night, Róbert";
     }
 
     document.getElementById("greeting").textContent = greeting;
