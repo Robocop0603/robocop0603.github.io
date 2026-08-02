@@ -311,6 +311,28 @@ h1 {
     width: 70px;
     height: 42px;
 }
+    /* Remove outer card box for app links */
+
+.app-link {
+    width: 140px;
+    padding: 0;
+    gap: 0;
+
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.app-link:hover {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    transform: none;
+}
+
+.app-link span {
+    margin-top: 6px;
+}
 
 @media (max-width: 700px) {
     body { padding: 22px 12px; }
@@ -711,13 +733,12 @@ h1 {
     <span> Netsíður</span>
 </div>
 
-   <a class="card app-link" href="https://stund.orri.is/Vinnustund/index.jsp?login=true">
+   <a class="app-link" href="https://stund.orri.is/Vinnustund/index.jsp?login=true" target="_blank">
     <div class="app-icon">
         <img src="images/vinnustund-logo.png" alt="Vinnustund">
     </div>
 
     <span>Vinnustund</span>
-</a>
 </a>
     <a class="card" href="https://visir.is" target="_blank"><img src="https://www.google.com/s2/favicons?domain=visir.is&sz=64"><span>Vísir</span></a>
     <a class="card" href="https://mbl.is" target="_blank"><img src="https://www.google.com/s2/favicons?domain=mbl.is&sz=64"><span>mbl</span></a>
