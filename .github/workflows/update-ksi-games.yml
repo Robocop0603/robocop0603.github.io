@@ -132,7 +132,14 @@ jobs:
             )
            if edge.get("node", {}).get("matchId") is not None
            ]
-          edges = (
+           officials_payload = {
+           "operationName": "MatchesOfficials",
+            "variables": {
+            "matchIds": match_ids
+             },
+            "query": officials_query
+            }
+            edges = (
               result
               .get("data", {})
               .get("cometMatches", {})
