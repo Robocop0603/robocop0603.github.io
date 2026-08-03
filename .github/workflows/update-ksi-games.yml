@@ -32,10 +32,10 @@ jobs:
 
           today = datetime.now(timezone.utc).date()
           start_date = today
-end_date = today + timedelta(days=6)
+          end_date = today + timedelta(days=6)
 
           date_from = f"{start_date.isoformat()}T00:00:00.000+00:00"
-date_to = f"{end_date.isoformat()}T23:59:59.999+00:00"
+          date_to = f"{end_date.isoformat()}T23:59:59.999+00:00"
 
           query = """
           query CometMatches(
