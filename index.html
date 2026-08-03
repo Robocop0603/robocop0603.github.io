@@ -670,7 +670,6 @@ h1 {
 
     <div class="comeback-info">
         <span id="recovery-day">Recovery Day</span>
-        <span id="comeback-percent">0%</span>
     </div>
 
     <div class="comeback-journey">
@@ -1038,9 +1037,6 @@ function updateComebackProgress() {
 
     document.getElementById("recovery-day").textContent =
         "Recovery Day " + recoveryDay;
-
-    document.getElementById("comeback-percent").textContent =
-        roundedProgress + "%";
 
     document.getElementById("comeback-remaining").style.width =
         (100 - progress) + "%";
