@@ -23,8 +23,6 @@ jobs:
 
       - name: Download KSÍ fixtures and officials
         run: |
-           - name: Download KSÍ fixtures and officials
-        run: |
           python <<'PY'
           import json
           import urllib.request
