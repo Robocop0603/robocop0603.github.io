@@ -16,7 +16,7 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-            - name: Set up Python
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -52,60 +52,33 @@ jobs:
             ) {
               totalCount
               edges {
-                cursor
                 node {
                   matchId
                   matchDescription
                   matchDate
                   liveStatus
                   matchStatus
-                  inStatusSince
-                  lastUpdatedDatetime
-                  round
-                  matchNumber
-                  field
                   homeScore
                   awayScore
-                  matchDatePrevious
-                  matchDateUpdatedAt
-                  facilityUpdatedAt
-                  facilityPrevious
                   facilityName
 
                   competition {
-                    id
                     name
-                    picture
-                    season
                     category
                     gender
                     competitionType
                   }
 
-                  facility {
-                    id
-                    name
-                    logo
-                    longitudeLatitude
-                  }
-
                   homeTeam {
-                    id
                     name
                     logo
                   }
 
                   awayTeam {
-                    id
                     name
                     logo
                   }
                 }
-              }
-
-              pageInfo {
-                hasNextPage
-                endCursor
               }
             }
           }
@@ -192,8 +165,8 @@ jobs:
                   continue
 
               if not any(
-                  allowed_name in competition_name
-                  for allowed_name in allowed_competitions
+                  allowed in competition_name
+                  for allowed in allowed_competitions
               ):
                   continue
 
