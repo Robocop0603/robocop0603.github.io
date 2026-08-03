@@ -1076,11 +1076,66 @@ function updateComebackProgress() {
     document.getElementById("police-marker").style.left =
         progress + "%";
 }
+    async function loadFixtures() {
+    try {
+        const response = await fetch("fixtures.json?" + Date.now());
+        const data = await response.json();
+
+        const list = document.getElementById("fixtures-list");
+        const count = document.getElementById("fixtures-count");
+
+        list.innerHTML = "";
+
+        count.textContent = `${data.games.length} leikir`;
+
+        if (data.games.length === 0) {
+            list.innerHTML = "<div class='fixtures-loading'>Engir leikir fundust.</div>";
+            return;
+        }
+
+        data.games.slice(0, 5).forEach(game => {
+
+            const item = document.createElement("div");
+
+            item.style.padding = "12px 0";
+            item.style.borderBottom = "1px solid rgba(255,255,255,.08)";
+            item.style.color = "white";
+
+            const kickoff = new Date(game.date);
+
+            item.innerHTML = `
+                <div style="font-size:15px;font-weight:bold;">
+                    ${game.home} vs ${game.away}
+                </div>
+
+                <div style="opacity:.75;font-size:13px;margin-top:4px;">
+                    ${kickoff.toLocaleDateString("is-IS")} •
+                    ${kickoff.toLocaleTimeString("is-IS",{hour:"2-digit",minute:"2-digit"})}
+                </div>
+
+                <div style="opacity:.55;font-size:12px;">
+                    ${game.competition}
+                </div>
+            `;
+
+            list.appendChild(item);
+
+        });
+
+    } catch (err) {
+
+        document.getElementById("fixtures-list").innerHTML =
+            "<div class='fixtures-loading'>Ekki tókst að sækja leiki.</div>";
+
+        console.error(err);
+    }
+}
     function updateDashboard() {
     const now = new Date();
 
     updateGreeting();
     updateComebackProgress();
+    loadFixtures();    
 
     document.getElementById("clock").innerHTML =
         now.toLocaleTimeString("en-GB", {
