@@ -21,7 +21,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Download today's adult matches
+           - name: Download KSÍ fixtures and officials
         run: |
           python <<'PY'
           import json
@@ -37,7 +37,7 @@ jobs:
           date_from = f"{start_date.isoformat()}T00:00:00.000+00:00"
           date_to = f"{end_date.isoformat()}T23:59:59.999+00:00"
 
-          query = """
+          fixtures_query = """
           query CometMatches(
             $first: Int!,
             $after: String,
@@ -52,51 +52,102 @@ jobs:
             ) {
               totalCount
               edges {
+                cursor
                 node {
                   matchId
                   matchDescription
                   matchDate
-                  matchStatus
                   liveStatus
+                  matchStatus
+                  inStatusSince
+                  lastUpdatedDatetime
+                  round
+                  matchNumber
+                  field
                   homeScore
                   awayScore
+                  matchDatePrevious
+                  matchDateUpdatedAt
+                  facilityUpdatedAt
+                  facilityPrevious
                   facilityName
 
                   competition {
+                    id
                     name
+                    picture
+                    season
                     category
                     gender
                     competitionType
                   }
 
+                  facility {
+                    id
+                    name
+                    logo
+                    longitudeLatitude
+                  }
+
                   homeTeam {
+                    id
                     name
                     logo
                   }
 
                   awayTeam {
+                    id
                     name
                     logo
                   }
                 }
               }
+
+              pageInfo {
+                hasNextPage
+                endCursor
+              }
             }
           }
           """
+
           officials_query = """
           query MatchesOfficials($matchIds: [Int!]!) {
-          matchesOfficials(matchIds: $matchIds) {
-          matchId
-          officials {
-          personId
-          name
-          role
-          orderNumber
-               }
-             }
-           }
+            matchesOfficials(matchIds: $matchIds) {
+              matchId
+              officials {
+                personId
+                name
+                role
+                orderNumber
+              }
+            }
+          }
           """
-          payload = {
+
+          def send_graphql_request(payload):
+              request = urllib.request.Request(
+                  endpoint,
+                  data=json.dumps(payload).encode("utf-8"),
+                  headers={
+                      "Content-Type": "application/json",
+                      "User-Agent": "robocop-dashboard"
+                  },
+                  method="POST"
+              )
+
+              with urllib.request.urlopen(request, timeout=30) as response:
+                  result = json.load(response)
+
+              if result.get("errors"):
+                  raise RuntimeError(
+                      "GraphQL error: "
+                      + json.dumps(result["errors"], ensure_ascii=False)
+                  )
+
+              return result
+
+          fixtures_payload = {
               "operationName": "CometMatches",
               "variables": {
                   "first": 100,
@@ -107,40 +158,13 @@ jobs:
                   },
                   "sort": "NEXT_FIRST"
               },
-              "query": query
+              "query": fixtures_query
           }
 
-          request = urllib.request.Request(
-              endpoint,
-              data=json.dumps(payload).encode("utf-8"),
-              headers={
-                  "Content-Type": "application/json",
-                  "User-Agent": "robocop-dashboard"
-              },
-              method="POST"
-          )
+          fixtures_result = send_graphql_request(fixtures_payload)
 
-          with urllib.request.urlopen(request, timeout=30) as response:
-              result = json.load(response)
-          match_ids = [
-          edge.get("node", {}).get("matchId")
-          for edge in (
-          result
-          .get("data", {})
-          .get("cometMatches", {})
-          .get("edges", [])
-            )
-           if edge.get("node", {}).get("matchId") is not None
-           ]
-           officials_payload = {
-           "operationName": "MatchesOfficials",
-            "variables": {
-            "matchIds": match_ids
-             },
-            "query": officials_query
-            }
-            edges = (
-              result
+          edges = (
+              fixtures_result
               .get("data", {})
               .get("cometMatches", {})
               .get("edges", [])
@@ -154,10 +178,10 @@ jobs:
               "Deildabikar karla"
           )
 
-          games = []
+          filtered_matches = []
 
           for edge in edges:
-              match = edge.get("node", {})
+              match = edge.get("node") or {}
               competition = match.get("competition") or {}
               competition_name = competition.get("name", "")
 
@@ -168,32 +192,95 @@ jobs:
                   continue
 
               if not any(
-                  allowed in competition_name
-                  for allowed in allowed_competitions
+                  allowed_name in competition_name
+                  for allowed_name in allowed_competitions
               ):
                   continue
 
-              home = match.get("homeTeam") or {}
-              away = match.get("awayTeam") or {}
+              filtered_matches.append(match)
+
+          match_ids = [
+              match.get("matchId")
+              for match in filtered_matches
+              if match.get("matchId") is not None
+          ]
+
+          officials_by_match = {}
+
+          if match_ids:
+              officials_payload = {
+                  "operationName": "MatchesOfficials",
+                  "variables": {
+                      "matchIds": match_ids
+                  },
+                  "query": officials_query
+              }
+
+              officials_result = send_graphql_request(
+                  officials_payload
+              )
+
+              officials_matches = (
+                  officials_result
+                  .get("data", {})
+                  .get("matchesOfficials", [])
+              )
+
+              for match_officials in officials_matches:
+                  match_id = match_officials.get("matchId")
+
+                  officials = sorted(
+                      match_officials.get("officials") or [],
+                      key=lambda official: (
+                          official.get("orderNumber")
+                          if official.get("orderNumber") is not None
+                          else 999
+                      )
+                  )
+
+                  officials_by_match[match_id] = [
+                      {
+                          "personId": official.get("personId"),
+                          "name": official.get("name"),
+                          "role": official.get("role"),
+                          "orderNumber": official.get("orderNumber")
+                      }
+                      for official in officials
+                  ]
+
+          games = []
+
+          for match in filtered_matches:
+              competition = match.get("competition") or {}
+              home_team = match.get("homeTeam") or {}
+              away_team = match.get("awayTeam") or {}
+              match_id = match.get("matchId")
 
               games.append({
-                  "id": match.get("matchId"),
+                  "id": match_id,
                   "date": match.get("matchDate"),
-                  "competition": competition_name,
-                  "home": home.get("name"),
-                  "away": away.get("name"),
-                  "homeLogo": home.get("logo"),
-                  "awayLogo": away.get("logo"),
+                  "competition": competition.get("name"),
+                  "home": home_team.get("name"),
+                  "away": away_team.get("name"),
+                  "homeLogo": home_team.get("logo"),
+                  "awayLogo": away_team.get("logo"),
                   "facility": match.get("facilityName"),
                   "status": match.get("matchStatus"),
                   "liveStatus": match.get("liveStatus"),
                   "homeScore": match.get("homeScore"),
-                  "awayScore": match.get("awayScore")
+                  "awayScore": match.get("awayScore"),
+                  "officials": officials_by_match.get(match_id, [])
               })
+
+          games.sort(
+              key=lambda game: game.get("date") or ""
+          )
 
           output = {
               "updatedAt": datetime.now(timezone.utc).isoformat(),
               "date": today.isoformat(),
+              "dateFrom": start_date.isoformat(),
+              "dateTo": end_date.isoformat(),
               "games": games
           }
 
@@ -205,7 +292,15 @@ jobs:
                   indent=2
               )
 
-          print(f"Saved {len(games)} matches to fixtures.json")
+          officials_count = sum(
+              len(game["officials"])
+              for game in games
+          )
+
+          print(
+              f"Saved {len(games)} matches and "
+              f"{officials_count} officials to fixtures.json"
+          )
           PY
 
       - name: Commit updated games
