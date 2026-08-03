@@ -83,7 +83,19 @@ jobs:
             }
           }
           """
-
+          officials_query = """
+          query MatchesOfficials($matchIds: [Int!]!) {
+          matchesOfficials(matchIds: $matchIds) {
+          matchId
+          officials {
+          personId
+          name
+          role
+          orderNumber
+               }
+             }
+           }
+          """
           payload = {
               "operationName": "CometMatches",
               "variables": {
@@ -110,7 +122,16 @@ jobs:
 
           with urllib.request.urlopen(request, timeout=30) as response:
               result = json.load(response)
-
+          match_ids = [
+          edge.get("node", {}).get("matchId")
+          for edge in (
+          result
+          .get("data", {})
+          .get("cometMatches", {})
+          .get("edges", [])
+            )
+           if edge.get("node", {}).get("matchId") is not None
+           ]
           edges = (
               result
               .get("data", {})
