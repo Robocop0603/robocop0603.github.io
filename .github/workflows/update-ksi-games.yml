@@ -1,1 +1,195 @@
+name: Update KSÍ games
 
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 * * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update-games:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Download today's adult matches
+        run: |
+          python <<'PY'
+          import json
+          import urllib.request
+          from datetime import datetime, timezone, timedelta
+
+          endpoint = "https://www.abler.io/comet-backend/graphql"
+
+          today = datetime.now(timezone.utc).date()
+          start_date = today
+end_date = today + timedelta(days=6)
+
+          date_from = f"{start_date.isoformat()}T00:00:00.000+00:00"
+date_to = f"{end_date.isoformat()}T23:59:59.999+00:00"
+
+          query = """
+          query CometMatches(
+            $first: Int!,
+            $after: String,
+            $filter: CometMatchFilterInput,
+            $sort: CometMatchSort
+          ) {
+            cometMatches(
+              first: $first,
+              after: $after,
+              filter: $filter,
+              sort: $sort
+            ) {
+              totalCount
+              edges {
+                node {
+                  matchId
+                  matchDescription
+                  matchDate
+                  matchStatus
+                  liveStatus
+                  homeScore
+                  awayScore
+                  facilityName
+
+                  competition {
+                    name
+                    category
+                    gender
+                    competitionType
+                  }
+
+                  homeTeam {
+                    name
+                    logo
+                  }
+
+                  awayTeam {
+                    name
+                    logo
+                  }
+                }
+              }
+            }
+          }
+          """
+
+          payload = {
+              "operationName": "CometMatches",
+              "variables": {
+                  "first": 100,
+                  "filter": {
+                      "categories": ["Adults"],
+                      "dateFrom": date_from,
+                      "dateTo": date_to
+                  },
+                  "sort": "NEXT_FIRST"
+              },
+              "query": query
+          }
+
+          request = urllib.request.Request(
+              endpoint,
+              data=json.dumps(payload).encode("utf-8"),
+              headers={
+                  "Content-Type": "application/json",
+                  "User-Agent": "robocop-dashboard"
+              },
+              method="POST"
+          )
+
+          with urllib.request.urlopen(request, timeout=30) as response:
+              result = json.load(response)
+
+          edges = (
+              result
+              .get("data", {})
+              .get("cometMatches", {})
+              .get("edges", [])
+          )
+
+          allowed_competitions = (
+              "Besta deild karla",
+              "Lengjudeild karla",
+              "2. deild karla",
+              "Mjólkurbikar karla",
+              "Deildabikar karla"
+          )
+
+          games = []
+
+          for edge in edges:
+              match = edge.get("node", {})
+              competition = match.get("competition") or {}
+              competition_name = competition.get("name", "")
+
+              if competition.get("category") != "Adults":
+                  continue
+
+              if competition.get("gender") != "Male":
+                  continue
+
+              if not any(
+                  allowed in competition_name
+                  for allowed in allowed_competitions
+              ):
+                  continue
+
+              home = match.get("homeTeam") or {}
+              away = match.get("awayTeam") or {}
+
+              games.append({
+                  "id": match.get("matchId"),
+                  "date": match.get("matchDate"),
+                  "competition": competition_name,
+                  "home": home.get("name"),
+                  "away": away.get("name"),
+                  "homeLogo": home.get("logo"),
+                  "awayLogo": away.get("logo"),
+                  "facility": match.get("facilityName"),
+                  "status": match.get("matchStatus"),
+                  "liveStatus": match.get("liveStatus"),
+                  "homeScore": match.get("homeScore"),
+                  "awayScore": match.get("awayScore")
+              })
+
+          output = {
+              "updatedAt": datetime.now(timezone.utc).isoformat(),
+              "date": today.isoformat(),
+              "games": games
+          }
+
+          with open("fixtures.json", "w", encoding="utf-8") as file:
+              json.dump(
+                  output,
+                  file,
+                  ensure_ascii=False,
+                  indent=2
+              )
+
+          print(f"Saved {len(games)} matches to fixtures.json")
+          PY
+
+      - name: Commit updated games
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add fixtures.json
+
+          if git diff --cached --quiet; then
+            echo "No fixture changes"
+          else
+            git commit -m "Update KSÍ fixtures"
+            git push
+          fi
