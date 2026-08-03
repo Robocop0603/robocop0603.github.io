@@ -659,6 +659,51 @@ h1 {
     color: rgba(255,255,255,0.7);
     padding: 18px;
 }
+   .fixtures-day-heading {
+    margin-top: 18px;
+    margin-bottom: 10px;
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: #6dd5ff;
+
+    border-bottom: 1px solid rgba(255,255,255,.12);
+    padding-bottom: 6px;
+}
+
+.fixture-item {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.fixture-main {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.fixture-time {
+    color: #6dd5ff;
+    font-weight: bold;
+    min-width: 48px;
+}
+
+.fixture-teams {
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.fixture-competition {
+    margin-left: 60px;
+    margin-top: 4px;
+
+    color: rgba(255,255,255,.65);
+    font-size: 12px;
+} 
 /* Mobile */
 @media (max-width: 600px) {
     .section-divider {
@@ -1093,35 +1138,82 @@ function updateComebackProgress() {
             return;
         }
 
-        data.games.slice(0, 5).forEach(game => {
+        const now = new Date();
 
-            const item = document.createElement("div");
+const todayKey = now.toLocaleDateString("en-CA", {
+    timeZone: "Atlantic/Reykjavik"
+});
 
-            item.style.padding = "12px 0";
-            item.style.borderBottom = "1px solid rgba(255,255,255,.08)";
-            item.style.color = "white";
+const tomorrow = new Date(now);
+tomorrow.setDate(tomorrow.getDate() + 1);
 
-            const kickoff = new Date(game.date);
+const tomorrowKey = tomorrow.toLocaleDateString("en-CA", {
+    timeZone: "Atlantic/Reykjavik"
+});
 
-            item.innerHTML = `
-                <div style="font-size:15px;font-weight:bold;">
-                    ${game.home} vs ${game.away}
-                </div>
+const todayGames = [];
+const tomorrowGames = [];
+const laterGames = [];
 
-                <div style="opacity:.75;font-size:13px;margin-top:4px;">
-                    ${kickoff.toLocaleDateString("is-IS")} •
-                    ${kickoff.toLocaleTimeString("is-IS",{hour:"2-digit",minute:"2-digit"})}
-                </div>
+data.games.forEach(game => {
+    const gameDate = new Date(game.date);
 
-                <div style="opacity:.55;font-size:12px;">
-                    ${game.competition}
-                </div>
-            `;
+    const gameKey = gameDate.toLocaleDateString("en-CA", {
+        timeZone: "Atlantic/Reykjavik"
+    });
 
-            list.appendChild(item);
+    if (gameKey === todayKey) {
+        todayGames.push(game);
+    } else if (gameKey === tomorrowKey) {
+        tomorrowGames.push(game);
+    } else {
+        laterGames.push(game);
+    }
+});
 
+function addGameGroup(title, games, limit) {
+    if (games.length === 0) {
+        return;
+    }
+
+    const heading = document.createElement("div");
+    heading.className = "fixtures-day-heading";
+    heading.textContent = title;
+    list.appendChild(heading);
+
+    games.slice(0, limit).forEach(game => {
+        const item = document.createElement("div");
+        item.className = "fixture-item";
+
+        const kickoff = new Date(game.date);
+
+        const time = kickoff.toLocaleTimeString("is-IS", {
+            timeZone: "Atlantic/Reykjavik",
+            hour: "2-digit",
+            minute: "2-digit"
         });
 
+        item.innerHTML = `
+            <div class="fixture-main">
+                <span class="fixture-time">${time}</span>
+
+                <span class="fixture-teams">
+                    ${game.home} vs ${game.away}
+                </span>
+            </div>
+
+            <div class="fixture-competition">
+                ${game.competition}
+            </div>
+        `;
+
+        list.appendChild(item);
+    });
+}
+
+addGameGroup("Í DAG", todayGames, 5);
+addGameGroup("Á MORGUN", tomorrowGames, 4);
+addGameGroup("Aðrir leikir", laterGames, 3);
     } catch (err) {
 
         document.getElementById("fixtures-list").innerHTML =
