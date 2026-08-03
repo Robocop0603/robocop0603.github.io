@@ -634,7 +634,31 @@ h1 {
         rgba(34, 211, 238, 0.15)
     );
 }
+.fixtures-panel {
+    margin-top: 24px;
+    padding: 20px;
+    border-radius: 22px;
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.12);
+}
 
+.fixtures-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+}
+
+.fixtures-loading {
+    text-align: center;
+    color: rgba(255,255,255,0.7);
+    padding: 18px;
+}
 /* Mobile */
 @media (max-width: 600px) {
     .section-divider {
@@ -693,10 +717,18 @@ h1 {
 </div>
     </div>
 
-    <div class="appointments" style="display: none;">
-        <div class="appointments-title">📅 Upcoming Appointments</div>
-        <div id="upcoming-list" class="match-list"></div>
+    <div class="fixtures-panel">
+    <div class="fixtures-heading">
+        <span>⚽ Leikir næstu daga</span>
+        <span id="fixtures-count"></span>
     </div>
+
+    <div id="fixtures-list">
+        <div class="fixtures-loading">
+            Sæki leiki...
+        </div>
+    </div>
+</div>
 </div>
 
 <div class="search-area">
