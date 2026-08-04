@@ -636,6 +636,9 @@ h1 {
 }
 .fixtures-panel {
     margin-top: 24px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 20px;
     border-radius: 22px;
     background: rgba(255,255,255,0.06);
@@ -765,7 +768,6 @@ h1 {
     <div class="fixtures-panel">
     <div class="fixtures-heading">
         <span>⚽ Leikir næstu daga</span>
-        <span id="fixtures-count"></span>
     </div>
 
     <div id="fixtures-list">
@@ -1127,11 +1129,8 @@ function updateComebackProgress() {
         const data = await response.json();
 
         const list = document.getElementById("fixtures-list");
-        const count = document.getElementById("fixtures-count");
 
         list.innerHTML = "";
-
-        count.textContent = `${data.games.length} leikir`;
 
         if (data.games.length === 0) {
             list.innerHTML = "<div class='fixtures-loading'>Engir leikir fundust.</div>";
@@ -1187,11 +1186,12 @@ function addGameGroup(title, games, limit) {
 
         const kickoff = new Date(game.date);
 
-        const time = kickoff.toLocaleTimeString("is-IS", {
-            timeZone: "Atlantic/Reykjavik",
-            hour: "2-digit",
-            minute: "2-digit"
-        });
+        const time = kickoff.toLocaleTimeString("en-GB", {
+    timeZone: "Atlantic/Reykjavik",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false
+});
 
         item.innerHTML = `
             <div class="fixture-main">
