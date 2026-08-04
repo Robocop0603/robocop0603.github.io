@@ -1213,18 +1213,24 @@ function addGameGroup(title, games, limit) {
     minute: "2-digit",
     hour12: false
 });
-
+const date = kickoff.toLocaleDateString("is-IS", {
+  timeZone: "Atlantic/Reykjavik",
+  weekday: "long",
+  day: "numeric",
+  month: "long"
+});
         item.innerHTML = `
             <div class="fixture-main">
                 <span class="fixture-time">${time}</span>
 
-                <span class="fixture-teams">
                     ${game.home} vs ${game.away}
                 </span>
             </div>
 
-            <div class="fixture-competition">
-    ${game.competition}
+            <div class="fixture-details">
+  <div class="fixture-date">${date} · ${time}</div>
+  <div class="fixture-venue">${game.venue || ""}</div>
+  <div class="fixture-competition">${game.competition}</div>
 </div>
 
 <div class="fixture-officials">
@@ -1246,7 +1252,7 @@ function addGameGroup(title, games, limit) {
 
 addGameGroup("Í DAG", todayGames, 5);
 addGameGroup("Á MORGUN", tomorrowGames, 4);
-addGameGroup("Aðrir leikir", laterGames, 3);
+addGameGroup("FRAMUNDAN", laterGames, 3);
     } catch (err) {
 
         document.getElementById("fixtures-list").innerHTML =
