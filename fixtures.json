@@ -1,95 +1,9 @@
 {
-  "updatedAt": "2026-08-03T23:36:25.882759+00:00",
-  "date": "2026-08-03",
-  "dateFrom": "2026-08-03",
-  "dateTo": "2026-08-09",
+  "updatedAt": "2026-08-04T03:38:41.283821+00:00",
+  "date": "2026-08-04",
+  "dateFrom": "2026-08-04",
+  "dateTo": "2026-08-10",
   "games": [
-    {
-      "id": 7047801,
-      "date": "2026-08-03T14:00:00.000Z",
-      "competition": "Íslandsmót KSÍ - Lengjudeild karla 2026",
-      "home": "Vestri",
-      "away": "Grótta",
-      "homeLogo": "https://comet.ksi.is/file?id=d6937a22-320d-4167-a3fa-4d3e34f433c4",
-      "awayLogo": "https://comet.ksi.is/file?id=f12cdfbd-f638-42e4-8639-e668c256e98d",
-      "facility": "Kerecisvöllurinn",
-      "status": "PLAYED",
-      "liveStatus": null,
-      "homeScore": 0,
-      "awayScore": 3,
-      "officials": [
-        {
-          "personId": 20707,
-          "name": "Aðalbjörn Heiðar Þorsteinsson",
-          "role": "Dómari",
-          "orderNumber": 1
-        },
-        {
-          "personId": 83352,
-          "name": "Kári Mímisson",
-          "role": "Aðstoðardómari 1",
-          "orderNumber": 2
-        },
-        {
-          "personId": 37295,
-          "name": "Breki Sigurðsson",
-          "role": "Aðstoðardómari 2",
-          "orderNumber": 3
-        },
-        {
-          "personId": 41478,
-          "name": "Lúðvík Þorgeirsson",
-          "role": "Dómaraeftirlitsmaður",
-          "orderNumber": 4
-        }
-      ]
-    },
-    {
-      "id": 7041424,
-      "date": "2026-08-03T19:15:00.000Z",
-      "competition": "Íslandsmót KSÍ - Besta deild karla 2026",
-      "home": "Valur",
-      "away": "Stjarnan",
-      "homeLogo": "https://comet.ksi.is/file?id=ba78e821-0820-4358-bd59-8b3b5a96c1f4",
-      "awayLogo": "https://comet.ksi.is/file?id=d588827d-21f1-42d7-83c9-15dd8ab4d294",
-      "facility": "N1-völlurinn Hlíðarenda",
-      "status": "SCHEDULED",
-      "liveStatus": null,
-      "homeScore": 2,
-      "awayScore": 3,
-      "officials": [
-        {
-          "personId": 3177,
-          "name": "Gunnar Freyr Róbertsson",
-          "role": "Dómari",
-          "orderNumber": 1
-        },
-        {
-          "personId": 22566,
-          "name": "Egill Guðvarður Guðlaugsson",
-          "role": "Aðstoðardómari 1",
-          "orderNumber": 2
-        },
-        {
-          "personId": 10851,
-          "name": "Eysteinn Hrafnkelsson",
-          "role": "Aðstoðardómari 2",
-          "orderNumber": 3
-        },
-        {
-          "personId": 11529,
-          "name": "Gunnar Oddur Hafliðason",
-          "role": "Fjórði dómari",
-          "orderNumber": 4
-        },
-        {
-          "personId": 27549,
-          "name": "Ólafur Ingi Guðmundsson",
-          "role": "Dómaraeftirlitsmaður",
-          "orderNumber": 5
-        }
-      ]
-    },
     {
       "id": 7041422,
       "date": "2026-08-04T18:30:00.000Z",
@@ -400,6 +314,36 @@
       "homeLogo": "https://comet.ksi.is/file?id=9cbcd4bf-2e6c-4e89-baa4-5323dbe60bd3",
       "awayLogo": "https://comet.ksi.is/file?id=ba78e821-0820-4358-bd59-8b3b5a96c1f4",
       "facility": "Eikarvöllurinn",
+      "status": "SCHEDULED",
+      "liveStatus": null,
+      "homeScore": null,
+      "awayScore": null,
+      "officials": []
+    },
+    {
+      "id": 7041432,
+      "date": "2026-08-10T19:15:00.000Z",
+      "competition": "Íslandsmót KSÍ - Besta deild karla 2026",
+      "home": "Fram",
+      "away": "KR",
+      "homeLogo": "https://comet.ksi.is/file?id=f9e13ccb-cfd8-4d26-a479-b41230900197",
+      "awayLogo": "https://comet.ksi.is/file?id=82b4a290-6bf0-414a-b292-bb11b2c884a6",
+      "facility": "Lambhagavöllurinn",
+      "status": "SCHEDULED",
+      "liveStatus": null,
+      "homeScore": null,
+      "awayScore": null,
+      "officials": []
+    },
+    {
+      "id": 7053295,
+      "date": "2026-08-10T19:15:00.000Z",
+      "competition": "Íslandsmót KSÍ - 2. deild karla 2026",
+      "home": "Víkingur Ó.",
+      "away": "Selfoss",
+      "homeLogo": "https://comet.ksi.is/file?id=f905d614-ec58-4a20-af4d-502aff02ac99",
+      "awayLogo": "https://comet.ksi.is/file?id=06beb216-886f-4bd7-bc76-9d98ada66e58",
+      "facility": "Ólafsvíkurvöllur",
       "status": "SCHEDULED",
       "liveStatus": null,
       "homeScore": null,
