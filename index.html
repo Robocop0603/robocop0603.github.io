@@ -707,6 +707,23 @@ h1 {
     color: rgba(255,255,255,.65);
     font-size: 12px;
 } 
+    .fixture-officials {
+    margin-top: 8px;
+    margin-left: 60px;
+
+    font-size: 12px;
+    color: rgba(255,255,255,.78);
+}
+
+.fixture-official {
+    margin-top: 3px;
+    line-height: 1.35;
+}
+
+.fixture-official strong {
+    color: #6dd5ff;
+    font-weight: 600;
+}
 /* Mobile */
 @media (max-width: 600px) {
     .section-divider {
@@ -1203,8 +1220,20 @@ function addGameGroup(title, games, limit) {
             </div>
 
             <div class="fixture-competition">
-                ${game.competition}
-            </div>
+    ${game.competition}
+</div>
+
+<div class="fixture-officials">
+    ${
+        game.officials && game.officials.length
+            ? game.officials.map(official => `
+                <div class="fixture-official">
+                    <strong>${official.role}:</strong> ${official.name}
+                </div>
+            `).join("")
+            : ""
+    }
+</div>
         `;
 
         list.appendChild(item);
