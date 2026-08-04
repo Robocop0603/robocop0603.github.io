@@ -287,5 +287,6 @@ jobs:
             echo "No fixture changes"
           else
             git commit -m "Update KSÍ fixtures"
-            git push
-          fi
+          git pull --rebase origin main
+git push origin main
+          
