@@ -288,5 +288,5 @@ jobs:
           else
             git commit -m "Update KSÍ fixtures"
           git pull --rebase origin main
-git push origin main
+          git push origin main
           
