@@ -1178,6 +1178,10 @@ data.games.forEach(game => {
         timeZone: "Atlantic/Reykjavik"
     });
 
+    if (gameKey < todayKey) {
+        return;
+    }
+
     if (gameKey === todayKey) {
         todayGames.push(game);
     } else if (gameKey === tomorrowKey) {
