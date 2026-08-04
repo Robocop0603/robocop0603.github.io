@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-04T03:38:41.283821+00:00",
+  "updatedAt": "2026-08-04T06:41:50.010204+00:00",
   "date": "2026-08-04",
   "dateFrom": "2026-08-04",
   "dateTo": "2026-08-10",
@@ -63,7 +63,38 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 75111,
+          "name": "Twana Khalid Ahmed",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 27654,
+          "name": "Birkir Sigurðarson",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 3840,
+          "name": "Guðmundur Ingi Bjarnason",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        },
+        {
+          "personId": 22729,
+          "name": "Elías Ingi Árnason",
+          "role": "Fjórði dómari",
+          "orderNumber": 4
+        },
+        {
+          "personId": 2800,
+          "name": "Gunnar Helgason",
+          "role": "Dómaraeftirlitsmaður",
+          "orderNumber": 5
+        }
+      ]
     },
     {
       "id": 7041426,
