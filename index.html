@@ -1213,12 +1213,12 @@ function addGameGroup(title, games, limit) {
     minute: "2-digit",
     hour12: false
 });
-const date = new Intl.DateTimeFormat("is-IS", {
+const date = kickoff.toLocaleDateString("is", {
     timeZone: "Atlantic/Reykjavik",
     weekday: "long",
     day: "numeric",
     month: "long"
-}).format(kickoff);
+});
         item.innerHTML = `
             <div class="fixture-main">
 
