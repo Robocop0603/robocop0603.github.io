@@ -145,6 +145,7 @@ jobs:
 
           allowed_competitions = (
               "Besta deild karla",
+              "Besta deild kvenna",
               "Lengjudeild karla",
               "2. deild karla",
               "3. deild karla",
