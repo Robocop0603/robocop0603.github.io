@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-05T20:38:42.824510+00:00",
+  "updatedAt": "2026-08-05T22:18:56.202363+00:00",
   "date": "2026-08-05",
   "dateFrom": "2026-08-05",
   "dateTo": "2026-08-11",
@@ -13,10 +13,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=135b7edd-e558-4dfe-a1dd-2956ac5a4bf3",
       "awayLogo": "https://comet.ksi.is/file?id=0d23d358-dd73-4c3a-8f4e-c225e273519c",
       "facility": "HS Orku völlurinn",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 3,
+      "awayScore": 0,
       "officials": [
         {
           "personId": 75111,
@@ -60,9 +60,9 @@
       "awayLogo": "https://comet.ksi.is/file?id=82b4a290-6bf0-414a-b292-bb11b2c884a6",
       "facility": "Kaplakrikavöllur",
       "status": "SCHEDULED",
-      "liveStatus": "NA",
-      "homeScore": null,
-      "awayScore": null,
+      "liveStatus": null,
+      "homeScore": 1,
+      "awayScore": 1,
       "officials": [
         {
           "personId": 10034,
