@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-06T06:43:35.790585+00:00",
+  "updatedAt": "2026-08-06T09:49:47.070270+00:00",
   "date": "2026-08-06",
   "dateFrom": "2026-08-06",
   "dateTo": "2026-08-12",
@@ -91,7 +91,26 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 21370,
+          "name": "Ronnarong Wongmahadthai",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 65380,
+          "name": "Ram Krishna Gurung",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 72390,
+          "name": "Alexander Elvar Young",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        }
+      ]
     },
     {
       "id": 7047803,
@@ -106,7 +125,32 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 89902,
+          "name": "Max Persson",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 3840,
+          "name": "Guðmundur Ingi Bjarnason",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 89903,
+          "name": "Sam Seno",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        },
+        {
+          "personId": 18176,
+          "name": "Hjalti Þór Halldórsson",
+          "role": "Dómaraeftirlitsmaður",
+          "orderNumber": 4
+        }
+      ]
     },
     {
       "id": 7047804,
@@ -121,7 +165,26 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 89922,
+          "name": "Faruk Iriskic",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 22566,
+          "name": "Egill Guðvarður Guðlaugsson",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 86853,
+          "name": "Anna Kjær Schmidt",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        }
+      ]
     },
     {
       "id": 7056043,
@@ -136,7 +199,20 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 2930,
+          "name": "Sindri Snær A van Kasteren",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 21476,
+          "name": "Sigurður Schram",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        }
+      ]
     },
     {
       "id": 7056044,
@@ -151,7 +227,20 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 14303,
+          "name": "Magnús Þór Jónsson",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 70082,
+          "name": "Elías Baldvinsson",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 2
+        }
+      ]
     },
     {
       "id": 7056045,
@@ -166,7 +255,20 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 79535,
+          "name": "Przemyslaw Janik",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 29884,
+          "name": "Nour Natan Ninir",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        }
+      ]
     },
     {
       "id": 7056041,
@@ -181,7 +283,26 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 89899,
+          "name": "Elin Forsberg",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 89901,
+          "name": "Ayaz Baghainia",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 89900,
+          "name": "Isak Betzholtz",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        }
+      ]
     },
     {
       "id": 7047806,
