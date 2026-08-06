@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-06T12:16:55.460683+00:00",
+  "updatedAt": "2026-08-06T14:36:38.210647+00:00",
   "date": "2026-08-06",
   "dateFrom": "2026-08-06",
   "dateTo": "2026-08-12",
@@ -211,6 +211,12 @@
           "name": "Sigurður Schram",
           "role": "Aðstoðardómari 1",
           "orderNumber": 2
+        },
+        {
+          "personId": 86033,
+          "name": "Wayne Blas Blake",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
         }
       ]
     },
@@ -229,8 +235,8 @@
       "awayScore": null,
       "officials": [
         {
-          "personId": 79535,
-          "name": "Przemyslaw Janik",
+          "personId": 14303,
+          "name": "Magnús Þór Jónsson",
           "role": "Dómari",
           "orderNumber": 1
         },
@@ -239,6 +245,12 @@
           "name": "Nour Natan Ninir",
           "role": "Aðstoðardómari 1",
           "orderNumber": 2
+        },
+        {
+          "personId": 85087,
+          "name": "Viktor Hjaltason",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
         }
       ]
     },
