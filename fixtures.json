@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-07T21:53:20.927775+00:00",
+  "updatedAt": "2026-08-07T22:54:05.794977+00:00",
   "date": "2026-08-07",
   "dateFrom": "2026-08-07",
   "dateTo": "2026-08-13",
@@ -197,8 +197,8 @@
       "facility": "Skessan",
       "status": "SCHEDULED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 1,
+      "awayScore": 4,
       "officials": [
         {
           "personId": 89899,
