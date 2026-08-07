@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-07T04:03:29.780638+00:00",
+  "updatedAt": "2026-08-07T05:49:30.363015+00:00",
   "date": "2026-08-07",
   "dateFrom": "2026-08-07",
   "dateTo": "2026-08-13",
@@ -551,7 +551,32 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 74027,
+          "name": "Sveinn Arnarsson",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 2700,
+          "name": "Eðvarð Þór Eðvarðsson",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 34832,
+          "name": "Patrik Freyr Guðmundsson",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        },
+        {
+          "personId": 2794,
+          "name": "Sverrir Gunnar Pálmason",
+          "role": "Dómaraeftirlitsmaður",
+          "orderNumber": 4
+        }
+      ]
     },
     {
       "id": 7053293,
@@ -566,7 +591,32 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 35755,
+          "name": "Atli Björn E Levy",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 84732,
+          "name": "Mikael Ívan Axelsson",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 84704,
+          "name": "Jovan Subic",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        },
+        {
+          "personId": 4901,
+          "name": "Egill Már Markússon",
+          "role": "Dómaraeftirlitsmaður",
+          "orderNumber": 4
+        }
+      ]
     },
     {
       "id": 7053294,
@@ -581,7 +631,32 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 79535,
+          "name": "Przemyslaw Janik",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 51516,
+          "name": "Rögnvaldur Þ Höskuldsson",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 10426,
+          "name": "Margeir Valur Sigurðsson",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        },
+        {
+          "personId": 27549,
+          "name": "Ólafur Ingi Guðmundsson",
+          "role": "Dómaraeftirlitsmaður",
+          "orderNumber": 4
+        }
+      ]
     },
     {
       "id": 7056044,
