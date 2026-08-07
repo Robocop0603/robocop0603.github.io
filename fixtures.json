@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-07T22:54:05.794977+00:00",
+  "updatedAt": "2026-08-07T23:46:29.035659+00:00",
   "date": "2026-08-07",
   "dateFrom": "2026-08-07",
   "dateTo": "2026-08-13",
@@ -195,10 +195,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=984abb8f-66cf-432a-a832-0ed0bd114065",
       "awayLogo": "https://comet.ksi.is/file?id=f467399a-f668-4555-911c-90a064c65016",
       "facility": "Skessan",
-      "status": "SCHEDULED",
-      "liveStatus": null,
+      "status": "PLAYED",
+      "liveStatus": "FULL_TIME",
       "homeScore": 1,
-      "awayScore": 4,
+      "awayScore": 7,
       "officials": [
         {
           "personId": 89899,
