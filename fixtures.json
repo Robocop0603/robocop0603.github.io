@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-07T10:10:25.442886+00:00",
+  "updatedAt": "2026-08-07T11:05:54.354319+00:00",
   "date": "2026-08-07",
   "dateFrom": "2026-08-07",
   "dateTo": "2026-08-13",
@@ -848,6 +848,21 @@
       "officials": []
     },
     {
+      "id": 7056046,
+      "date": "2026-08-13T18:30:00.000Z",
+      "competition": "Íslandsmót KSÍ - 4. deild karla 2026",
+      "home": "Hamar",
+      "away": "Vængir Júpiters",
+      "homeLogo": "https://comet.ksi.is/file?id=f467399a-f668-4555-911c-90a064c65016",
+      "awayLogo": "https://comet.ksi.is/file?id=13bd9180-874d-49f6-bdca-76ae17469ccb",
+      "facility": "Grýluvöllur",
+      "status": "SCHEDULED",
+      "liveStatus": null,
+      "homeScore": null,
+      "awayScore": null,
+      "officials": []
+    },
+    {
       "id": 7047811,
       "date": "2026-08-13T19:15:00.000Z",
       "competition": "Íslandsmót KSÍ - Lengjudeild karla 2026",
@@ -886,21 +901,6 @@
       "homeLogo": "https://comet.ksi.is/file?id=f12cdfbd-f638-42e4-8639-e668c256e98d",
       "awayLogo": "https://comet.ksi.is/file?id=ab41e2cb-5839-4081-920b-62fa023c1a5e",
       "facility": "Vivaldivöllurinn",
-      "status": "SCHEDULED",
-      "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
-      "officials": []
-    },
-    {
-      "id": 7056046,
-      "date": "2026-08-13T19:15:00.000Z",
-      "competition": "Íslandsmót KSÍ - 4. deild karla 2026",
-      "home": "Hamar",
-      "away": "Vængir Júpiters",
-      "homeLogo": "https://comet.ksi.is/file?id=f467399a-f668-4555-911c-90a064c65016",
-      "awayLogo": "https://comet.ksi.is/file?id=13bd9180-874d-49f6-bdca-76ae17469ccb",
-      "facility": "Grýluvöllur",
       "status": "SCHEDULED",
       "liveStatus": null,
       "homeScore": null,
