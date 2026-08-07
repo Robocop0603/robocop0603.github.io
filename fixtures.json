@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-07T15:07:36.531320+00:00",
+  "updatedAt": "2026-08-07T16:07:39.348005+00:00",
   "date": "2026-08-07",
   "dateFrom": "2026-08-07",
   "dateTo": "2026-08-13",
@@ -128,7 +128,7 @@
       "awayLogo": "https://comet.ksi.is/file?id=a79d9a50-d12a-436c-8967-eee4e71336a7",
       "facility": "Lambhagavöllurinn",
       "status": "SCHEDULED",
-      "liveStatus": null,
+      "liveStatus": "NA",
       "homeScore": null,
       "awayScore": null,
       "officials": [
@@ -535,6 +535,12 @@
           "name": "Bergvin Fannar Gunnarsson",
           "role": "Dómari",
           "orderNumber": 1
+        },
+        {
+          "personId": 13537,
+          "name": "Ásgeir Þór Ásgeirsson",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
         }
       ]
     },
