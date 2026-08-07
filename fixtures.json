@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-07T19:13:06.467137+00:00",
+  "updatedAt": "2026-08-07T19:58:02.869879+00:00",
   "date": "2026-08-07",
   "dateFrom": "2026-08-07",
   "dateTo": "2026-08-13",
@@ -15,8 +15,8 @@
       "facility": "Brons völlurinn",
       "status": "SCHEDULED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 4,
+      "awayScore": 0,
       "officials": [
         {
           "personId": 21370,
