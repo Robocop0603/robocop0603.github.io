@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-07T09:14:18.013452+00:00",
+  "updatedAt": "2026-08-07T10:10:25.442886+00:00",
   "date": "2026-08-07",
   "dateFrom": "2026-08-07",
   "dateTo": "2026-08-13",
@@ -633,16 +633,22 @@
       "awayScore": null,
       "officials": [
         {
+          "personId": 84704,
+          "name": "Jovan Subic",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
           "personId": 64031,
           "name": "Sigurður Þór Sveinsson",
           "role": "Aðstoðardómari 1",
-          "orderNumber": 1
+          "orderNumber": 2
         },
         {
           "personId": 65380,
           "name": "Ram Krishna Gurung",
           "role": "Aðstoðardómari 2",
-          "orderNumber": 2
+          "orderNumber": 3
         }
       ]
     },
@@ -701,9 +707,9 @@
       "awayLogo": "https://comet.ksi.is/file?id=5aa260ce-3bfa-4377-b4ee-3595207efc3a",
       "facility": "Víkingsvöllur",
       "status": "SCHEDULED",
-      "liveStatus": "IN_PROGRESS",
-      "homeScore": 0,
-      "awayScore": 0,
+      "liveStatus": null,
+      "homeScore": null,
+      "awayScore": null,
       "officials": []
     },
     {
