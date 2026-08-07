@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-07T16:07:39.348005+00:00",
+  "updatedAt": "2026-08-07T17:05:17.793893+00:00",
   "date": "2026-08-07",
   "dateFrom": "2026-08-07",
   "dateTo": "2026-08-13",
@@ -541,6 +541,12 @@
           "name": "Ásgeir Þór Ásgeirsson",
           "role": "Aðstoðardómari 1",
           "orderNumber": 2
+        },
+        {
+          "personId": 86138,
+          "name": "Viktor Helgi Gunnarsson",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
         }
       ]
     },
