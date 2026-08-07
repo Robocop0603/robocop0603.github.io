@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-07T05:49:30.363015+00:00",
+  "updatedAt": "2026-08-07T07:39:16.512042+00:00",
   "date": "2026-08-07",
   "dateFrom": "2026-08-07",
   "dateTo": "2026-08-13",
@@ -671,7 +671,20 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 64031,
+          "name": "Sigurður Þór Sveinsson",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 1
+        },
+        {
+          "personId": 65380,
+          "name": "Ram Krishna Gurung",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 2
+        }
+      ]
     },
     {
       "id": 7047805,
