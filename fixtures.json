@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-07T20:56:57.410870+00:00",
+  "updatedAt": "2026-08-07T21:53:20.927775+00:00",
   "date": "2026-08-07",
   "dateFrom": "2026-08-07",
   "dateTo": "2026-08-13",
@@ -47,10 +47,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=007a0a34-88fd-475b-82be-895ced8dc8c8",
       "awayLogo": "https://comet.ksi.is/file?id=2a59ff70-be99-4c1c-9490-3d1e819cf6cc",
       "facility": "Malbikstöðin að Varmá",
-      "status": "SCHEDULED",
-      "liveStatus": "NA",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "PLAYED",
+      "liveStatus": "FULL_TIME",
+      "homeScore": 4,
+      "awayScore": 1,
       "officials": [
         {
           "personId": 89902,
@@ -87,10 +87,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=b44d8199-8d93-4472-8b07-d7482a4ccac9",
       "awayLogo": "https://comet.ksi.is/file?id=f2d584bb-41ff-4c03-a12d-9629d6acab02",
       "facility": "Leiknisvöllur",
-      "status": "SCHEDULED",
-      "liveStatus": "NA",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "PLAYED",
+      "liveStatus": "FULL_TIME",
+      "homeScore": 3,
+      "awayScore": 0,
       "officials": [
         {
           "personId": 89922,
@@ -127,10 +127,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=c02be093-f4d6-4182-bdb2-54a776988dc6",
       "awayLogo": "https://comet.ksi.is/file?id=a79d9a50-d12a-436c-8967-eee4e71336a7",
       "facility": "Lambhagavöllurinn",
-      "status": "SCHEDULED",
-      "liveStatus": "IN_PROGRESS",
-      "homeScore": 1,
-      "awayScore": 1,
+      "status": "PLAYED",
+      "liveStatus": "FULL_TIME",
+      "homeScore": 3,
+      "awayScore": 3,
       "officials": [
         {
           "personId": 2930,
@@ -161,10 +161,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=13bd9180-874d-49f6-bdca-76ae17469ccb",
       "awayLogo": "https://comet.ksi.is/file?id=918c4f38-072b-4add-9531-416163db151a",
       "facility": "Egilshöll",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
-      "homeScore": 1,
-      "awayScore": 0,
+      "homeScore": 2,
+      "awayScore": 2,
       "officials": [
         {
           "personId": 14303,
