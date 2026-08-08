@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-08T02:19:37.347524+00:00",
+  "updatedAt": "2026-08-08T04:19:32.443093+00:00",
   "date": "2026-08-08",
   "dateFrom": "2026-08-08",
   "dateTo": "2026-08-14",
@@ -461,7 +461,32 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 20707,
+          "name": "Aðalbjörn Heiðar Þorsteinsson",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 38492,
+          "name": "Óliver Thanh Tung Vú",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 66094,
+          "name": "Arnór Bjarki Hjaltalín",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        },
+        {
+          "personId": 2795,
+          "name": "Magnús Sigurður Sigurólason",
+          "role": "Dómaraeftirlitsmaður",
+          "orderNumber": 4
+        }
+      ]
     },
     {
       "id": 7053293,
@@ -476,7 +501,32 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 35755,
+          "name": "Atli Björn E Levy",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 84732,
+          "name": "Mikael Ívan Axelsson",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 54306,
+          "name": "Þráinn Jón Elmarsson",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        },
+        {
+          "personId": 4901,
+          "name": "Egill Már Markússon",
+          "role": "Dómaraeftirlitsmaður",
+          "orderNumber": 4
+        }
+      ]
     },
     {
       "id": 7041427,
