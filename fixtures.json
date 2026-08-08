@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-08T16:50:07.850508+00:00",
+  "updatedAt": "2026-08-08T17:44:43.454872+00:00",
   "date": "2026-08-08",
   "dateFrom": "2026-08-08",
   "dateTo": "2026-08-14",
@@ -87,8 +87,8 @@
       "homeLogo": "https://comet.ksi.is/file?id=f12cdfbd-f638-42e4-8639-e668c256e98d",
       "awayLogo": "https://comet.ksi.is/file?id=84fb0756-2829-4c67-ba34-98303709ba3e",
       "facility": "Vivaldivöllurinn",
-      "status": "SCHEDULED",
-      "liveStatus": "NA",
+      "status": "PLAYED",
+      "liveStatus": "FULL_TIME",
       "homeScore": 1,
       "awayScore": 1,
       "officials": [
@@ -127,8 +127,8 @@
       "homeLogo": "https://comet.ksi.is/file?id=a42fe67b-0c8e-472e-92ae-6c776f936b1d",
       "awayLogo": "https://comet.ksi.is/file?id=76b6e443-3453-4458-a1e3-1133c69005b8",
       "facility": "Extra völlurinn",
-      "status": "SCHEDULED",
-      "liveStatus": "NA",
+      "status": "PLAYED",
+      "liveStatus": "FULL_TIME",
       "homeScore": 4,
       "awayScore": 1,
       "officials": [
@@ -169,8 +169,8 @@
       "facility": "SÚN-völlurinn",
       "status": "SCHEDULED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 1,
+      "awayScore": 2,
       "officials": [
         {
           "personId": 20621,
@@ -241,8 +241,8 @@
       "homeLogo": "https://comet.ksi.is/file?id=0ae3cbe6-1bde-4dff-a29b-9e07cb92ef33",
       "awayLogo": "https://comet.ksi.is/file?id=2b0a8b9e-7814-443f-b96c-4b7b50786a9b",
       "facility": "BIRTU völlurinn",
-      "status": "SCHEDULED",
-      "liveStatus": "NA",
+      "status": "PLAYED",
+      "liveStatus": "FULL_TIME",
       "homeScore": 2,
       "awayScore": 1,
       "officials": [
@@ -311,8 +311,8 @@
       "facility": "Ólafsfjarðarvöllur",
       "status": "SCHEDULED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 4,
+      "awayScore": 4,
       "officials": [
         {
           "personId": 52794,
@@ -385,8 +385,8 @@
       "facility": "Malbikstöðin að Varmá",
       "status": "SCHEDULED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 1,
+      "awayScore": 0,
       "officials": [
         {
           "personId": 79535,
