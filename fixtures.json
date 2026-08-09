@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-09T21:45:56.709696+00:00",
+  "updatedAt": "2026-08-09T22:48:24.119592+00:00",
   "date": "2026-08-09",
   "dateFrom": "2026-08-09",
   "dateTo": "2026-08-15",
@@ -231,7 +231,7 @@
       "homeLogo": "https://comet.ksi.is/file?id=0d23d358-dd73-4c3a-8f4e-c225e273519c",
       "awayLogo": "https://comet.ksi.is/file?id=98827182-4af0-4f8b-b6f4-0aaeed8fde45",
       "facility": "Greifavöllurinn",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
       "homeScore": 0,
       "awayScore": 1,
@@ -277,10 +277,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=9cbcd4bf-2e6c-4e89-baa4-5323dbe60bd3",
       "awayLogo": "https://comet.ksi.is/file?id=ba78e821-0820-4358-bd59-8b3b5a96c1f4",
       "facility": "Eikarvöllurinn",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 1,
+      "awayScore": 3,
       "officials": [
         {
           "personId": 10034,
