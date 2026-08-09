@@ -1,453 +1,9 @@
 {
-  "updatedAt": "2026-08-08T23:42:39.554126+00:00",
-  "date": "2026-08-08",
-  "dateFrom": "2026-08-08",
-  "dateTo": "2026-08-14",
+  "updatedAt": "2026-08-09T02:26:44.025746+00:00",
+  "date": "2026-08-09",
+  "dateFrom": "2026-08-09",
+  "dateTo": "2026-08-15",
   "games": [
-    {
-      "id": 7054056,
-      "date": "2026-08-08T13:00:00.000Z",
-      "competition": "Íslandsmót KSÍ - 3. deild karla 2026",
-      "home": "Höttur",
-      "away": "Augnablik",
-      "homeLogo": "https://comet.ksi.is/file?id=87c25915-59b3-4cf7-b1fa-3fdf88b309b2",
-      "awayLogo": "https://comet.ksi.is/file?id=52aab99c-bb4d-4e80-9c92-04912ce8576e",
-      "facility": "Rafey-völlurinn",
-      "status": "PLAYED",
-      "liveStatus": null,
-      "homeScore": 4,
-      "awayScore": 1,
-      "officials": [
-        {
-          "personId": 7178,
-          "name": "Hallgrímur Viðar Arnarson",
-          "role": "Dómari",
-          "orderNumber": 1
-        },
-        {
-          "personId": 44612,
-          "name": "Erik Hallgrímsson",
-          "role": "Aðstoðardómari 1",
-          "orderNumber": 2
-        },
-        {
-          "personId": 84770,
-          "name": "Dragoljub Nikoletic",
-          "role": "Aðstoðardómari 2",
-          "orderNumber": 3
-        }
-      ]
-    },
-    {
-      "id": 7047806,
-      "date": "2026-08-08T14:00:00.000Z",
-      "competition": "Íslandsmót KSÍ - Lengjudeild karla 2026",
-      "home": "Njarðvík",
-      "away": "Vestri",
-      "homeLogo": "https://comet.ksi.is/file?id=ab41e2cb-5839-4081-920b-62fa023c1a5e",
-      "awayLogo": "https://comet.ksi.is/file?id=d6937a22-320d-4167-a3fa-4d3e34f433c4",
-      "facility": "JBÓ völlurinn",
-      "status": "PLAYED",
-      "liveStatus": null,
-      "homeScore": 3,
-      "awayScore": 1,
-      "officials": [
-        {
-          "personId": 3177,
-          "name": "Gunnar Freyr Róbertsson",
-          "role": "Dómari",
-          "orderNumber": 1
-        },
-        {
-          "personId": 38576,
-          "name": "Kristofer Bergmann",
-          "role": "Aðstoðardómari 1",
-          "orderNumber": 2
-        },
-        {
-          "personId": 46199,
-          "name": "Tryggvi Elías Hermannsson",
-          "role": "Aðstoðardómari 2",
-          "orderNumber": 3
-        },
-        {
-          "personId": 30550,
-          "name": "Halldór Breiðfjörð Jóhannsson",
-          "role": "Dómaraeftirlitsmaður",
-          "orderNumber": 4
-        }
-      ]
-    },
-    {
-      "id": 7047807,
-      "date": "2026-08-08T14:00:00.000Z",
-      "competition": "Íslandsmót KSÍ - Lengjudeild karla 2026",
-      "home": "Grótta",
-      "away": "Þróttur R.",
-      "homeLogo": "https://comet.ksi.is/file?id=f12cdfbd-f638-42e4-8639-e668c256e98d",
-      "awayLogo": "https://comet.ksi.is/file?id=84fb0756-2829-4c67-ba34-98303709ba3e",
-      "facility": "Vivaldivöllurinn",
-      "status": "PLAYED",
-      "liveStatus": "FULL_TIME",
-      "homeScore": 1,
-      "awayScore": 1,
-      "officials": [
-        {
-          "personId": 6273,
-          "name": "Þórður Þorsteinsson Þórðarson",
-          "role": "Dómari",
-          "orderNumber": 1
-        },
-        {
-          "personId": 54306,
-          "name": "Þráinn Jón Elmarsson",
-          "role": "Aðstoðardómari 1",
-          "orderNumber": 2
-        },
-        {
-          "personId": 14364,
-          "name": "Sveinn Ingi Sigurjónsson Waage",
-          "role": "Aðstoðardómari 2",
-          "orderNumber": 3
-        },
-        {
-          "personId": 23318,
-          "name": "Jón Magnús Guðjónsson",
-          "role": "Dómaraeftirlitsmaður",
-          "orderNumber": 4
-        }
-      ]
-    },
-    {
-      "id": 7053290,
-      "date": "2026-08-08T14:00:00.000Z",
-      "competition": "Íslandsmót KSÍ - 2. deild karla 2026",
-      "home": "Fjölnir",
-      "away": "KFG",
-      "homeLogo": "https://comet.ksi.is/file?id=a42fe67b-0c8e-472e-92ae-6c776f936b1d",
-      "awayLogo": "https://comet.ksi.is/file?id=76b6e443-3453-4458-a1e3-1133c69005b8",
-      "facility": "Extra völlurinn",
-      "status": "PLAYED",
-      "liveStatus": "FULL_TIME",
-      "homeScore": 4,
-      "awayScore": 1,
-      "officials": [
-        {
-          "personId": 67442,
-          "name": "Hreinn Magnússon",
-          "role": "Dómari",
-          "orderNumber": 1
-        },
-        {
-          "personId": 83352,
-          "name": "Kári Mímisson",
-          "role": "Aðstoðardómari 1",
-          "orderNumber": 2
-        },
-        {
-          "personId": 81550,
-          "name": "Tijana Krstic",
-          "role": "Aðstoðardómari 2",
-          "orderNumber": 3
-        },
-        {
-          "personId": 12475,
-          "name": "Skúli Freyr Brynjólfsson",
-          "role": "Dómaraeftirlitsmaður",
-          "orderNumber": 4
-        }
-      ]
-    },
-    {
-      "id": 7053291,
-      "date": "2026-08-08T14:00:00.000Z",
-      "competition": "Íslandsmót KSÍ - 2. deild karla 2026",
-      "home": "KFA",
-      "away": "Haukar",
-      "homeLogo": "https://comet.ksi.is/file?id=cc382ada-da70-4c3f-aad9-a5fda48f6672",
-      "awayLogo": "https://comet.ksi.is/file?id=2b0071a0-382c-4b6e-9ab3-175184715a01",
-      "facility": "SÚN-völlurinn",
-      "status": "PLAYED",
-      "liveStatus": null,
-      "homeScore": 1,
-      "awayScore": 2,
-      "officials": [
-        {
-          "personId": 20621,
-          "name": "Þorfinnur Gústaf Þorfinnsson",
-          "role": "Dómari",
-          "orderNumber": 1
-        },
-        {
-          "personId": 24561,
-          "name": "Bryngeir Valdimarsson",
-          "role": "Aðstoðardómari 1",
-          "orderNumber": 2
-        },
-        {
-          "personId": 19143,
-          "name": "Jóhann Finnur Sigurjónsson",
-          "role": "Aðstoðardómari 2",
-          "orderNumber": 3
-        },
-        {
-          "personId": 4901,
-          "name": "Egill Már Markússon",
-          "role": "Dómaraeftirlitsmaður",
-          "orderNumber": 4
-        }
-      ]
-    },
-    {
-      "id": 7054057,
-      "date": "2026-08-08T14:00:00.000Z",
-      "competition": "Íslandsmót KSÍ - 3. deild karla 2026",
-      "home": "Árbær",
-      "away": "KH",
-      "homeLogo": "https://comet.ksi.is/file?id=25c07a23-5bc7-4621-a52f-57a4ff4c48ee",
-      "awayLogo": "https://comet.ksi.is/file?id=d3ad8173-3ecd-4a66-81ae-e1e71c71a560",
-      "facility": "Fagrilundur - gervigras",
-      "status": "SCHEDULED",
-      "liveStatus": null,
-      "homeScore": 1,
-      "awayScore": 2,
-      "officials": [
-        {
-          "personId": 89901,
-          "name": "Ayaz Baghainia",
-          "role": "Dómari",
-          "orderNumber": 1
-        },
-        {
-          "personId": 83490,
-          "name": "Kristinn Freyr Victorsson",
-          "role": "Aðstoðardómari 1",
-          "orderNumber": 2
-        },
-        {
-          "personId": 82885,
-          "name": "Pálmi Víðir Bjarnason",
-          "role": "Aðstoðardómari 2",
-          "orderNumber": 3
-        }
-      ]
-    },
-    {
-      "id": 7054058,
-      "date": "2026-08-08T14:00:00.000Z",
-      "competition": "Íslandsmót KSÍ - 3. deild karla 2026",
-      "home": "KÁ",
-      "away": "Sindri",
-      "homeLogo": "https://comet.ksi.is/file?id=0ae3cbe6-1bde-4dff-a29b-9e07cb92ef33",
-      "awayLogo": "https://comet.ksi.is/file?id=2b0a8b9e-7814-443f-b96c-4b7b50786a9b",
-      "facility": "BIRTU völlurinn",
-      "status": "PLAYED",
-      "liveStatus": "FULL_TIME",
-      "homeScore": 2,
-      "awayScore": 1,
-      "officials": [
-        {
-          "personId": 89900,
-          "name": "Isak Betzholtz",
-          "role": "Dómari",
-          "orderNumber": 1
-        },
-        {
-          "personId": 89899,
-          "name": "Elin Forsberg",
-          "role": "Aðstoðardómari 1",
-          "orderNumber": 2
-        },
-        {
-          "personId": 43750,
-          "name": "Daníel Örn Arnarson",
-          "role": "Aðstoðardómari 2",
-          "orderNumber": 3
-        }
-      ]
-    },
-    {
-      "id": 7054059,
-      "date": "2026-08-08T14:00:00.000Z",
-      "competition": "Íslandsmót KSÍ - 3. deild karla 2026",
-      "home": "Ýmir",
-      "away": "Víðir",
-      "homeLogo": "https://comet.ksi.is/file?id=cad0532d-7f44-451d-9f9d-a60709971230",
-      "awayLogo": "https://comet.ksi.is/file?id=6f7f5564-74cc-4323-a424-6915fb79b646",
-      "facility": "Kórinn",
-      "status": "PLAYED",
-      "liveStatus": null,
-      "homeScore": 1,
-      "awayScore": 5,
-      "officials": [
-        {
-          "personId": 46887,
-          "name": "Atli Haukur Arnarsson",
-          "role": "Dómari",
-          "orderNumber": 1
-        },
-        {
-          "personId": 17988,
-          "name": "Jón Reynir Reynisson",
-          "role": "Aðstoðardómari 1",
-          "orderNumber": 2
-        },
-        {
-          "personId": 52641,
-          "name": "Heimir Árni Erlendsson",
-          "role": "Aðstoðardómari 2",
-          "orderNumber": 3
-        }
-      ]
-    },
-    {
-      "id": 7054061,
-      "date": "2026-08-08T15:00:00.000Z",
-      "competition": "Íslandsmót KSÍ - 3. deild karla 2026",
-      "home": "KF",
-      "away": "KV",
-      "homeLogo": "https://comet.ksi.is/file?id=16885f2f-9352-49c8-8ac7-1f5a932fd8e8",
-      "awayLogo": "https://comet.ksi.is/file?id=136d36fc-4974-41ee-b024-5619d18c5459",
-      "facility": "Ólafsfjarðarvöllur",
-      "status": "PLAYED",
-      "liveStatus": null,
-      "homeScore": 4,
-      "awayScore": 4,
-      "officials": [
-        {
-          "personId": 52794,
-          "name": "Bergvin Fannar Gunnarsson",
-          "role": "Dómari",
-          "orderNumber": 1
-        },
-        {
-          "personId": 13537,
-          "name": "Ásgeir Þór Ásgeirsson",
-          "role": "Aðstoðardómari 1",
-          "orderNumber": 2
-        },
-        {
-          "personId": 86138,
-          "name": "Viktor Helgi Gunnarsson",
-          "role": "Aðstoðardómari 2",
-          "orderNumber": 3
-        }
-      ]
-    },
-    {
-      "id": 7053292,
-      "date": "2026-08-08T16:00:00.000Z",
-      "competition": "Íslandsmót KSÍ - 2. deild karla 2026",
-      "home": "Dalvík/Reynir",
-      "away": "Kári",
-      "homeLogo": "https://comet.ksi.is/file?id=65d44e5b-3a1b-440a-91f7-6f6a06e2b0d2",
-      "awayLogo": "https://comet.ksi.is/file?id=e9216648-28b9-456a-8f13-ad72223d75e3",
-      "facility": "Dalvíkurvöllur",
-      "status": "PLAYED",
-      "liveStatus": null,
-      "homeScore": 1,
-      "awayScore": 1,
-      "officials": [
-        {
-          "personId": 74027,
-          "name": "Sveinn Arnarsson",
-          "role": "Dómari",
-          "orderNumber": 1
-        },
-        {
-          "personId": 2700,
-          "name": "Eðvarð Þór Eðvarðsson",
-          "role": "Aðstoðardómari 1",
-          "orderNumber": 2
-        },
-        {
-          "personId": 34832,
-          "name": "Patrik Freyr Guðmundsson",
-          "role": "Aðstoðardómari 2",
-          "orderNumber": 3
-        },
-        {
-          "personId": 2794,
-          "name": "Sverrir Gunnar Pálmason",
-          "role": "Dómaraeftirlitsmaður",
-          "orderNumber": 4
-        }
-      ]
-    },
-    {
-      "id": 7053294,
-      "date": "2026-08-08T16:30:00.000Z",
-      "competition": "Íslandsmót KSÍ - 2. deild karla 2026",
-      "home": "Hvíti riddarinn",
-      "away": "Magni",
-      "homeLogo": "https://comet.ksi.is/file?id=883885f1-2da9-4b11-9208-e67485068e15",
-      "awayLogo": "https://comet.ksi.is/file?id=cadcef07-afc7-4b94-8ca5-e5665b403226",
-      "facility": "Malbikstöðin að Varmá",
-      "status": "PLAYED",
-      "liveStatus": null,
-      "homeScore": 1,
-      "awayScore": 0,
-      "officials": [
-        {
-          "personId": 79535,
-          "name": "Przemyslaw Janik",
-          "role": "Dómari",
-          "orderNumber": 1
-        },
-        {
-          "personId": 51516,
-          "name": "Rögnvaldur Þ Höskuldsson",
-          "role": "Aðstoðardómari 1",
-          "orderNumber": 2
-        },
-        {
-          "personId": 10426,
-          "name": "Margeir Valur Sigurðsson",
-          "role": "Aðstoðardómari 2",
-          "orderNumber": 3
-        },
-        {
-          "personId": 27549,
-          "name": "Ólafur Ingi Guðmundsson",
-          "role": "Dómaraeftirlitsmaður",
-          "orderNumber": 4
-        }
-      ]
-    },
-    {
-      "id": 7056044,
-      "date": "2026-08-08T19:00:00.000Z",
-      "competition": "Íslandsmót KSÍ - 4. deild karla 2026",
-      "home": "Álafoss",
-      "away": "Álftanes",
-      "homeLogo": "https://comet.ksi.is/file?id=d0155455-ef7d-4ebe-843e-3a61eacb0d72",
-      "awayLogo": "https://comet.ksi.is/file?id=512900fd-8856-417f-8834-1cd39360db40",
-      "facility": "Malbikstöðin að Varmá",
-      "status": "PLAYED",
-      "liveStatus": null,
-      "homeScore": 2,
-      "awayScore": 7,
-      "officials": [
-        {
-          "personId": 84704,
-          "name": "Jovan Subic",
-          "role": "Dómari",
-          "orderNumber": 1
-        },
-        {
-          "personId": 64031,
-          "name": "Sigurður Þór Sveinsson",
-          "role": "Aðstoðardómari 1",
-          "orderNumber": 2
-        },
-        {
-          "personId": 65380,
-          "name": "Ram Krishna Gurung",
-          "role": "Aðstoðardómari 2",
-          "orderNumber": 3
-        }
-      ]
-    },
     {
       "id": 7047805,
       "date": "2026-08-09T16:00:00.000Z",
@@ -992,6 +548,171 @@
       "homeLogo": "https://comet.ksi.is/file?id=4ff9e019-c4d5-4bd7-a0cd-05b5dd5ea357",
       "awayLogo": "https://comet.ksi.is/file?id=984abb8f-66cf-432a-a832-0ed0bd114065",
       "facility": "JÁVERK-völlurinn",
+      "status": "SCHEDULED",
+      "liveStatus": null,
+      "homeScore": null,
+      "awayScore": null,
+      "officials": []
+    },
+    {
+      "id": 7053297,
+      "date": "2026-08-15T14:00:00.000Z",
+      "competition": "Íslandsmót KSÍ - 2. deild karla 2026",
+      "home": "KFG",
+      "away": "KFA",
+      "homeLogo": "https://comet.ksi.is/file?id=76b6e443-3453-4458-a1e3-1133c69005b8",
+      "awayLogo": "https://comet.ksi.is/file?id=cc382ada-da70-4c3f-aad9-a5fda48f6672",
+      "facility": "Samsungvöllurinn",
+      "status": "SCHEDULED",
+      "liveStatus": null,
+      "homeScore": null,
+      "awayScore": null,
+      "officials": []
+    },
+    {
+      "id": 7053298,
+      "date": "2026-08-15T14:00:00.000Z",
+      "competition": "Íslandsmót KSÍ - 2. deild karla 2026",
+      "home": "Magni",
+      "away": "Kormákur/Hvöt",
+      "homeLogo": "https://comet.ksi.is/file?id=cadcef07-afc7-4b94-8ca5-e5665b403226",
+      "awayLogo": "https://comet.ksi.is/file?id=d40beebb-670a-44d6-8bac-972a9838918e",
+      "facility": "Grenivíkurvöllur",
+      "status": "SCHEDULED",
+      "liveStatus": null,
+      "homeScore": null,
+      "awayScore": null,
+      "officials": []
+    },
+    {
+      "id": 7053299,
+      "date": "2026-08-15T14:00:00.000Z",
+      "competition": "Íslandsmót KSÍ - 2. deild karla 2026",
+      "home": "Kári",
+      "away": "Víkingur Ó.",
+      "homeLogo": "https://comet.ksi.is/file?id=e9216648-28b9-456a-8f13-ad72223d75e3",
+      "awayLogo": "https://comet.ksi.is/file?id=f905d614-ec58-4a20-af4d-502aff02ac99",
+      "facility": "Akraneshöllin",
+      "status": "SCHEDULED",
+      "liveStatus": null,
+      "homeScore": null,
+      "awayScore": null,
+      "officials": []
+    },
+    {
+      "id": 7053300,
+      "date": "2026-08-15T14:00:00.000Z",
+      "competition": "Íslandsmót KSÍ - 2. deild karla 2026",
+      "home": "Selfoss",
+      "away": "Fjölnir",
+      "homeLogo": "https://comet.ksi.is/file?id=06beb216-886f-4bd7-bc76-9d98ada66e58",
+      "awayLogo": "https://comet.ksi.is/file?id=a42fe67b-0c8e-472e-92ae-6c776f936b1d",
+      "facility": "JÁVERK-völlurinn",
+      "status": "SCHEDULED",
+      "liveStatus": null,
+      "homeScore": null,
+      "awayScore": null,
+      "officials": []
+    },
+    {
+      "id": 7054064,
+      "date": "2026-08-15T14:00:00.000Z",
+      "competition": "Íslandsmót KSÍ - 3. deild karla 2026",
+      "home": "KH",
+      "away": "Höttur",
+      "homeLogo": "https://comet.ksi.is/file?id=d3ad8173-3ecd-4a66-81ae-e1e71c71a560",
+      "awayLogo": "https://comet.ksi.is/file?id=87c25915-59b3-4cf7-b1fa-3fdf88b309b2",
+      "facility": "Valsvöllur",
+      "status": "SCHEDULED",
+      "liveStatus": null,
+      "homeScore": null,
+      "awayScore": null,
+      "officials": []
+    },
+    {
+      "id": 7056047,
+      "date": "2026-08-15T14:00:00.000Z",
+      "competition": "Íslandsmót KSÍ - 4. deild karla 2026",
+      "home": "KFR",
+      "away": "Álafoss",
+      "homeLogo": "https://comet.ksi.is/file?id=918c4f38-072b-4add-9531-416163db151a",
+      "awayLogo": "https://comet.ksi.is/file?id=d0155455-ef7d-4ebe-843e-3a61eacb0d72",
+      "facility": "Helluvöllur",
+      "status": "SCHEDULED",
+      "liveStatus": null,
+      "homeScore": null,
+      "awayScore": null,
+      "officials": []
+    },
+    {
+      "id": 7053301,
+      "date": "2026-08-15T16:00:00.000Z",
+      "competition": "Íslandsmót KSÍ - 2. deild karla 2026",
+      "home": "Þróttur V.",
+      "away": "Dalvík/Reynir",
+      "homeLogo": "https://comet.ksi.is/file?id=95d6913c-c0c2-4a44-b67e-cb464ac1941b",
+      "awayLogo": "https://comet.ksi.is/file?id=65d44e5b-3a1b-440a-91f7-6f6a06e2b0d2",
+      "facility": "Vogaídýfuvöllur",
+      "status": "SCHEDULED",
+      "liveStatus": null,
+      "homeScore": null,
+      "awayScore": null,
+      "officials": []
+    },
+    {
+      "id": 7054065,
+      "date": "2026-08-15T16:00:00.000Z",
+      "competition": "Íslandsmót KSÍ - 3. deild karla 2026",
+      "home": "Sindri",
+      "away": "Árbær",
+      "homeLogo": "https://comet.ksi.is/file?id=2b0a8b9e-7814-443f-b96c-4b7b50786a9b",
+      "awayLogo": "https://comet.ksi.is/file?id=25c07a23-5bc7-4621-a52f-57a4ff4c48ee",
+      "facility": "Jökulfellsvöllurinn",
+      "status": "SCHEDULED",
+      "liveStatus": null,
+      "homeScore": null,
+      "awayScore": null,
+      "officials": []
+    },
+    {
+      "id": 7054066,
+      "date": "2026-08-15T16:00:00.000Z",
+      "competition": "Íslandsmót KSÍ - 3. deild karla 2026",
+      "home": "Tindastóll",
+      "away": "KV",
+      "homeLogo": "https://comet.ksi.is/file?id=ab598983-730a-4e37-91b6-9591bca92a33",
+      "awayLogo": "https://comet.ksi.is/file?id=136d36fc-4974-41ee-b024-5619d18c5459",
+      "facility": "Sauðárkróksvöllur",
+      "status": "SCHEDULED",
+      "liveStatus": null,
+      "homeScore": null,
+      "awayScore": null,
+      "officials": []
+    },
+    {
+      "id": 7054067,
+      "date": "2026-08-15T16:00:00.000Z",
+      "competition": "Íslandsmót KSÍ - 3. deild karla 2026",
+      "home": "Ýmir",
+      "away": "KF",
+      "homeLogo": "https://comet.ksi.is/file?id=cad0532d-7f44-451d-9f9d-a60709971230",
+      "awayLogo": "https://comet.ksi.is/file?id=16885f2f-9352-49c8-8ac7-1f5a932fd8e8",
+      "facility": "Kórinn",
+      "status": "SCHEDULED",
+      "liveStatus": null,
+      "homeScore": null,
+      "awayScore": null,
+      "officials": []
+    },
+    {
+      "id": 7041436,
+      "date": "2026-08-15T17:00:00.000Z",
+      "competition": "Íslandsmót KSÍ - Besta deild karla 2026",
+      "home": "Þór",
+      "away": "Keflavík",
+      "homeLogo": "https://comet.ksi.is/file?id=5580fa53-772d-4be8-8f0b-e4c26ee9ad6a",
+      "awayLogo": "https://comet.ksi.is/file?id=135b7edd-e558-4dfe-a1dd-2956ac5a4bf3",
+      "facility": "VÍS völlurinn",
       "status": "SCHEDULED",
       "liveStatus": null,
       "homeScore": null,
