@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-10T02:31:31.435686+00:00",
+  "updatedAt": "2026-08-10T04:51:45.841519+00:00",
   "date": "2026-08-10",
   "dateFrom": "2026-08-10",
   "dateTo": "2026-08-16",
@@ -103,7 +103,26 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 27328,
+          "name": "Natan Leó Arnarsson",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 84770,
+          "name": "Dragoljub Nikoletic",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 88114,
+          "name": "Ðorðe Ljubisic",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        }
+      ]
     },
     {
       "id": 7047808,
