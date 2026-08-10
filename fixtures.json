@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-10T21:56:21.186406+00:00",
+  "updatedAt": "2026-08-10T22:55:04.715358+00:00",
   "date": "2026-08-10",
   "dateFrom": "2026-08-10",
   "dateTo": "2026-08-16",
@@ -59,7 +59,7 @@
       "homeLogo": "https://comet.ksi.is/file?id=f905d614-ec58-4a20-af4d-502aff02ac99",
       "awayLogo": "https://comet.ksi.is/file?id=06beb216-886f-4bd7-bc76-9d98ada66e58",
       "facility": "Ólafsvíkurvöllur",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
       "homeScore": 2,
       "awayScore": 0,
