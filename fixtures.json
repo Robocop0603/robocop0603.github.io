@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-12T08:38:16.878141+00:00",
+  "updatedAt": "2026-08-12T10:18:46.775753+00:00",
   "date": "2026-08-12",
   "dateFrom": "2026-08-12",
   "dateTo": "2026-08-18",
@@ -111,10 +111,16 @@
           "orderNumber": 2
         },
         {
+          "personId": 14181,
+          "name": "Guðni Freyr Ingvason",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        },
+        {
           "personId": 2800,
           "name": "Gunnar Helgason",
           "role": "Dómaraeftirlitsmaður",
-          "orderNumber": 3
+          "orderNumber": 4
         }
       ]
     },
