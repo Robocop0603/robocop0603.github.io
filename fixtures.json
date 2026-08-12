@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-12T17:10:21.142362+00:00",
+  "updatedAt": "2026-08-12T18:05:10.485178+00:00",
   "date": "2026-08-12",
   "dateFrom": "2026-08-12",
   "dateTo": "2026-08-18",
@@ -31,8 +31,8 @@
           "orderNumber": 2
         },
         {
-          "personId": 46199,
-          "name": "Tryggvi Elías Hermannsson",
+          "personId": 3840,
+          "name": "Guðmundur Ingi Bjarnason",
           "role": "Aðstoðardómari 2",
           "orderNumber": 3
         },
@@ -259,16 +259,22 @@
           "orderNumber": 1
         },
         {
+          "personId": 22566,
+          "name": "Egill Guðvarður Guðlaugsson",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
           "personId": 37295,
           "name": "Breki Sigurðsson",
           "role": "Aðstoðardómari 2",
-          "orderNumber": 2
+          "orderNumber": 3
         },
         {
           "personId": 27549,
           "name": "Ólafur Ingi Guðmundsson",
           "role": "Dómaraeftirlitsmaður",
-          "orderNumber": 3
+          "orderNumber": 4
         }
       ]
     },
