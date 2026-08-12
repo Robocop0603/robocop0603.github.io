@@ -1,43 +1,9 @@
 {
-  "updatedAt": "2026-08-11T23:57:09.803370+00:00",
-  "date": "2026-08-11",
-  "dateFrom": "2026-08-11",
-  "dateTo": "2026-08-17",
+  "updatedAt": "2026-08-12T02:41:51.960315+00:00",
+  "date": "2026-08-12",
+  "dateFrom": "2026-08-12",
+  "dateTo": "2026-08-18",
   "games": [
-    {
-      "id": 7054050,
-      "date": "2026-08-11T16:00:00.000Z",
-      "competition": "Íslandsmót KSÍ - 3. deild karla 2026",
-      "home": "Sindri",
-      "away": "Ýmir",
-      "homeLogo": "https://comet.ksi.is/file?id=2b0a8b9e-7814-443f-b96c-4b7b50786a9b",
-      "awayLogo": "https://comet.ksi.is/file?id=cad0532d-7f44-451d-9f9d-a60709971230",
-      "facility": "Jökulfellsvöllurinn",
-      "status": "PLAYED",
-      "liveStatus": null,
-      "homeScore": 3,
-      "awayScore": 1,
-      "officials": [
-        {
-          "personId": 27328,
-          "name": "Natan Leó Arnarsson",
-          "role": "Dómari",
-          "orderNumber": 1
-        },
-        {
-          "personId": 84770,
-          "name": "Dragoljub Nikoletic",
-          "role": "Aðstoðardómari 1",
-          "orderNumber": 2
-        },
-        {
-          "personId": 88114,
-          "name": "Ðorðe Ljubisic",
-          "role": "Aðstoðardómari 2",
-          "orderNumber": 3
-        }
-      ]
-    },
     {
       "id": 7047808,
       "date": "2026-08-13T18:00:00.000Z",
