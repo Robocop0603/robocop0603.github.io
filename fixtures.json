@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-12T13:43:50.767534+00:00",
+  "updatedAt": "2026-08-12T15:13:02.202202+00:00",
   "date": "2026-08-12",
   "dateFrom": "2026-08-12",
   "dateTo": "2026-08-18",
@@ -343,21 +343,6 @@
       "officials": []
     },
     {
-      "id": 7054063,
-      "date": "2026-08-14T19:15:00.000Z",
-      "competition": "Íslandsmót KSÍ - 3. deild karla 2026",
-      "home": "Augnablik",
-      "away": "Reynir S.",
-      "homeLogo": "https://comet.ksi.is/file?id=52aab99c-bb4d-4e80-9c92-04912ce8576e",
-      "awayLogo": "https://comet.ksi.is/file?id=94b20964-52b3-4d51-87fa-a4da3614b99b",
-      "facility": "Fífan",
-      "status": "SCHEDULED",
-      "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
-      "officials": []
-    },
-    {
       "id": 7056049,
       "date": "2026-08-14T19:15:00.000Z",
       "competition": "Íslandsmót KSÍ - 4. deild karla 2026",
@@ -441,6 +426,21 @@
       "homeLogo": "https://comet.ksi.is/file?id=06beb216-886f-4bd7-bc76-9d98ada66e58",
       "awayLogo": "https://comet.ksi.is/file?id=a42fe67b-0c8e-472e-92ae-6c776f936b1d",
       "facility": "JÁVERK-völlurinn",
+      "status": "SCHEDULED",
+      "liveStatus": null,
+      "homeScore": null,
+      "awayScore": null,
+      "officials": []
+    },
+    {
+      "id": 7054063,
+      "date": "2026-08-15T14:00:00.000Z",
+      "competition": "Íslandsmót KSÍ - 3. deild karla 2026",
+      "home": "Augnablik",
+      "away": "Reynir S.",
+      "homeLogo": "https://comet.ksi.is/file?id=52aab99c-bb4d-4e80-9c92-04912ce8576e",
+      "awayLogo": "https://comet.ksi.is/file?id=94b20964-52b3-4d51-87fa-a4da3614b99b",
+      "facility": "Fífuvöllur",
       "status": "SCHEDULED",
       "liveStatus": null,
       "homeScore": null,
