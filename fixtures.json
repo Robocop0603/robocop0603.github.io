@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-13T06:43:05.719020+00:00",
+  "updatedAt": "2026-08-13T08:42:22.741256+00:00",
   "date": "2026-08-13",
   "dateFrom": "2026-08-13",
   "dateTo": "2026-08-19",
@@ -399,7 +399,26 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 71522,
+          "name": "Ágúst Hjalti Tómasson",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 86506,
+          "name": "Birgir Ágúst Andrésson",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 86439,
+          "name": "Lukasz Slawomir Bednarski",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        }
+      ]
     },
     {
       "id": 7056050,
@@ -414,7 +433,26 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 29175,
+          "name": "Jakob Leó Bjarnason",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 38492,
+          "name": "Óliver Thanh Tung Vú",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 72601,
+          "name": "Ísak Trausti Ingólfsson Lehmann",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        }
+      ]
     },
     {
       "id": 7053297,
