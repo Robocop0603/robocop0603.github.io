@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-13T16:08:37.754894+00:00",
+  "updatedAt": "2026-08-13T17:10:02.802402+00:00",
   "date": "2026-08-13",
   "dateFrom": "2026-08-13",
   "dateTo": "2026-08-19",
@@ -14,7 +14,7 @@
       "awayLogo": "https://comet.ksi.is/file?id=20e14564-1f6d-4df5-8b70-a6e52582a73e",
       "facility": "Kerecisvöllurinn",
       "status": "SCHEDULED",
-      "liveStatus": null,
+      "liveStatus": "NA",
       "homeScore": null,
       "awayScore": null,
       "officials": [
@@ -54,7 +54,7 @@
       "awayLogo": "https://comet.ksi.is/file?id=5afa29d4-a7bd-472a-93be-ce649fab8af5",
       "facility": "GeoSalmo völlurinn",
       "status": "SCHEDULED",
-      "liveStatus": null,
+      "liveStatus": "NA",
       "homeScore": null,
       "awayScore": null,
       "officials": [
@@ -248,7 +248,7 @@
       "awayLogo": "https://comet.ksi.is/file?id=ab41e2cb-5839-4081-920b-62fa023c1a5e",
       "facility": "Vivaldivöllurinn",
       "status": "SCHEDULED",
-      "liveStatus": null,
+      "liveStatus": "NA",
       "homeScore": null,
       "awayScore": null,
       "officials": [
