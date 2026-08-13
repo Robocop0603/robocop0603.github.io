@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-13T05:01:57.467502+00:00",
+  "updatedAt": "2026-08-13T06:43:05.719020+00:00",
   "date": "2026-08-13",
   "dateFrom": "2026-08-13",
   "dateTo": "2026-08-19",
@@ -325,7 +325,32 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 35755,
+          "name": "Atli Björn E Levy",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 33044,
+          "name": "Bergur Daði Ágústsson",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 82156,
+          "name": "Ásgeir Sigurðsson",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        },
+        {
+          "personId": 18066,
+          "name": "Sigursteinn Árni Brynjólfsson",
+          "role": "Dómaraeftirlitsmaður",
+          "orderNumber": 4
+        }
+      ]
     },
     {
       "id": 7054062,
@@ -340,7 +365,26 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 4353,
+          "name": "Tómas Wolfgang Meyer",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 52641,
+          "name": "Heimir Árni Erlendsson",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 82885,
+          "name": "Pálmi Víðir Bjarnason",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        }
+      ]
     },
     {
       "id": 7056049,
