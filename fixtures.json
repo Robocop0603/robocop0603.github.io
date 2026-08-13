@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-13T21:00:48.334123+00:00",
+  "updatedAt": "2026-08-13T22:00:59.564124+00:00",
   "date": "2026-08-13",
   "dateFrom": "2026-08-13",
   "dateTo": "2026-08-19",
@@ -53,8 +53,8 @@
       "homeLogo": "https://comet.ksi.is/file?id=7debf8ed-b411-4dbb-9647-1c4bd140ecf7",
       "awayLogo": "https://comet.ksi.is/file?id=5afa29d4-a7bd-472a-93be-ce649fab8af5",
       "facility": "GeoSalmo völlurinn",
-      "status": "SCHEDULED",
-      "liveStatus": "NA",
+      "status": "PLAYED",
+      "liveStatus": null,
       "homeScore": 0,
       "awayScore": 2,
       "officials": [
@@ -133,7 +133,7 @@
       "homeLogo": "https://comet.ksi.is/file?id=f467399a-f668-4555-911c-90a064c65016",
       "awayLogo": "https://comet.ksi.is/file?id=13bd9180-874d-49f6-bdca-76ae17469ccb",
       "facility": "Grýluvöllur",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
       "homeScore": 8,
       "awayScore": 0,
@@ -167,10 +167,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=cb661b78-41d9-44fe-9a68-213dd17b5623",
       "awayLogo": "https://comet.ksi.is/file?id=b44d8199-8d93-4472-8b07-d7482a4ccac9",
       "facility": "Kórinn",
-      "status": "SCHEDULED",
-      "liveStatus": "NA",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "PLAYED",
+      "liveStatus": "FULL_TIME",
+      "homeScore": 2,
+      "awayScore": 1,
       "officials": [
         {
           "personId": 25693,
@@ -208,9 +208,9 @@
       "awayLogo": "https://comet.ksi.is/file?id=007a0a34-88fd-475b-82be-895ced8dc8c8",
       "facility": "tekk VÖLLURINN",
       "status": "SCHEDULED",
-      "liveStatus": "NA",
-      "homeScore": null,
-      "awayScore": null,
+      "liveStatus": null,
+      "homeScore": 3,
+      "awayScore": 3,
       "officials": [
         {
           "personId": 35383,
@@ -247,10 +247,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=f12cdfbd-f638-42e4-8639-e668c256e98d",
       "awayLogo": "https://comet.ksi.is/file?id=ab41e2cb-5839-4081-920b-62fa023c1a5e",
       "facility": "Vivaldivöllurinn",
-      "status": "SCHEDULED",
-      "liveStatus": "NA",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "PLAYED",
+      "liveStatus": "FULL_TIME",
+      "homeScore": 1,
+      "awayScore": 4,
       "officials": [
         {
           "personId": 75111,
@@ -287,10 +287,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=512900fd-8856-417f-8834-1cd39360db40",
       "awayLogo": "https://comet.ksi.is/file?id=c02be093-f4d6-4182-bdb2-54a776988dc6",
       "facility": "HTH völlurinn",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 10,
+      "awayScore": 0,
       "officials": [
         {
           "personId": 29175,
