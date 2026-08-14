@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-14T18:04:49.676022+00:00",
+  "updatedAt": "2026-08-14T19:11:33.903807+00:00",
   "date": "2026-08-14",
   "dateFrom": "2026-08-14",
   "dateTo": "2026-08-20",
@@ -55,8 +55,8 @@
       "facility": "Nesfisk-völlurinn",
       "status": "SCHEDULED",
       "liveStatus": "NA",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 2,
+      "awayScore": 0,
       "officials": [
         {
           "personId": 4353,
@@ -188,7 +188,7 @@
       "away": "KFA",
       "homeLogo": "https://comet.ksi.is/file?id=76b6e443-3453-4458-a1e3-1133c69005b8",
       "awayLogo": "https://comet.ksi.is/file?id=cc382ada-da70-4c3f-aad9-a5fda48f6672",
-      "facility": "Samsungvöllurinn",
+      "facility": "Miðgarður",
       "status": "SCHEDULED",
       "liveStatus": null,
       "homeScore": null,
