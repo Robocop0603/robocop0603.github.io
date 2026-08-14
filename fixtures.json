@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-14T19:54:41.267443+00:00",
+  "updatedAt": "2026-08-14T20:43:32.765299+00:00",
   "date": "2026-08-14",
   "dateFrom": "2026-08-14",
   "dateTo": "2026-08-20",
@@ -15,8 +15,8 @@
       "facility": "BIRTU völlurinn",
       "status": "SCHEDULED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 3,
+      "awayScore": 1,
       "officials": [
         {
           "personId": 35755,
@@ -53,9 +53,9 @@
       "homeLogo": "https://comet.ksi.is/file?id=6f7f5564-74cc-4323-a424-6915fb79b646",
       "awayLogo": "https://comet.ksi.is/file?id=0ae3cbe6-1bde-4dff-a29b-9e07cb92ef33",
       "facility": "Nesfisk-völlurinn",
-      "status": "SCHEDULED",
-      "liveStatus": "NA",
-      "homeScore": 2,
+      "status": "PLAYED",
+      "liveStatus": "FULL_TIME",
+      "homeScore": 4,
       "awayScore": 0,
       "officials": [
         {
