@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-14T21:37:31.012934+00:00",
+  "updatedAt": "2026-08-14T22:38:27.859544+00:00",
   "date": "2026-08-14",
   "dateFrom": "2026-08-14",
   "dateTo": "2026-08-20",
@@ -87,8 +87,8 @@
       "homeLogo": "https://comet.ksi.is/file?id=a79d9a50-d12a-436c-8967-eee4e71336a7",
       "awayLogo": "https://comet.ksi.is/file?id=8591fefc-1392-4e9a-9522-4497a48823d3",
       "facility": "Fylkisvöllur",
-      "status": "SCHEDULED",
-      "liveStatus": "NA",
+      "status": "PLAYED",
+      "liveStatus": "FULL_TIME",
       "homeScore": 2,
       "awayScore": 3,
       "officials": [
