@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-14T17:09:14.553390+00:00",
+  "updatedAt": "2026-08-14T18:04:49.676022+00:00",
   "date": "2026-08-14",
   "dateFrom": "2026-08-14",
   "dateTo": "2026-08-20",
@@ -439,6 +439,12 @@
           "name": "Heimir Árni Erlendsson",
           "role": "Aðstoðardómari 2",
           "orderNumber": 3
+        },
+        {
+          "personId": 27549,
+          "name": "Ólafur Ingi Guðmundsson",
+          "role": "Dómaraeftirlitsmaður",
+          "orderNumber": 4
         }
       ]
     },
