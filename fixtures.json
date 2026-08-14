@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-14T20:43:32.765299+00:00",
+  "updatedAt": "2026-08-14T21:37:31.012934+00:00",
   "date": "2026-08-14",
   "dateFrom": "2026-08-14",
   "dateTo": "2026-08-20",
@@ -13,7 +13,7 @@
       "homeLogo": "https://comet.ksi.is/file?id=2b0071a0-382c-4b6e-9ab3-175184715a01",
       "awayLogo": "https://comet.ksi.is/file?id=883885f1-2da9-4b11-9208-e67485068e15",
       "facility": "BIRTU völlurinn",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
       "homeScore": 3,
       "awayScore": 1,
@@ -89,8 +89,8 @@
       "facility": "Fylkisvöllur",
       "status": "SCHEDULED",
       "liveStatus": "NA",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 2,
+      "awayScore": 3,
       "officials": [
         {
           "personId": 71522,
@@ -121,10 +121,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=4ff9e019-c4d5-4bd7-a0cd-05b5dd5ea357",
       "awayLogo": "https://comet.ksi.is/file?id=984abb8f-66cf-432a-a832-0ed0bd114065",
       "facility": "JÁVERK-völlurinn",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 4,
+      "awayScore": 0,
       "officials": [
         {
           "personId": 29175,
