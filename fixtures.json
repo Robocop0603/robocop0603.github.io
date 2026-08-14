@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-14T22:38:27.859544+00:00",
+  "updatedAt": "2026-08-14T23:34:08.440324+00:00",
   "date": "2026-08-14",
   "dateFrom": "2026-08-14",
   "dateTo": "2026-08-20",
@@ -181,46 +181,6 @@
       ]
     },
     {
-      "id": 7053297,
-      "date": "2026-08-15T14:00:00.000Z",
-      "competition": "Íslandsmót KSÍ - 2. deild karla 2026",
-      "home": "KFG",
-      "away": "KFA",
-      "homeLogo": "https://comet.ksi.is/file?id=76b6e443-3453-4458-a1e3-1133c69005b8",
-      "awayLogo": "https://comet.ksi.is/file?id=cc382ada-da70-4c3f-aad9-a5fda48f6672",
-      "facility": "Miðgarður",
-      "status": "SCHEDULED",
-      "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
-      "officials": [
-        {
-          "personId": 19925,
-          "name": "Reynir Ingi Finnsson",
-          "role": "Dómari",
-          "orderNumber": 1
-        },
-        {
-          "personId": 44978,
-          "name": "Daníel Ingi Þórisson",
-          "role": "Aðstoðardómari 1",
-          "orderNumber": 2
-        },
-        {
-          "personId": 21476,
-          "name": "Sigurður Schram",
-          "role": "Aðstoðardómari 2",
-          "orderNumber": 3
-        },
-        {
-          "personId": 8130,
-          "name": "Þórður Ingi Guðjónsson",
-          "role": "Dómaraeftirlitsmaður",
-          "orderNumber": 4
-        }
-      ]
-    },
-    {
       "id": 7053298,
       "date": "2026-08-15T14:00:00.000Z",
       "competition": "Íslandsmót KSÍ - 2. deild karla 2026",
@@ -376,7 +336,7 @@
     },
     {
       "id": 7054064,
-      "date": "2026-08-15T14:00:00.000Z",
+      "date": "2026-08-15T14:30:00.000Z",
       "competition": "Íslandsmót KSÍ - 3. deild karla 2026",
       "home": "KH",
       "away": "Höttur",
@@ -405,6 +365,46 @@
           "name": "Tijana Krstic",
           "role": "Aðstoðardómari 2",
           "orderNumber": 3
+        }
+      ]
+    },
+    {
+      "id": 7053297,
+      "date": "2026-08-15T15:00:00.000Z",
+      "competition": "Íslandsmót KSÍ - 2. deild karla 2026",
+      "home": "KFG",
+      "away": "KFA",
+      "homeLogo": "https://comet.ksi.is/file?id=76b6e443-3453-4458-a1e3-1133c69005b8",
+      "awayLogo": "https://comet.ksi.is/file?id=cc382ada-da70-4c3f-aad9-a5fda48f6672",
+      "facility": "Miðgarður",
+      "status": "SCHEDULED",
+      "liveStatus": null,
+      "homeScore": null,
+      "awayScore": null,
+      "officials": [
+        {
+          "personId": 19925,
+          "name": "Reynir Ingi Finnsson",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 44978,
+          "name": "Daníel Ingi Þórisson",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 21476,
+          "name": "Sigurður Schram",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        },
+        {
+          "personId": 8130,
+          "name": "Þórður Ingi Guðjónsson",
+          "role": "Dómaraeftirlitsmaður",
+          "orderNumber": 4
         }
       ]
     },
