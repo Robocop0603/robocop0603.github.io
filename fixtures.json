@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-15T14:36:57.631601+00:00",
+  "updatedAt": "2026-08-15T15:33:42.267729+00:00",
   "date": "2026-08-15",
   "dateFrom": "2026-08-15",
   "dateTo": "2026-08-21",
@@ -15,8 +15,8 @@
       "facility": "Helluvöllur",
       "status": "SCHEDULED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 3,
+      "awayScore": 2,
       "officials": [
         {
           "personId": 54306,
@@ -276,7 +276,7 @@
       "awayLogo": "https://comet.ksi.is/file?id=65d44e5b-3a1b-440a-91f7-6f6a06e2b0d2",
       "facility": "Vogaídýfuvöllur",
       "status": "SCHEDULED",
-      "liveStatus": null,
+      "liveStatus": "NA",
       "homeScore": null,
       "awayScore": null,
       "officials": [
