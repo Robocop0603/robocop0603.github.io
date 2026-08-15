@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-15T15:33:42.267729+00:00",
+  "updatedAt": "2026-08-15T16:39:20.865370+00:00",
   "date": "2026-08-15",
   "dateFrom": "2026-08-15",
   "dateTo": "2026-08-21",
@@ -13,7 +13,7 @@
       "homeLogo": "https://comet.ksi.is/file?id=918c4f38-072b-4add-9531-416163db151a",
       "awayLogo": "https://comet.ksi.is/file?id=d0155455-ef7d-4ebe-843e-3a61eacb0d72",
       "facility": "Helluvöllur",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
       "homeScore": 3,
       "awayScore": 2,
@@ -47,10 +47,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=cadcef07-afc7-4b94-8ca5-e5665b403226",
       "awayLogo": "https://comet.ksi.is/file?id=d40beebb-670a-44d6-8bac-972a9838918e",
       "facility": "Grenivíkurvöllur",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 3,
+      "awayScore": 0,
       "officials": [
         {
           "personId": 30463,
@@ -89,8 +89,8 @@
       "facility": "Akraneshöllin",
       "status": "SCHEDULED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 4,
+      "awayScore": 0,
       "officials": [
         {
           "personId": 52794,
@@ -129,8 +129,8 @@
       "facility": "JÁVERK-völlurinn",
       "status": "SCHEDULED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 6,
+      "awayScore": 2,
       "officials": [
         {
           "personId": 74027,
@@ -169,8 +169,8 @@
       "facility": "Fífuvöllur",
       "status": "SCHEDULED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 2,
+      "awayScore": 3,
       "officials": [
         {
           "personId": 46887,
@@ -203,8 +203,8 @@
       "facility": "Valsvöllur",
       "status": "SCHEDULED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 3,
+      "awayScore": 1,
       "officials": [
         {
           "personId": 84704,
