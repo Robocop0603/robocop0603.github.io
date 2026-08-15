@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-15T08:44:09.638075+00:00",
+  "updatedAt": "2026-08-15T09:37:50.601318+00:00",
   "date": "2026-08-15",
   "dateFrom": "2026-08-15",
   "dateTo": "2026-08-21",
@@ -207,16 +207,22 @@
       "awayScore": null,
       "officials": [
         {
+          "personId": 84704,
+          "name": "Jovan Subic",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
           "personId": 65380,
           "name": "Ram Krishna Gurung",
           "role": "Aðstoðardómari 1",
-          "orderNumber": 1
+          "orderNumber": 2
         },
         {
           "personId": 81550,
           "name": "Tijana Krstic",
           "role": "Aðstoðardómari 2",
-          "orderNumber": 2
+          "orderNumber": 3
         }
       ]
     },
