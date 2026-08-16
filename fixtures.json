@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-16T19:31:14.676558+00:00",
+  "updatedAt": "2026-08-16T20:35:57.105295+00:00",
   "date": "2026-08-16",
   "dateFrom": "2026-08-16",
   "dateTo": "2026-08-22",
@@ -13,10 +13,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=82b4a290-6bf0-414a-b292-bb11b2c884a6",
       "awayLogo": "https://comet.ksi.is/file?id=9cbcd4bf-2e6c-4e89-baa4-5323dbe60bd3",
       "facility": "Meistaravellir",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 3,
+      "awayScore": 3,
       "officials": [
         {
           "personId": 6273,
@@ -59,10 +59,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=98827182-4af0-4f8b-b6f4-0aaeed8fde45",
       "awayLogo": "https://comet.ksi.is/file?id=a2fbd01a-8ee0-4a47-b39f-6674d10236f2",
       "facility": "Kaplakrikavöllur",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 2,
+      "awayScore": 0,
       "officials": [
         {
           "personId": 4114,
@@ -106,9 +106,9 @@
       "awayLogo": "https://comet.ksi.is/file?id=04772e1f-0323-4dee-821c-88809b2499d4",
       "facility": "Hásteinsvöllur",
       "status": "SCHEDULED",
-      "liveStatus": "NA",
-      "homeScore": null,
-      "awayScore": null,
+      "liveStatus": null,
+      "homeScore": 1,
+      "awayScore": 3,
       "officials": [
         {
           "personId": 15989,
@@ -175,10 +175,16 @@
           "orderNumber": 3
         },
         {
+          "personId": 20621,
+          "name": "Þorfinnur Gústaf Þorfinnsson",
+          "role": "Fjórði dómari",
+          "orderNumber": 4
+        },
+        {
           "personId": 31353,
           "name": "Viðar Helgason",
           "role": "Dómaraeftirlitsmaður",
-          "orderNumber": 4
+          "orderNumber": 5
         }
       ]
     },
