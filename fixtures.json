@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-16T11:32:50.608157+00:00",
+  "updatedAt": "2026-08-16T12:58:42.219250+00:00",
   "date": "2026-08-16",
   "dateFrom": "2026-08-16",
   "dateTo": "2026-08-22",
@@ -449,16 +449,22 @@
           "orderNumber": 1
         },
         {
+          "personId": 21370,
+          "name": "Ronnarong Wongmahadthai",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
           "personId": 14364,
           "name": "Sveinn Ingi Sigurjónsson Waage",
           "role": "Aðstoðardómari 2",
-          "orderNumber": 2
+          "orderNumber": 3
         },
         {
           "personId": 30550,
           "name": "Halldór Breiðfjörð Jóhannsson",
           "role": "Dómaraeftirlitsmaður",
-          "orderNumber": 3
+          "orderNumber": 4
         }
       ]
     },
