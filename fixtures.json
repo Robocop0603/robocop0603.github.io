@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-16T07:43:31.919404+00:00",
+  "updatedAt": "2026-08-16T08:45:12.736854+00:00",
   "date": "2026-08-16",
   "dateFrom": "2026-08-16",
   "dateTo": "2026-08-22",
@@ -355,7 +355,38 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 10034,
+          "name": "Sigurður Hjörtur Þrastarson",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 19413,
+          "name": "Gylfi Már Sigurðsson",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 10851,
+          "name": "Eysteinn Hrafnkelsson",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        },
+        {
+          "personId": 15989,
+          "name": "Arnar Ingi Ingvarsson",
+          "role": "Fjórði dómari",
+          "orderNumber": 4
+        },
+        {
+          "personId": 12475,
+          "name": "Skúli Freyr Brynjólfsson",
+          "role": "Dómaraeftirlitsmaður",
+          "orderNumber": 5
+        }
+      ]
     },
     {
       "id": 7047818,
@@ -370,7 +401,32 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 36451,
+          "name": "Ívar Orri Kristjánsson",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 22566,
+          "name": "Egill Guðvarður Guðlaugsson",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 84732,
+          "name": "Mikael Ívan Axelsson",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        },
+        {
+          "personId": 3425,
+          "name": "Jóhann Gunnarsson",
+          "role": "Dómaraeftirlitsmaður",
+          "orderNumber": 4
+        }
+      ]
     },
     {
       "id": 7047819,
@@ -385,7 +441,26 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 3177,
+          "name": "Gunnar Freyr Róbertsson",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 14364,
+          "name": "Sveinn Ingi Sigurjónsson Waage",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 2
+        },
+        {
+          "personId": 30550,
+          "name": "Halldór Breiðfjörð Jóhannsson",
+          "role": "Dómaraeftirlitsmaður",
+          "orderNumber": 3
+        }
+      ]
     },
     {
       "id": 7053302,
