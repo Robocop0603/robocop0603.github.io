@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-17T22:38:13.140959+00:00",
+  "updatedAt": "2026-08-17T23:34:47.170326+00:00",
   "date": "2026-08-17",
   "dateFrom": "2026-08-17",
   "dateTo": "2026-08-23",
@@ -179,8 +179,8 @@
       "homeLogo": "https://comet.ksi.is/file?id=2a59ff70-be99-4c1c-9490-3d1e819cf6cc",
       "awayLogo": "https://comet.ksi.is/file?id=f12cdfbd-f638-42e4-8639-e668c256e98d",
       "facility": "Stakkavíkurvöllur",
-      "status": "SCHEDULED",
-      "liveStatus": "NA",
+      "status": "PLAYED",
+      "liveStatus": "FULL_TIME",
       "homeScore": 0,
       "awayScore": 0,
       "officials": [
