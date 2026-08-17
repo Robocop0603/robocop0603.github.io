@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-17T20:41:37.195455+00:00",
+  "updatedAt": "2026-08-17T21:37:50.281555+00:00",
   "date": "2026-08-17",
   "dateFrom": "2026-08-17",
   "dateTo": "2026-08-23",
@@ -221,8 +221,8 @@
       "facility": "Lambhagavöllurinn",
       "status": "SCHEDULED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 3,
+      "awayScore": 1,
       "officials": [
         {
           "personId": 10034,
@@ -266,9 +266,9 @@
       "awayLogo": "https://comet.ksi.is/file?id=f2d584bb-41ff-4c03-a12d-9629d6acab02",
       "facility": "AVIS völlurinn",
       "status": "SCHEDULED",
-      "liveStatus": "BREAK",
-      "homeScore": 2,
-      "awayScore": 0,
+      "liveStatus": "IN_PROGRESS",
+      "homeScore": 3,
+      "awayScore": 1,
       "officials": [
         {
           "personId": 36451,
@@ -307,8 +307,8 @@
       "facility": "Malbikstöðin að Varmá",
       "status": "SCHEDULED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 2,
+      "awayScore": 0,
       "officials": [
         {
           "personId": 3177,
