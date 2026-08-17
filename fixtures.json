@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-17T15:36:51.481719+00:00",
+  "updatedAt": "2026-08-17T16:43:53.121570+00:00",
   "date": "2026-08-17",
   "dateFrom": "2026-08-17",
   "dateTo": "2026-08-23",
@@ -60,7 +60,7 @@
       "awayLogo": "https://comet.ksi.is/file?id=d6937a22-320d-4167-a3fa-4d3e34f433c4",
       "facility": "GPG völlurinn",
       "status": "SCHEDULED",
-      "liveStatus": "NA",
+      "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
       "officials": [
@@ -121,6 +121,12 @@
           "name": "Kristinn Freyr Victorsson",
           "role": "Aðstoðardómari 2",
           "orderNumber": 3
+        },
+        {
+          "personId": 8239,
+          "name": "Ingvar Örn Gíslason",
+          "role": "Dómaraeftirlitsmaður",
+          "orderNumber": 4
         }
       ]
     },
@@ -174,7 +180,7 @@
       "awayLogo": "https://comet.ksi.is/file?id=f12cdfbd-f638-42e4-8639-e668c256e98d",
       "facility": "Stakkavíkurvöllur",
       "status": "SCHEDULED",
-      "liveStatus": null,
+      "liveStatus": "NA",
       "homeScore": null,
       "awayScore": null,
       "officials": [
