@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-17T19:39:58.368020+00:00",
+  "updatedAt": "2026-08-17T20:41:37.195455+00:00",
   "date": "2026-08-17",
   "dateFrom": "2026-08-17",
   "dateTo": "2026-08-23",
@@ -13,10 +13,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=ba78e821-0820-4358-bd59-8b3b5a96c1f4",
       "awayLogo": "https://comet.ksi.is/file?id=0d23d358-dd73-4c3a-8f4e-c225e273519c",
       "facility": "N1-völlurinn Hlíðarenda",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 4,
+      "awayScore": 4,
       "officials": [
         {
           "personId": 35383,
@@ -59,10 +59,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=5afa29d4-a7bd-472a-93be-ce649fab8af5",
       "awayLogo": "https://comet.ksi.is/file?id=d6937a22-320d-4167-a3fa-4d3e34f433c4",
       "facility": "GPG völlurinn",
-      "status": "SCHEDULED",
-      "liveStatus": "NA",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "PLAYED",
+      "liveStatus": null,
+      "homeScore": 2,
+      "awayScore": 0,
       "officials": [
         {
           "personId": 74027,
@@ -99,10 +99,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=b44d8199-8d93-4472-8b07-d7482a4ccac9",
       "awayLogo": "https://comet.ksi.is/file?id=7debf8ed-b411-4dbb-9647-1c4bd140ecf7",
       "facility": "Leiknisvöllur",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 6,
+      "awayScore": 1,
       "officials": [
         {
           "personId": 75111,
@@ -139,10 +139,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=20e14564-1f6d-4df5-8b70-a6e52582a73e",
       "awayLogo": "https://comet.ksi.is/file?id=ab41e2cb-5839-4081-920b-62fa023c1a5e",
       "facility": "Þarfaþingsvöllurinn",
-      "status": "SCHEDULED",
-      "liveStatus": "NA",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "PLAYED",
+      "liveStatus": null,
+      "homeScore": 3,
+      "awayScore": 1,
       "officials": [
         {
           "personId": 11529,
@@ -181,8 +181,8 @@
       "facility": "Stakkavíkurvöllur",
       "status": "SCHEDULED",
       "liveStatus": "NA",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "officials": [
         {
           "personId": 25693,
@@ -266,9 +266,9 @@
       "awayLogo": "https://comet.ksi.is/file?id=f2d584bb-41ff-4c03-a12d-9629d6acab02",
       "facility": "AVIS völlurinn",
       "status": "SCHEDULED",
-      "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "liveStatus": "BREAK",
+      "homeScore": 2,
+      "awayScore": 0,
       "officials": [
         {
           "personId": 36451,
