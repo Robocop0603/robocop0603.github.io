@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-17T07:59:37.264158+00:00",
+  "updatedAt": "2026-08-17T08:58:42.665921+00:00",
   "date": "2026-08-17",
   "dateFrom": "2026-08-17",
   "dateTo": "2026-08-23",
@@ -601,6 +601,21 @@
       "officials": []
     },
     {
+      "id": 7047824,
+      "date": "2026-08-21T19:15:00.000Z",
+      "competition": "Íslandsmót KSÍ - Lengjudeild karla 2026",
+      "home": "Grótta",
+      "away": "ÍR",
+      "homeLogo": "https://comet.ksi.is/file?id=f12cdfbd-f638-42e4-8639-e668c256e98d",
+      "awayLogo": "https://comet.ksi.is/file?id=20e14564-1f6d-4df5-8b70-a6e52582a73e",
+      "facility": "Vivaldivöllurinn",
+      "status": "SCHEDULED",
+      "liveStatus": null,
+      "homeScore": null,
+      "awayScore": null,
+      "officials": []
+    },
+    {
       "id": 7047822,
       "date": "2026-08-22T14:00:00.000Z",
       "competition": "Íslandsmót KSÍ - Lengjudeild karla 2026",
@@ -624,21 +639,6 @@
       "homeLogo": "https://comet.ksi.is/file?id=f2d584bb-41ff-4c03-a12d-9629d6acab02",
       "awayLogo": "https://comet.ksi.is/file?id=2a59ff70-be99-4c1c-9490-3d1e819cf6cc",
       "facility": "tekk VÖLLURINN",
-      "status": "SCHEDULED",
-      "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
-      "officials": []
-    },
-    {
-      "id": 7047824,
-      "date": "2026-08-22T14:00:00.000Z",
-      "competition": "Íslandsmót KSÍ - Lengjudeild karla 2026",
-      "home": "Grótta",
-      "away": "ÍR",
-      "homeLogo": "https://comet.ksi.is/file?id=f12cdfbd-f638-42e4-8639-e668c256e98d",
-      "awayLogo": "https://comet.ksi.is/file?id=20e14564-1f6d-4df5-8b70-a6e52582a73e",
-      "facility": "Vivaldivöllurinn",
       "status": "SCHEDULED",
       "liveStatus": null,
       "homeScore": null,
