@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-17T13:51:19.361273+00:00",
+  "updatedAt": "2026-08-17T14:41:46.684202+00:00",
   "date": "2026-08-17",
   "dateFrom": "2026-08-17",
   "dateTo": "2026-08-23",
@@ -60,7 +60,7 @@
       "awayLogo": "https://comet.ksi.is/file?id=d6937a22-320d-4167-a3fa-4d3e34f433c4",
       "facility": "GPG völlurinn",
       "status": "SCHEDULED",
-      "liveStatus": null,
+      "liveStatus": "NA",
       "homeScore": null,
       "awayScore": null,
       "officials": [
