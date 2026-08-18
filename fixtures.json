@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-18T16:46:35.965661+00:00",
+  "updatedAt": "2026-08-18T17:40:33.958504+00:00",
   "date": "2026-08-18",
   "dateFrom": "2026-08-18",
   "dateTo": "2026-08-24",
@@ -195,6 +195,12 @@
           "name": "Ram Krishna Gurung",
           "role": "Aðstoðardómari 2",
           "orderNumber": 3
+        },
+        {
+          "personId": 27549,
+          "name": "Ólafur Ingi Guðmundsson",
+          "role": "Dómaraeftirlitsmaður",
+          "orderNumber": 4
         }
       ]
     },
@@ -527,9 +533,9 @@
       "awayLogo": "https://comet.ksi.is/file?id=007a0a34-88fd-475b-82be-895ced8dc8c8",
       "facility": "GeoSalmo völlurinn",
       "status": "SCHEDULED",
-      "liveStatus": "IN_PROGRESS",
-      "homeScore": 0,
-      "awayScore": 0,
+      "liveStatus": null,
+      "homeScore": null,
+      "awayScore": null,
       "officials": []
     },
     {
