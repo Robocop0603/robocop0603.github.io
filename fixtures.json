@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-18T13:55:15.533936+00:00",
+  "updatedAt": "2026-08-18T14:50:26.662795+00:00",
   "date": "2026-08-18",
   "dateFrom": "2026-08-18",
   "dateTo": "2026-08-24",
@@ -195,12 +195,6 @@
           "name": "Ram Krishna Gurung",
           "role": "Aðstoðardómari 2",
           "orderNumber": 3
-        },
-        {
-          "personId": 2565,
-          "name": "Oddur Helgi Guðmundsson",
-          "role": "Dómaraeftirlitsmaður",
-          "orderNumber": 4
         }
       ]
     },
@@ -303,6 +297,12 @@
           "name": "Jóhann Finnur Sigurjónsson",
           "role": "Aðstoðardómari 1",
           "orderNumber": 2
+        },
+        {
+          "personId": 2700,
+          "name": "Eðvarð Þór Eðvarðsson",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
         }
       ]
     },
@@ -327,10 +327,16 @@
           "orderNumber": 1
         },
         {
+          "personId": 43750,
+          "name": "Daníel Örn Arnarson",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
           "personId": 69252,
           "name": "Ingólfur Kristinn Magnússon",
           "role": "Aðstoðardómari 2",
-          "orderNumber": 2
+          "orderNumber": 3
         }
       ]
     },
@@ -437,21 +443,6 @@
       ]
     },
     {
-      "id": 7056051,
-      "date": "2026-08-20T19:15:00.000Z",
-      "competition": "Íslandsmót KSÍ - 4. deild karla 2026",
-      "home": "Árborg",
-      "away": "Hamar",
-      "homeLogo": "https://comet.ksi.is/file?id=4ff9e019-c4d5-4bd7-a0cd-05b5dd5ea357",
-      "awayLogo": "https://comet.ksi.is/file?id=f467399a-f668-4555-911c-90a064c65016",
-      "facility": "JÁVERK-völlurinn",
-      "status": "SCHEDULED",
-      "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
-      "officials": []
-    },
-    {
       "id": 7056053,
       "date": "2026-08-20T19:15:00.000Z",
       "competition": "Íslandsmót KSÍ - 4. deild karla 2026",
@@ -475,6 +466,21 @@
       "homeLogo": "https://comet.ksi.is/file?id=d0155455-ef7d-4ebe-843e-3a61eacb0d72",
       "awayLogo": "https://comet.ksi.is/file?id=13bd9180-874d-49f6-bdca-76ae17469ccb",
       "facility": "Malbikstöðin að Varmá",
+      "status": "SCHEDULED",
+      "liveStatus": null,
+      "homeScore": null,
+      "awayScore": null,
+      "officials": []
+    },
+    {
+      "id": 7056051,
+      "date": "2026-08-20T20:00:00.000Z",
+      "competition": "Íslandsmót KSÍ - 4. deild karla 2026",
+      "home": "Árborg",
+      "away": "Hamar",
+      "homeLogo": "https://comet.ksi.is/file?id=4ff9e019-c4d5-4bd7-a0cd-05b5dd5ea357",
+      "awayLogo": "https://comet.ksi.is/file?id=f467399a-f668-4555-911c-90a064c65016",
+      "facility": "JÁVERK-völlurinn",
       "status": "SCHEDULED",
       "liveStatus": null,
       "homeScore": null,
