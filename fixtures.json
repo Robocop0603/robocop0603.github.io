@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-18T15:44:30.260001+00:00",
+  "updatedAt": "2026-08-18T16:46:35.965661+00:00",
   "date": "2026-08-18",
   "dateFrom": "2026-08-18",
   "dateTo": "2026-08-24",
@@ -527,9 +527,9 @@
       "awayLogo": "https://comet.ksi.is/file?id=007a0a34-88fd-475b-82be-895ced8dc8c8",
       "facility": "GeoSalmo völlurinn",
       "status": "SCHEDULED",
-      "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "liveStatus": "IN_PROGRESS",
+      "homeScore": 0,
+      "awayScore": 0,
       "officials": []
     },
     {
