@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-18T10:44:43.647910+00:00",
+  "updatedAt": "2026-08-18T11:37:25.924587+00:00",
   "date": "2026-08-18",
   "dateFrom": "2026-08-18",
   "dateTo": "2026-08-24",
@@ -315,10 +315,16 @@
       "awayScore": null,
       "officials": [
         {
+          "personId": 27663,
+          "name": "Milan Djurovic",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
           "personId": 69252,
           "name": "Ingólfur Kristinn Magnússon",
           "role": "Aðstoðardómari 2",
-          "orderNumber": 1
+          "orderNumber": 2
         }
       ]
     },
