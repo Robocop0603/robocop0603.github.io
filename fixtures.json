@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-18T11:37:25.924587+00:00",
+  "updatedAt": "2026-08-18T13:05:54.872466+00:00",
   "date": "2026-08-18",
   "dateFrom": "2026-08-18",
   "dateTo": "2026-08-24",
@@ -269,6 +269,12 @@
           "name": "Pálmi Víðir Bjarnason",
           "role": "Aðstoðardómari 1",
           "orderNumber": 2
+        },
+        {
+          "personId": 67080,
+          "name": "Aleksander Patryk Jurczak",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
         }
       ]
     },
@@ -411,8 +417,8 @@
       "awayScore": null,
       "officials": [
         {
-          "personId": 27663,
-          "name": "Milan Djurovic",
+          "personId": 64785,
+          "name": "Patryk Emanuel Jurczak",
           "role": "Dómari",
           "orderNumber": 1
         },
@@ -421,6 +427,12 @@
           "name": "Jón Reynir Reynisson",
           "role": "Aðstoðardómari 1",
           "orderNumber": 2
+        },
+        {
+          "personId": 72188,
+          "name": "Adam Smári Ottesen Guðlaugsson",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
         }
       ]
     },
