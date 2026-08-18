@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-18T09:47:15.456582+00:00",
+  "updatedAt": "2026-08-18T10:44:43.647910+00:00",
   "date": "2026-08-18",
   "dateFrom": "2026-08-18",
   "dateTo": "2026-08-24",
@@ -65,16 +65,22 @@
           "orderNumber": 1
         },
         {
-          "personId": 84732,
-          "name": "Mikael Ívan Axelsson",
-          "role": "Aðstoðardómari 2",
+          "personId": 84704,
+          "name": "Jovan Subic",
+          "role": "Aðstoðardómari 1",
           "orderNumber": 2
+        },
+        {
+          "personId": 38492,
+          "name": "Óliver Thanh Tung Vú",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
         },
         {
           "personId": 8130,
           "name": "Þórður Ingi Guðjónsson",
           "role": "Dómaraeftirlitsmaður",
-          "orderNumber": 3
+          "orderNumber": 4
         }
       ]
     },
@@ -309,8 +315,8 @@
       "awayScore": null,
       "officials": [
         {
-          "personId": 43750,
-          "name": "Daníel Örn Arnarson",
+          "personId": 69252,
+          "name": "Ingólfur Kristinn Magnússon",
           "role": "Aðstoðardómari 2",
           "orderNumber": 1
         }
