@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-19T11:36:58.098204+00:00",
+  "updatedAt": "2026-08-19T13:06:50.781769+00:00",
   "date": "2026-08-19",
   "dateFrom": "2026-08-19",
   "dateTo": "2026-08-25",
@@ -473,6 +473,12 @@
           "name": "Kristinn Freyr Victorsson",
           "role": "Aðstoðardómari 1",
           "orderNumber": 2
+        },
+        {
+          "personId": 67080,
+          "name": "Aleksander Patryk Jurczak",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
         }
       ]
     },
@@ -501,6 +507,12 @@
           "name": "Tryggvi Elías Hermannsson",
           "role": "Aðstoðardómari 1",
           "orderNumber": 2
+        },
+        {
+          "personId": 87191,
+          "name": "Mihail-Liviu Nitu",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
         }
       ]
     },
