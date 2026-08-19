@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-19T07:52:07.823969+00:00",
+  "updatedAt": "2026-08-19T08:52:30.690949+00:00",
   "date": "2026-08-19",
   "dateFrom": "2026-08-19",
   "dateTo": "2026-08-25",
@@ -461,7 +461,20 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 85210,
+          "name": "Ricardas Kanisauskas",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 83490,
+          "name": "Kristinn Freyr Victorsson",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        }
+      ]
     },
     {
       "id": 7056055,
@@ -476,7 +489,20 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 71522,
+          "name": "Ágúst Hjalti Tómasson",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 46199,
+          "name": "Tryggvi Elías Hermannsson",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        }
+      ]
     },
     {
       "id": 7056051,
@@ -491,7 +517,26 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 4353,
+          "name": "Tómas Wolfgang Meyer",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 87586,
+          "name": "Ragnar Karl Jóhannsson",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 31213,
+          "name": "Björn Ingvar Guðbergsson",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        }
+      ]
     },
     {
       "id": 7056052,
@@ -506,7 +551,26 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 84704,
+          "name": "Jovan Subic",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 69252,
+          "name": "Ingólfur Kristinn Magnússon",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 52641,
+          "name": "Heimir Árni Erlendsson",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        }
+      ]
     },
     {
       "id": 7056054,
@@ -521,7 +585,20 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 79535,
+          "name": "Przemyslaw Janik",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 27953,
+          "name": "Damian Pawlik",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        }
+      ]
     },
     {
       "id": 7047821,
