@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-19T17:37:28.857796+00:00",
+  "updatedAt": "2026-08-19T18:51:24.773708+00:00",
   "date": "2026-08-19",
   "dateFrom": "2026-08-19",
   "dateTo": "2026-08-25",
@@ -424,9 +424,9 @@
       "awayLogo": "https://comet.ksi.is/file?id=cad0532d-7f44-451d-9f9d-a60709971230",
       "facility": "BIRTU völlurinn",
       "status": "SCHEDULED",
-      "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "liveStatus": "IN_PROGRESS",
+      "homeScore": 0,
+      "awayScore": 0,
       "officials": [
         {
           "personId": 64785,
@@ -475,8 +475,8 @@
           "orderNumber": 2
         },
         {
-          "personId": 67080,
-          "name": "Aleksander Patryk Jurczak",
+          "personId": 83890,
+          "name": "Amro A. H. Qash",
           "role": "Aðstoðardómari 2",
           "orderNumber": 3
         }
