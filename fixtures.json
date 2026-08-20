@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T05:44:55.746592+00:00",
+  "updatedAt": "2026-08-20T07:04:04.589767+00:00",
   "date": "2026-08-20",
   "dateFrom": "2026-08-20",
   "dateTo": "2026-08-26",
@@ -187,7 +187,26 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 22729,
+          "name": "Elías Ingi Árnason",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 14181,
+          "name": "Guðni Freyr Ingvason",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 30550,
+          "name": "Halldór Breiðfjörð Jóhannsson",
+          "role": "Dómaraeftirlitsmaður",
+          "orderNumber": 3
+        }
+      ]
     },
     {
       "id": 7047824,
