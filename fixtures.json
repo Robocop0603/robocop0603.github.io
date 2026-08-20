@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T20:44:12.746402+00:00",
+  "updatedAt": "2026-08-20T21:41:42.021056+00:00",
   "date": "2026-08-20",
   "dateFrom": "2026-08-20",
   "dateTo": "2026-08-26",
@@ -15,8 +15,8 @@
       "facility": "Nettóhöllin",
       "status": "SCHEDULED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 1,
+      "awayScore": 7,
       "officials": [
         {
           "personId": 85210,
@@ -49,8 +49,8 @@
       "facility": "Malbikstöðin að Varmá",
       "status": "SCHEDULED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 3,
       "officials": [
         {
           "personId": 71522,
@@ -151,8 +151,8 @@
       "facility": "Lambhagavöllurinn",
       "status": "SCHEDULED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 2,
       "officials": [
         {
           "personId": 79535,
