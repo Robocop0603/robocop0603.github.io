@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T07:54:56.022607+00:00",
+  "updatedAt": "2026-08-20T08:54:25.775647+00:00",
   "date": "2026-08-20",
   "dateFrom": "2026-08-20",
   "dateTo": "2026-08-26",
@@ -221,7 +221,32 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 67442,
+          "name": "Hreinn Magnússon",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 46199,
+          "name": "Tryggvi Elías Hermannsson",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 33044,
+          "name": "Bergur Daði Ágústsson",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        },
+        {
+          "personId": 12475,
+          "name": "Skúli Freyr Brynjólfsson",
+          "role": "Dómaraeftirlitsmaður",
+          "orderNumber": 4
+        }
+      ]
     },
     {
       "id": 7047822,
