@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T11:39:49.724132+00:00",
+  "updatedAt": "2026-08-20T13:09:07.030648+00:00",
   "date": "2026-08-20",
   "dateFrom": "2026-08-20",
   "dateTo": "2026-08-26",
@@ -189,16 +189,22 @@
       "awayScore": null,
       "officials": [
         {
+          "personId": 6273,
+          "name": "Þórður Þorsteinsson Þórðarson",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
           "personId": 14181,
           "name": "Guðni Freyr Ingvason",
           "role": "Aðstoðardómari 1",
-          "orderNumber": 1
+          "orderNumber": 2
         },
         {
           "personId": 30550,
           "name": "Halldór Breiðfjörð Jóhannsson",
           "role": "Dómaraeftirlitsmaður",
-          "orderNumber": 2
+          "orderNumber": 3
         }
       ]
     },
