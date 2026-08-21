@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-21T19:35:21.420574+00:00",
+  "updatedAt": "2026-08-21T20:38:36.987811+00:00",
   "date": "2026-08-21",
   "dateFrom": "2026-08-21",
   "dateTo": "2026-08-27",
@@ -15,8 +15,8 @@
       "facility": "GeoSalmo völlurinn",
       "status": "SCHEDULED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 7,
       "officials": [
         {
           "personId": 6273,
