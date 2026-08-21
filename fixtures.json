@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-21T01:56:01.885334+00:00",
+  "updatedAt": "2026-08-21T03:14:32.447897+00:00",
   "date": "2026-08-21",
   "dateFrom": "2026-08-21",
   "dateTo": "2026-08-27",
@@ -97,7 +97,32 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 35383,
+          "name": "Helgi Mikael Jónasson",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 84704,
+          "name": "Jovan Subic",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 24561,
+          "name": "Bryngeir Valdimarsson",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        },
+        {
+          "personId": 8239,
+          "name": "Ingvar Örn Gíslason",
+          "role": "Dómaraeftirlitsmaður",
+          "orderNumber": 4
+        }
+      ]
     },
     {
       "id": 7047823,
@@ -112,7 +137,32 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 30015,
+          "name": "Pétur Guðmundsson",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 54306,
+          "name": "Þráinn Jón Elmarsson",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 14364,
+          "name": "Sveinn Ingi Sigurjónsson Waage",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        },
+        {
+          "personId": 3716,
+          "name": "Jón Sigurjónsson",
+          "role": "Dómaraeftirlitsmaður",
+          "orderNumber": 4
+        }
+      ]
     },
     {
       "id": 7053312,
@@ -127,7 +177,32 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 7178,
+          "name": "Hallgrímur Viðar Arnarson",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 85210,
+          "name": "Ricardas Kanisauskas",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 83490,
+          "name": "Kristinn Freyr Victorsson",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        },
+        {
+          "personId": 27549,
+          "name": "Ólafur Ingi Guðmundsson",
+          "role": "Dómaraeftirlitsmaður",
+          "orderNumber": 4
+        }
+      ]
     },
     {
       "id": 7047820,
@@ -142,7 +217,26 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 20621,
+          "name": "Þorfinnur Gústaf Þorfinnsson",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 83352,
+          "name": "Kári Mímisson",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 17988,
+          "name": "Jón Reynir Reynisson",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        }
+      ]
     },
     {
       "id": 7047825,
