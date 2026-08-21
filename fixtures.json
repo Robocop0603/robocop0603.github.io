@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-21T04:00:41.141603+00:00",
+  "updatedAt": "2026-08-21T04:52:02.460295+00:00",
   "date": "2026-08-21",
   "dateFrom": "2026-08-21",
   "dateTo": "2026-08-27",
@@ -251,7 +251,32 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 15989,
+          "name": "Arnar Ingi Ingvarsson",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 21370,
+          "name": "Ronnarong Wongmahadthai",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 51516,
+          "name": "Rögnvaldur Þ Höskuldsson",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        },
+        {
+          "personId": 3425,
+          "name": "Jóhann Gunnarsson",
+          "role": "Dómaraeftirlitsmaður",
+          "orderNumber": 4
+        }
+      ]
     },
     {
       "id": 7053310,
