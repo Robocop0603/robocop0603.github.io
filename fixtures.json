@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-21T22:39:10.053552+00:00",
+  "updatedAt": "2026-08-21T23:36:12.310718+00:00",
   "date": "2026-08-21",
   "dateFrom": "2026-08-21",
   "dateTo": "2026-08-27",
@@ -53,8 +53,8 @@
       "homeLogo": "https://comet.ksi.is/file?id=f12cdfbd-f638-42e4-8639-e668c256e98d",
       "awayLogo": "https://comet.ksi.is/file?id=20e14564-1f6d-4df5-8b70-a6e52582a73e",
       "facility": "Vivaldivöllurinn",
-      "status": "SCHEDULED",
-      "liveStatus": "NA",
+      "status": "PLAYED",
+      "liveStatus": "FULL_TIME",
       "homeScore": 1,
       "awayScore": 3,
       "officials": [
