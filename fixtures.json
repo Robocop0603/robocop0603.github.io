@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22T05:39:39.632577+00:00",
+  "updatedAt": "2026-08-22T06:57:11.111311+00:00",
   "date": "2026-08-22",
   "dateFrom": "2026-08-22",
   "dateTo": "2026-08-28",
@@ -765,7 +765,26 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 64785,
+          "name": "Patryk Emanuel Jurczak",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 10426,
+          "name": "Margeir Valur Sigurðsson",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 72390,
+          "name": "Alexander Elvar Young",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        }
+      ]
     },
     {
       "id": 7041443,
