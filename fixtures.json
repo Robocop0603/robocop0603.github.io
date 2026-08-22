@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22T08:45:51.069757+00:00",
+  "updatedAt": "2026-08-22T09:39:24.584088+00:00",
   "date": "2026-08-22",
   "dateFrom": "2026-08-22",
   "dateTo": "2026-08-28",
@@ -94,7 +94,7 @@
       "awayLogo": "https://comet.ksi.is/file?id=d40beebb-670a-44d6-8bac-972a9838918e",
       "facility": "Miðgarður",
       "status": "SCHEDULED",
-      "liveStatus": null,
+      "liveStatus": "NA",
       "homeScore": null,
       "awayScore": null,
       "officials": [
