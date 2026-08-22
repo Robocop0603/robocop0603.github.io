@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22T16:37:54.332580+00:00",
+  "updatedAt": "2026-08-22T17:34:00.801805+00:00",
   "date": "2026-08-22",
   "dateFrom": "2026-08-22",
   "dateTo": "2026-08-28",
@@ -13,7 +13,7 @@
       "homeLogo": "https://comet.ksi.is/file?id=cb661b78-41d9-44fe-9a68-213dd17b5623",
       "awayLogo": "https://comet.ksi.is/file?id=84fb0756-2829-4c67-ba34-98303709ba3e",
       "facility": "Kórinn",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
       "homeScore": 3,
       "awayScore": 0,
