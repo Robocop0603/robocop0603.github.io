@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22T03:54:12.721583+00:00",
+  "updatedAt": "2026-08-22T04:47:03.955235+00:00",
   "date": "2026-08-22",
   "dateFrom": "2026-08-22",
   "dateTo": "2026-08-28",
@@ -479,7 +479,26 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 30463,
+          "name": "Brynjar Þór Elvarsson",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 44839,
+          "name": "Arnþór Helgi Gíslason",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 38492,
+          "name": "Óliver Thanh Tung Vú",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        }
+      ]
     },
     {
       "id": 7054078,
@@ -494,7 +513,26 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 29884,
+          "name": "Nour Natan Ninir",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 36347,
+          "name": "Hugo Miguel Borges Esteves",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 60276,
+          "name": "Abdelmajid Zaidy",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        }
+      ]
     },
     {
       "id": 7054079,
@@ -509,7 +547,26 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 27663,
+          "name": "Milan Djurovic",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 13314,
+          "name": "Kjartan Már Másson",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 83490,
+          "name": "Kristinn Freyr Victorsson",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        }
+      ]
     },
     {
       "id": 7041439,
