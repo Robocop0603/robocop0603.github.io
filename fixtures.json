@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22T11:33:17.370734+00:00",
+  "updatedAt": "2026-08-22T12:58:29.934464+00:00",
   "date": "2026-08-22",
   "dateFrom": "2026-08-22",
   "dateTo": "2026-08-28",
@@ -14,7 +14,7 @@
       "awayLogo": "https://comet.ksi.is/file?id=84fb0756-2829-4c67-ba34-98303709ba3e",
       "facility": "Kórinn",
       "status": "SCHEDULED",
-      "liveStatus": null,
+      "liveStatus": "NA",
       "homeScore": null,
       "awayScore": null,
       "officials": [
@@ -54,7 +54,7 @@
       "awayLogo": "https://comet.ksi.is/file?id=2a59ff70-be99-4c1c-9490-3d1e819cf6cc",
       "facility": "tekk VÖLLURINN",
       "status": "SCHEDULED",
-      "liveStatus": null,
+      "liveStatus": "NA",
       "homeScore": null,
       "awayScore": null,
       "officials": [
@@ -94,7 +94,7 @@
       "awayLogo": "https://comet.ksi.is/file?id=d40beebb-670a-44d6-8bac-972a9838918e",
       "facility": "Miðgarður",
       "status": "SCHEDULED",
-      "liveStatus": "NA",
+      "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
       "officials": [
@@ -134,7 +134,7 @@
       "awayLogo": "https://comet.ksi.is/file?id=b44d8199-8d93-4472-8b07-d7482a4ccac9",
       "facility": "Kerecisvöllurinn",
       "status": "SCHEDULED",
-      "liveStatus": null,
+      "liveStatus": "NA",
       "homeScore": null,
       "awayScore": null,
       "officials": [
