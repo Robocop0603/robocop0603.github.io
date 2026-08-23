@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-23T19:32:22.655342+00:00",
+  "updatedAt": "2026-08-23T20:37:09.215347+00:00",
   "date": "2026-08-23",
   "dateFrom": "2026-08-23",
   "dateTo": "2026-08-29",
@@ -475,10 +475,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=0d23d358-dd73-4c3a-8f4e-c225e273519c",
       "awayLogo": "https://comet.ksi.is/file?id=82b4a290-6bf0-414a-b292-bb11b2c884a6",
       "facility": "Greifavöllurinn",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
       "homeScore": 3,
-      "awayScore": 0,
+      "awayScore": 5,
       "officials": [
         {
           "personId": 11529,
@@ -567,10 +567,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=25c07a23-5bc7-4621-a52f-57a4ff4c48ee",
       "awayLogo": "https://comet.ksi.is/file?id=cad0532d-7f44-451d-9f9d-a60709971230",
       "facility": "Fagrilundur - gervigras",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 3,
+      "awayScore": 4,
       "officials": [
         {
           "personId": 64785,
