@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-23T17:32:40.359409+00:00",
+  "updatedAt": "2026-08-23T18:46:17.704832+00:00",
   "date": "2026-08-23",
   "dateFrom": "2026-08-23",
   "dateTo": "2026-08-29",
@@ -275,10 +275,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=2b0071a0-382c-4b6e-9ab3-175184715a01",
       "awayLogo": "https://comet.ksi.is/file?id=65d44e5b-3a1b-440a-91f7-6f6a06e2b0d2",
       "facility": "BIRTU völlurinn",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 5,
+      "awayScore": 2,
       "officials": [
         {
           "personId": 30463,
@@ -317,7 +317,7 @@
       "facility": "Jökulfellsvöllurinn",
       "status": "SCHEDULED",
       "liveStatus": null,
-      "homeScore": 1,
+      "homeScore": 4,
       "awayScore": 1,
       "officials": [
         {
@@ -349,10 +349,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=52aab99c-bb4d-4e80-9c92-04912ce8576e",
       "awayLogo": "https://comet.ksi.is/file?id=ab598983-730a-4e37-91b6-9591bca92a33",
       "facility": "Fífan",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 2,
       "officials": [
         {
           "personId": 27663,
@@ -522,9 +522,9 @@
       "awayLogo": "https://comet.ksi.is/file?id=5580fa53-772d-4be8-8f0b-e4c26ee9ad6a",
       "facility": "Miðgarður",
       "status": "SCHEDULED",
-      "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "liveStatus": "BREAK",
+      "homeScore": 3,
+      "awayScore": 0,
       "officials": [
         {
           "personId": 36451,
