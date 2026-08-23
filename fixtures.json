@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-23T09:40:52.421119+00:00",
+  "updatedAt": "2026-08-23T10:37:20.275261+00:00",
   "date": "2026-08-23",
   "dateFrom": "2026-08-23",
   "dateTo": "2026-08-29",
@@ -174,7 +174,7 @@
       "awayLogo": "https://comet.ksi.is/file?id=87c25915-59b3-4cf7-b1fa-3fdf88b309b2",
       "facility": "Nesfisk-völlurinn",
       "status": "SCHEDULED",
-      "liveStatus": null,
+      "liveStatus": "NA",
       "homeScore": null,
       "awayScore": null,
       "officials": [
@@ -297,6 +297,12 @@
           "name": "Óliver Thanh Tung Vú",
           "role": "Aðstoðardómari 2",
           "orderNumber": 3
+        },
+        {
+          "personId": 27549,
+          "name": "Ólafur Ingi Guðmundsson",
+          "role": "Dómaraeftirlitsmaður",
+          "orderNumber": 4
         }
       ]
     },
