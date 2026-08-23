@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-23T22:35:58.434189+00:00",
+  "updatedAt": "2026-08-23T23:33:58.703064+00:00",
   "date": "2026-08-23",
   "dateFrom": "2026-08-23",
   "dateTo": "2026-08-29",
@@ -383,8 +383,8 @@
       "homeLogo": "https://comet.ksi.is/file?id=135b7edd-e558-4dfe-a1dd-2956ac5a4bf3",
       "awayLogo": "https://comet.ksi.is/file?id=5aa260ce-3bfa-4377-b4ee-3595207efc3a",
       "facility": "HS Orku völlurinn",
-      "status": "SCHEDULED",
-      "liveStatus": "IN_PROGRESS",
+      "status": "PLAYED",
+      "liveStatus": "FULL_TIME",
       "homeScore": 1,
       "awayScore": 0,
       "officials": [
@@ -521,7 +521,7 @@
       "homeLogo": "https://comet.ksi.is/file?id=d588827d-21f1-42d7-83c9-15dd8ab4d294",
       "awayLogo": "https://comet.ksi.is/file?id=5580fa53-772d-4be8-8f0b-e4c26ee9ad6a",
       "facility": "Miðgarður",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": "FULL_TIME",
       "homeScore": 4,
       "awayScore": 2,
