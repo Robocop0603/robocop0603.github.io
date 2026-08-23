@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-23T15:34:48.336105+00:00",
+  "updatedAt": "2026-08-23T16:40:48.757312+00:00",
   "date": "2026-08-23",
   "dateFrom": "2026-08-23",
   "dateTo": "2026-08-29",
@@ -13,7 +13,7 @@
       "homeLogo": "https://comet.ksi.is/file?id=e9216648-28b9-456a-8f13-ad72223d75e3",
       "awayLogo": "https://comet.ksi.is/file?id=a42fe67b-0c8e-472e-92ae-6c776f936b1d",
       "facility": "Akraneshöllin",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
       "homeScore": 1,
       "awayScore": 0,
@@ -55,8 +55,8 @@
       "facility": "Grenivíkurvöllur",
       "status": "SCHEDULED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 3,
+      "awayScore": 1,
       "officials": [
         {
           "personId": 25433,
@@ -93,10 +93,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=95d6913c-c0c2-4a44-b67e-cb464ac1941b",
       "awayLogo": "https://comet.ksi.is/file?id=06beb216-886f-4bd7-bc76-9d98ada66e58",
       "facility": "Vogaídýfuvöllur",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 1,
+      "awayScore": 3,
       "officials": [
         {
           "personId": 64034,
@@ -133,10 +133,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=cc382ada-da70-4c3f-aad9-a5fda48f6672",
       "awayLogo": "https://comet.ksi.is/file?id=883885f1-2da9-4b11-9208-e67485068e15",
       "facility": "SÚN-völlurinn",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 6,
+      "awayScore": 0,
       "officials": [
         {
           "personId": 67442,
@@ -173,10 +173,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=6f7f5564-74cc-4323-a424-6915fb79b646",
       "awayLogo": "https://comet.ksi.is/file?id=87c25915-59b3-4cf7-b1fa-3fdf88b309b2",
       "facility": "Nesfisk-völlurinn",
-      "status": "SCHEDULED",
-      "liveStatus": "NA",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "PLAYED",
+      "liveStatus": "FULL_TIME",
+      "homeScore": 3,
+      "awayScore": 0,
       "officials": [
         {
           "personId": 29175,
@@ -207,10 +207,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=d3ad8173-3ecd-4a66-81ae-e1e71c71a560",
       "awayLogo": "https://comet.ksi.is/file?id=136d36fc-4974-41ee-b024-5619d18c5459",
       "facility": "Valsvöllur",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 4,
+      "awayScore": 1,
       "officials": [
         {
           "personId": 15502,
@@ -243,8 +243,8 @@
       "facility": "Knatthús Hauka",
       "status": "SCHEDULED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 2,
+      "awayScore": 3,
       "officials": [
         {
           "personId": 19925,
@@ -384,7 +384,7 @@
       "awayLogo": "https://comet.ksi.is/file?id=5aa260ce-3bfa-4377-b4ee-3595207efc3a",
       "facility": "HS Orku völlurinn",
       "status": "SCHEDULED",
-      "liveStatus": null,
+      "liveStatus": "NA",
       "homeScore": null,
       "awayScore": null,
       "officials": [
@@ -430,7 +430,7 @@
       "awayLogo": "https://comet.ksi.is/file?id=98827182-4af0-4f8b-b6f4-0aaeed8fde45",
       "facility": "ELKEM völlurinn",
       "status": "SCHEDULED",
-      "liveStatus": null,
+      "liveStatus": "NA",
       "homeScore": null,
       "awayScore": null,
       "officials": [
