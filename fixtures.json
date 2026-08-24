@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-24T20:46:03.565997+00:00",
+  "updatedAt": "2026-08-24T21:42:13.485332+00:00",
   "date": "2026-08-24",
   "dateFrom": "2026-08-24",
   "dateTo": "2026-08-30",
@@ -15,8 +15,8 @@
       "facility": "Eikarvöllurinn",
       "status": "SCHEDULED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 3,
+      "awayScore": 4,
       "officials": [
         {
           "personId": 4114,
