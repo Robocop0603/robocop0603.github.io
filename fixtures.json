@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-26T11:42:18.291364+00:00",
+  "updatedAt": "2026-08-26T13:14:13.835281+00:00",
   "date": "2026-08-26",
   "dateFrom": "2026-08-26",
   "dateTo": "2026-09-01",
@@ -29,6 +29,12 @@
           "name": "Guðmundur Ingi Bjarnason",
           "role": "Aðstoðardómari 1",
           "orderNumber": 2
+        },
+        {
+          "personId": 38492,
+          "name": "Óliver Thanh Tung Vú",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
         }
       ]
     },
