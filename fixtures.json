@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-26T05:48:05.199417+00:00",
+  "updatedAt": "2026-08-26T07:06:51.654548+00:00",
   "date": "2026-08-26",
   "dateFrom": "2026-08-26",
   "dateTo": "2026-09-01",
@@ -45,7 +45,26 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 64785,
+          "name": "Patryk Emanuel Jurczak",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 87586,
+          "name": "Ragnar Karl Jóhannsson",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 64031,
+          "name": "Sigurður Þór Sveinsson",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        }
+      ]
     },
     {
       "id": 7056057,
