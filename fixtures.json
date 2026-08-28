@@ -1,219 +1,9 @@
 {
-  "updatedAt": "2026-08-27T23:47:09.655009+00:00",
-  "date": "2026-08-27",
-  "dateFrom": "2026-08-27",
-  "dateTo": "2026-09-02",
+  "updatedAt": "2026-08-28T11:19:39.278722+00:00",
+  "date": "2026-08-28",
+  "dateFrom": "2026-08-28",
+  "dateTo": "2026-09-03",
   "games": [
-    {
-      "id": 7054080,
-      "date": "2026-08-27T17:30:00.000Z",
-      "competition": "Íslandsmót KSÍ - 3. deild karla 2026",
-      "home": "Reynir S.",
-      "away": "Víðir",
-      "homeLogo": "https://comet.ksi.is/file?id=94b20964-52b3-4d51-87fa-a4da3614b99b",
-      "awayLogo": "https://comet.ksi.is/file?id=6f7f5564-74cc-4323-a424-6915fb79b646",
-      "facility": "Brons völlurinn",
-      "status": "PLAYED",
-      "liveStatus": null,
-      "homeScore": 2,
-      "awayScore": 1,
-      "officials": [
-        {
-          "personId": 11529,
-          "name": "Gunnar Oddur Hafliðason",
-          "role": "Dómari",
-          "orderNumber": 1
-        },
-        {
-          "personId": 3840,
-          "name": "Guðmundur Ingi Bjarnason",
-          "role": "Aðstoðardómari 1",
-          "orderNumber": 2
-        },
-        {
-          "personId": 38492,
-          "name": "Óliver Thanh Tung Vú",
-          "role": "Aðstoðardómari 2",
-          "orderNumber": 3
-        }
-      ]
-    },
-    {
-      "id": 7056056,
-      "date": "2026-08-27T18:00:00.000Z",
-      "competition": "Íslandsmót KSÍ - 4. deild karla 2026",
-      "home": "Hamar",
-      "away": "Álafoss",
-      "homeLogo": "https://comet.ksi.is/file?id=f467399a-f668-4555-911c-90a064c65016",
-      "awayLogo": "https://comet.ksi.is/file?id=d0155455-ef7d-4ebe-843e-3a61eacb0d72",
-      "facility": "Grýluvöllur",
-      "status": "PLAYED",
-      "liveStatus": null,
-      "homeScore": 5,
-      "awayScore": 0,
-      "officials": [
-        {
-          "personId": 64785,
-          "name": "Patryk Emanuel Jurczak",
-          "role": "Dómari",
-          "orderNumber": 1
-        },
-        {
-          "personId": 87586,
-          "name": "Ragnar Karl Jóhannsson",
-          "role": "Aðstoðardómari 1",
-          "orderNumber": 2
-        },
-        {
-          "personId": 64031,
-          "name": "Sigurður Þór Sveinsson",
-          "role": "Aðstoðardómari 2",
-          "orderNumber": 3
-        }
-      ]
-    },
-    {
-      "id": 7056057,
-      "date": "2026-08-27T19:15:00.000Z",
-      "competition": "Íslandsmót KSÍ - 4. deild karla 2026",
-      "home": "Vængir Júpiters",
-      "away": "Úlfarnir",
-      "homeLogo": "https://comet.ksi.is/file?id=13bd9180-874d-49f6-bdca-76ae17469ccb",
-      "awayLogo": "https://comet.ksi.is/file?id=c02be093-f4d6-4182-bdb2-54a776988dc6",
-      "facility": "Egilshöll",
-      "status": "PLAYED",
-      "liveStatus": null,
-      "homeScore": 4,
-      "awayScore": 2,
-      "officials": [
-        {
-          "personId": 64034,
-          "name": "Guðmundur Páll Friðbertsson",
-          "role": "Dómari",
-          "orderNumber": 1
-        },
-        {
-          "personId": 29884,
-          "name": "Nour Natan Ninir",
-          "role": "Aðstoðardómari 1",
-          "orderNumber": 2
-        },
-        {
-          "personId": 85210,
-          "name": "Ricardas Kanisauskas",
-          "role": "Aðstoðardómari 2",
-          "orderNumber": 3
-        }
-      ]
-    },
-    {
-      "id": 7056059,
-      "date": "2026-08-27T19:15:00.000Z",
-      "competition": "Íslandsmót KSÍ - 4. deild karla 2026",
-      "home": "Álftanes",
-      "away": "ÍH",
-      "homeLogo": "https://comet.ksi.is/file?id=512900fd-8856-417f-8834-1cd39360db40",
-      "awayLogo": "https://comet.ksi.is/file?id=984abb8f-66cf-432a-a832-0ed0bd114065",
-      "facility": "HTH völlurinn",
-      "status": "PLAYED",
-      "liveStatus": null,
-      "homeScore": 16,
-      "awayScore": 0,
-      "officials": [
-        {
-          "personId": 27663,
-          "name": "Milan Djurovic",
-          "role": "Dómari",
-          "orderNumber": 1
-        },
-        {
-          "personId": 52548,
-          "name": "Róbert Þormar Skarphéðinsson",
-          "role": "Aðstoðardómari 1",
-          "orderNumber": 2
-        },
-        {
-          "personId": 82885,
-          "name": "Pálmi Víðir Bjarnason",
-          "role": "Aðstoðardómari 2",
-          "orderNumber": 3
-        }
-      ]
-    },
-    {
-      "id": 7056060,
-      "date": "2026-08-27T19:15:00.000Z",
-      "competition": "Íslandsmót KSÍ - 4. deild karla 2026",
-      "home": "Elliði",
-      "away": "Árborg",
-      "homeLogo": "https://comet.ksi.is/file?id=a79d9a50-d12a-436c-8967-eee4e71336a7",
-      "awayLogo": "https://comet.ksi.is/file?id=4ff9e019-c4d5-4bd7-a0cd-05b5dd5ea357",
-      "facility": "Fylkisvöllur",
-      "status": "PLAYED",
-      "liveStatus": "FULL_TIME",
-      "homeScore": 2,
-      "awayScore": 2,
-      "officials": [
-        {
-          "personId": 20707,
-          "name": "Aðalbjörn Heiðar Þorsteinsson",
-          "role": "Dómari",
-          "orderNumber": 1
-        },
-        {
-          "personId": 27953,
-          "name": "Damian Pawlik",
-          "role": "Aðstoðardómari 1",
-          "orderNumber": 2
-        },
-        {
-          "personId": 85087,
-          "name": "Viktor Hjaltason",
-          "role": "Aðstoðardómari 2",
-          "orderNumber": 3
-        }
-      ]
-    },
-    {
-      "id": 7053314,
-      "date": "2026-08-27T20:00:00.000Z",
-      "competition": "Íslandsmót KSÍ - 2. deild karla 2026",
-      "home": "Hvíti riddarinn",
-      "away": "Fjölnir",
-      "homeLogo": "https://comet.ksi.is/file?id=883885f1-2da9-4b11-9208-e67485068e15",
-      "awayLogo": "https://comet.ksi.is/file?id=a42fe67b-0c8e-472e-92ae-6c776f936b1d",
-      "facility": "Malbikstöðin að Varmá",
-      "status": "PLAYED",
-      "liveStatus": null,
-      "homeScore": 3,
-      "awayScore": 3,
-      "officials": [
-        {
-          "personId": 25433,
-          "name": "Óli Njáll Ingólfsson",
-          "role": "Dómari",
-          "orderNumber": 1
-        },
-        {
-          "personId": 17988,
-          "name": "Jón Reynir Reynisson",
-          "role": "Aðstoðardómari 1",
-          "orderNumber": 2
-        },
-        {
-          "personId": 52641,
-          "name": "Heimir Árni Erlendsson",
-          "role": "Aðstoðardómari 2",
-          "orderNumber": 3
-        },
-        {
-          "personId": 3737,
-          "name": "Sigurður G Friðjónsson",
-          "role": "Dómaraeftirlitsmaður",
-          "orderNumber": 4
-        }
-      ]
-    },
     {
       "id": 7047826,
       "date": "2026-08-28T19:15:00.000Z",
@@ -375,7 +165,32 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 75111,
+          "name": "Twana Khalid Ahmed",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 83352,
+          "name": "Kári Mímisson",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 33044,
+          "name": "Bergur Daði Ágústsson",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        },
+        {
+          "personId": 3737,
+          "name": "Sigurður G Friðjónsson",
+          "role": "Dómaraeftirlitsmaður",
+          "orderNumber": 4
+        }
+      ]
     },
     {
       "id": 7047829,
@@ -390,7 +205,32 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 11529,
+          "name": "Gunnar Oddur Hafliðason",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 84732,
+          "name": "Mikael Ívan Axelsson",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 48291,
+          "name": "Ragnar Arelíus Sveinsson",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        },
+        {
+          "personId": 8130,
+          "name": "Þórður Ingi Guðjónsson",
+          "role": "Dómaraeftirlitsmaður",
+          "orderNumber": 4
+        }
+      ]
     },
     {
       "id": 7047830,
@@ -405,7 +245,32 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 74027,
+          "name": "Sveinn Arnarsson",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 44839,
+          "name": "Arnþór Helgi Gíslason",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 14364,
+          "name": "Sveinn Ingi Sigurjónsson Waage",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        },
+        {
+          "personId": 31353,
+          "name": "Viðar Helgason",
+          "role": "Dómaraeftirlitsmaður",
+          "orderNumber": 4
+        }
+      ]
     },
     {
       "id": 7053316,
@@ -420,7 +285,32 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 20621,
+          "name": "Þorfinnur Gústaf Þorfinnsson",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 85210,
+          "name": "Ricardas Kanisauskas",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 10426,
+          "name": "Margeir Valur Sigurðsson",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        },
+        {
+          "personId": 11045,
+          "name": "Björn Guðbjörnsson",
+          "role": "Dómaraeftirlitsmaður",
+          "orderNumber": 4
+        }
+      ]
     },
     {
       "id": 7053317,
@@ -435,7 +325,32 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 7178,
+          "name": "Hallgrímur Viðar Arnarson",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 29884,
+          "name": "Nour Natan Ninir",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 27953,
+          "name": "Damian Pawlik",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        },
+        {
+          "personId": 4901,
+          "name": "Egill Már Markússon",
+          "role": "Dómaraeftirlitsmaður",
+          "orderNumber": 4
+        }
+      ]
     },
     {
       "id": 7053318,
@@ -450,7 +365,32 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 25693,
+          "name": "Stefán Ragnar Guðlaugsson",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 15502,
+          "name": "Ásgeir Viktorsson",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 52641,
+          "name": "Heimir Árni Erlendsson",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        },
+        {
+          "personId": 4901,
+          "name": "Egill Már Markússon",
+          "role": "Dómaraeftirlitsmaður",
+          "orderNumber": 4
+        }
+      ]
     },
     {
       "id": 7054082,
@@ -465,7 +405,26 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 28354,
+          "name": "Arnar Þór Stefánsson",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 34832,
+          "name": "Patrik Freyr Guðmundsson",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 72390,
+          "name": "Alexander Elvar Young",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        }
+      ]
     },
     {
       "id": 7054083,
@@ -480,7 +439,26 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 71522,
+          "name": "Ágúst Hjalti Tómasson",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 46199,
+          "name": "Tryggvi Elías Hermannsson",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 83490,
+          "name": "Kristinn Freyr Victorsson",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        }
+      ]
     },
     {
       "id": 7056058,
@@ -495,7 +473,26 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 79535,
+          "name": "Przemyslaw Janik",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 39134,
+          "name": "Uchechukwu Michael Eze",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 89873,
+          "name": "Hosni A. J. Kaware",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        }
+      ]
     },
     {
       "id": 7054084,
@@ -510,7 +507,26 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 86119,
+          "name": "Guðmundur Halldórsson",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 52548,
+          "name": "Róbert Þormar Skarphéðinsson",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 64692,
+          "name": "Reynir Örn Sigrúnarson",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        }
+      ]
     },
     {
       "id": 7047831,
@@ -525,7 +541,32 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 52794,
+          "name": "Bergvin Fannar Gunnarsson",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 54306,
+          "name": "Þráinn Jón Elmarsson",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 37295,
+          "name": "Breki Sigurðsson",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        },
+        {
+          "personId": 2795,
+          "name": "Magnús Sigurður Sigurólason",
+          "role": "Dómaraeftirlitsmaður",
+          "orderNumber": 4
+        }
+      ]
     },
     {
       "id": 7053319,
@@ -540,7 +581,32 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 27663,
+          "name": "Milan Djurovic",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 38492,
+          "name": "Óliver Thanh Tung Vú",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 47651,
+          "name": "Ágúst Örn Víðisson",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        },
+        {
+          "personId": 2794,
+          "name": "Sverrir Gunnar Pálmason",
+          "role": "Dómaraeftirlitsmaður",
+          "orderNumber": 4
+        }
+      ]
     },
     {
       "id": 7054085,
@@ -555,7 +621,26 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 12892,
+          "name": "Birgir Þór Þrastarson",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 66094,
+          "name": "Arnór Bjarki Hjaltalín",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 71168,
+          "name": "Gabríel Gyðuson",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        }
+      ]
     },
     {
       "id": 7041448,
@@ -570,7 +655,38 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 6273,
+          "name": "Þórður Þorsteinsson Þórðarson",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 33585,
+          "name": "Ragnar Þór Bender",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 38576,
+          "name": "Kristofer Bergmann",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        },
+        {
+          "personId": 20707,
+          "name": "Aðalbjörn Heiðar Þorsteinsson",
+          "role": "Fjórði dómari",
+          "orderNumber": 4
+        },
+        {
+          "personId": 3126,
+          "name": "Sigurður Hannesson",
+          "role": "Dómaraeftirlitsmaður",
+          "orderNumber": 5
+        }
+      ]
     },
     {
       "id": 7041445,
@@ -656,6 +772,66 @@
       "homeLogo": "https://comet.ksi.is/file?id=4ff9e019-c4d5-4bd7-a0cd-05b5dd5ea357",
       "awayLogo": "https://comet.ksi.is/file?id=512900fd-8856-417f-8834-1cd39360db40",
       "facility": "JÁVERK-völlurinn",
+      "status": "SCHEDULED",
+      "liveStatus": null,
+      "homeScore": null,
+      "awayScore": null,
+      "officials": []
+    },
+    {
+      "id": 7056061,
+      "date": "2026-09-03T19:15:00.000Z",
+      "competition": "Íslandsmót KSÍ - 4. deild karla 2026",
+      "home": "Elliði",
+      "away": "Hamar",
+      "homeLogo": "https://comet.ksi.is/file?id=a79d9a50-d12a-436c-8967-eee4e71336a7",
+      "awayLogo": "https://comet.ksi.is/file?id=f467399a-f668-4555-911c-90a064c65016",
+      "facility": "Fylkisvöllur",
+      "status": "SCHEDULED",
+      "liveStatus": null,
+      "homeScore": null,
+      "awayScore": null,
+      "officials": []
+    },
+    {
+      "id": 7056064,
+      "date": "2026-09-03T19:15:00.000Z",
+      "competition": "Íslandsmót KSÍ - 4. deild karla 2026",
+      "home": "Hafnir",
+      "away": "Vængir Júpiters",
+      "homeLogo": "https://comet.ksi.is/file?id=8591fefc-1392-4e9a-9522-4497a48823d3",
+      "awayLogo": "https://comet.ksi.is/file?id=13bd9180-874d-49f6-bdca-76ae17469ccb",
+      "facility": "Nettóhöllin",
+      "status": "SCHEDULED",
+      "liveStatus": null,
+      "homeScore": null,
+      "awayScore": null,
+      "officials": []
+    },
+    {
+      "id": 7056063,
+      "date": "2026-09-03T20:00:00.000Z",
+      "competition": "Íslandsmót KSÍ - 4. deild karla 2026",
+      "home": "ÍH",
+      "away": "KFR",
+      "homeLogo": "https://comet.ksi.is/file?id=984abb8f-66cf-432a-a832-0ed0bd114065",
+      "awayLogo": "https://comet.ksi.is/file?id=918c4f38-072b-4add-9531-416163db151a",
+      "facility": "Skessan",
+      "status": "SCHEDULED",
+      "liveStatus": null,
+      "homeScore": null,
+      "awayScore": null,
+      "officials": []
+    },
+    {
+      "id": 7056065,
+      "date": "2026-09-03T20:00:00.000Z",
+      "competition": "Íslandsmót KSÍ - 4. deild karla 2026",
+      "home": "Úlfarnir",
+      "away": "Álafoss",
+      "homeLogo": "https://comet.ksi.is/file?id=c02be093-f4d6-4182-bdb2-54a776988dc6",
+      "awayLogo": "https://comet.ksi.is/file?id=d0155455-ef7d-4ebe-843e-3a61eacb0d72",
+      "facility": "Lambhagavöllurinn",
       "status": "SCHEDULED",
       "liveStatus": null,
       "homeScore": null,
