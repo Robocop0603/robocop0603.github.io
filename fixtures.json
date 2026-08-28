@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-28T11:19:39.278722+00:00",
+  "updatedAt": "2026-08-28T22:15:56.767355+00:00",
   "date": "2026-08-28",
   "dateFrom": "2026-08-28",
   "dateTo": "2026-09-03",
@@ -14,9 +14,9 @@
       "awayLogo": "https://comet.ksi.is/file?id=7debf8ed-b411-4dbb-9647-1c4bd140ecf7",
       "facility": "PEPSI völlurinn",
       "status": "SCHEDULED",
-      "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "liveStatus": "NA",
+      "homeScore": 7,
+      "awayScore": 2,
       "officials": [
         {
           "personId": 4114,
@@ -53,10 +53,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=f2d584bb-41ff-4c03-a12d-9629d6acab02",
       "awayLogo": "https://comet.ksi.is/file?id=f12cdfbd-f638-42e4-8639-e668c256e98d",
       "facility": "tekk VÖLLURINN",
-      "status": "SCHEDULED",
-      "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "status": "PLAYED",
+      "liveStatus": "FULL_TIME",
+      "homeScore": 3,
+      "awayScore": 1,
       "officials": [
         {
           "personId": 15989,
@@ -75,6 +75,12 @@
           "name": "Bryngeir Valdimarsson",
           "role": "Aðstoðardómari 2",
           "orderNumber": 3
+        },
+        {
+          "personId": 9194,
+          "name": "Þórður Georg Lárusson",
+          "role": "Dómaraeftirlitsmaður",
+          "orderNumber": 4
         }
       ]
     },
@@ -87,10 +93,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=e9216648-28b9-456a-8f13-ad72223d75e3",
       "awayLogo": "https://comet.ksi.is/file?id=95d6913c-c0c2-4a44-b67e-cb464ac1941b",
       "facility": "Akraneshöllin",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 2,
+      "awayScore": 0,
       "officials": [
         {
           "personId": 30463,
@@ -127,10 +133,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=25c07a23-5bc7-4621-a52f-57a4ff4c48ee",
       "awayLogo": "https://comet.ksi.is/file?id=0ae3cbe6-1bde-4dff-a29b-9e07cb92ef33",
       "facility": "Fagrilundur - gervigras",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 1,
+      "awayScore": 4,
       "officials": [
         {
           "personId": 29175,
