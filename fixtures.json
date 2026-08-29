@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-29T19:23:14.974394+00:00",
+  "updatedAt": "2026-08-29T22:38:51.965045+00:00",
   "date": "2026-08-29",
   "dateFrom": "2026-08-29",
   "dateTo": "2026-09-04",
@@ -503,8 +503,8 @@
       "homeLogo": "https://comet.ksi.is/file?id=5aa260ce-3bfa-4377-b4ee-3595207efc3a",
       "awayLogo": "https://comet.ksi.is/file?id=5580fa53-772d-4be8-8f0b-e4c26ee9ad6a",
       "facility": "Hásteinsvöllur",
-      "status": "SCHEDULED",
-      "liveStatus": "NA",
+      "status": "PLAYED",
+      "liveStatus": "FULL_TIME",
       "homeScore": 0,
       "awayScore": 1,
       "officials": [
