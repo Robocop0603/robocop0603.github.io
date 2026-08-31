@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-31T20:01:23.341139+00:00",
+  "updatedAt": "2026-08-31T23:49:15.396767+00:00",
   "date": "2026-08-31",
   "dateFrom": "2026-08-31",
   "dateTo": "2026-09-06",
@@ -13,10 +13,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=9cbcd4bf-2e6c-4e89-baa4-5323dbe60bd3",
       "awayLogo": "https://comet.ksi.is/file?id=d588827d-21f1-42d7-83c9-15dd8ab4d294",
       "facility": "Eikarvöllurinn",
-      "status": "SCHEDULED",
-      "liveStatus": "NA",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "PLAYED",
+      "liveStatus": "FULL_TIME",
+      "homeScore": 0,
+      "awayScore": 2,
       "officials": [
         {
           "personId": 22729,
