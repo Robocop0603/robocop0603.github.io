@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-01T05:03:04.067005+00:00",
+  "updatedAt": "2026-09-01T10:03:29.019833+00:00",
   "date": "2026-09-01",
   "dateFrom": "2026-09-01",
   "dateTo": "2026-09-07",
@@ -63,7 +63,26 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 76986,
+          "name": "Konráð Garðar Guðlaugsson",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 86033,
+          "name": "Wayne Blas Blake",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 53953,
+          "name": "Piotr Wasala",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        }
+      ]
     },
     {
       "id": 7056061,
@@ -149,6 +168,21 @@
       "homeLogo": "https://comet.ksi.is/file?id=d3ad8173-3ecd-4a66-81ae-e1e71c71a560",
       "awayLogo": "https://comet.ksi.is/file?id=52aab99c-bb4d-4e80-9c92-04912ce8576e",
       "facility": "Valsvöllur",
+      "status": "SCHEDULED",
+      "liveStatus": null,
+      "homeScore": null,
+      "awayScore": null,
+      "officials": []
+    },
+    {
+      "id": 7054088,
+      "date": "2026-09-05T13:00:00.000Z",
+      "competition": "Íslandsmót KSÍ - 3. deild karla 2026",
+      "home": "KÁ",
+      "away": "Höttur",
+      "homeLogo": "https://comet.ksi.is/file?id=0ae3cbe6-1bde-4dff-a29b-9e07cb92ef33",
+      "awayLogo": "https://comet.ksi.is/file?id=87c25915-59b3-4cf7-b1fa-3fdf88b309b2",
+      "facility": "Knatthús Hauka",
       "status": "SCHEDULED",
       "liveStatus": null,
       "homeScore": null,
@@ -298,21 +332,6 @@
       "away": "Selfoss",
       "homeLogo": "https://comet.ksi.is/file?id=2b0071a0-382c-4b6e-9ab3-175184715a01",
       "awayLogo": "https://comet.ksi.is/file?id=06beb216-886f-4bd7-bc76-9d98ada66e58",
-      "facility": "BIRTU völlurinn",
-      "status": "SCHEDULED",
-      "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
-      "officials": []
-    },
-    {
-      "id": 7054088,
-      "date": "2026-09-05T14:00:00.000Z",
-      "competition": "Íslandsmót KSÍ - 3. deild karla 2026",
-      "home": "KÁ",
-      "away": "Höttur",
-      "homeLogo": "https://comet.ksi.is/file?id=0ae3cbe6-1bde-4dff-a29b-9e07cb92ef33",
-      "awayLogo": "https://comet.ksi.is/file?id=87c25915-59b3-4cf7-b1fa-3fdf88b309b2",
       "facility": "BIRTU völlurinn",
       "status": "SCHEDULED",
       "liveStatus": null,
