@@ -1,55 +1,9 @@
 {
-  "updatedAt": "2026-08-31T23:49:15.396767+00:00",
-  "date": "2026-08-31",
-  "dateFrom": "2026-08-31",
-  "dateTo": "2026-09-06",
+  "updatedAt": "2026-09-01T05:03:04.067005+00:00",
+  "date": "2026-09-01",
+  "dateFrom": "2026-09-01",
+  "dateTo": "2026-09-07",
   "games": [
-    {
-      "id": 7041450,
-      "date": "2026-08-31T19:15:00.000Z",
-      "competition": "Íslandsmót KSÍ - Besta deild karla 2026",
-      "home": "Breiðablik",
-      "away": "Stjarnan",
-      "homeLogo": "https://comet.ksi.is/file?id=9cbcd4bf-2e6c-4e89-baa4-5323dbe60bd3",
-      "awayLogo": "https://comet.ksi.is/file?id=d588827d-21f1-42d7-83c9-15dd8ab4d294",
-      "facility": "Eikarvöllurinn",
-      "status": "PLAYED",
-      "liveStatus": "FULL_TIME",
-      "homeScore": 0,
-      "awayScore": 2,
-      "officials": [
-        {
-          "personId": 22729,
-          "name": "Elías Ingi Árnason",
-          "role": "Dómari",
-          "orderNumber": 1
-        },
-        {
-          "personId": 28278,
-          "name": "Kristján Már Ólafs",
-          "role": "Aðstoðardómari 1",
-          "orderNumber": 2
-        },
-        {
-          "personId": 2700,
-          "name": "Eðvarð Þór Eðvarðsson",
-          "role": "Aðstoðardómari 2",
-          "orderNumber": 3
-        },
-        {
-          "personId": 15989,
-          "name": "Arnar Ingi Ingvarsson",
-          "role": "Fjórði dómari",
-          "orderNumber": 4
-        },
-        {
-          "personId": 31353,
-          "name": "Viðar Helgason",
-          "role": "Dómaraeftirlitsmaður",
-          "orderNumber": 5
-        }
-      ]
-    },
     {
       "id": 7041446,
       "date": "2026-09-01T17:30:00.000Z",
