@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-01T18:27:27.421460+00:00",
+  "updatedAt": "2026-09-01T21:44:51.646167+00:00",
   "date": "2026-09-01",
   "dateFrom": "2026-09-01",
   "dateTo": "2026-09-07",
@@ -13,10 +13,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=82b4a290-6bf0-414a-b292-bb11b2c884a6",
       "awayLogo": "https://comet.ksi.is/file?id=a2fbd01a-8ee0-4a47-b39f-6674d10236f2",
       "facility": "Meistaravellir",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 1,
+      "awayScore": 1,
       "officials": [
         {
           "personId": 36451,
