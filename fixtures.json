@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-03T18:36:05.203929+00:00",
+  "updatedAt": "2026-09-03T21:41:15.100270+00:00",
   "date": "2026-09-03",
   "dateFrom": "2026-09-03",
   "dateTo": "2026-09-09",
@@ -13,10 +13,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=a79d9a50-d12a-436c-8967-eee4e71336a7",
       "awayLogo": "https://comet.ksi.is/file?id=f467399a-f668-4555-911c-90a064c65016",
       "facility": "Fylkisvöllur",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 1,
+      "awayScore": 1,
       "officials": [
         {
           "personId": 27663,
@@ -47,10 +47,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=8591fefc-1392-4e9a-9522-4497a48823d3",
       "awayLogo": "https://comet.ksi.is/file?id=13bd9180-874d-49f6-bdca-76ae17469ccb",
       "facility": "Nettóhöllin",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 1,
+      "awayScore": 3,
       "officials": [
         {
           "personId": 79535,
@@ -83,8 +83,8 @@
       "facility": "Skessan",
       "status": "SCHEDULED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 2,
+      "awayScore": 2,
       "officials": [
         {
           "personId": 29884,
