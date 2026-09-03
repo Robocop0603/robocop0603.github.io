@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-03T00:12:41.778167+00:00",
+  "updatedAt": "2026-09-03T04:20:15.023323+00:00",
   "date": "2026-09-03",
   "dateFrom": "2026-09-03",
   "dateTo": "2026-09-09",
@@ -420,9 +420,9 @@
       "awayLogo": "https://comet.ksi.is/file?id=ba78e821-0820-4358-bd59-8b3b5a96c1f4",
       "facility": "HS Orku völlurinn",
       "status": "SCHEDULED",
-      "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "liveStatus": "IN_PROGRESS",
+      "homeScore": 0,
+      "awayScore": 0,
       "officials": []
     },
     {
