@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-04T18:22:00.633372+00:00",
+  "updatedAt": "2026-09-04T21:26:00.542422+00:00",
   "date": "2026-09-04",
   "dateFrom": "2026-09-04",
   "dateTo": "2026-09-10",
@@ -15,8 +15,8 @@
       "facility": "Kórinn",
       "status": "SCHEDULED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 2,
+      "awayScore": 0,
       "officials": [
         {
           "personId": 15502,
@@ -49,8 +49,8 @@
       "facility": "Valsvöllur",
       "status": "SCHEDULED",
       "liveStatus": "NA",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 5,
+      "awayScore": 0,
       "officials": [
         {
           "personId": 71522,
@@ -561,16 +561,10 @@
           "orderNumber": 1
         },
         {
-          "personId": 86506,
-          "name": "Birgir Ágúst Andrésson",
-          "role": "Aðstoðardómari 1",
-          "orderNumber": 2
-        },
-        {
           "personId": 75340,
           "name": "Bjarki Sigurjónsson",
           "role": "Aðstoðardómari 2",
-          "orderNumber": 3
+          "orderNumber": 2
         }
       ]
     },
