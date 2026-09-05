@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-05T18:15:18.304826+00:00",
+  "updatedAt": "2026-09-05T20:21:17.619951+00:00",
   "date": "2026-09-05",
   "dateFrom": "2026-09-05",
   "dateTo": "2026-09-11",
@@ -549,7 +549,7 @@
       "homeLogo": "https://comet.ksi.is/file?id=cadcef07-afc7-4b94-8ca5-e5665b403226",
       "awayLogo": "https://comet.ksi.is/file?id=e9216648-28b9-456a-8f13-ad72223d75e3",
       "facility": "Grenivíkurvöllur",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
       "homeScore": 0,
       "awayScore": 2,
@@ -592,7 +592,7 @@
       "status": "SCHEDULED",
       "liveStatus": null,
       "homeScore": 2,
-      "awayScore": 1,
+      "awayScore": 3,
       "officials": [
         {
           "personId": 5847,
@@ -629,10 +629,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=135b7edd-e558-4dfe-a1dd-2956ac5a4bf3",
       "awayLogo": "https://comet.ksi.is/file?id=ba78e821-0820-4358-bd59-8b3b5a96c1f4",
       "facility": "HS Orku völlurinn",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 1,
+      "awayScore": 2,
       "officials": [
         {
           "personId": 36451,
