@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-05T16:02:17.439582+00:00",
+  "updatedAt": "2026-09-05T18:15:18.304826+00:00",
   "date": "2026-09-05",
   "dateFrom": "2026-09-05",
   "dateTo": "2026-09-11",
@@ -47,10 +47,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=20e14564-1f6d-4df5-8b70-a6e52582a73e",
       "awayLogo": "https://comet.ksi.is/file?id=b44d8199-8d93-4472-8b07-d7482a4ccac9",
       "facility": "Þarfaþingsvöllurinn",
-      "status": "SCHEDULED",
-      "liveStatus": "NA",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "PLAYED",
+      "liveStatus": "FULL_TIME",
+      "homeScore": 3,
+      "awayScore": 2,
       "officials": [
         {
           "personId": 25693,
@@ -87,10 +87,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=ab41e2cb-5839-4081-920b-62fa023c1a5e",
       "awayLogo": "https://comet.ksi.is/file?id=007a0a34-88fd-475b-82be-895ced8dc8c8",
       "facility": "JBÓ völlurinn",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 2,
+      "awayScore": 1,
       "officials": [
         {
           "personId": 15989,
@@ -127,10 +127,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=d6937a22-320d-4167-a3fa-4d3e34f433c4",
       "awayLogo": "https://comet.ksi.is/file?id=84fb0756-2829-4c67-ba34-98303709ba3e",
       "facility": "Kerecisvöllurinn",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
       "homeScore": 0,
-      "awayScore": 0,
+      "awayScore": 2,
       "officials": [
         {
           "personId": 20707,
@@ -167,10 +167,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=7debf8ed-b411-4dbb-9647-1c4bd140ecf7",
       "awayLogo": "https://comet.ksi.is/file?id=2a59ff70-be99-4c1c-9490-3d1e819cf6cc",
       "facility": "GeoSalmo völlurinn",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 1,
+      "awayScore": 1,
       "officials": [
         {
           "personId": 20621,
@@ -207,10 +207,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=cb661b78-41d9-44fe-9a68-213dd17b5623",
       "awayLogo": "https://comet.ksi.is/file?id=f2d584bb-41ff-4c03-a12d-9629d6acab02",
       "facility": "Kórinn",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 2,
+      "awayScore": 1,
       "officials": [
         {
           "personId": 22729,
@@ -247,10 +247,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=f12cdfbd-f638-42e4-8639-e668c256e98d",
       "awayLogo": "https://comet.ksi.is/file?id=5afa29d4-a7bd-472a-93be-ce649fab8af5",
       "facility": "Vivaldivöllurinn",
-      "status": "SCHEDULED",
-      "liveStatus": "NA",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "PLAYED",
+      "liveStatus": "FULL_TIME",
+      "homeScore": 0,
+      "awayScore": 2,
       "officials": [
         {
           "personId": 74027,
@@ -287,10 +287,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=a42fe67b-0c8e-472e-92ae-6c776f936b1d",
       "awayLogo": "https://comet.ksi.is/file?id=95d6913c-c0c2-4a44-b67e-cb464ac1941b",
       "facility": "Extra völlurinn",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 1,
+      "awayScore": 1,
       "officials": [
         {
           "personId": 21370,
@@ -327,10 +327,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=883885f1-2da9-4b11-9208-e67485068e15",
       "awayLogo": "https://comet.ksi.is/file?id=d40beebb-670a-44d6-8bac-972a9838918e",
       "facility": "Malbikstöðin að Varmá",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
-      "homeScore": 1,
-      "awayScore": 3,
+      "homeScore": 3,
+      "awayScore": 4,
       "officials": [
         {
           "personId": 27663,
@@ -367,10 +367,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=2b0071a0-382c-4b6e-9ab3-175184715a01",
       "awayLogo": "https://comet.ksi.is/file?id=06beb216-886f-4bd7-bc76-9d98ada66e58",
       "facility": "BIRTU völlurinn",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
       "homeScore": 1,
-      "awayScore": 0,
+      "awayScore": 2,
       "officials": [
         {
           "personId": 28354,
@@ -407,9 +407,9 @@
       "homeLogo": "https://comet.ksi.is/file?id=6f7f5564-74cc-4323-a424-6915fb79b646",
       "awayLogo": "https://comet.ksi.is/file?id=136d36fc-4974-41ee-b024-5619d18c5459",
       "facility": "Nesfisk-völlurinn",
-      "status": "SCHEDULED",
-      "liveStatus": "NA",
-      "homeScore": 3,
+      "status": "PLAYED",
+      "liveStatus": "FULL_TIME",
+      "homeScore": 5,
       "awayScore": 1,
       "officials": [
         {
@@ -441,9 +441,9 @@
       "homeLogo": "https://comet.ksi.is/file?id=2b0a8b9e-7814-443f-b96c-4b7b50786a9b",
       "awayLogo": "https://comet.ksi.is/file?id=ab598983-730a-4e37-91b6-9591bca92a33",
       "facility": "Jökulfellsvöllurinn",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
-      "homeScore": 1,
+      "homeScore": 3,
       "awayScore": 1,
       "officials": [
         {
@@ -475,10 +475,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=76b6e443-3453-4458-a1e3-1133c69005b8",
       "awayLogo": "https://comet.ksi.is/file?id=f905d614-ec58-4a20-af4d-502aff02ac99",
       "facility": "Miðgarður",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 4,
+      "awayScore": 1,
       "officials": [
         {
           "personId": 67442,
@@ -515,10 +515,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=25c07a23-5bc7-4621-a52f-57a4ff4c48ee",
       "awayLogo": "https://comet.ksi.is/file?id=16885f2f-9352-49c8-8ac7-1f5a932fd8e8",
       "facility": "Fagrilundur - gervigras",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
-      "homeScore": 1,
-      "awayScore": 0,
+      "homeScore": 2,
+      "awayScore": 2,
       "officials": [
         {
           "personId": 15502,
@@ -551,8 +551,8 @@
       "facility": "Grenivíkurvöllur",
       "status": "SCHEDULED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 2,
       "officials": [
         {
           "personId": 19925,
@@ -591,8 +591,8 @@
       "facility": "SÚN-völlurinn",
       "status": "SCHEDULED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 2,
+      "awayScore": 1,
       "officials": [
         {
           "personId": 5847,
@@ -898,13 +898,13 @@
     },
     {
       "id": 7100619,
-      "date": "2026-09-09T00:00:00.000Z",
+      "date": "2026-09-09T17:00:00.000Z",
       "competition": "Íslandsmót KSÍ - Lengjudeild karla 2026 - Umspil",
-      "home": "5.",
-      "away": "2.",
-      "homeLogo": null,
-      "awayLogo": null,
-      "facility": null,
+      "home": "Njarðvík",
+      "away": "Þróttur R.",
+      "homeLogo": "https://comet.ksi.is/file?id=ab41e2cb-5839-4081-920b-62fa023c1a5e",
+      "awayLogo": "https://comet.ksi.is/file?id=84fb0756-2829-4c67-ba34-98303709ba3e",
+      "facility": "JBÓ völlurinn",
       "status": "ENTERED",
       "liveStatus": null,
       "homeScore": null,
@@ -913,13 +913,13 @@
     },
     {
       "id": 7100718,
-      "date": "2026-09-09T00:00:00.000Z",
+      "date": "2026-09-09T19:15:00.000Z",
       "competition": "Íslandsmót KSÍ - Lengjudeild karla 2026 - Umspil",
-      "home": "4.",
-      "away": "3.",
-      "homeLogo": null,
-      "awayLogo": null,
-      "facility": null,
+      "home": "HK",
+      "away": "Fylkir",
+      "homeLogo": "https://comet.ksi.is/file?id=cb661b78-41d9-44fe-9a68-213dd17b5623",
+      "awayLogo": "https://comet.ksi.is/file?id=f2d584bb-41ff-4c03-a12d-9629d6acab02",
+      "facility": "Kórinn",
       "status": "ENTERED",
       "liveStatus": null,
       "homeScore": null,
