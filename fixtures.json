@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-05T09:01:51.004608+00:00",
+  "updatedAt": "2026-09-05T12:40:31.908593+00:00",
   "date": "2026-09-05",
   "dateFrom": "2026-09-05",
   "dateTo": "2026-09-11",
@@ -14,7 +14,7 @@
       "awayLogo": "https://comet.ksi.is/file?id=87c25915-59b3-4cf7-b1fa-3fdf88b309b2",
       "facility": "Knatthús Hauka",
       "status": "SCHEDULED",
-      "liveStatus": null,
+      "liveStatus": "NA",
       "homeScore": null,
       "awayScore": null,
       "officials": [
@@ -48,7 +48,7 @@
       "awayLogo": "https://comet.ksi.is/file?id=b44d8199-8d93-4472-8b07-d7482a4ccac9",
       "facility": "Þarfaþingsvöllurinn",
       "status": "SCHEDULED",
-      "liveStatus": null,
+      "liveStatus": "NA",
       "homeScore": null,
       "awayScore": null,
       "officials": [
@@ -368,7 +368,7 @@
       "awayLogo": "https://comet.ksi.is/file?id=f905d614-ec58-4a20-af4d-502aff02ac99",
       "facility": "Miðgarður",
       "status": "SCHEDULED",
-      "liveStatus": null,
+      "liveStatus": "NA",
       "homeScore": null,
       "awayScore": null,
       "officials": [
@@ -508,7 +508,7 @@
     },
     {
       "id": 7054091,
-      "date": "2026-09-05T14:00:00.000Z",
+      "date": "2026-09-05T14:30:00.000Z",
       "competition": "Íslandsmót KSÍ - 3. deild karla 2026",
       "home": "Árbær",
       "away": "KF",
