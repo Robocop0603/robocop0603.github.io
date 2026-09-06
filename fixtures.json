@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T14:08:36.885118+00:00",
+  "updatedAt": "2026-09-06T17:00:00.188677+00:00",
   "date": "2026-09-06",
   "dateFrom": "2026-09-06",
   "dateTo": "2026-09-12",
@@ -13,10 +13,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=5580fa53-772d-4be8-8f0b-e4c26ee9ad6a",
       "awayLogo": "https://comet.ksi.is/file?id=98827182-4af0-4f8b-b6f4-0aaeed8fde45",
       "facility": "VÍS völlurinn",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 1,
+      "awayScore": 0,
       "officials": [
         {
           "personId": 30015,
@@ -59,10 +59,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=04772e1f-0323-4dee-821c-88809b2499d4",
       "awayLogo": "https://comet.ksi.is/file?id=82b4a290-6bf0-414a-b292-bb11b2c884a6",
       "facility": "ELKEM völlurinn",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 3,
+      "awayScore": 1,
       "officials": [
         {
           "personId": 4114,
@@ -105,10 +105,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=a2fbd01a-8ee0-4a47-b39f-6674d10236f2",
       "awayLogo": "https://comet.ksi.is/file?id=f9e13ccb-cfd8-4d26-a479-b41230900197",
       "facility": "Víkingsvöllur",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 2,
+      "awayScore": 2,
       "officials": [
         {
           "personId": 6273,
@@ -151,10 +151,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=0d23d358-dd73-4c3a-8f4e-c225e273519c",
       "awayLogo": "https://comet.ksi.is/file?id=9cbcd4bf-2e6c-4e89-baa4-5323dbe60bd3",
       "facility": "Greifavöllurinn",
-      "status": "SCHEDULED",
-      "liveStatus": "NA",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "PLAYED",
+      "liveStatus": null,
+      "homeScore": 2,
+      "awayScore": 1,
       "officials": [
         {
           "personId": 75111,
@@ -197,10 +197,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=d588827d-21f1-42d7-83c9-15dd8ab4d294",
       "awayLogo": "https://comet.ksi.is/file?id=5aa260ce-3bfa-4377-b4ee-3595207efc3a",
       "facility": "Miðgarður",
-      "status": "SCHEDULED",
-      "liveStatus": "NA",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "PLAYED",
+      "liveStatus": "FULL_TIME",
+      "homeScore": 2,
+      "awayScore": 2,
       "officials": [
         {
           "personId": 11529,
