@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-08T15:05:15.295740+00:00",
+  "updatedAt": "2026-09-08T18:37:09.858955+00:00",
   "date": "2026-09-08",
   "dateFrom": "2026-09-08",
   "dateTo": "2026-09-14",
@@ -427,21 +427,6 @@
       "officials": []
     },
     {
-      "id": 7100727,
-      "date": "2026-09-13T14:00:00.000Z",
-      "competition": "Íslandsmót KSÍ - Lengjudeild karla 2026 - Umspil",
-      "home": "Fylkir",
-      "away": "HK",
-      "homeLogo": "https://comet.ksi.is/file?id=f2d584bb-41ff-4c03-a12d-9629d6acab02",
-      "awayLogo": "https://comet.ksi.is/file?id=cb661b78-41d9-44fe-9a68-213dd17b5623",
-      "facility": "tekk VÖLLURINN",
-      "status": "SCHEDULED",
-      "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
-      "officials": []
-    },
-    {
       "id": 7100635,
       "date": "2026-09-13T16:15:00.000Z",
       "competition": "Íslandsmót KSÍ - Lengjudeild karla 2026 - Umspil",
@@ -450,6 +435,21 @@
       "homeLogo": "https://comet.ksi.is/file?id=84fb0756-2829-4c67-ba34-98303709ba3e",
       "awayLogo": "https://comet.ksi.is/file?id=ab41e2cb-5839-4081-920b-62fa023c1a5e",
       "facility": "PEPSI völlurinn",
+      "status": "SCHEDULED",
+      "liveStatus": null,
+      "homeScore": null,
+      "awayScore": null,
+      "officials": []
+    },
+    {
+      "id": 7100727,
+      "date": "2026-09-13T19:15:00.000Z",
+      "competition": "Íslandsmót KSÍ - Lengjudeild karla 2026 - Umspil",
+      "home": "Fylkir",
+      "away": "HK",
+      "homeLogo": "https://comet.ksi.is/file?id=f2d584bb-41ff-4c03-a12d-9629d6acab02",
+      "awayLogo": "https://comet.ksi.is/file?id=cb661b78-41d9-44fe-9a68-213dd17b5623",
+      "facility": "tekk VÖLLURINN",
       "status": "SCHEDULED",
       "liveStatus": null,
       "homeScore": null,
