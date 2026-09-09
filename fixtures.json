@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-09T04:37:15.603184+00:00",
+  "updatedAt": "2026-09-09T09:41:26.357359+00:00",
   "date": "2026-09-09",
   "dateFrom": "2026-09-09",
   "dateTo": "2026-09-15",
@@ -109,7 +109,26 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 79535,
+          "name": "Przemyslaw Janik",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 82156,
+          "name": "Ásgeir Sigurðsson",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 72601,
+          "name": "Ísak Trausti Ingólfsson Lehmann",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        }
+      ]
     },
     {
       "id": 7056068,
@@ -124,7 +143,26 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 27663,
+          "name": "Milan Djurovic",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 27953,
+          "name": "Damian Pawlik",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 64031,
+          "name": "Sigurður Þór Sveinsson",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        }
+      ]
     },
     {
       "id": 7056070,
@@ -139,7 +177,26 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 19925,
+          "name": "Reynir Ingi Finnsson",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 10770,
+          "name": "Steinar Stephensen",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 82885,
+          "name": "Pálmi Víðir Bjarnason",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        }
+      ]
     },
     {
       "id": 7067973,
