@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-09T14:33:36.703260+00:00",
+  "updatedAt": "2026-09-09T18:33:15.897993+00:00",
   "date": "2026-09-09",
   "dateFrom": "2026-09-09",
   "dateTo": "2026-09-15",
@@ -60,7 +60,7 @@
       "awayLogo": "https://comet.ksi.is/file?id=f2d584bb-41ff-4c03-a12d-9629d6acab02",
       "facility": "Kórinn",
       "status": "SCHEDULED",
-      "liveStatus": null,
+      "liveStatus": "NA",
       "homeScore": null,
       "awayScore": null,
       "officials": [
@@ -117,16 +117,10 @@
           "orderNumber": 1
         },
         {
-          "personId": 27953,
-          "name": "Damian Pawlik",
-          "role": "Aðstoðardómari 1",
-          "orderNumber": 2
-        },
-        {
           "personId": 64031,
           "name": "Sigurður Þór Sveinsson",
-          "role": "Aðstoðardómari 2",
-          "orderNumber": 3
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
         }
       ]
     },
@@ -191,8 +185,8 @@
           "orderNumber": 2
         },
         {
-          "personId": 72601,
-          "name": "Ísak Trausti Ingólfsson Lehmann",
+          "personId": 27953,
+          "name": "Damian Pawlik",
           "role": "Aðstoðardómari 2",
           "orderNumber": 3
         }
