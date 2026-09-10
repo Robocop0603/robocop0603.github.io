@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-10T04:37:28.226616+00:00",
+  "updatedAt": "2026-09-10T09:40:19.018011+00:00",
   "date": "2026-09-10",
   "dateFrom": "2026-09-10",
   "dateTo": "2026-09-16",
@@ -113,7 +113,50 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 36451,
+          "name": "Ívar Orri Kristjánsson",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 27654,
+          "name": "Birkir Sigurðarson",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 19413,
+          "name": "Gylfi Már Sigurðsson",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        },
+        {
+          "personId": 11529,
+          "name": "Gunnar Oddur Hafliðason",
+          "role": "Fjórði dómari",
+          "orderNumber": 4
+        },
+        {
+          "personId": 2565,
+          "name": "Oddur Helgi Guðmundsson",
+          "role": "Dómaraeftirlitsmaður",
+          "orderNumber": 5
+        },
+        {
+          "personId": 3840,
+          "name": "Guðmundur Ingi Bjarnason",
+          "role": null,
+          "orderNumber": 6
+        },
+        {
+          "personId": 6751,
+          "name": "Haraldur V Haraldsson",
+          "role": "Match Delegate",
+          "orderNumber": 7
+        }
+      ]
     },
     {
       "id": 7053326,
