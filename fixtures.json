@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-12T16:17:13.648226+00:00",
+  "updatedAt": "2026-09-12T19:17:59.406038+00:00",
   "date": "2026-09-12",
   "dateFrom": "2026-09-12",
   "dateTo": "2026-09-18",
@@ -47,10 +47,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=95d6913c-c0c2-4a44-b67e-cb464ac1941b",
       "awayLogo": "https://comet.ksi.is/file?id=cadcef07-afc7-4b94-8ca5-e5665b403226",
       "facility": "Vogaídýfuvöllur",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 2,
+      "awayScore": 1,
       "officials": [
         {
           "personId": 5847,
@@ -87,7 +87,7 @@
       "homeLogo": "https://comet.ksi.is/file?id=e9216648-28b9-456a-8f13-ad72223d75e3",
       "awayLogo": "https://comet.ksi.is/file?id=2b0071a0-382c-4b6e-9ab3-175184715a01",
       "facility": "Akraneshöllin",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
       "homeScore": 4,
       "awayScore": 0,
@@ -127,10 +127,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=06beb216-886f-4bd7-bc76-9d98ada66e58",
       "awayLogo": "https://comet.ksi.is/file?id=76b6e443-3453-4458-a1e3-1133c69005b8",
       "facility": "JÁVERK-völlurinn",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 2,
+      "awayScore": 1,
       "officials": [
         {
           "personId": 75111,
@@ -207,10 +207,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=65d44e5b-3a1b-440a-91f7-6f6a06e2b0d2",
       "awayLogo": "https://comet.ksi.is/file?id=883885f1-2da9-4b11-9208-e67485068e15",
       "facility": "Dalvíkurvöllur",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
-      "homeScore": 0,
-      "awayScore": 0,
+      "homeScore": 4,
+      "awayScore": 1,
       "officials": [
         {
           "personId": 74027,
@@ -247,10 +247,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=d40beebb-670a-44d6-8bac-972a9838918e",
       "awayLogo": "https://comet.ksi.is/file?id=a42fe67b-0c8e-472e-92ae-6c776f936b1d",
       "facility": "Blönduósvöllur",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
       "homeScore": 1,
-      "awayScore": 0,
+      "awayScore": 2,
       "officials": [
         {
           "personId": 64034,
@@ -423,10 +423,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=16885f2f-9352-49c8-8ac7-1f5a932fd8e8",
       "awayLogo": "https://comet.ksi.is/file?id=d3ad8173-3ecd-4a66-81ae-e1e71c71a560",
       "facility": "Ólafsfjarðarvöllur",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
-      "homeScore": 0,
-      "awayScore": 0,
+      "homeScore": 2,
+      "awayScore": 3,
       "officials": [
         {
           "personId": 26691,
@@ -491,7 +491,7 @@
       "homeLogo": "https://comet.ksi.is/file?id=918c4f38-072b-4add-9531-416163db151a",
       "awayLogo": "https://comet.ksi.is/file?id=4ff9e019-c4d5-4bd7-a0cd-05b5dd5ea357",
       "facility": "Helluvöllur",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
       "homeScore": 0,
       "awayScore": 2,
