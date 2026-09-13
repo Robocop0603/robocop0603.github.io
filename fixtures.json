@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-13T18:10:22.514201+00:00",
+  "updatedAt": "2026-09-13T20:46:17.556922+00:00",
   "date": "2026-09-13",
   "dateFrom": "2026-09-13",
   "dateTo": "2026-09-19",
@@ -197,10 +197,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=84fb0756-2829-4c67-ba34-98303709ba3e",
       "awayLogo": "https://comet.ksi.is/file?id=ab41e2cb-5839-4081-920b-62fa023c1a5e",
       "facility": "PEPSI völlurinn",
-      "status": "SCHEDULED",
+      "status": "PLAYED",
       "liveStatus": null,
-      "homeScore": 1,
-      "awayScore": 0,
+      "homeScore": 2,
+      "awayScore": 1,
       "officials": [
         {
           "personId": 22729,
@@ -244,7 +244,7 @@
       "awayLogo": "https://comet.ksi.is/file?id=cb661b78-41d9-44fe-9a68-213dd17b5623",
       "facility": "tekk VÖLLURINN",
       "status": "SCHEDULED",
-      "liveStatus": null,
+      "liveStatus": "NA",
       "homeScore": null,
       "awayScore": null,
       "officials": [
