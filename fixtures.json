@@ -1,55 +1,9 @@
 {
-  "updatedAt": "2026-09-14T22:28:16.818878+00:00",
-  "date": "2026-09-14",
-  "dateFrom": "2026-09-14",
-  "dateTo": "2026-09-20",
+  "updatedAt": "2026-09-15T01:25:35.067789+00:00",
+  "date": "2026-09-15",
+  "dateFrom": "2026-09-15",
+  "dateTo": "2026-09-21",
   "games": [
-    {
-      "id": 7100149,
-      "date": "2026-09-14T19:15:00.000Z",
-      "competition": "Íslandsmót KSÍ - Besta deild karla 2026 - Efri hluti",
-      "home": "Víkingur R.",
-      "away": "Keflavík",
-      "homeLogo": "https://comet.ksi.is/file?id=a2fbd01a-8ee0-4a47-b39f-6674d10236f2",
-      "awayLogo": "https://comet.ksi.is/file?id=135b7edd-e558-4dfe-a1dd-2956ac5a4bf3",
-      "facility": "Víkingsvöllur",
-      "status": "PLAYED",
-      "liveStatus": null,
-      "homeScore": 4,
-      "awayScore": 1,
-      "officials": [
-        {
-          "personId": 30015,
-          "name": "Pétur Guðmundsson",
-          "role": "Dómari",
-          "orderNumber": 1
-        },
-        {
-          "personId": 27654,
-          "name": "Birkir Sigurðarson",
-          "role": "Aðstoðardómari 1",
-          "orderNumber": 2
-        },
-        {
-          "personId": 10851,
-          "name": "Eysteinn Hrafnkelsson",
-          "role": "Aðstoðardómari 2",
-          "orderNumber": 3
-        },
-        {
-          "personId": 28354,
-          "name": "Arnar Þór Stefánsson",
-          "role": "Fjórði dómari",
-          "orderNumber": 4
-        },
-        {
-          "personId": 23318,
-          "name": "Jón Magnús Guðjónsson",
-          "role": "Dómaraeftirlitsmaður",
-          "orderNumber": 5
-        }
-      ]
-    },
     {
       "id": 7100151,
       "date": "2026-09-15T19:15:00.000Z",
