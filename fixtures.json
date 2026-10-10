@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-10T05:46:49.445212+00:00",
+  "updatedAt": "2026-10-10T12:26:03.239206+00:00",
   "date": "2026-10-10",
   "dateFrom": "2026-10-10",
   "dateTo": "2026-10-16",
@@ -60,7 +60,7 @@
       "awayLogo": "https://comet.ksi.is/file?id=98827182-4af0-4f8b-b6f4-0aaeed8fde45",
       "facility": "N1-völlurinn Hlíðarenda",
       "status": "SCHEDULED",
-      "liveStatus": null,
+      "liveStatus": "NA",
       "homeScore": null,
       "awayScore": null,
       "officials": [
@@ -201,7 +201,38 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 10034,
+          "name": "Sigurður Hjörtur Þrastarson",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 28278,
+          "name": "Kristján Már Ólafs",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 54306,
+          "name": "Þráinn Jón Elmarsson",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        },
+        {
+          "personId": 20707,
+          "name": "Aðalbjörn Heiðar Þorsteinsson",
+          "role": "Fjórði dómari",
+          "orderNumber": 4
+        },
+        {
+          "personId": 2565,
+          "name": "Oddur Helgi Guðmundsson",
+          "role": "Dómaraeftirlitsmaður",
+          "orderNumber": 5
+        }
+      ]
     },
     {
       "id": 7100157,
@@ -216,7 +247,38 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 15989,
+          "name": "Arnar Ingi Ingvarsson",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 34832,
+          "name": "Patrik Freyr Guðmundsson",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 2700,
+          "name": "Eðvarð Þór Eðvarðsson",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        },
+        {
+          "personId": 11529,
+          "name": "Gunnar Oddur Hafliðason",
+          "role": "Fjórði dómari",
+          "orderNumber": 4
+        },
+        {
+          "personId": 3715,
+          "name": "Gylfi Þór Orrason",
+          "role": "Dómaraeftirlitsmaður",
+          "orderNumber": 5
+        }
+      ]
     }
   ]
 }
