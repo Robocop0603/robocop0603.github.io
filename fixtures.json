@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-10T17:50:10.758322+00:00",
+  "updatedAt": "2026-10-10T21:38:52.514744+00:00",
   "date": "2026-10-10",
   "dateFrom": "2026-10-10",
   "dateTo": "2026-10-16",
@@ -153,8 +153,8 @@
       "facility": "Lambhagavöllurinn",
       "status": "SCHEDULED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 1,
+      "awayScore": 2,
       "officials": [
         {
           "personId": 36451,
