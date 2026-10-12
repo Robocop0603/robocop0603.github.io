@@ -1,101 +1,9 @@
 {
-  "updatedAt": "2026-10-11T22:51:08.429613+00:00",
-  "date": "2026-10-11",
-  "dateFrom": "2026-10-11",
-  "dateTo": "2026-10-17",
+  "updatedAt": "2026-10-12T02:21:26.971603+00:00",
+  "date": "2026-10-12",
+  "dateFrom": "2026-10-12",
+  "dateTo": "2026-10-18",
   "games": [
-    {
-      "id": 7100155,
-      "date": "2026-10-11T19:15:00.000Z",
-      "competition": "Íslandsmót KSÍ - Besta deild karla 2026 - Efri hluti",
-      "home": "Víkingur R.",
-      "away": "ÍA",
-      "homeLogo": "https://comet.ksi.is/file?id=a2fbd01a-8ee0-4a47-b39f-6674d10236f2",
-      "awayLogo": "https://comet.ksi.is/file?id=04772e1f-0323-4dee-821c-88809b2499d4",
-      "facility": "Víkingsvöllur",
-      "status": "PLAYED",
-      "liveStatus": null,
-      "homeScore": 2,
-      "awayScore": 2,
-      "officials": [
-        {
-          "personId": 10034,
-          "name": "Sigurður Hjörtur Þrastarson",
-          "role": "Dómari",
-          "orderNumber": 1
-        },
-        {
-          "personId": 28278,
-          "name": "Kristján Már Ólafs",
-          "role": "Aðstoðardómari 1",
-          "orderNumber": 2
-        },
-        {
-          "personId": 54306,
-          "name": "Þráinn Jón Elmarsson",
-          "role": "Aðstoðardómari 2",
-          "orderNumber": 3
-        },
-        {
-          "personId": 20707,
-          "name": "Aðalbjörn Heiðar Þorsteinsson",
-          "role": "Fjórði dómari",
-          "orderNumber": 4
-        },
-        {
-          "personId": 2565,
-          "name": "Oddur Helgi Guðmundsson",
-          "role": "Dómaraeftirlitsmaður",
-          "orderNumber": 5
-        }
-      ]
-    },
-    {
-      "id": 7100157,
-      "date": "2026-10-11T19:15:00.000Z",
-      "competition": "Íslandsmót KSÍ - Besta deild karla 2026 - Efri hluti",
-      "home": "Breiðablik",
-      "away": "Keflavík",
-      "homeLogo": "https://comet.ksi.is/file?id=9cbcd4bf-2e6c-4e89-baa4-5323dbe60bd3",
-      "awayLogo": "https://comet.ksi.is/file?id=135b7edd-e558-4dfe-a1dd-2956ac5a4bf3",
-      "facility": "Eikarvöllurinn",
-      "status": "PLAYED",
-      "liveStatus": null,
-      "homeScore": 3,
-      "awayScore": 1,
-      "officials": [
-        {
-          "personId": 15989,
-          "name": "Arnar Ingi Ingvarsson",
-          "role": "Dómari",
-          "orderNumber": 1
-        },
-        {
-          "personId": 34832,
-          "name": "Patrik Freyr Guðmundsson",
-          "role": "Aðstoðardómari 1",
-          "orderNumber": 2
-        },
-        {
-          "personId": 2700,
-          "name": "Eðvarð Þór Eðvarðsson",
-          "role": "Aðstoðardómari 2",
-          "orderNumber": 3
-        },
-        {
-          "personId": 11529,
-          "name": "Gunnar Oddur Hafliðason",
-          "role": "Fjórði dómari",
-          "orderNumber": 4
-        },
-        {
-          "personId": 3715,
-          "name": "Gylfi Þór Orrason",
-          "role": "Dómaraeftirlitsmaður",
-          "orderNumber": 5
-        }
-      ]
-    },
     {
       "id": 7100160,
       "date": "2026-10-17T14:00:00.000Z",
@@ -165,6 +73,21 @@
       "homeLogo": "https://comet.ksi.is/file?id=9cbcd4bf-2e6c-4e89-baa4-5323dbe60bd3",
       "awayLogo": "https://comet.ksi.is/file?id=a2fbd01a-8ee0-4a47-b39f-6674d10236f2",
       "facility": "Eikarvöllurinn",
+      "status": "ENTERED",
+      "liveStatus": null,
+      "homeScore": null,
+      "awayScore": null,
+      "officials": []
+    },
+    {
+      "id": 7100159,
+      "date": "2026-10-18T19:15:00.000Z",
+      "competition": "Íslandsmót KSÍ - Besta deild karla 2026 - Efri hluti",
+      "home": "Fram",
+      "away": "ÍA",
+      "homeLogo": "https://comet.ksi.is/file?id=f9e13ccb-cfd8-4d26-a479-b41230900197",
+      "awayLogo": "https://comet.ksi.is/file?id=04772e1f-0323-4dee-821c-88809b2499d4",
+      "facility": "Lambhagavöllurinn",
       "status": "ENTERED",
       "liveStatus": null,
       "homeScore": null,
