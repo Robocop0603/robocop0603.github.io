@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-15T11:22:16.748529+00:00",
+  "updatedAt": "2026-10-15T16:56:09.036001+00:00",
   "date": "2026-10-15",
   "dateFrom": "2026-10-15",
   "dateTo": "2026-10-21",
@@ -41,6 +41,12 @@
           "name": "Hreinn Magnússon",
           "role": "Fjórði dómari",
           "orderNumber": 4
+        },
+        {
+          "personId": 4901,
+          "name": "Egill Már Markússon",
+          "role": "Dómaraeftirlitsmaður",
+          "orderNumber": 5
         }
       ]
     },
@@ -77,16 +83,22 @@
           "orderNumber": 3
         },
         {
+          "personId": 30367,
+          "name": "Vilhjálmur Alvar Þórarinsson",
+          "role": "Fjórði dómari",
+          "orderNumber": 4
+        },
+        {
           "personId": 23318,
           "name": "Jón Magnús Guðjónsson",
           "role": "Dómaraeftirlitsmaður",
-          "orderNumber": 4
+          "orderNumber": 5
         }
       ]
     },
     {
       "id": 7100160,
-      "date": "2026-10-17T14:00:00.000Z",
+      "date": "2026-10-17T12:00:00.000Z",
       "competition": "Íslandsmót KSÍ - Besta deild karla 2026 - Efri hluti",
       "home": "Keflavík",
       "away": "KR",
