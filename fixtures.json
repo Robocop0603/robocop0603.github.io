@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-15T05:52:25.414268+00:00",
+  "updatedAt": "2026-10-15T11:22:16.748529+00:00",
   "date": "2026-10-15",
   "dateFrom": "2026-10-15",
   "dateTo": "2026-10-21",
@@ -57,7 +57,32 @@
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
-      "officials": []
+      "officials": [
+        {
+          "personId": 36451,
+          "name": "Ívar Orri Kristjánsson",
+          "role": "Dómari",
+          "orderNumber": 1
+        },
+        {
+          "personId": 27654,
+          "name": "Birkir Sigurðarson",
+          "role": "Aðstoðardómari 1",
+          "orderNumber": 2
+        },
+        {
+          "personId": 33585,
+          "name": "Ragnar Þór Bender",
+          "role": "Aðstoðardómari 2",
+          "orderNumber": 3
+        },
+        {
+          "personId": 23318,
+          "name": "Jón Magnús Guðjónsson",
+          "role": "Dómaraeftirlitsmaður",
+          "orderNumber": 4
+        }
+      ]
     },
     {
       "id": 7100160,
