@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-16T18:47:00.962877+00:00",
+  "updatedAt": "2026-10-16T22:03:45.619057+00:00",
   "date": "2026-10-16",
   "dateFrom": "2026-10-16",
   "dateTo": "2026-10-22",
@@ -13,10 +13,10 @@
       "homeLogo": "https://comet.ksi.is/file?id=5aa260ce-3bfa-4377-b4ee-3595207efc3a",
       "awayLogo": "https://comet.ksi.is/file?id=98827182-4af0-4f8b-b6f4-0aaeed8fde45",
       "facility": "Hásteinsvöllur",
-      "status": "SCHEDULED",
-      "liveStatus": "NA",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "PLAYED",
+      "liveStatus": "FULL_TIME",
+      "homeScore": 3,
+      "awayScore": 1,
       "officials": [
         {
           "personId": 11529,
@@ -61,8 +61,8 @@
       "facility": "Eikarvöllurinn",
       "status": "SCHEDULED",
       "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 1,
+      "awayScore": 2,
       "officials": [
         {
           "personId": 36451,
