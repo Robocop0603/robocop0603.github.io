@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-16T09:44:44.199380+00:00",
+  "updatedAt": "2026-10-16T14:48:32.124667+00:00",
   "date": "2026-10-16",
   "dateFrom": "2026-10-16",
   "dateTo": "2026-10-22",
@@ -14,7 +14,7 @@
       "awayLogo": "https://comet.ksi.is/file?id=98827182-4af0-4f8b-b6f4-0aaeed8fde45",
       "facility": "Hásteinsvöllur",
       "status": "SCHEDULED",
-      "liveStatus": null,
+      "liveStatus": "NA",
       "homeScore": null,
       "awayScore": null,
       "officials": [
@@ -236,7 +236,7 @@
     },
     {
       "id": 7100159,
-      "date": "2026-10-18T19:15:00.000Z",
+      "date": "2026-10-19T19:15:00.000Z",
       "competition": "Íslandsmót KSÍ - Besta deild karla 2026 - Efri hluti",
       "home": "Fram",
       "away": "ÍA",
