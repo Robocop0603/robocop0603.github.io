@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-17T10:37:04.450099+00:00",
+  "updatedAt": "2026-10-17T14:10:59.661970+00:00",
   "date": "2026-10-17",
   "dateFrom": "2026-10-17",
   "dateTo": "2026-10-23",
@@ -60,9 +60,9 @@
       "awayLogo": "https://comet.ksi.is/file?id=0d23d358-dd73-4c3a-8f4e-c225e273519c",
       "facility": "N1-völlurinn Hlíðarenda",
       "status": "SCHEDULED",
-      "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
+      "liveStatus": "NA",
+      "homeScore": 1,
+      "awayScore": 1,
       "officials": [
         {
           "personId": 22729,
