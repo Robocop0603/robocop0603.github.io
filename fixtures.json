@@ -1,147 +1,9 @@
 {
-  "updatedAt": "2026-10-17T22:15:20.012330+00:00",
-  "date": "2026-10-17",
-  "dateFrom": "2026-10-17",
-  "dateTo": "2026-10-23",
+  "updatedAt": "2026-10-18T00:02:51.272273+00:00",
+  "date": "2026-10-18",
+  "dateFrom": "2026-10-18",
+  "dateTo": "2026-10-24",
   "games": [
-    {
-      "id": 7100160,
-      "date": "2026-10-17T12:00:00.000Z",
-      "competition": "Íslandsmót KSÍ - Besta deild karla 2026 - Efri hluti",
-      "home": "Keflavík",
-      "away": "KR",
-      "homeLogo": "https://comet.ksi.is/file?id=135b7edd-e558-4dfe-a1dd-2956ac5a4bf3",
-      "awayLogo": "https://comet.ksi.is/file?id=82b4a290-6bf0-414a-b292-bb11b2c884a6",
-      "facility": "HS Orku völlurinn",
-      "status": "PLAYED",
-      "liveStatus": null,
-      "homeScore": 2,
-      "awayScore": 3,
-      "officials": [
-        {
-          "personId": 35383,
-          "name": "Helgi Mikael Jónasson",
-          "role": "Dómari",
-          "orderNumber": 1
-        },
-        {
-          "personId": 2446,
-          "name": "Antoníus Bjarki Halldórsson",
-          "role": "Aðstoðardómari 1",
-          "orderNumber": 2
-        },
-        {
-          "personId": 14181,
-          "name": "Guðni Freyr Ingvason",
-          "role": "Aðstoðardómari 2",
-          "orderNumber": 3
-        },
-        {
-          "personId": 75111,
-          "name": "Twana Khalid Ahmed",
-          "role": "Fjórði dómari",
-          "orderNumber": 4
-        },
-        {
-          "personId": 4901,
-          "name": "Egill Már Markússon",
-          "role": "Dómaraeftirlitsmaður",
-          "orderNumber": 5
-        }
-      ]
-    },
-    {
-      "id": 7100293,
-      "date": "2026-10-17T13:00:00.000Z",
-      "competition": "Íslandsmót KSÍ - Besta deild karla 2026 - Neðri hluti",
-      "home": "Valur",
-      "away": "KA",
-      "homeLogo": "https://comet.ksi.is/file?id=ba78e821-0820-4358-bd59-8b3b5a96c1f4",
-      "awayLogo": "https://comet.ksi.is/file?id=0d23d358-dd73-4c3a-8f4e-c225e273519c",
-      "facility": "N1-völlurinn Hlíðarenda",
-      "status": "PLAYED",
-      "liveStatus": null,
-      "homeScore": 4,
-      "awayScore": 1,
-      "officials": [
-        {
-          "personId": 22729,
-          "name": "Elías Ingi Árnason",
-          "role": "Dómari",
-          "orderNumber": 1
-        },
-        {
-          "personId": 84704,
-          "name": "Jovan Subic",
-          "role": "Aðstoðardómari 1",
-          "orderNumber": 2
-        },
-        {
-          "personId": 54306,
-          "name": "Þráinn Jón Elmarsson",
-          "role": "Aðstoðardómari 2",
-          "orderNumber": 3
-        },
-        {
-          "personId": 30015,
-          "name": "Pétur Guðmundsson",
-          "role": "Fjórði dómari",
-          "orderNumber": 4
-        },
-        {
-          "personId": 4355,
-          "name": "Einar Örn Daníelsson",
-          "role": "Dómaraeftirlitsmaður",
-          "orderNumber": 5
-        }
-      ]
-    },
-    {
-      "id": 7100292,
-      "date": "2026-10-17T14:00:00.000Z",
-      "competition": "Íslandsmót KSÍ - Besta deild karla 2026 - Neðri hluti",
-      "home": "Þór",
-      "away": "Stjarnan",
-      "homeLogo": "https://comet.ksi.is/file?id=5580fa53-772d-4be8-8f0b-e4c26ee9ad6a",
-      "awayLogo": "https://comet.ksi.is/file?id=d588827d-21f1-42d7-83c9-15dd8ab4d294",
-      "facility": "VÍS völlurinn",
-      "status": "PLAYED",
-      "liveStatus": null,
-      "homeScore": 3,
-      "awayScore": 1,
-      "officials": [
-        {
-          "personId": 6273,
-          "name": "Þórður Þorsteinsson Þórðarson",
-          "role": "Dómari",
-          "orderNumber": 1
-        },
-        {
-          "personId": 3840,
-          "name": "Guðmundur Ingi Bjarnason",
-          "role": "Aðstoðardómari 1",
-          "orderNumber": 2
-        },
-        {
-          "personId": 38576,
-          "name": "Kristofer Bergmann",
-          "role": "Aðstoðardómari 2",
-          "orderNumber": 3
-        },
-        {
-          "personId": 15989,
-          "name": "Arnar Ingi Ingvarsson",
-          "role": "Fjórði dómari",
-          "orderNumber": 4
-        },
-        {
-          "personId": 2795,
-          "name": "Magnús Sigurður Sigurólason",
-          "role": "Dómaraeftirlitsmaður",
-          "orderNumber": 5
-        }
-      ]
-    },
     {
       "id": 7100159,
       "date": "2026-10-19T19:15:00.000Z",
@@ -152,6 +14,96 @@
       "awayLogo": "https://comet.ksi.is/file?id=04772e1f-0323-4dee-821c-88809b2499d4",
       "facility": "Lambhagavöllurinn",
       "status": "SCHEDULED",
+      "liveStatus": null,
+      "homeScore": null,
+      "awayScore": null,
+      "officials": []
+    },
+    {
+      "id": 7100161,
+      "date": "2026-10-24T14:00:00.000Z",
+      "competition": "Íslandsmót KSÍ - Besta deild karla 2026 - Efri hluti",
+      "home": "Víkingur R.",
+      "away": "Fram",
+      "homeLogo": "https://comet.ksi.is/file?id=a2fbd01a-8ee0-4a47-b39f-6674d10236f2",
+      "awayLogo": "https://comet.ksi.is/file?id=f9e13ccb-cfd8-4d26-a479-b41230900197",
+      "facility": "Víkingsvöllur",
+      "status": "ENTERED",
+      "liveStatus": null,
+      "homeScore": null,
+      "awayScore": null,
+      "officials": []
+    },
+    {
+      "id": 7100162,
+      "date": "2026-10-24T14:00:00.000Z",
+      "competition": "Íslandsmót KSÍ - Besta deild karla 2026 - Efri hluti",
+      "home": "KR",
+      "away": "Breiðablik",
+      "homeLogo": "https://comet.ksi.is/file?id=82b4a290-6bf0-414a-b292-bb11b2c884a6",
+      "awayLogo": "https://comet.ksi.is/file?id=9cbcd4bf-2e6c-4e89-baa4-5323dbe60bd3",
+      "facility": "Meistaravellir",
+      "status": "ENTERED",
+      "liveStatus": null,
+      "homeScore": null,
+      "awayScore": null,
+      "officials": []
+    },
+    {
+      "id": 7100163,
+      "date": "2026-10-24T14:00:00.000Z",
+      "competition": "Íslandsmót KSÍ - Besta deild karla 2026 - Efri hluti",
+      "home": "ÍA",
+      "away": "Keflavík",
+      "homeLogo": "https://comet.ksi.is/file?id=04772e1f-0323-4dee-821c-88809b2499d4",
+      "awayLogo": "https://comet.ksi.is/file?id=135b7edd-e558-4dfe-a1dd-2956ac5a4bf3",
+      "facility": "ELKEM völlurinn",
+      "status": "ENTERED",
+      "liveStatus": null,
+      "homeScore": null,
+      "awayScore": null,
+      "officials": []
+    },
+    {
+      "id": 7100295,
+      "date": "2026-10-24T14:00:00.000Z",
+      "competition": "Íslandsmót KSÍ - Besta deild karla 2026 - Neðri hluti",
+      "home": "Stjarnan",
+      "away": "Valur",
+      "homeLogo": "https://comet.ksi.is/file?id=d588827d-21f1-42d7-83c9-15dd8ab4d294",
+      "awayLogo": "https://comet.ksi.is/file?id=ba78e821-0820-4358-bd59-8b3b5a96c1f4",
+      "facility": "Samsungvöllurinn",
+      "status": "ENTERED",
+      "liveStatus": null,
+      "homeScore": null,
+      "awayScore": null,
+      "officials": []
+    },
+    {
+      "id": 7100296,
+      "date": "2026-10-24T14:00:00.000Z",
+      "competition": "Íslandsmót KSÍ - Besta deild karla 2026 - Neðri hluti",
+      "home": "FH",
+      "away": "Þór",
+      "homeLogo": "https://comet.ksi.is/file?id=98827182-4af0-4f8b-b6f4-0aaeed8fde45",
+      "awayLogo": "https://comet.ksi.is/file?id=5580fa53-772d-4be8-8f0b-e4c26ee9ad6a",
+      "facility": "Kaplakrikavöllur",
+      "status": "ENTERED",
+      "liveStatus": null,
+      "homeScore": null,
+      "awayScore": null,
+      "officials": []
+    },
+    {
+      "id": 7100297,
+      "date": "2026-10-24T14:00:00.000Z",
+      "competition": "Íslandsmót KSÍ - Besta deild karla 2026 - Neðri hluti",
+      "home": "KA",
+      "away": "ÍBV",
+      "homeLogo": "https://comet.ksi.is/file?id=0d23d358-dd73-4c3a-8f4e-c225e273519c",
+      "awayLogo": "https://comet.ksi.is/file?id=5aa260ce-3bfa-4377-b4ee-3595207efc3a",
+      "facility": "Greifavöllurinn",
+      "status": "ENTERED",
       "liveStatus": null,
       "homeScore": null,
       "awayScore": null,
