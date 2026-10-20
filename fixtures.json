@@ -1,24 +1,9 @@
 {
-  "updatedAt": "2026-10-20T15:01:34.242624+00:00",
+  "updatedAt": "2026-10-20T19:12:03.150937+00:00",
   "date": "2026-10-20",
   "dateFrom": "2026-10-20",
   "dateTo": "2026-10-26",
   "games": [
-    {
-      "id": 7100161,
-      "date": "2026-10-24T14:00:00.000Z",
-      "competition": "Íslandsmót KSÍ - Besta deild karla 2026 - Efri hluti",
-      "home": "Víkingur R.",
-      "away": "Fram",
-      "homeLogo": "https://comet.ksi.is/file?id=a2fbd01a-8ee0-4a47-b39f-6674d10236f2",
-      "awayLogo": "https://comet.ksi.is/file?id=f9e13ccb-cfd8-4d26-a479-b41230900197",
-      "facility": "Víkingsvöllur",
-      "status": "SCHEDULED",
-      "liveStatus": null,
-      "homeScore": null,
-      "awayScore": null,
-      "officials": []
-    },
     {
       "id": 7100162,
       "date": "2026-10-24T14:00:00.000Z",
@@ -88,6 +73,21 @@
       "homeLogo": "https://comet.ksi.is/file?id=0d23d358-dd73-4c3a-8f4e-c225e273519c",
       "awayLogo": "https://comet.ksi.is/file?id=5aa260ce-3bfa-4377-b4ee-3595207efc3a",
       "facility": "Greifavöllurinn",
+      "status": "SCHEDULED",
+      "liveStatus": null,
+      "homeScore": null,
+      "awayScore": null,
+      "officials": []
+    },
+    {
+      "id": 7100161,
+      "date": "2026-10-24T16:15:00.000Z",
+      "competition": "Íslandsmót KSÍ - Besta deild karla 2026 - Efri hluti",
+      "home": "Víkingur R.",
+      "away": "Fram",
+      "homeLogo": "https://comet.ksi.is/file?id=a2fbd01a-8ee0-4a47-b39f-6674d10236f2",
+      "awayLogo": "https://comet.ksi.is/file?id=f9e13ccb-cfd8-4d26-a479-b41230900197",
+      "facility": "Víkingsvöllur",
       "status": "SCHEDULED",
       "liveStatus": null,
       "homeScore": null,
