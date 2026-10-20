@@ -1,55 +1,9 @@
 {
-  "updatedAt": "2026-10-19T23:36:15.040452+00:00",
-  "date": "2026-10-19",
-  "dateFrom": "2026-10-19",
-  "dateTo": "2026-10-25",
+  "updatedAt": "2026-10-20T04:43:54.014301+00:00",
+  "date": "2026-10-20",
+  "dateFrom": "2026-10-20",
+  "dateTo": "2026-10-26",
   "games": [
-    {
-      "id": 7100159,
-      "date": "2026-10-19T19:15:00.000Z",
-      "competition": "Íslandsmót KSÍ - Besta deild karla 2026 - Efri hluti",
-      "home": "Fram",
-      "away": "ÍA",
-      "homeLogo": "https://comet.ksi.is/file?id=f9e13ccb-cfd8-4d26-a479-b41230900197",
-      "awayLogo": "https://comet.ksi.is/file?id=04772e1f-0323-4dee-821c-88809b2499d4",
-      "facility": "Lambhagavöllurinn",
-      "status": "PLAYED",
-      "liveStatus": null,
-      "homeScore": 2,
-      "awayScore": 4,
-      "officials": [
-        {
-          "personId": 28354,
-          "name": "Arnar Þór Stefánsson",
-          "role": "Dómari",
-          "orderNumber": 1
-        },
-        {
-          "personId": 10851,
-          "name": "Eysteinn Hrafnkelsson",
-          "role": "Aðstoðardómari 1",
-          "orderNumber": 2
-        },
-        {
-          "personId": 2700,
-          "name": "Eðvarð Þór Eðvarðsson",
-          "role": "Aðstoðardómari 2",
-          "orderNumber": 3
-        },
-        {
-          "personId": 11529,
-          "name": "Gunnar Oddur Hafliðason",
-          "role": "Fjórði dómari",
-          "orderNumber": 4
-        },
-        {
-          "personId": 27549,
-          "name": "Ólafur Ingi Guðmundsson",
-          "role": "Dómaraeftirlitsmaður",
-          "orderNumber": 5
-        }
-      ]
-    },
     {
       "id": 7100161,
       "date": "2026-10-24T14:00:00.000Z",
